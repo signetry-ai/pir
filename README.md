@@ -155,4 +155,4 @@ python scripts/validate.py
 
 ---
 
-Maintained by [Signetry](https://signetry.ai). License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Contributions welcome.
+Maintained by [Signetry](https://signetry.ai). License: [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). Contributions welcome.
