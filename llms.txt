@@ -1,95 +1,460 @@
 # Signetry Product Intelligence Records (PIR)
 
-An open registry of authenticated product facts, indexed by GTIN.
+An open registry of structured product facts, indexed by GTIN.
+Total: 368 products across 7 brands.
 
-## Purpose
-Each record contains verified facts, pre-answered questions, document references,
-and authorized sellers for a specific product. Designed for AI agents, search
-crawlers, and developers who need structured, trustworthy product data.
+## How to access
+
+Individual record by GTIN:
+  https://raw.githubusercontent.com/jb-au/pir/main/records/{gtin}.json
+
+Full catalog index:
+  https://raw.githubusercontent.com/jb-au/pir/main/catalog.json
+
+Browse all records:
+  https://github.com/jb-au/pir/tree/main/records
+
+## Record structure
+
+Each JSON record contains:
+- gtin: Global Trade Item Number (barcode)
+- sku: Manufacturer model code
+- brand: Brand name (manufacturer for wrapped products)
+- manufacturer: Who made the product (present on wrapped/OEM products)
+- base_model: Underlying platform model (for branded wraps)
+- branding: { type, wrap_brand, licensor } for licensed wraps
+- category: Product category
+- facts{}: Structured specs (capacity_litres, weight_kg, noise_db, etc.)
+- qa[]: Pre-answered questions citing fact keys
+- documents[]: Spec sheets, manuals, brochures (URLs)
+- sellers[]: Authorized retailers with regions
+- status: { brand_certified, submitted_by, submitted_date }
 
 ## Trust model
-Every record has a trust status:
-- brand_certified: true  — Facts approved by the brand via DNS domain ownership verification
-- brand_certified: false — Facts submitted by a retailer or community contributor, not yet brand-verified
+- brand_certified: true — Brand verified facts via DNS domain ownership
+- brand_certified: false — Submitted by retailer, source recorded
 
-Prefer brand_certified records for high-stakes queries. Uncertified records are
-honest about their source (submitted_by field) and useful as a starting point.
+## Products by brand
 
-## How to use this data
+### Bar Fridges Australia (1 products)
 
-Lookup by GTIN:
-  GET /records/{gtin}.json
+#### bar_fridge (1)
+- 9351886006343 — AVS-1000, 1-Door Bar Fridge
 
-The qa[] array is the fastest path for natural language queries. Each entry
-contains a pre-answered question with citations back to the fact keys it was
-derived from. Use qa[] first, fall back to facts{} for raw data lookups.
+### Dellcool (2 products)
 
-Facts use unit-in-key naming: capacity_litres, weight_kg, noise_db, dimensions_exterior_w_mm.
-Classification codes are strings: ip_rating: "IP24". Market-specific ratings include
-market suffix: energy_star_rating_au: 8.
+#### bar_fridge (2)
+- 9351886000143 — DW-SC25, 1-Door Bar Fridge
+- 9351886003106 — DW100CD, 1-Door Bar Fridge
 
-## Schema
-https://schema.signetry.ai/pir/v1.json
+### Dellware (2 products)
 
-## Current records (43 products, 1 brand)
+#### bar_fridge (2)
+- 9351886000150 — DW-SD50, 1-Door Bar Fridge (Solid Door)
+- 9351886000174 — DW60E, 1-Door Bar Fridge
 
-### Rhino Envy (7 products)
-- 9351886000259 — Rhino Envy ENV1R-SD, 1-Door Outdoor Bar Fridge (Solid Door) (bar_fridge)
-- 9351886000266 — Rhino Envy ENV1R-SS, 1-Door Outdoor Bar Fridge (bar_fridge)
-- 9351886000273 — Rhino Envy ENV2H-SS, 2-Door Outdoor Bar Fridge (bar_fridge)
-- 9351886001263 — Rhino Envy ENV1L-SD, 1-Door Outdoor Bar Fridge (Solid Door, Left Hinge) (bar_fridge)
-- 9351886001324 — Rhino Envy ENV1L-SS, 1-Door Outdoor Bar Fridge (Left Hinge) (bar_fridge)
-- 9351886001331 — Rhino Envy ENV3H-SS, 3-Door Outdoor Bar Fridge (bar_fridge)
-- 9351886003205 — Rhino Envy ENV2H-SD, 2-Door Outdoor Bar Fridge (Solid Door) (bar_fridge)
+### IC COLD (2 products)
 
-### Rhino GSP (7 products)
-- 5060482000320 — Rhino GSP GSP1H-SS, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 5060482000337 — Rhino GSP GSP1HL-SS, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 5060482000344 — Rhino GSP GSP2H-SS, 2-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 5060482000351 — Rhino GSP GSP3H-SS, 3-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 5060482000382 — Rhino GSP GSP1H-840-SS, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 5060482000405 — Rhino GSP GSP2H-840-SS, 2-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 9351886000280 — Rhino GSP GSP1H-840-BW, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+#### bar_fridge (2)
+- 9351886007777 — FC-BS75AH, 1-Door Bar Fridge
+- 9351886007807 — FD-BS75AH, 1-Door Bar Fridge
 
-### Rhino SG (22 products)
-- 5060482000429 — Rhino SG SG1R-B, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 5060482000436 — Rhino SG SG1L-B, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 5060482000443 — Rhino SG SG2H-B, 2-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 5060482000450 — Rhino SG SG2S-B, 2-Door Outdoor Bar Fridge (Sliding Glass) (bar_fridge)
-- 5060482000467 — Rhino SG SG3H-B, 3-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 5060482000474 — Rhino SG SG3S-B, 3-Door Outdoor Bar Fridge (Sliding Glass) (bar_fridge)
-- 5060482000580 — Rhino SG SG1R-SD, 1-Door Outdoor Bar Fridge (Solid Door) (bar_fridge)
-- 5060482000597 — Rhino SG SG1L-SD, 1-Door Outdoor Bar Fridge (Solid Door) (bar_fridge)
-- 5060482000627 — Rhino SG SG1R-HD, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
-- 5060482000634 — Rhino SG SG1L-HD, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
-- 5060482000641 — Rhino SG SG2H-HD, 2-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
-- 5060482003611 — Rhino SG SG3H-HD, 3-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
-- 9351886000945 — Rhino SG SG1Q-Combo, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 9351886001300 — Rhino SG SG1R-NC, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 9351886001317 — Rhino SG SG1L-NC, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 9351886001645 — Rhino SG SG1R-BQ, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 9351886001669 — Rhino SG SG2H-NC, 2-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 9351886003366 — Rhino SG SG3H-B-HD, 3-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
-- 9351886003465 — Rhino SG SG1L-HDQ, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
-- 9351886004752 — Rhino SG SG1L-BQ, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
-- 9351886006350 — Rhino SG SG2H-B-HD, 2-Door Outdoor Bar Fridge (Heated Low-E Glass) (bar_fridge)
-- 9351886007838 — Rhino SG SG1L-B-HD, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
-- 9351886007845 — Rhino SG SG1R-B-HD, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
+### Lecavist (20 products)
 
-### Rhino SGT (3 products)
-- 9351886001393 — Rhino SGT SGT1R-BS, 3-Door Upright Display Fridge (Low-E Glass) (upright_display_fridge)
-- 9351886001409 — Rhino SGT SGT1L-BS, 3-Door Upright Display Fridge (Low-E Glass) (upright_display_fridge)
-- 9351886001430 — Rhino SGT SGT2-BS, 2-Door Upright Display Fridge (Low-E Glass) (upright_display_fridge)
+#### beverage_fridge (3)
+- 0739988380414 — LEK14PV, Beverage Fridge 50L Single Zone
+- 0739988380421 — LEK21PV, Beverage Fridge 70L Single Zone
+- 0739988380438 — LEK33PV, Beverage Fridge 90L Single Zone
 
-### Rhino TK (3 products)
-- 9351886006626 — Rhino TK TK-6, Open Display Commercial Cooler (Low-E Glass) (open_display_cooler)
-- 9351886006633 — Rhino TK TK-6S, Open Display Commercial Cooler (Low-E Glass) (open_display_cooler)
-- 9351886006657 — Rhino TK TK-12, Open Display Commercial Cooler (Low-E Glass) (open_display_cooler)
+#### wine_cellar (1)
+- 3016116020662 — LKV168PNDX, Wine Cabinet 109 Bottle Single Zone Freestanding
+
+#### wine_fridge (16)
+- pending — LCS100VN, Wine Cabinet 111 Bottle Dual Zone Freestanding
+- pending — LCS100VNFS, Wine Cabinet 76 Bottle Single Zone Freestanding
+- pending — LEK1052ZPV, Wine Cabinet 105 Bottle Dual Zone Freestanding
+- pending — LEK1052ZPVFS-1, Wine Cabinet 77 Bottle Dual Zone Freestanding
+- pending — LEK1403ZPVFS-1, Wine Cabinet 98 Bottle Triple Zone Freestanding
+- pending — LEK1403ZPVX, Wine Cabinet 140 Bottle Triple Zone Freestanding
+- pending — LEK1403ZPVXFS-1, Wine Cabinet 98 Bottle Triple Zone Freestanding
+- pending — LEK168PVFS-1, Wine Cabinet 109 Bottle Single Zone Freestanding
+- pending — LEK168PVXFS-1, Wine Cabinet 109 Bottle Single Zone Freestanding
+- 0739988379296 — LJ17VN2ZBU, Wine Cabinet 17 Bottle Dual Zone Built-In/Freestanding
+- 0739988379289 — LJ20VNBU, Wine Cabinet 20 Bottle Single Zone Built-In/Freestanding
+- 0739988379326 — LJ40VN2Z2DBU, Wine Cabinet 40 Bottle Dual Zone Built-In/Freestanding
+- 0739988379319 — LJ44VN2ZBU, Wine Cabinet 44 Bottle Dual Zone Built-In/Freestanding
+- 0739988379302 — LJ52VNBU, Wine Cabinet 52 Bottle Single Zone Built-In/Freestanding
+- 0633710296762 — LKCV63N, Wine Cabinet 63 Bottle Single Zone Freestanding
+- 0684910432016 — LKS56VN2Z, Wine Cabinet 56 Bottle Dual Zone Freestanding
+
+### Rhino (47 products)
+
+#### bar_fridge (41)
+- 9351886001263 — ENV1L-SD, 1-Door Outdoor Bar Fridge (Solid Door, Left Hinge)
+- 9351886001324 — ENV1L-SS, 1-Door Outdoor Bar Fridge (Left Hinge)
+- 9351886000259 — ENV1R-SD, 1-Door Outdoor Bar Fridge (Solid Door)
+- 9351886000266 — ENV1R-SS, 1-Door Outdoor Bar Fridge
+- 9351886003205 — ENV2H-SD, 2-Door Outdoor Bar Fridge (Solid Door)
+- 9351886000273 — ENV2H-SS, 2-Door Outdoor Bar Fridge
+- 9351886001331 — ENV3H-SS, 3-Door Outdoor Bar Fridge
+- 9351886000280 — GSP1H-840-BW, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000382 — GSP1H-840-SS, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000320 — GSP1H-SS, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000399 — GSP1HL-840-SS, 1-Door Bar Fridge
+- 5060482000337 — GSP1HL-SS, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000405 — GSP2H-840-SS, 2-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000344 — GSP2H-SS, 2-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000351 — GSP3H-SS, 3-Door Outdoor Bar Fridge (Low-E Glass)
+- 9351886000938 — SG1-Combo, 1-Door Bar Fridge
+- 5060482000436 — SG1L-B, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 9351886007838 — SG1L-B-HD, 1-Door Outdoor Bar Fridge (Heated Glass)
+- 9351886004752 — SG1L-BQ, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000634 — SG1L-HD, 1-Door Outdoor Bar Fridge (Heated Glass)
+- 9351886003465 — SG1L-HDQ, 1-Door Outdoor Bar Fridge (Heated Glass)
+- 9351886001317 — SG1L-NC, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000597 — SG1L-SD, 1-Door Outdoor Bar Fridge (Solid Door)
+- 9351886000945 — SG1Q-Combo, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000429 — SG1R-B, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 9351886007845 — SG1R-B-HD, 1-Door Outdoor Bar Fridge (Heated Glass)
+- 9351886001645 — SG1R-BQ, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000627 — SG1R-HD, 1-Door Outdoor Bar Fridge (Heated Glass)
+- 9351886003458 — SG1R-HDQ, 1-Door Bar Fridge (Heated Glass)
+- 9351886001300 — SG1R-NC, 1-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000580 — SG1R-SD, 1-Door Outdoor Bar Fridge (Solid Door)
+- 5060482000443 — SG2H-B, 2-Door Outdoor Bar Fridge (Low-E Glass)
+- 9351886006350 — SG2H-B-HD, 2-Door Outdoor Bar Fridge (Heated Low-E Glass)
+- 5060482000641 — SG2H-HD, 2-Door Outdoor Bar Fridge (Heated Glass)
+- 9351886001669 — SG2H-NC, 2-Door Outdoor Bar Fridge (Low-E Glass)
+- 5060482000603 — SG2H-SD, 2-Door Bar Fridge (Solid Door)
+- 5060482000450 — SG2S-B, 2-Door Outdoor Bar Fridge (Sliding Glass)
+- 5060482000467 — SG3H-B, 3-Door Outdoor Bar Fridge (Low-E Glass)
+- 9351886003366 — SG3H-B-HD, 3-Door Outdoor Bar Fridge (Heated Glass)
+- 5060482003611 — SG3H-HD, 3-Door Outdoor Bar Fridge (Heated Glass)
+- 5060482000474 — SG3S-B, 3-Door Outdoor Bar Fridge (Sliding Glass)
+
+#### open_display_cooler (3)
+- 9351886006657 — TK-12, Open Display Commercial Cooler (Low-E Glass)
+- 9351886006626 — TK-6, Open Display Commercial Cooler (Low-E Glass)
+- 9351886006633 — TK-6S, Open Display Commercial Cooler (Low-E Glass)
+
+#### upright_display_fridge (3)
+- 9351886001409 — SGT1L-BS, 3-Door Upright Display Fridge (Low-E Glass)
+- 9351886001393 — SGT1R-BS, 3-Door Upright Display Fridge (Low-E Glass)
+- 9351886001430 — SGT2-BS, 2-Door Upright Display Fridge (Low-E Glass)
+
+### Schmick (294 products)
+
+#### bar_fridge (255)
+- 9351886000297 — BC46B-ACME, 1-Door Bar Fridge
+- 9351886003687 — BC46B-BB, 1-Door Bar Fridge
+- 9351886008392 — BC46B-BVU, 1-Door Bar Fridge
+- 9351886003663 — BC46B-CRATE, 1-Door Bar Fridge
+- 9351886000327 — BC46B-DICE, 1-Door Bar Fridge
+- 9351886000334 — BC46B-FOOTY, 1-Door Bar Fridge
+- 9351886000358 — BC46B-HSV, 1-Door Bar Fridge [HSV wrap]
+- 9351886008002 — BC46B-RET-RUGBY, 1-Door Bar Fridge
+- 9351886003694 — BC46B-SLIME, 1-Door Bar Fridge
+- 9351886000396 — BC46B-SOCCER, 1-Door Bar Fridge
+- 9351886000402 — BC46B-TOXIC, 1-Door Bar Fridge
+- 9351886000419 — BC46B-TRAVEL, 1-Door Bar Fridge
+- 9351886001690 — BC46B2-AMP, 1-Door Bar Fridge
+- 9351886007937 — BC46B2-FOOTY-V2, 1-Door Bar Fridge
+- 9351886008316 — BC46B2-MB, 1-Door Bar Fridge
+- 9351886007999 — BC46B2-RUGBY, 1-Door Bar Fridge
+- 9351886003090 — BC46W-CORONA-V1, 1-Door Bar Fridge [Corona wrap]
+- 9351886006992 — BC46W-CORONA-V2, 1-Door Bar Fridge [Corona wrap]
+- 9351886003793 — BC46W-DRAUGHT-V1, 1-Door Bar Fridge [Carlton Draught wrap]
+- 9351886003809 — BC46W-DRAUGHT-V2, 1-Door Bar Fridge [Carlton Draught wrap]
+- 9351886008156 — BC46W-DRAUGHT-V3, 1-Door Bar Fridge [Carlton Draught wrap]
+- 9351886003823 — BC46W-GNBC-CRISP, 1-Door Bar Fridge [Great Northern Crisp wrap]
+- 9351886003502 — BC46W-GNBC-GOLD, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886003816 — BC46W-GNBC-ORIG, 1-Door Bar Fridge [Great Northern Original wrap]
+- 9351886008026 — BC46W-RET-GOLF, 1-Door Bar Fridge
+- 9351886008019 — BC46W-TENNIS, 1-Door Bar Fridge
+- 9351886003076 — BC46W-VB-V1, 1-Door Bar Fridge [Victoria Bitter wrap]
+- 9351886003786 — BC46W-VB-V2, 1-Door Bar Fridge [Victoria Bitter wrap]
+- 9351886006107 — BC46W-VC, 1-Door Bar Fridge [Victoria Cross wrap]
+- 9351886003847 — BC70B-ACME, 1-Door Bar Fridge
+- 9351886007418 — BC70B-BTS-CORONA, 1-Door Bar Fridge [Corona wrap]
+- 9351886007432 — BC70B-BTS-CRISP, 1-Door Bar Fridge [Great Northern Crisp wrap]
+- 9351886007401 — BC70B-BTS-DRAUGHT, 1-Door Bar Fridge [Carlton Draught wrap]
+- 9351886007449 — BC70B-BTS-DRY, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886007135 — BC70B-BTS-GOLD, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886007371 — BC70B-BTS-VB-V1, 1-Door Bar Fridge [Victoria Bitter wrap]
+- 9351886007425 — BC70B-BTS-VC, 1-Door Bar Fridge [Victoria Cross wrap]
+- 9351886003892 — BC70B-CORONA-V1, 1-Door Bar Fridge [Corona wrap]
+- 9351886000440 — BC70B-EP, 1-Door Bar Fridge
+- 9351886003861 — BC70B-RC, 1-Door Bar Fridge
+- 9351886003854 — BC70B-ROADIE-AUS, 1-Door Bar Fridge
+- 9351886000464 — BC70B-SAFE, 1-Door Bar Fridge
+- 9351886003908 — BC70B-TRAVEL, 1-Door Bar Fridge
+- 9351886006114 — BC70B-VC, 1-Door Bar Fridge [Victoria Cross wrap]
+- 9351886003878 — BC70B-WC, 1-Door Bar Fridge
+- 9351886003175 — BD425B-B, 1-Door Upright Fridge
+- 9351886003304 — BD425RB-B, 1-Door Upright Fridge
+- 9351886000235 — EC68-SSH, 1-Door Bar Fridge
+- 9351886000242 — EC68L-SSH, 1-Door Bar Fridge
+- 9351886007234 — EC68L-SSH-CRISP, 1-Door Bar Fridge [Great Northern Crisp wrap]
+- 9351886006428 — EC68L-SSH-DRAUGHT, 1-Door Bar Fridge [Carlton Draught wrap]
+- 9351886006411 — EC68L-SSH-DRY, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886007982 — EC68L-SSH-DRY-MID, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886006442 — EC68L-SSH-GOLD, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886006664 — EC68L-SSH-ORIG, 1-Door Bar Fridge [Great Northern Original wrap]
+- 9351886006480 — EC68L-SSH-VB-V1, 1-Door Bar Fridge [Victoria Bitter wrap]
+- 9351886003359 — HUS-BC115-B, 1-Door Bar Fridge
+- 9351886000372 — HUS-BC46B-RET, 1-Door Bar Fridge
+- 9351886001560 — HUS-BC46B2, 1-Door Bar Fridge
+- 9351886000426 — HUS-BC46W-RET, 1-Door Bar Fridge
+- 9351886007128 — HUS-BC70-BTS, 1-Door Bar Fridge
+- 9351886003885 — HUS-BC70B-BB, 1-Door Bar Fridge
+- 9351886000457 — HUS-BC70B-RET, 1-Door Bar Fridge
+- 9351886000495 — HUS-EX108, 1-Door Outdoor Bar Fridge
+- 9351886002994 — HUS-RND70B, 1-Door Bar Fridge
+- 9351886000617 — HUS-SC23C, 1-Door Bar Fridge
+- 9351886006985 — HUS-SC372B, 1-Door Bar Fridge
+- 9351886007012 — HUS-SC372LB, 1-Door Bar Fridge
+- 9351886006541 — HUS-SC372LW, 1-Door Bar Fridge
+- 9351886006084 — HUS-SC372W, 1-Door Bar Fridge
+- 9351886000716 — HUS-SC50AB, 1-Door Bar Fridge
+- 9351886000723 — HUS-SC50B, 1-Door Bar Fridge
+- 9351886000747 — HUS-SC50W, 1-Door Bar Fridge
+- 9351886000761 — HUS-SC50WH, 1-Door Bar Fridge [Holden Sandman wrap]
+- 9351886000778 — HUS-SC70-B, 1-Door Bar Fridge
+- 9351886007586 — HUS-SC70-B-X, 1-Door Bar Fridge
+- 9351886000785 — HUS-SC70-SS, 1-Door Outdoor Bar Fridge (Triple Glazed)
+- 9351886000792 — HUS-SC70-SS-COMBO, 2-Door Outdoor Bar Fridge (Triple Glazed)
+- 9351886000877 — HUS-SC70L-SS, 1-Door Outdoor Bar Fridge (Triple Glazed)
+- 9351886000884 — HUS-SC88-SS, 1-Door Outdoor Bar Fridge (Triple Glazed)
+- 9351886001652 — HUS-SC88-SS-COMBO, 2-Door Outdoor Bar Fridge (Triple Glazed)
+- 9351886008088 — HUS-SC88-WZ, 1-Door Outdoor Bar Fridge
+- 9351886000907 — HUS-SC88L-SS, 1-Door Outdoor Bar Fridge (Triple Glazed)
+- 9351886008446 — PG65A-CCR, 1-Door Bar Fridge [Coca-Cola wrap]
+- 9351886008422 — SC372B-BVU, 1-Door Bar Fridge
+- 9351886007098 — SC372B-DRY, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886007050 — SC372B-GNBC-CRISP, 1-Door Bar Fridge [Great Northern Crisp wrap]
+- 9351886007579 — SC372B-GNBC-GOLD, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886008385 — SC372B-HR, 1-Door Bar Fridge [Hahn Racing wrap]
+- 9351886008187 — SC372LB-CASTROL, 1-Door Bar Fridge
+- 9351886008248 — SC372LB-DRY, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886008217 — SC372LB-FP-FLEECE, 1-Door Bar Fridge
+- 9351886008262 — SC372LB-GNBC-CRISP, 1-Door Bar Fridge [Great Northern Crisp wrap]
+- 9351886008255 — SC372LB-GNBC-GOLD, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886008194 — SC372LB-JOKER, 1-Door Bar Fridge
+- 9351886007906 — SC372LB-LWF, 1-Door Bar Fridge
+- 9351886007920 — SC372LB-LWF2, 1-Door Bar Fridge
+- 9351886008231 — SC372LB-NED, 1-Door Bar Fridge
+- 9351886007500 — SC372W-CD, 1-Door Bar Fridge [Carlton Draught wrap]
+- 9351886007036 — SC372W-CORONA, 1-Door Bar Fridge [Corona wrap]
+- 9351886007517 — SC372W-DRY, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886007524 — SC372W-FOSTERS, 1-Door Bar Fridge [Fosters wrap]
+- 9351886007531 — SC372W-GNBC-GOLD, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886007548 — SC372W-MB, 1-Door Bar Fridge [Melbourne Bitter wrap]
+- 9351886007357 — SC372W-PB, 1-Door Bar Fridge
+- 9351886007364 — SC372W-TB, 1-Door Bar Fridge
+- 9351886007555 — SC372W-VB1, 1-Door Bar Fridge [Victoria Bitter wrap]
+- 9351886007562 — SC372W-VB2, 1-Door Bar Fridge [Victoria Bitter V2 wrap]
+- 9351886007029 — SC372W-VC, 1-Door Bar Fridge [Victoria Cross wrap]
+- 9351886006534 — SC50AB-DRY, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886007968 — SC50AB-DRY-MID, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886008354 — SC50AB-HR, 1-Door Bar Fridge [Hahn Racing wrap]
+- 9351886008408 — SC70-B-BVU, 1-Door Bar Fridge [Branded Vinyl wrap]
+- 9351886008163 — SC70-B-DRAUGHT-V3, 1-Door Bar Fridge [Carlton Draught wrap]
+- 9351886004080 — SC70-B-DRY, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886004110 — SC70-B-GNBC-CRISP, 1-Door Bar Fridge [Great Northern Crisp wrap]
+- 9351886004073 — SC70-B-GNBC-GOLD, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886004103 — SC70-B-GNBC-ORIG, 1-Door Bar Fridge [Great Northern Original wrap]
+- 9351886008361 — SC70-B-HR, 1-Door Bar Fridge [Hahn Racing wrap]
+- 9351886008323 — SC70-B-LWF, 1-Door Bar Fridge
+- 9351886008330 — SC70-B-LWF2, 1-Door Bar Fridge
+- 9351886004066 — SC70-B-VB-V1, 1-Door Bar Fridge [Victoria Bitter wrap]
+- 9351886004097 — SC70-B-VB-V2, 1-Door Bar Fridge [Victoria Bitter wrap]
+- 9351886006121 — SC70-B-VC, 1-Door Bar Fridge [Victoria Cross wrap]
+- 9351886004493 — SC70-FP-CASTROL, 1-Door Bar Fridge [Castrol wrap]
+- 9351886004325 — SC70-FP-DINO, 1-Door Bar Fridge [Dino wrap]
+- 9351886004332 — SC70-FP-ESSO, 1-Door Bar Fridge [Esso wrap]
+- 9351886002031 — SC70-FP-FLEECE, 1-Door Bar Fridge [Golden Fleece wrap]
+- 9351886004349 — SC70-FP-GILMORE, 1-Door Bar Fridge [Gilmore wrap]
+- 9351886004356 — SC70-FP-HANCOCK, 1-Door Bar Fridge [Hancock wrap]
+- 9351886004141 — SC70-SS-GNBC-GOLD, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886000815 — SC70-SS-GTSR, 1-Door Bar Fridge [HSV GTSR wrap]
+- 9351886000822 — SC70-SS-GTSR-Maloo, 1-Door Bar Fridge [HSV GTSR wrap]
+- 9351886000839 — SC70-SS-GTSR-W1, 1-Door Bar Fridge [HSV GTSR wrap]
+- 9351886004134 — SC70-SS-NED, 1-Door Bar Fridge
+- 9351886005841 — SC70-SS-PERONI, 1-Door Bar Fridge [Peroni wrap]
+- 9351886005834 — SC70-SS-R-ASAHI, 1-Door Bar Fridge [Asahi wrap]
+- 9351886006466 — SC70-SS-VB-V1, 1-Door Bar Fridge (Triple Glazed) [Victoria Bitter wrap]
+- 9351886008347 — SC70-SS-VC, 1-Door Bar Fridge [Victoria Cross wrap]
+- 9351886006145 — SC70-SS-W-ASAHI, 1-Door Bar Fridge [Asahi wrap]
+- 9351886004530 — SC88-FP-CASTROL, 1-Door Bar Fridge (Triple Glazed) [Castrol wrap]
+- 9351886004547 — SC88-FP-DINO, 1-Door Bar Fridge (Triple Glazed) [Dino wrap]
+- 9351886004554 — SC88-FP-ESSO, 1-Door Bar Fridge (Triple Glazed) [Esso wrap]
+- 9351886004516 — SC88-FP-FLEECE, 1-Door Bar Fridge (Triple Glazed) [Golden Fleece wrap]
+- 9351886004561 — SC88-FP-GILMORE, 1-Door Bar Fridge (Triple Glazed) [Gilmore wrap]
+- 9351886004578 — SC88-FP-HANCOCK, 1-Door Bar Fridge (Triple Glazed) [Hancock wrap]
+- 9351886005872 — SC88-SS-PERONI, 1-Door Bar Fridge [Peroni wrap]
+- 9351886003229 — SK116L-B-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002420 — SK116L-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886005551 — SK116L-SD, 1-Door Under Bench Bar Fridge (Solid Door)
+- 9351886006398 — SK116L-SS, 1-Door Under Bench Bar Fridge (Stainless Steel Glass)
+- 9351886003212 — SK116R-B-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002437 — SK116R-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002444 — SK116R-SD, 1-Door Under Bench Bar Fridge (Solid Door)
+- 9351886002451 — SK116R-SS, 1-Door Under Bench Bar Fridge (Stainless Steel Glass)
+- 9351886001768 — SK118L-B, 1-Door Bar Fridge (Heated Glass)
+- 9351886001775 — SK118L-SS, 1-Door Bar Fridge (Heated Glass)
+- 9351886001737 — SK118R-B, 1-Door Bar Fridge (Heated Glass)
+- 9351886001751 — SK118R-SS, 1-Door Bar Fridge (Heated Glass)
+- 9351886006596 — SK126L-B-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002475 — SK126L-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886005582 — SK126L-SD, 1-Door Under Bench Bar Fridge (Solid Door)
+- 9351886006589 — SK126R-B-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002482 — SK126R-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002499 — SK126R-SD, 1-Door Under Bench Bar Fridge (Solid Door)
+- 9351886003403 — SK146L-B-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886003434 — SK146L-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886003397 — SK146R-B-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886003427 — SK146R-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886003441 — SK146R-SD, 1-Door Under Bench Bar Fridge (Solid Door)
+- 9351886008309 — SK156-COMBO-BM, 1-Door Under Bench Bar Fridge
+- 9351886005629 — SK156L-B, 1-Door Under Bench Bar Fridge (Black Glass)
+- 9351886003243 — SK156L-B-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886008286 — SK156L-B-MW, 1-Door Under Bench Bar Fridge (Black Glass)
+- 9351886002574 — SK156L-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886005643 — SK156L-SD, 1-Door Under Bench Bar Fridge (Solid Door)
+- 9351886005636 — SK156L-SS, 1-Door Under Bench Bar Fridge (Stainless Steel Glass)
+- 9351886002512 — SK156R-B, 1-Door Under Bench Bar Fridge (Black Glass)
+- 9351886003236 — SK156R-B-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886008293 — SK156R-B-M, 1-Door Under Bench Bar Fridge (Black Glass)
+- 9351886002581 — SK156R-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886008279 — SK156R-RS, 1-Door Under Bench Bar Fridge (Rose Gold Glass)
+- 9351886002598 — SK156R-SD, 1-Door Under Bench Bar Fridge (Solid Door)
+- 9351886002604 — SK156R-SS, 1-Door Under Bench Bar Fridge (Stainless Steel Glass)
+- 9351886003113 — SK168B, 1-Door Upright Fridge
+- 9351886005025 — SK168RB, 1-Door Upright Fridge
+- 9351886001720 — SK190-B, 2-Door Bar Fridge (Heated Glass)
+- 9351886001744 — SK190-SS, 2-Door Bar Fridge (Heated Glass)
+- 9351886008095 — SK198D-B-HD, 2-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886008118 — SK198D-HD, 2-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886003571 — SK206-B, 2-Door Bar Fridge (Triple Glazed)
+- 9351886003588 — SK206-B-HD, 2-Door Bar Fridge (Heated Glass)
+- 9351886003601 — SK206-HD, 2-Door Bar Fridge (Heated Glass)
+- 9351886003618 — SK206-SD, 2-Door Bar Fridge (Solid Door)
+- 9351886003595 — SK206-SS, 2-Door Bar Fridge (Triple Glazed)
+- 9351886007227 — SK220L-B-HD, 1-Door Upright Fridge (Heated Glass)
+- 9351886007869 — SK220R-B-HD, 1-Door Upright Fridge (Heated Glass)
+- 9351886008101 — SK228D-B-HD, 2-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886008125 — SK228D-HD, 2-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886003526 — SK245-B-HD, 2-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886003540 — SK245-HD, 2-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886003557 — SK245-SD, 2-Door Under Bench Bar Fridge (Solid Door)
+- 9351886002628 — SK246-B-HD, 2-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002666 — SK246-HD, 2-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002642 — SK246-SD, 2-Door Under Bench Bar Fridge (Solid Door)
+- 9351886002680 — SK386-B-HD, 3-Door Bar Fridge (Heated Glass)
+- 9351886002727 — SK386-HD, 3-Door Bar Fridge (Heated Glass)
+- 9351886002703 — SK386-SD, 3-Door Bar Fridge (Solid Door)
+- 9351886002710 — SK386-SS, 3-Door Bar Fridge
+- 9351886002147 — SK40-B, 1-Door Bar Fridge
+- 9351886002130 — SK40-SD, 1-Door Bar Fridge (Solid Door)
+- 9351886002741 — SK422L-B-HD, 1-Door Upright Fridge (Heated Glass)
+- 9351886006800 — SK422L-W-HD, 1-Door Upright Fridge (Heated Glass)
+- 9351886002758 — SK422R-B-HD, 1-Door Upright Fridge (Heated Glass)
+- 9351886006794 — SK422R-W-HD, 1-Door Upright Fridge (Heated Glass)
+- 9351886006817 — SK668-B-HD, 1-Door Upright Fridge (Heated Glass)
+- 9351886006619 — SK68L-B, 1-Door Bar Fridge (Triple Glazed)
+- 9351886002819 — SK68L-SS, 1-Door Bar Fridge (Triple Glazed)
+- 9351886002796 — SK68R-B, 1-Door Bar Fridge (Triple Glazed)
+- 9351886002802 — SK68R-SS, 1-Door Bar Fridge (Triple Glazed)
+- 9351886003328 — SK86L-B-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002253 — SK86L-HD, 1-Door Under Bench Bar Fridge (Heated Glass)
+- 9351886002277 — SK86R-SD, 1-Door Under Bench Bar Fridge (Solid Door)
+- 9351886005858 — SS-P160-ASAHI, 1-Door Bar Fridge [Asahi wrap]
+- 9351886008415 — SS-P160-BVU, 1-Door Bar Fridge [Branded Vinyl wrap]
+- 9351886005469 — SS-P160-CORONA, 1-Door Bar Fridge [Corona wrap]
+- 9351886003496 — SS-P160-DRAUGHT, 1-Door Bar Fridge [Carlton Draught wrap]
+- 9351886008170 — SS-P160-DRAUGHT-V3, 1-Door Bar Fridge [Carlton Draught wrap]
+- 9351886002932 — SS-P160-DRY, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886007975 — SS-P160-DRY-MID, 1-Door Bar Fridge [Carlton Dry wrap]
+- 9351886005810 — SS-P160-FOSTERS, 1-Door Bar Fridge [Fosters wrap]
+- 9351886005230 — SS-P160-FP-CASTROL, 1-Door Bar Fridge [Castrol wrap]
+- 9351886005247 — SS-P160-FP-DINO, 1-Door Bar Fridge [Dino wrap]
+- 9351886005254 — SS-P160-FP-ESSO, 1-Door Bar Fridge [Esso wrap]
+- 9351886001881 — SS-P160-FP-FLEECE, 1-Door Bar Fridge [Golden Fleece wrap]
+- 9351886005261 — SS-P160-FP-GILMORE, 1-Door Bar Fridge [Gilmore wrap]
+- 9351886005278 — SS-P160-FP-HANCOCK, 1-Door Bar Fridge [Hancock wrap]
+- 9351886005452 — SS-P160-GNBC-CRISP, 1-Door Bar Fridge [Great Northern Crisp wrap]
+- 9351886002925 — SS-P160-GNBC-GOLD, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886005445 — SS-P160-GNBC-ORIG, 1-Door Bar Fridge [Great Northern Original wrap]
+- 9351886007739 — SS-P160-GOLD-V2, 1-Door Bar Fridge [Great Northern Gold wrap]
+- 9351886008378 — SS-P160-HR, 1-Door Bar Fridge [Hahn Racing wrap]
+- 9351886005803 — SS-P160-MB, 1-Door Bar Fridge [Melbourne Bitter wrap]
+- 9351886005865 — SS-P160-PERONI, 1-Door Bar Fridge [Peroni wrap]
+- 9351886007005 — SS-P160-PERONI-V2, 1-Door Bar Fridge [Peroni wrap]
+- 9351886002895 — SS-P160-VB-V1, 1-Door Bar Fridge [Victoria Bitter wrap]
+- 9351886006138 — SS-P160-VC, 1-Door Bar Fridge [Victoria Cross wrap]
+- 9351886001539 — SS-P160FA, 1-Door Upright Fridge (Triple Glazed)
+- 9351886005421 — SS-P160FA-JOKER, 1-Door Bar Fridge
+- 9351886005896 — SS-P160FA-LWF, 1-Door Bar Fridge
+- 9351886005902 — SS-P160FA-LWF2, 1-Door Bar Fridge
+- 9351886007159 — SS-P160FA-NED, 1-Door Bar Fridge [Ned Kelly wrap]
+- 9351886001874 — SS-P160FA-PB, 1-Door Bar Fridge
+- 9351886005063 — SS-P160FA-PC, 1-Door Bar Fridge
+- 9351886001867 — SS-P160FA-TB, 1-Door Bar Fridge
+
+#### commercial_fridge (4)
+- 9351886007623 — HUS-C5, 1-Door Commercial Fridge
+- 9351886007654 — HUS-F10, 1-Door Commercial Fridge
+- 9351886007647 — HUS-F5, 1-Door Commercial Fridge
+- 9351886006558 — HUS-SC700W, 1-Door Commercial Fridge
+
+#### freezer (2)
+- 9351886001638 — BD36, 1-Door Freezer
+- 9351886001621 — SD36, 1-Door Freezer
+
+#### integrated_fridge (7)
+- 9351886005940 — MC200-INT, 1-Door Integrated Fridge
+- 9351886005957 — MC560-INT, 1-Door Integrated Fridge
+- 9351886005995 — MSF230, 1-Door Integrated Fridge
+- 9351886005971 — MSF90, 1-Door Integrated Fridge
+- 9351886005964 — MSL110, 1-Door Integrated Fridge
+- 9351886005988 — MSL330, 1-Door Integrated Fridge
+- 9351886006565 — MSLF241, 1-Door Integrated Fridge
+
+#### portable_fridge (7)
+- 9351886001942 — PG-65A, 1-Door Portable Fridge
+- 9351886003632 — RF-42, 1-Door Portable Fridge
+- 9351886005889 — RF-42-VB-V1, 1-Door Portable Fridge [Victoria Bitter wrap]
+- 9351886003472 — SK-BDC60, 1-Door Portable Fridge
+- 9351886003564 — SK-BDC60-GNBC, 1-Door Portable Fridge [Great Northern wrap]
+- 9351886007746 — YF-NL35, 1-Door Portable Fridge
+- 9351886007753 — YF-NL42, 1-Door Portable Fridge
+
+#### wine_fridge (19)
+- 9351886003199 — BD425-Combo-B, 1-Door Wine Fridge
+- 9351886007111 — BD425D, 1-Door Wine Fridge
+- 9351886007104 — BD425D-B, 1-Door Wine Fridge
+- 9351886008132 — BD425D-X-B, 1-Door Wine Fridge
+- 9351886005735 — BD425LW, 1-Door Wine Fridge
+- 9351886006374 — BD425LW-B, 1-Door Wine Fridge
+- 9351886002833 — BD425W, 1-Door Wine Fridge
+- 9351886003182 — BD425W-B, 1-Door Wine Fridge
+- 9351886003335 — JC132D, 1-Door Wine Fridge (Triple Glazed)
+- 9351886000921 — JC165, 1-Door Wine Fridge
+- 9351886002987 — JC165B, 1-Door Wine Fridge
+- 9351886001911 — JC190-GG, 2-Door Wine Fridge
+- 9351886003168 — JC190-SS, 2-Door Wine Fridge
+- 9351886001829 — JC95B, 1-Door Wine Fridge (Triple Glazed)
+- 9351886004738 — JC95W-860, 1-Door Wine Fridge (Triple Glazed)
+- 9351886003144 — SK168-Combo, 1-Door Wine Fridge
+- 9351886003151 — SK168-Combo3, 3-Door Wine Fridge
+- 9351886003137 — SK168D, 1-Door Wine Fridge
+- 9351886003120 — SK168W, 1-Door Wine Fridge
 
 ## Known data gaps
-- 35 products missing capacity_litres (source product pages don't include volume data)
-- TK-6S (9351886006633) and TK-9 share the same GTIN in Shopify — data entry error, pending correction
+- 6 GTIN collisions in BFA feed (Shopify data entry errors)
+- 9 Lecavist products pending GTINs (stored as sku-{SKU}.json)
+- 2 Schmick products (SK116R-SS, SK126L-SD) missing enrichment (404 on product pages)
 
 ## Contributing
-Records are stored as {gtin}.json in /records/. Submit via pull request.
-Brand certification is self-serve via DNS TXT verification — see README.
+Records stored as {gtin}.json in /records/. Submit via pull request.
+Pending-GTIN records use sku-{SKU}.json naming.

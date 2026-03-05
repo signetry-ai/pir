@@ -1,0 +1,3678 @@
+{
+  "schema": "pir-catalog/1.0",
+  "generated": "2026-03-05",
+  "total_products": 368,
+  "brands": {
+    "Bar Fridges Australia": 1,
+    "Dellcool": 2,
+    "Dellware": 2,
+    "IC COLD": 2,
+    "Lecavist": 20,
+    "Rhino": 47,
+    "Schmick": 294
+  },
+  "products": [
+    {
+      "gtin": "0633710296762",
+      "sku": "LKCV63N",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 63 Bottle Single Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "0684910432016",
+      "sku": "LKS56VN2Z",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 56 Bottle Dual Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "0739988379289",
+      "sku": "LJ20VNBU",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 20 Bottle Single Zone Built-In/Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "0739988379296",
+      "sku": "LJ17VN2ZBU",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 17 Bottle Dual Zone Built-In/Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "0739988379302",
+      "sku": "LJ52VNBU",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 52 Bottle Single Zone Built-In/Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "0739988379319",
+      "sku": "LJ44VN2ZBU",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 44 Bottle Dual Zone Built-In/Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "0739988379326",
+      "sku": "LJ40VN2Z2DBU",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 40 Bottle Dual Zone Built-In/Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "0739988380414",
+      "sku": "LEK14PV",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Beverage Fridge 50L Single Zone",
+      "category": "beverage_fridge"
+    },
+    {
+      "gtin": "0739988380421",
+      "sku": "LEK21PV",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Beverage Fridge 70L Single Zone",
+      "category": "beverage_fridge"
+    },
+    {
+      "gtin": "0739988380438",
+      "sku": "LEK33PV",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Beverage Fridge 90L Single Zone",
+      "category": "beverage_fridge"
+    },
+    {
+      "gtin": "3016116020662",
+      "sku": "LKV168PNDX",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 109 Bottle Single Zone Freestanding",
+      "category": "wine_cellar"
+    },
+    {
+      "gtin": "5060482000320",
+      "sku": "GSP1H-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000337",
+      "sku": "GSP1HL-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000344",
+      "sku": "GSP2H-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000351",
+      "sku": "GSP3H-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "3-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000382",
+      "sku": "GSP1H-840-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000399",
+      "sku": "GSP1HL-840-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000405",
+      "sku": "GSP2H-840-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000429",
+      "sku": "SG1R-B",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000436",
+      "sku": "SG1L-B",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000443",
+      "sku": "SG2H-B",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000450",
+      "sku": "SG2S-B",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Sliding Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000467",
+      "sku": "SG3H-B",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "3-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000474",
+      "sku": "SG3S-B",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "3-Door Outdoor Bar Fridge (Sliding Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000580",
+      "sku": "SG1R-SD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000597",
+      "sku": "SG1L-SD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000603",
+      "sku": "SG2H-SD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000627",
+      "sku": "SG1R-HD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000634",
+      "sku": "SG1L-HD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482000641",
+      "sku": "SG2H-HD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "5060482003611",
+      "sku": "SG3H-HD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "3-Door Outdoor Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000143",
+      "sku": "DW-SC25",
+      "brand": "Dellcool",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "branding": {
+        "type": "oem",
+        "original_brand": "Dellcool"
+      }
+    },
+    {
+      "gtin": "9351886000150",
+      "sku": "DW-SD50",
+      "brand": "Dellware",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge (Solid Door)",
+      "category": "bar_fridge",
+      "branding": {
+        "type": "oem",
+        "original_brand": "Dellware"
+      }
+    },
+    {
+      "gtin": "9351886000174",
+      "sku": "DW60E",
+      "brand": "Dellware",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "branding": {
+        "type": "oem",
+        "original_brand": "Dellware"
+      }
+    },
+    {
+      "gtin": "9351886000235",
+      "sku": "EC68-SSH",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000242",
+      "sku": "EC68L-SSH",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000259",
+      "sku": "ENV1R-SD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000266",
+      "sku": "ENV1R-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000273",
+      "sku": "ENV2H-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000280",
+      "sku": "GSP1H-840-BW",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000297",
+      "sku": "BC46B-ACME",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000327",
+      "sku": "BC46B-DICE",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000334",
+      "sku": "BC46B-FOOTY",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000358",
+      "sku": "BC46B-HSV",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "HSV",
+        "licensor": "Holden"
+      }
+    },
+    {
+      "gtin": "9351886000372",
+      "sku": "HUS-BC46B-RET",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000396",
+      "sku": "BC46B-SOCCER",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000402",
+      "sku": "BC46B-TOXIC",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000419",
+      "sku": "BC46B-TRAVEL",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000426",
+      "sku": "HUS-BC46W-RET",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000440",
+      "sku": "BC70B-EP",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000457",
+      "sku": "HUS-BC70B-RET",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000464",
+      "sku": "BC70B-SAFE",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000495",
+      "sku": "HUS-EX108",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000617",
+      "sku": "HUS-SC23C",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000716",
+      "sku": "HUS-SC50AB",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000723",
+      "sku": "HUS-SC50B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000747",
+      "sku": "HUS-SC50W",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000761",
+      "sku": "HUS-SC50WH",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "HUS-SC50",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Holden Sandman",
+        "licensor": "Holden"
+      }
+    },
+    {
+      "gtin": "9351886000778",
+      "sku": "HUS-SC70-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000785",
+      "sku": "HUS-SC70-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000792",
+      "sku": "HUS-SC70-SS-COMBO",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000815",
+      "sku": "SC70-SS-GTSR",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "HSV GTSR",
+        "licensor": "Holden"
+      }
+    },
+    {
+      "gtin": "9351886000822",
+      "sku": "SC70-SS-GTSR-Maloo",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "HSV GTSR",
+        "licensor": "Holden"
+      }
+    },
+    {
+      "gtin": "9351886000839",
+      "sku": "SC70-SS-GTSR-W1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "HSV GTSR",
+        "licensor": "Holden"
+      }
+    },
+    {
+      "gtin": "9351886000877",
+      "sku": "HUS-SC70L-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000884",
+      "sku": "HUS-SC88-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000907",
+      "sku": "HUS-SC88L-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000921",
+      "sku": "JC165",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886000938",
+      "sku": "SG1-Combo",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886000945",
+      "sku": "SG1Q-Combo",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001263",
+      "sku": "ENV1L-SD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Solid Door, Left Hinge)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001300",
+      "sku": "SG1R-NC",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001317",
+      "sku": "SG1L-NC",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001324",
+      "sku": "ENV1L-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Left Hinge)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001331",
+      "sku": "ENV3H-SS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "3-Door Outdoor Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001393",
+      "sku": "SGT1R-BS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "3-Door Upright Display Fridge (Low-E Glass)",
+      "category": "upright_display_fridge"
+    },
+    {
+      "gtin": "9351886001409",
+      "sku": "SGT1L-BS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "3-Door Upright Display Fridge (Low-E Glass)",
+      "category": "upright_display_fridge"
+    },
+    {
+      "gtin": "9351886001430",
+      "sku": "SGT2-BS",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Upright Display Fridge (Low-E Glass)",
+      "category": "upright_display_fridge"
+    },
+    {
+      "gtin": "9351886001539",
+      "sku": "SS-P160FA",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001560",
+      "sku": "HUS-BC46B2",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001621",
+      "sku": "SD36",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Freezer",
+      "category": "freezer"
+    },
+    {
+      "gtin": "9351886001638",
+      "sku": "BD36",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Freezer",
+      "category": "freezer"
+    },
+    {
+      "gtin": "9351886001645",
+      "sku": "SG1R-BQ",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001652",
+      "sku": "HUS-SC88-SS-COMBO",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001669",
+      "sku": "SG2H-NC",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001690",
+      "sku": "BC46B2-AMP",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001720",
+      "sku": "SK190-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001737",
+      "sku": "SK118R-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001744",
+      "sku": "SK190-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001751",
+      "sku": "SK118R-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001768",
+      "sku": "SK118L-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001775",
+      "sku": "SK118L-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001829",
+      "sku": "JC95B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge (Triple Glazed)",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886001867",
+      "sku": "SS-P160FA-TB",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001874",
+      "sku": "SS-P160FA-PB",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886001881",
+      "sku": "SS-P160-FP-FLEECE",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Golden Fleece",
+        "licensor": "Golden Fleece"
+      }
+    },
+    {
+      "gtin": "9351886001911",
+      "sku": "JC190-GG",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886001942",
+      "sku": "PG-65A",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Portable Fridge",
+      "category": "portable_fridge"
+    },
+    {
+      "gtin": "9351886002031",
+      "sku": "SC70-FP-FLEECE",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Golden Fleece",
+        "licensor": "Golden Fleece"
+      }
+    },
+    {
+      "gtin": "9351886002130",
+      "sku": "SK40-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002147",
+      "sku": "SK40-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002253",
+      "sku": "SK86L-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002277",
+      "sku": "SK86R-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002420",
+      "sku": "SK116L-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002437",
+      "sku": "SK116R-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002444",
+      "sku": "SK116R-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002451",
+      "sku": "SK116R-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Stainless Steel Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002475",
+      "sku": "SK126L-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002482",
+      "sku": "SK126R-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002499",
+      "sku": "SK126R-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002512",
+      "sku": "SK156R-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Black Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002574",
+      "sku": "SK156L-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002581",
+      "sku": "SK156R-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002598",
+      "sku": "SK156R-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002604",
+      "sku": "SK156R-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Stainless Steel Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002628",
+      "sku": "SK246-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002642",
+      "sku": "SK246-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002666",
+      "sku": "SK246-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002680",
+      "sku": "SK386-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "3-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002703",
+      "sku": "SK386-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "3-Door Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002710",
+      "sku": "SK386-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "3-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002727",
+      "sku": "SK386-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "3-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002741",
+      "sku": "SK422L-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002758",
+      "sku": "SK422R-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002796",
+      "sku": "SK68R-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002802",
+      "sku": "SK68R-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002819",
+      "sku": "SK68L-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886002833",
+      "sku": "BD425W",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886002895",
+      "sku": "SS-P160-VB-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886002925",
+      "sku": "SS-P160-GNBC-GOLD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886002932",
+      "sku": "SS-P160-DRY",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886002987",
+      "sku": "JC165B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886002994",
+      "sku": "HUS-RND70B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003076",
+      "sku": "BC46W-VB-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003090",
+      "sku": "BC46W-CORONA-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Corona",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003106",
+      "sku": "DW100CD",
+      "brand": "Dellcool",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "branding": {
+        "type": "oem",
+        "original_brand": "Dellcool"
+      }
+    },
+    {
+      "gtin": "9351886003113",
+      "sku": "SK168B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003120",
+      "sku": "SK168W",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886003137",
+      "sku": "SK168D",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886003144",
+      "sku": "SK168-Combo",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886003151",
+      "sku": "SK168-Combo3",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "3-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886003168",
+      "sku": "JC190-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886003175",
+      "sku": "BD425B-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003182",
+      "sku": "BD425W-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886003199",
+      "sku": "BD425-Combo-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886003205",
+      "sku": "ENV2H-SD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003212",
+      "sku": "SK116R-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003229",
+      "sku": "SK116L-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003236",
+      "sku": "SK156R-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003243",
+      "sku": "SK156L-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003304",
+      "sku": "BD425RB-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003328",
+      "sku": "SK86L-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003335",
+      "sku": "JC132D",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge (Triple Glazed)",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886003359",
+      "sku": "HUS-BC115-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003366",
+      "sku": "SG3H-B-HD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "3-Door Outdoor Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003397",
+      "sku": "SK146R-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003403",
+      "sku": "SK146L-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003427",
+      "sku": "SK146R-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003434",
+      "sku": "SK146L-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003441",
+      "sku": "SK146R-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003458",
+      "sku": "SG1R-HDQ",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003465",
+      "sku": "SG1L-HDQ",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003472",
+      "sku": "SK-BDC60",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Portable Fridge",
+      "category": "portable_fridge"
+    },
+    {
+      "gtin": "9351886003496",
+      "sku": "SS-P160-DRAUGHT",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Draught",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003502",
+      "sku": "BC46W-GNBC-GOLD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003526",
+      "sku": "SK245-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003540",
+      "sku": "SK245-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003557",
+      "sku": "SK245-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003564",
+      "sku": "SK-BDC60-GNBC",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Portable Fridge",
+      "category": "portable_fridge",
+      "base_model": "SK-BDC60",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003571",
+      "sku": "SK206-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003588",
+      "sku": "SK206-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003595",
+      "sku": "SK206-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003601",
+      "sku": "SK206-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003618",
+      "sku": "SK206-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003632",
+      "sku": "RF-42",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Portable Fridge",
+      "category": "portable_fridge"
+    },
+    {
+      "gtin": "9351886003663",
+      "sku": "BC46B-CRATE",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003687",
+      "sku": "BC46B-BB",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003694",
+      "sku": "BC46B-SLIME",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003786",
+      "sku": "BC46W-VB-V2",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003793",
+      "sku": "BC46W-DRAUGHT-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Draught",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003809",
+      "sku": "BC46W-DRAUGHT-V2",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Draught",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003816",
+      "sku": "BC46W-GNBC-ORIG",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Original",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003823",
+      "sku": "BC46W-GNBC-CRISP",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Crisp",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003847",
+      "sku": "BC70B-ACME",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003854",
+      "sku": "BC70B-ROADIE-AUS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003861",
+      "sku": "BC70B-RC",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003878",
+      "sku": "BC70B-WC",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003885",
+      "sku": "HUS-BC70B-BB",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886003892",
+      "sku": "BC70B-CORONA-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC70B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Corona",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886003908",
+      "sku": "BC70B-TRAVEL",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886004066",
+      "sku": "SC70-B-VB-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886004073",
+      "sku": "SC70-B-GNBC-GOLD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886004080",
+      "sku": "SC70-B-DRY",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886004097",
+      "sku": "SC70-B-VB-V2",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886004103",
+      "sku": "SC70-B-GNBC-ORIG",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Original",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886004110",
+      "sku": "SC70-B-GNBC-CRISP",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Crisp",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886004134",
+      "sku": "SC70-SS-NED",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886004141",
+      "sku": "SC70-SS-GNBC-GOLD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886004325",
+      "sku": "SC70-FP-DINO",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Dino",
+        "licensor": "Sinclair Oil"
+      }
+    },
+    {
+      "gtin": "9351886004332",
+      "sku": "SC70-FP-ESSO",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Esso",
+        "licensor": "Esso"
+      }
+    },
+    {
+      "gtin": "9351886004349",
+      "sku": "SC70-FP-GILMORE",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Gilmore",
+        "licensor": "Gilmore Oil"
+      }
+    },
+    {
+      "gtin": "9351886004356",
+      "sku": "SC70-FP-HANCOCK",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Hancock",
+        "licensor": "Hancock Oil"
+      }
+    },
+    {
+      "gtin": "9351886004493",
+      "sku": "SC70-FP-CASTROL",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Castrol",
+        "licensor": "Castrol"
+      }
+    },
+    {
+      "gtin": "9351886004516",
+      "sku": "SC88-FP-FLEECE",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge",
+      "base_model": "SC88",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Golden Fleece",
+        "licensor": "Golden Fleece"
+      }
+    },
+    {
+      "gtin": "9351886004530",
+      "sku": "SC88-FP-CASTROL",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge",
+      "base_model": "SC88",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Castrol",
+        "licensor": "Castrol"
+      }
+    },
+    {
+      "gtin": "9351886004547",
+      "sku": "SC88-FP-DINO",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge",
+      "base_model": "SC88",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Dino",
+        "licensor": "Sinclair Oil"
+      }
+    },
+    {
+      "gtin": "9351886004554",
+      "sku": "SC88-FP-ESSO",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge",
+      "base_model": "SC88",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Esso",
+        "licensor": "Esso"
+      }
+    },
+    {
+      "gtin": "9351886004561",
+      "sku": "SC88-FP-GILMORE",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge",
+      "base_model": "SC88",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Gilmore",
+        "licensor": "Gilmore Oil"
+      }
+    },
+    {
+      "gtin": "9351886004578",
+      "sku": "SC88-FP-HANCOCK",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge",
+      "base_model": "SC88",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Hancock",
+        "licensor": "Hancock Oil"
+      }
+    },
+    {
+      "gtin": "9351886004738",
+      "sku": "JC95W-860",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge (Triple Glazed)",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886004752",
+      "sku": "SG1L-BQ",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005025",
+      "sku": "SK168RB",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005063",
+      "sku": "SS-P160FA-PC",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005230",
+      "sku": "SS-P160-FP-CASTROL",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Castrol",
+        "licensor": "Castrol"
+      }
+    },
+    {
+      "gtin": "9351886005247",
+      "sku": "SS-P160-FP-DINO",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Dino",
+        "licensor": "Sinclair Oil"
+      }
+    },
+    {
+      "gtin": "9351886005254",
+      "sku": "SS-P160-FP-ESSO",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Esso",
+        "licensor": "Esso"
+      }
+    },
+    {
+      "gtin": "9351886005261",
+      "sku": "SS-P160-FP-GILMORE",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Gilmore",
+        "licensor": "Gilmore Oil"
+      }
+    },
+    {
+      "gtin": "9351886005278",
+      "sku": "SS-P160-FP-HANCOCK",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Hancock",
+        "licensor": "Hancock Oil"
+      }
+    },
+    {
+      "gtin": "9351886005421",
+      "sku": "SS-P160FA-JOKER",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005445",
+      "sku": "SS-P160-GNBC-ORIG",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Original",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886005452",
+      "sku": "SS-P160-GNBC-CRISP",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Crisp",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886005469",
+      "sku": "SS-P160-CORONA",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Corona",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886005551",
+      "sku": "SK116L-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005582",
+      "sku": "SK126L-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005629",
+      "sku": "SK156L-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Black Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005636",
+      "sku": "SK156L-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Stainless Steel Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005643",
+      "sku": "SK156L-SD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Solid Door)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005735",
+      "sku": "BD425LW",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886005803",
+      "sku": "SS-P160-MB",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Melbourne Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886005810",
+      "sku": "SS-P160-FOSTERS",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Fosters",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886005834",
+      "sku": "SC70-SS-R-ASAHI",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Asahi",
+        "licensor": "Asahi"
+      }
+    },
+    {
+      "gtin": "9351886005841",
+      "sku": "SC70-SS-PERONI",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Peroni",
+        "licensor": "Asahi"
+      }
+    },
+    {
+      "gtin": "9351886005858",
+      "sku": "SS-P160-ASAHI",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Asahi",
+        "licensor": "Asahi"
+      }
+    },
+    {
+      "gtin": "9351886005865",
+      "sku": "SS-P160-PERONI",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Peroni",
+        "licensor": "Asahi"
+      }
+    },
+    {
+      "gtin": "9351886005872",
+      "sku": "SC88-SS-PERONI",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC88",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Peroni",
+        "licensor": "Asahi"
+      }
+    },
+    {
+      "gtin": "9351886005889",
+      "sku": "RF-42-VB-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Portable Fridge",
+      "category": "portable_fridge",
+      "base_model": "RF-42",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886005896",
+      "sku": "SS-P160FA-LWF",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005902",
+      "sku": "SS-P160FA-LWF2",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886005940",
+      "sku": "MC200-INT",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Integrated Fridge",
+      "category": "integrated_fridge"
+    },
+    {
+      "gtin": "9351886005957",
+      "sku": "MC560-INT",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Integrated Fridge",
+      "category": "integrated_fridge"
+    },
+    {
+      "gtin": "9351886005964",
+      "sku": "MSL110",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Integrated Fridge",
+      "category": "integrated_fridge"
+    },
+    {
+      "gtin": "9351886005971",
+      "sku": "MSF90",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Integrated Fridge",
+      "category": "integrated_fridge"
+    },
+    {
+      "gtin": "9351886005988",
+      "sku": "MSL330",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Integrated Fridge",
+      "category": "integrated_fridge"
+    },
+    {
+      "gtin": "9351886005995",
+      "sku": "MSF230",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Integrated Fridge",
+      "category": "integrated_fridge"
+    },
+    {
+      "gtin": "9351886006084",
+      "sku": "HUS-SC372W",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "HUS-SC372W",
+      "branding": {
+        "type": "sub_brand",
+        "sub_brand": "Schmick OWL"
+      }
+    },
+    {
+      "gtin": "9351886006107",
+      "sku": "BC46W-VC",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Cross",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006114",
+      "sku": "BC70B-VC",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC70B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Cross",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006121",
+      "sku": "SC70-B-VC",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Cross",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006138",
+      "sku": "SS-P160-VC",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Cross",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006145",
+      "sku": "SC70-SS-W-ASAHI",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Asahi",
+        "licensor": "Asahi"
+      }
+    },
+    {
+      "gtin": "9351886006343",
+      "sku": "AVS-1000",
+      "brand": "Bar Fridges Australia",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "branding": {
+        "type": "house_brand",
+        "original_brand": "Bar Fridges Australia"
+      }
+    },
+    {
+      "gtin": "9351886006350",
+      "sku": "SG2H-B-HD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "2-Door Outdoor Bar Fridge (Heated Low-E Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886006374",
+      "sku": "BD425LW-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886006398",
+      "sku": "SK116L-SS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Stainless Steel Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886006411",
+      "sku": "EC68L-SSH-DRY",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "EC68L",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006428",
+      "sku": "EC68L-SSH-DRAUGHT",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "EC68L",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Draught",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006442",
+      "sku": "EC68L-SSH-GOLD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "EC68L",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006466",
+      "sku": "SC70-SS-VB-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006480",
+      "sku": "EC68L-SSH-VB-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "EC68L",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006534",
+      "sku": "SC50AB-DRY",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC50AB",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006541",
+      "sku": "HUS-SC372LW",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "HUS-SC372LW",
+      "branding": {
+        "type": "sub_brand",
+        "sub_brand": "Schmick OWL"
+      }
+    },
+    {
+      "gtin": "9351886006558",
+      "sku": "HUS-SC700W",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Commercial Fridge",
+      "category": "commercial_fridge"
+    },
+    {
+      "gtin": "9351886006565",
+      "sku": "MSLF241",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Integrated Fridge",
+      "category": "integrated_fridge"
+    },
+    {
+      "gtin": "9351886006589",
+      "sku": "SK126R-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886006596",
+      "sku": "SK126L-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886006619",
+      "sku": "SK68L-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge (Triple Glazed)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886006626",
+      "sku": "TK-6",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "Open Display Commercial Cooler (Low-E Glass)",
+      "category": "open_display_cooler"
+    },
+    {
+      "gtin": "9351886006633",
+      "sku": "TK-6S",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "Open Display Commercial Cooler (Low-E Glass)",
+      "category": "open_display_cooler"
+    },
+    {
+      "gtin": "9351886006657",
+      "sku": "TK-12",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "Open Display Commercial Cooler (Low-E Glass)",
+      "category": "open_display_cooler"
+    },
+    {
+      "gtin": "9351886006664",
+      "sku": "EC68L-SSH-ORIG",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "EC68L",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Original",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886006794",
+      "sku": "SK422R-W-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886006800",
+      "sku": "SK422L-W-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886006817",
+      "sku": "SK668-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886006985",
+      "sku": "HUS-SC372B",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "HUS-SC372B",
+      "branding": {
+        "type": "sub_brand",
+        "sub_brand": "Schmick OWL"
+      }
+    },
+    {
+      "gtin": "9351886006992",
+      "sku": "BC46W-CORONA-V2",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Corona",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007005",
+      "sku": "SS-P160-PERONI-V2",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Peroni",
+        "licensor": "Asahi"
+      }
+    },
+    {
+      "gtin": "9351886007012",
+      "sku": "HUS-SC372LB",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "HUS-SC372LB",
+      "branding": {
+        "type": "sub_brand",
+        "sub_brand": "Schmick OWL"
+      }
+    },
+    {
+      "gtin": "9351886007029",
+      "sku": "SC372W-VC",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Cross",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007036",
+      "sku": "SC372W-CORONA",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Corona",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007050",
+      "sku": "SC372B-GNBC-CRISP",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Crisp",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007098",
+      "sku": "SC372B-DRY",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007104",
+      "sku": "BD425D-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886007111",
+      "sku": "BD425D",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886007128",
+      "sku": "HUS-BC70-BTS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886007135",
+      "sku": "BC70B-BTS-GOLD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC70B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007159",
+      "sku": "SS-P160FA-NED",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160FA",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Ned Kelly",
+        "licensor": "Ned Kelly"
+      }
+    },
+    {
+      "gtin": "9351886007227",
+      "sku": "SK220L-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886007234",
+      "sku": "EC68L-SSH-CRISP",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "EC68L",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Crisp",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007357",
+      "sku": "SC372W-PB",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "sub_brand",
+        "sub_brand": "Schmick OWL"
+      }
+    },
+    {
+      "gtin": "9351886007364",
+      "sku": "SC372W-TB",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "sub_brand",
+        "sub_brand": "Schmick OWL"
+      }
+    },
+    {
+      "gtin": "9351886007371",
+      "sku": "BC70B-BTS-VB-V1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC70B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007401",
+      "sku": "BC70B-BTS-DRAUGHT",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC70B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Draught",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007418",
+      "sku": "BC70B-BTS-CORONA",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC70B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Corona",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007425",
+      "sku": "BC70B-BTS-VC",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC70B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Cross",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007432",
+      "sku": "BC70B-BTS-CRISP",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC70B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Crisp",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007449",
+      "sku": "BC70B-BTS-DRY",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC70B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007500",
+      "sku": "SC372W-CD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Draught",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007517",
+      "sku": "SC372W-DRY",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007524",
+      "sku": "SC372W-FOSTERS",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Fosters",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007531",
+      "sku": "SC372W-GNBC-GOLD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007548",
+      "sku": "SC372W-MB",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Melbourne Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007555",
+      "sku": "SC372W-VB1",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007562",
+      "sku": "SC372W-VB2",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Bitter V2",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007579",
+      "sku": "SC372B-GNBC-GOLD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007586",
+      "sku": "HUS-SC70-B-X",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886007623",
+      "sku": "HUS-C5",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Commercial Fridge",
+      "category": "commercial_fridge"
+    },
+    {
+      "gtin": "9351886007647",
+      "sku": "HUS-F5",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Commercial Fridge",
+      "category": "commercial_fridge"
+    },
+    {
+      "gtin": "9351886007654",
+      "sku": "HUS-F10",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Commercial Fridge",
+      "category": "commercial_fridge"
+    },
+    {
+      "gtin": "9351886007739",
+      "sku": "SS-P160-GOLD-V2",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007746",
+      "sku": "YF-NL35",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Portable Fridge",
+      "category": "portable_fridge"
+    },
+    {
+      "gtin": "9351886007753",
+      "sku": "YF-NL42",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Portable Fridge",
+      "category": "portable_fridge"
+    },
+    {
+      "gtin": "9351886007777",
+      "sku": "FC-BS75AH",
+      "brand": "IC COLD",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "branding": {
+        "type": "oem",
+        "original_brand": "IC COLD"
+      }
+    },
+    {
+      "gtin": "9351886007807",
+      "sku": "FD-BS75AH",
+      "brand": "IC COLD",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "branding": {
+        "type": "oem",
+        "original_brand": "IC COLD"
+      }
+    },
+    {
+      "gtin": "9351886007838",
+      "sku": "SG1L-B-HD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886007845",
+      "sku": "SG1R-B-HD",
+      "brand": "Rhino",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886007869",
+      "sku": "SK220R-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Upright Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886007906",
+      "sku": "SC372LB-LWF",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886007920",
+      "sku": "SC372LB-LWF2",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886007937",
+      "sku": "BC46B2-FOOTY-V2",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886007968",
+      "sku": "SC50AB-DRY-MID",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC50AB",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007975",
+      "sku": "SS-P160-DRY-MID",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007982",
+      "sku": "EC68L-SSH-DRY-MID",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "EC68L",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886007999",
+      "sku": "BC46B2-RUGBY",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008002",
+      "sku": "BC46B-RET-RUGBY",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008019",
+      "sku": "BC46W-TENNIS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008026",
+      "sku": "BC46W-RET-GOLF",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008088",
+      "sku": "HUS-SC88-WZ",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Outdoor Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008095",
+      "sku": "SK198D-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008101",
+      "sku": "SK228D-B-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008118",
+      "sku": "SK198D-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008125",
+      "sku": "SK228D-HD",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "2-Door Under Bench Bar Fridge (Heated Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008132",
+      "sku": "BD425D-X-B",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Wine Fridge",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": "9351886008156",
+      "sku": "BC46W-DRAUGHT-V3",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "BC46W",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Draught",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886008163",
+      "sku": "SC70-B-DRAUGHT-V3",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Draught",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886008170",
+      "sku": "SS-P160-DRAUGHT-V3",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Draught",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886008187",
+      "sku": "SC372LB-CASTROL",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008194",
+      "sku": "SC372LB-JOKER",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008217",
+      "sku": "SC372LB-FP-FLEECE",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008231",
+      "sku": "SC372LB-NED",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008248",
+      "sku": "SC372LB-DRY",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372LB",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Carlton Dry",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886008255",
+      "sku": "SC372LB-GNBC-GOLD",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372LB",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Gold",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886008262",
+      "sku": "SC372LB-GNBC-CRISP",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372LB",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Great Northern Crisp",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886008279",
+      "sku": "SK156R-RS",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Rose Gold Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008286",
+      "sku": "SK156L-B-MW",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Black Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008293",
+      "sku": "SK156R-B-M",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge (Black Glass)",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008309",
+      "sku": "SK156-COMBO-BM",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Under Bench Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008316",
+      "sku": "BC46B2-MB",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008323",
+      "sku": "SC70-B-LWF",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008330",
+      "sku": "SC70-B-LWF2",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008347",
+      "sku": "SC70-SS-VC",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Victoria Cross",
+        "licensor": "CUB"
+      }
+    },
+    {
+      "gtin": "9351886008354",
+      "sku": "SC50AB-HR",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC50AB",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Hahn Racing",
+        "licensor": "Lion"
+      }
+    },
+    {
+      "gtin": "9351886008361",
+      "sku": "SC70-B-HR",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Hahn Racing",
+        "licensor": "Lion"
+      }
+    },
+    {
+      "gtin": "9351886008378",
+      "sku": "SS-P160-HR",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Hahn Racing",
+        "licensor": "Lion"
+      }
+    },
+    {
+      "gtin": "9351886008385",
+      "sku": "SC372B-HR",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC372B",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Hahn Racing",
+        "licensor": "Lion"
+      }
+    },
+    {
+      "gtin": "9351886008392",
+      "sku": "BC46B-BVU",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008408",
+      "sku": "SC70-B-BVU",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SC70",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Branded Vinyl",
+        "licensor": "Novelty"
+      }
+    },
+    {
+      "gtin": "9351886008415",
+      "sku": "SS-P160-BVU",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "SS-P160",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Branded Vinyl",
+        "licensor": "Novelty"
+      }
+    },
+    {
+      "gtin": "9351886008422",
+      "sku": "SC372B-BVU",
+      "brand": "Schmick",
+      "manufacturer": null,
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge"
+    },
+    {
+      "gtin": "9351886008446",
+      "sku": "PG65A-CCR",
+      "brand": "Schmick",
+      "manufacturer": "Schmick",
+      "name": "1-Door Bar Fridge",
+      "category": "bar_fridge",
+      "base_model": "PG65A",
+      "branding": {
+        "type": "licensed_wrap",
+        "wrap_brand": "Coca-Cola",
+        "licensor": "Coca-Cola"
+      }
+    },
+    {
+      "gtin": null,
+      "sku": "LCS100VN",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 111 Bottle Dual Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": null,
+      "sku": "LCS100VNFS",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 76 Bottle Single Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": null,
+      "sku": "LEK1052ZPV",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 105 Bottle Dual Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": null,
+      "sku": "LEK1052ZPVFS-1",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 77 Bottle Dual Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": null,
+      "sku": "LEK1403ZPVFS-1",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 98 Bottle Triple Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": null,
+      "sku": "LEK1403ZPVX",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 140 Bottle Triple Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": null,
+      "sku": "LEK1403ZPVXFS-1",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 98 Bottle Triple Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": null,
+      "sku": "LEK168PVFS-1",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 109 Bottle Single Zone Freestanding",
+      "category": "wine_fridge"
+    },
+    {
+      "gtin": null,
+      "sku": "LEK168PVXFS-1",
+      "brand": "Lecavist",
+      "manufacturer": null,
+      "name": "Wine Cabinet 109 Bottle Single Zone Freestanding",
+      "category": "wine_fridge"
+    }
+  ],
+  "categories": {
+    "bar_fridge": 303,
+    "beverage_fridge": 3,
+    "commercial_fridge": 4,
+    "freezer": 2,
+    "integrated_fridge": 7,
+    "open_display_cooler": 3,
+    "portable_fridge": 7,
+    "upright_display_fridge": 3,
+    "wine_cellar": 1,
+    "wine_fridge": 35
+  }
+}
