@@ -1,0 +1,183 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "8393113829668",
+  "sku": "ENV1R-SS",
+  "brand": "Rhino",
+  "range": "Envy",
+  "name": "1-Door Outdoor Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 148,
+    "capacity_375ml_cans": 140,
+    "capacity_330ml_bottles": 100,
+    "capacity_wine_bottles_750ml": 48,
+    "dimensions_exterior_w_mm": 600,
+    "dimensions_exterior_d_mm": 575,
+    "dimensions_exterior_h_mm": 840,
+    "dimensions_interior_w_mm": 510,
+    "dimensions_interior_d_mm": 440,
+    "dimensions_interior_h_mm": 680,
+    "dimensions_note": "Door open adds 420mm to exterior depth. Top shelf depth is 400mm only due to fan assembly.",
+    "weight_kg": 64,
+    "noise_db": 43,
+    "energy_star_rating_au": 8,
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
+    "power_consumption_kwh_per_24h": 2.33,
+    "power_consumption_note": "Measured with heated door OFF. Heated door adds 1.5 kWh/24h when enabled.",
+    "running_cost_aud_annual": 218.06,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "ip_rating": "IP24",
+    "ambient_temperature_max_c": 43,
+    "internal_temperature_min_c": 0,
+    "location": ["indoor", "outdoor"],
+    "lockable": true,
+    "lockable_note": "Key lock included. Suitable for public and commercial installations.",
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "shelf_count": 2,
+    "shelf_w_mm": 395,
+    "shelf_d_mm": 400,
+    "shelf_type": "flat chromed, fully adjustable",
+    "door_hinge": "right",
+    "handle_side": "left",
+    "glass_door": true,
+    "glass_door_type": "heated tempered",
+    "glass_door_heated_switchable": true,
+    "led_lighting": true,
+    "led_colour_switchable": true,
+    "led_colours": ["blue", "white"],
+    "refrigerant": "R600",
+    "body_material": "316 Marine Grade Stainless Steel",
+    "interior_finish": "Polished 304 Mirror Stainless",
+    "grill_material": "316 Marine Grade Stainless Steel",
+    "ventilation_top_mm": 10,
+    "ventilation_each_side_mm": 10,
+    "ventilation_rear_mm": 50,
+    "approvals": ["Green Sense Plus Accredited", "EMC C-Tick", "SAA Electrical", "MEPS", "IP24 Outdoor Rated"],
+    "component_compressor": "GMCC",
+    "component_fan_primary": "EBM EC Fan (Germany)",
+    "component_fan_secondary": "Noctua (Norway)",
+    "component_controller": "Danfoss ECO (Germany)",
+    "component_transformer": "Meanwell (Taiwan)",
+    "component_switches": "Cherry (USA)",
+    "component_lighting": "Philips LED"
+  },
+  "qa": [
+    {
+      "q": "Can it be used outdoors?",
+      "a": "Yes. IP24 rated for outdoor use. Performs in ambient temperatures up to 43°C+.",
+      "facts": ["ip_rating", "ambient_temperature_max_c", "location"]
+    },
+    {
+      "q": "Is it suitable for coastal areas?",
+      "a": "Yes. Both the body and grill are 316 marine grade stainless steel — the highest grade for rust prevention and longevity in coastal and sea environments.",
+      "facts": ["body_material", "grill_material"]
+    },
+    {
+      "q": "Does it get condensation on the glass?",
+      "a": "No. It has switchable heated tempered glass. When enabled, it prevents condensation in high humidity environments.",
+      "facts": ["glass_door_heated_switchable", "glass_door_type"]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock, making it suitable for public venues, pubs, clubs, and commercial hospitality installations.",
+      "facts": ["lockable", "lockable_note"]
+    },
+    {
+      "q": "How many cans does it hold?",
+      "a": "140 standard 375ml cans.",
+      "facts": ["capacity_375ml_cans"]
+    },
+    {
+      "q": "How many wine bottles does it hold?",
+      "a": "48 standard 750ml wine bottles.",
+      "facts": ["capacity_wine_bottles_750ml"]
+    },
+    {
+      "q": "Will it fit under a standard bench?",
+      "a": "The exterior height is 840mm. Standard bench height in Australia is 900mm. Check your specific clearance — ventilation requires a minimum 10mm top, 10mm each side, and 50mm at the rear.",
+      "facts": ["dimensions_exterior_h_mm", "ventilation_top_mm", "ventilation_each_side_mm", "ventilation_rear_mm"]
+    },
+    {
+      "q": "How wide is it?",
+      "a": "600mm exterior width.",
+      "facts": ["dimensions_exterior_w_mm"]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $218 AUD per year based on 25.64 cents per kWh, with the heated door off. Enabling the heated door adds approximately 1.5 kWh per 24 hours.",
+      "facts": ["running_cost_aud_annual", "running_cost_basis_cents_per_kwh", "power_consumption_note"]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": ["noise_db"]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600 (isobutane), which is 100% ozone safe.",
+      "facts": ["refrigerant"]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "8 stars on the Australian 1-10 star scale.",
+      "facts": ["energy_star_rating_au", "energy_star_rating_au_note"]
+    },
+    {
+      "q": "Does it have adjustable shelves?",
+      "a": "Yes. 2 flat chromed fully adjustable shelves, each 395mm wide by 400mm deep. Note: the top shelf depth is 400mm due to the fan assembly.",
+      "facts": ["shelf_count", "shelf_w_mm", "shelf_d_mm", "dimensions_note"]
+    },
+    {
+      "q": "Which side is the door hinged?",
+      "a": "Right hinge, handle on the left.",
+      "facts": ["door_hinge", "handle_side"]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "Green Sense Plus Accredited, EMC (C-Tick), SAA Electrical, MEPS, IP24 Outdoor Rated.",
+      "facts": ["approvals"]
+    },
+    {
+      "q": "What components does it use?",
+      "a": "GMCC compressor, EBM EC fans (Germany), Noctua silent fans (Norway), Danfoss ECO controller (Germany), Meanwell transformer (Taiwan), Cherry switches (USA), Philips LED lighting.",
+      "facts": ["component_compressor", "component_fan_primary", "component_fan_secondary", "component_controller", "component_transformer", "component_switches", "component_lighting"]
+    }
+  ],
+  "documents": [
+    {
+      "type": "spec_sheet",
+      "url": "https://bar-fridges-australia.com.au/cdn/shop/files/ENV1R-SS.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    },
+    {
+      "type": "manual",
+      "url": "https://bar-fridges-australia.com.au/cdn/shop/files/ENVY-_instruction_manual-2025.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    },
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/8393113829668.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/outdoor-rhino-envy-1-door-bar-fridge-coldest-beer-43oc-best-alfresco-316-stainless-quiet-with-no-condensation-2",
+      "authorized": false,
+      "regions": ["AU"]
+    }
+  ]
+}

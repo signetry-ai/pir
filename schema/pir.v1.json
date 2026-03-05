@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.signetry.ai/pir/v1.json",
+  "title": "Product Intelligence Record",
+  "description": "An open, authenticated record of product facts. GTIN is the primary key. Facts are contributed by retailers or certified by the brand via domain ownership verification.",
+  "type": "object",
+  "required": ["schema", "gtin", "brand", "name", "status", "facts"],
+  "properties": {
+    "schema": {
+      "type": "string",
+      "const": "pir/1.0"
+    },
+    "gtin": {
+      "type": "string",
+      "description": "EAN-13 or GTIN-14. Primary key. Filename must match: {gtin}.json"
+    },
+    "sku": {
+      "type": "string",
+      "description": "Manufacturer SKU / model code"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "range": {
+      "type": "string",
+      "description": "Product line or range name, if applicable"
+    },
+    "name": {
+      "type": "string",
+      "description": "Clean product name, without marketing language"
+    },
+    "category": {
+      "type": "string",
+      "description": "Lowercase, underscore-separated. e.g. bar_fridge, wine_fridge, chest_freezer"
+    },
+    "status": {
+      "type": "object",
+      "required": ["brand_certified", "submitted_by", "submitted_date"],
+      "properties": {
+        "brand_certified": {
+          "type": "boolean",
+          "description": "True only when the brand has verified ownership of brand_domain and approved these facts"
+        },
+        "brand_domain": {
+          "type": ["string", "null"],
+          "description": "Domain used to verify brand ownership via DNS TXT record"
+        },
+        "certified_date": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "submitted_by": {
+          "type": "string",
+          "description": "Domain of the entity that initially submitted this record"
+        },
+        "submitted_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "facts": {
+      "type": "object",
+      "description": "Flat key-value product facts. Conventions: (1) encode units in the key — capacity_litres, weight_kg, noise_db, dimensions_exterior_w_mm. (2) classification codes are strings — ip_rating: 'IP24', not 24. (3) market-specific ratings include market suffix — energy_star_rating_au: 8. (4) currency-denominated values include currency in key — running_cost_aud_annual. (5) append _note to a key for prose qualifications that cannot be expressed as a typed value — power_consumption_note. (6) component suppliers use component_ prefix — component_compressor, component_fan_primary. Values are string, number, boolean, or array of strings."
+    },
+    "qa": {
+      "type": "array",
+      "description": "Pre-answered questions for AI agents. Each answer is derived from and cites specific fact keys.",
+      "items": {
+        "type": "object",
+        "required": ["q", "a", "facts"],
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Natural language question as a consumer or AI agent would ask it"
+          },
+          "a": {
+            "type": "string",
+            "description": "Complete, direct answer. Include relevant context. Do not hedge unless genuinely uncertain."
+          },
+          "facts": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Fact keys this answer is derived from. Makes each answer auditable."
+          }
+        }
+      }
+    },
+    "documents": {
+      "type": "array",
+      "description": "References to official product documents. URLs only — content is not embedded.",
+      "items": {
+        "type": "object",
+        "required": ["type", "url", "source"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["spec_sheet", "manual", "brochure", "compliance_cert", "warranty"]
+          },
+          "url": { "type": "string", "format": "uri" },
+          "source": {
+            "type": "string",
+            "description": "Domain that hosts this document"
+          },
+          "brand_certified": {
+            "type": "boolean",
+            "description": "True when the brand has confirmed this is the official current document"
+          }
+        }
+      }
+    },
+    "sellers": {
+      "type": "array",
+      "description": "Known sellers of this product. authorized:true requires explicit brand confirmation.",
+      "items": {
+        "type": "object",
+        "required": ["name", "domain", "url"],
+        "properties": {
+          "name": { "type": "string" },
+          "domain": { "type": "string" },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Direct product page URL"
+          },
+          "authorized": {
+            "type": "boolean",
+            "description": "True when brand has explicitly authorized this seller. Omit or false if unconfirmed."
+          },
+          "regions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "ISO 3166-1 alpha-2 country codes where this seller operates"
+          },
+          "price": {
+            "type": ["number", "null"],
+            "description": "Current price in currency specified by currency field. Omit if price changes frequently — link to url instead."
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO 4217 currency code. e.g. AUD, USD, GBP"
+          },
+          "in_stock": {
+            "type": ["boolean", "null"],
+            "description": "Current stock status. Omit if not maintained in real-time."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+name: Validate Records
+
+on:
+  push:
+    paths:
+      - 'records/**'
+      - 'schema/**'
+      - 'scripts/**'
+  pull_request:
+    paths:
+      - 'records/**'
+      - 'schema/**'
+
+jobs:
+  validate:
+    name: Schema validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install jsonschema
+
+      - name: Validate all records
+        run: python scripts/validate.py

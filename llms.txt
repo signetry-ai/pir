@@ -1,0 +1,39 @@
+# Signetry Product Intelligence Records (PIR)
+
+An open registry of authenticated product facts, indexed by GTIN.
+
+## Purpose
+Each record contains verified facts, pre-answered questions, document references,
+and authorized sellers for a specific product. Designed for AI agents, search
+crawlers, and developers who need structured, trustworthy product data.
+
+## Trust model
+Every record has a trust status:
+- brand_certified: true  — Facts approved by the brand via DNS domain ownership verification
+- brand_certified: false — Facts submitted by a retailer or community contributor, not yet brand-verified
+
+Prefer brand_certified records for high-stakes queries. Uncertified records are
+honest about their source (submitted_by field) and useful as a starting point.
+
+## How to use this data
+
+Lookup by GTIN:
+  GET /records/{gtin}.json
+
+The qa[] array is the fastest path for natural language queries. Each entry
+contains a pre-answered question with citations back to the fact keys it was
+derived from. Use qa[] first, fall back to facts{} for raw data lookups.
+
+Facts use unit-in-key naming: capacity_litres, weight_kg, noise_db, dimensions_exterior_w_mm.
+Classification codes are strings: ip_rating: "IP24". Market-specific ratings include
+market suffix: energy_star_rating_au: 8.
+
+## Schema
+https://schema.signetry.ai/pir/v1.json
+
+## Current records
+- 8393113829668 — Rhino Envy ENV1R-SS, 1-Door Outdoor Bar Fridge (bar_fridge)
+
+## Contributing
+Records are stored as {gtin}.json in /records/. Submit via pull request.
+Brand certification is self-serve via DNS TXT verification — see README.
