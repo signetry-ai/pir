@@ -75,6 +75,12 @@ python scripts/validate.py
 | GTIN | Brand | SKU | Name |
 |---|---|---|---|
 | [8393113829668](records/8393113829668.json) | Rhino | ENV1R-SS | Envy 1-Door Outdoor Bar Fridge |
+| [9351886001324](records/9351886001324.json) | Rhino | ENV1L-SS | Envy 1-Door Outdoor Bar Fridge (Left Hinge) |
+| [9351886000259](records/9351886000259.json) | Rhino | ENV1R-SD | Envy 1-Door Outdoor Bar Fridge (Solid Door) |
+| [9351886001263](records/9351886001263.json) | Rhino | ENV1L-SD | Envy 1-Door Outdoor Bar Fridge (Solid Door, Left Hinge) |
+| [9351886000273](records/9351886000273.json) | Rhino | ENV2H-SS | Envy 2-Door Outdoor Bar Fridge |
+| [9351886003205](records/9351886003205.json) | Rhino | ENV2H-SD | Envy 2-Door Outdoor Bar Fridge (Solid Door) |
+| [9351886001331](records/9351886001331.json) | Rhino | ENV3H-SS | Envy 3-Door Outdoor Bar Fridge |
 
 ---
 
