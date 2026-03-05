@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pir.signetry.ai/catalog.json
+Sitemap: https://signetry.ai/catalog.json

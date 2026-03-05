@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://pir.signetry.ai/schema/pir.v1.json",
+  "$id": "https://signetry.ai/records/schema.json",
   "title": "PIR Product Record",
   "description": "Signetry Product Intelligence Record — structured product facts indexed by GTIN.",
   "type": "object",

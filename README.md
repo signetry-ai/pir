@@ -8,12 +8,12 @@ An open registry of structured product facts. Every record is a GTIN-indexed JSO
 
 **Single record (by GTIN):**
 ```bash
-curl https://pir.signetry.ai/records/9351886000266.json
+curl https://signetry.ai/records/9351886000266.json
 ```
 
 **Full catalog index:**
 ```bash
-curl https://pir.signetry.ai/catalog.json
+curl https://signetry.ai/catalog.json
 ```
 
 **AI agents:** See [`llms.txt`](llms.txt) for a structured overview of all products, access patterns, and trust model.
