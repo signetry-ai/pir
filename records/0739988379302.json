@@ -1,0 +1,66 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "0739988379302",
+  "sku": "LJ52VNBU",
+  "brand": "Lecavist",
+  "name": "Wine Cabinet 52 Bottle Single Zone Built-In/Freestanding",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": "lecavist.com",
+    "certified_date": null,
+    "submitted_by": "lecavist.com",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_bottles": 52,
+    "dimensions_exterior_w_mm": 595,
+    "dimensions_exterior_d_mm": 575,
+    "dimensions_exterior_h_mm": 820,
+    "temperature_zones": 1,
+    "shelf_material": "Wood",
+    "glass_door": true,
+    "led_lighting": true,
+    "anti_vibration": true,
+    "lockable": false,
+    "installation": "built-in or freestanding",
+    "location": [
+      "indoor"
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "52 Bordeaux bottles.",
+      "facts": [
+        "capacity_bottles"
+      ]
+    },
+    {
+      "q": "Can it be built in?",
+      "a": "Installation: built-in or freestanding.",
+      "facts": [
+        "installation"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "spec_sheet",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/Cuve_Conti_LJ52VNBU_SpecSheet_fa5e6dba-bd36-4bb9-917e-afe7346f70e3.pdf?v=1749172386",
+      "source": "lecavist.com",
+      "brand_certified": true
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Lecavist",
+      "domain": "lecavist.com",
+      "url": "https://lecavist.com/products/lecavist-52-bottle-wine-cabinet-single-zone-lj52vnbu",
+      "authorized": true,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

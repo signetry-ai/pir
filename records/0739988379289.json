@@ -1,0 +1,76 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "0739988379289",
+  "sku": "LJ20VNBU",
+  "brand": "Lecavist",
+  "name": "Wine Cabinet 20 Bottle Single Zone Built-In/Freestanding",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": "lecavist.com",
+    "certified_date": null,
+    "submitted_by": "lecavist.com",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_bottles": 20,
+    "dimensions_exterior_w_mm": 295,
+    "dimensions_exterior_d_mm": 575,
+    "dimensions_exterior_h_mm": 820,
+    "internal_temperature_min_c": 2,
+    "internal_temperature_max_c": 18,
+    "temperature_zones": 1,
+    "shelf_material": "Beech wood",
+    "glass_door": true,
+    "glass_door_type": "Double pane glass",
+    "led_lighting": true,
+    "anti_vibration": true,
+    "lockable": false,
+    "cooling_system": "Fan",
+    "installation": "built-in or freestanding",
+    "location": [
+      "indoor"
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "20 Bordeaux bottles.",
+      "facts": [
+        "capacity_bottles"
+      ]
+    },
+    {
+      "q": "Can it be built in?",
+      "a": "Installation: built-in or freestanding.",
+      "facts": [
+        "installation"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "spec_sheet",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/Cuve_Conti_LJ20VNBU_SpecSheet.pdf?v=1748481587",
+      "source": "lecavist.com",
+      "brand_certified": true
+    },
+    {
+      "type": "manual",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/EN_LJ20VNBU_IM_e519ef59-6be0-4829-bdfb-b08929c4ecf4.pdf?v=1748481596",
+      "source": "lecavist.com",
+      "brand_certified": true
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Lecavist",
+      "domain": "lecavist.com",
+      "url": "https://lecavist.com/products/lecavist-20-bottle-wine-cabinet-single-zone-lj20vnbu",
+      "authorized": true,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

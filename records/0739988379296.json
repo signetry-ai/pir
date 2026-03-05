@@ -1,0 +1,81 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "0739988379296",
+  "sku": "LJ17VN2ZBU",
+  "brand": "Lecavist",
+  "name": "Wine Cabinet 17 Bottle Dual Zone Built-In/Freestanding",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": "lecavist.com",
+    "certified_date": null,
+    "submitted_by": "lecavist.com",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_bottles": 17,
+    "dimensions_exterior_w_mm": 295,
+    "dimensions_exterior_d_mm": 575,
+    "dimensions_exterior_h_mm": 820,
+    "temperature_zones": 2,
+    "shelf_material": "Beech wood",
+    "glass_door": true,
+    "glass_door_type": "Double pane glass",
+    "led_lighting": true,
+    "anti_vibration": true,
+    "lockable": false,
+    "cooling_system": "Fan",
+    "installation": "built-in or freestanding",
+    "location": [
+      "indoor"
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "17 Bordeaux bottles.",
+      "facts": [
+        "capacity_bottles"
+      ]
+    },
+    {
+      "q": "How many temperature zones does it have?",
+      "a": "Dual zone.",
+      "facts": [
+        "temperature_zones"
+      ]
+    },
+    {
+      "q": "Can it be built in?",
+      "a": "Installation: built-in or freestanding.",
+      "facts": [
+        "installation"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "spec_sheet",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/Cuve_Conti_LJ17VN2ZBU_SpecSheet.pdf?v=1748481452",
+      "source": "lecavist.com",
+      "brand_certified": true
+    },
+    {
+      "type": "manual",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/EN_LJ17VN2ZBU_IM_a2bb718d-8268-49ed-8881-2334c8960046.pdf?v=1753855531",
+      "source": "lecavist.com",
+      "brand_certified": true
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Lecavist",
+      "domain": "lecavist.com",
+      "url": "https://lecavist.com/products/lecavist-17-bottle-wine-cabinet-dual-zone-lj17vn2zbu",
+      "authorized": true,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "0739988380414",
+  "sku": "LEK14PV",
+  "brand": "Lecavist",
+  "name": "Beverage Fridge 50L Single Zone",
+  "category": "beverage_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": "lecavist.com",
+    "certified_date": null,
+    "submitted_by": "lecavist.com",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 50,
+    "dimensions_exterior_w_mm": 445,
+    "dimensions_exterior_d_mm": 457,
+    "dimensions_exterior_h_mm": 515,
+    "weight_kg": 13,
+    "noise_db": 45,
+    "energy_consumption_kwh_annual": 183,
+    "internal_temperature_min_c": 2,
+    "internal_temperature_max_c": 10,
+    "ambient_temperature_max_c": 43,
+    "temperature_zones": 1,
+    "shelf_count": 2,
+    "shelf_material": "Wire with wood trim",
+    "glass_door": true,
+    "glass_door_type": "Double pane glass",
+    "led_lighting": true,
+    "anti_vibration": true,
+    "lockable": false,
+    "cooling_system": "Compressor",
+    "installation": "freestanding",
+    "location": [
+      "indoor"
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "50 litres.",
+      "facts": [
+        "capacity_litres"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "45 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy consumption?",
+      "a": "183 kWh per year.",
+      "facts": [
+        "energy_consumption_kwh_annual"
+      ]
+    },
+    {
+      "q": "Can it be built in?",
+      "a": "Installation: freestanding.",
+      "facts": [
+        "installation"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "spec_sheet",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/Cuve_Burgundy_LEK14PV__SpecSheet_3.pdf?v=1748481220",
+      "source": "lecavist.com",
+      "brand_certified": true
+    },
+    {
+      "type": "manual",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/EN_LEK14PV_LEK21PV_LEK33PV_manual__3_40fcc4f1-a082-4a59-a0c3-e4d0e68f79a7.pdf?v=1753852400",
+      "source": "lecavist.com",
+      "brand_certified": true
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Lecavist",
+      "domain": "lecavist.com",
+      "url": "https://lecavist.com/products/lecavist-14-bottle-wine-cabinet-single-zone-black-lek14pv",
+      "authorized": true,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

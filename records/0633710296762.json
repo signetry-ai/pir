@@ -1,0 +1,97 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "0633710296762",
+  "sku": "LKCV63N",
+  "brand": "Lecavist",
+  "name": "Wine Cabinet 63 Bottle Single Zone Freestanding",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": "lecavist.com",
+    "certified_date": null,
+    "submitted_by": "lecavist.com",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 126,
+    "capacity_bottles": 63,
+    "dimensions_exterior_w_mm": 500,
+    "dimensions_exterior_d_mm": 575,
+    "dimensions_exterior_h_mm": 847,
+    "weight_kg": 29,
+    "noise_db": 43,
+    "energy_consumption_kwh_annual": 290,
+    "internal_temperature_min_c": 5,
+    "internal_temperature_max_c": 20,
+    "temperature_zones": 1,
+    "shelf_count": 3,
+    "shelf_material": "Wood",
+    "glass_door": true,
+    "glass_door_type": "Triple layer glass (glass, tempered glass, low-E coating)",
+    "door_hinge": "right",
+    "led_lighting": true,
+    "anti_vibration": false,
+    "lockable": false,
+    "cooling_system": "Compressor",
+    "installation": "freestanding",
+    "location": [
+      "indoor"
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "63 Bordeaux bottles (126L).",
+      "facts": [
+        "capacity_bottles",
+        "capacity_litres"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy consumption?",
+      "a": "290 kWh per year.",
+      "facts": [
+        "energy_consumption_kwh_annual"
+      ]
+    },
+    {
+      "q": "Can it be built in?",
+      "a": "Installation: freestanding.",
+      "facts": [
+        "installation"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "manual",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/LKCV63N-Instruction-Manual.pdf?v=1770873412",
+      "source": "lecavist.com",
+      "brand_certified": true
+    },
+    {
+      "type": "spec_sheet",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/LKCV63N_Spec_sheet.pdf?v=1770873919",
+      "source": "lecavist.com",
+      "brand_certified": true
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Lecavist",
+      "domain": "lecavist.com",
+      "url": "https://lecavist.com/products/lecavist-63-bottle-wine-fridge-single-zone-lkcv63n",
+      "authorized": true,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}
