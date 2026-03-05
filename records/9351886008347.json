@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886008347",
   "sku": "SC70-SS-VC",
-  "brand": "CUB",
+  "brand": "Schmick",
   "range": "SC",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -85,5 +85,12 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "licensed_wrap",
+    "wrap_brand": "Victoria Cross",
+    "licensor": "CUB"
+  },
+  "base_model": "SC70"
 }

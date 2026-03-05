@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886000761",
   "sku": "HUS-SC50WH",
-  "brand": "Holden",
+  "brand": "Schmick",
   "range": "HUS",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -84,5 +84,12 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "licensed_wrap",
+    "wrap_brand": "Holden Sandman",
+    "licensor": "Holden"
+  },
+  "base_model": "HUS-SC50"
 }

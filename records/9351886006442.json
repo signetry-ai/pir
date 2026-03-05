@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886006442",
   "sku": "EC68L-SSH-GOLD",
-  "brand": "CUB",
+  "brand": "Schmick",
   "range": "EC",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -85,5 +85,12 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "licensed_wrap",
+    "wrap_brand": "Great Northern Gold",
+    "licensor": "CUB"
+  },
+  "base_model": "EC68L"
 }

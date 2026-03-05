@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886007012",
   "sku": "HUS-SC372LB",
-  "brand": "Schmick OWL",
+  "brand": "Schmick",
   "range": "HUS",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -84,5 +84,11 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "sub_brand",
+    "sub_brand": "Schmick OWL"
+  },
+  "base_model": "HUS-SC372LB"
 }

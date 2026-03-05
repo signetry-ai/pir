@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886008408",
   "sku": "SC70-B-BVU",
-  "brand": "CUB",
+  "brand": "Schmick",
   "range": "SC",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -85,5 +85,12 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "licensed_wrap",
+    "wrap_brand": "Branded Vinyl",
+    "licensor": "Novelty"
+  },
+  "base_model": "SC70"
 }

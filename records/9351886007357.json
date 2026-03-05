@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886007357",
   "sku": "SC372W-PB",
-  "brand": "Schmick OWL",
+  "brand": "Schmick",
   "range": "SC",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -84,5 +84,11 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "sub_brand",
+    "sub_brand": "Schmick OWL"
+  },
+  "base_model": "SC372W"
 }

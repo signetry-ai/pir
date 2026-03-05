@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886003892",
   "sku": "BC70B-CORONA-V1",
-  "brand": "CUB",
+  "brand": "Schmick",
   "range": "BC",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -84,5 +84,12 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "licensed_wrap",
+    "wrap_brand": "Corona",
+    "licensor": "CUB"
+  },
+  "base_model": "BC70B"
 }

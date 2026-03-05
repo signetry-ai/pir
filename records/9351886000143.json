@@ -84,5 +84,10 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "oem",
+    "original_brand": "Dellcool"
+  }
 }

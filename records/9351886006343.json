@@ -66,5 +66,10 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "house_brand",
+    "original_brand": "Bar Fridges Australia"
+  }
 }

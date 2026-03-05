@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886005810",
   "sku": "SS-P160-FOSTERS",
-  "brand": "CUB",
+  "brand": "Schmick",
   "range": "SS",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -86,5 +86,12 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "licensed_wrap",
+    "wrap_brand": "Fosters",
+    "licensor": "CUB"
+  },
+  "base_model": "SS-P160"
 }

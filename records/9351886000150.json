@@ -83,5 +83,10 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "oem",
+    "original_brand": "Dellware"
+  }
 }

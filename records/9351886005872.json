@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886005872",
   "sku": "SC88-SS-PERONI",
-  "brand": "CUB",
+  "brand": "Schmick",
   "range": "SC",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -84,5 +84,12 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "licensed_wrap",
+    "wrap_brand": "Peroni",
+    "licensor": "Asahi"
+  },
+  "base_model": "SC88"
 }

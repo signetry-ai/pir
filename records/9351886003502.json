@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886003502",
   "sku": "BC46W-GNBC-GOLD",
-  "brand": "CUB",
+  "brand": "Schmick",
   "range": "BC",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -84,5 +84,12 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "licensed_wrap",
+    "wrap_brand": "Great Northern Gold",
+    "licensor": "CUB"
+  },
+  "base_model": "BC46W"
 }

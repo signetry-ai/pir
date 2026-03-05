@@ -2,7 +2,7 @@
   "schema": "pir/1.0",
   "gtin": "9351886007005",
   "sku": "SS-P160-PERONI-V2",
-  "brand": "CUB",
+  "brand": "Schmick",
   "range": "SS",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -86,5 +86,12 @@
         "AU"
       ]
     }
-  ]
+  ],
+  "manufacturer": "Schmick",
+  "branding": {
+    "type": "licensed_wrap",
+    "wrap_brand": "Peroni",
+    "licensor": "Asahi"
+  },
+  "base_model": "SS-P160"
 }
