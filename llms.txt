@@ -6,10 +6,13 @@ Total: 368 products across 7 brands.
 ## How to access
 
 Individual record by GTIN:
-  https://raw.githubusercontent.com/jb-au/pir/main/records/{gtin}.json
+  https://pir.signetry.ai/records/{gtin}.json
 
 Full catalog index:
-  https://raw.githubusercontent.com/jb-au/pir/main/catalog.json
+  https://pir.signetry.ai/catalog.json
+
+JSON Schema:
+  https://pir.signetry.ai/schema/pir.v1.json
 
 Browse all records:
   https://github.com/jb-au/pir/tree/main/records

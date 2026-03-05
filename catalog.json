@@ -1,5 +1,6 @@
 {
   "schema": "pir-catalog/1.0",
+  "record_schema": "https://pir.signetry.ai/schema/pir.v1.json",
   "generated": "2026-03-05",
   "total_products": 368,
   "brands": {
