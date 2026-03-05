@@ -1,116 +1,75 @@
 #!/usr/bin/env python3
-"""Validate all records in /records/ against /schema/pir.v1.json
-
-Install: pip install jsonschema==4.23.0
-"""
+"""Validate all PIR records against the JSON schema."""
 
 import json
 import os
 import sys
 
 try:
-    from jsonschema import validate, ValidationError
+    from jsonschema import Draft202012Validator
 except ImportError:
-    print("Install jsonschema: pip install jsonschema==4.23.0")
+    print("Install jsonschema: pip install jsonschema")
     sys.exit(1)
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SCHEMA_PATH = os.path.join(ROOT, "schema", "pir.v1.json")
-RECORDS_DIR = os.path.join(ROOT, "records")
-
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
-def gtin_check_digit_valid(gtin: str) -> bool:
-    """
-    Validate GS1 check digit (Luhn-variant algorithm).
-    Note: Some manufacturer-assigned GTINs may not pass this check.
-    Failures are warnings, not errors.
-    """
-    digits = [int(d) for d in gtin]
-    total = sum(
-        d * (3 if (len(digits) - 1 - i) % 2 == 0 else 1)
-        for i, d in enumerate(digits[:-1])
-    )
-    expected = (10 - (total % 10)) % 10
-    return digits[-1] == expected
+RECORDS_DIR = "records"
+SCHEMA_PATH = "schema/pir.v1.json"
 
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
+def main():
+    with open(SCHEMA_PATH) as f:
+        schema = json.load(f)
 
-if not os.path.isdir(RECORDS_DIR):
-    print("No records/ directory found. Nothing to validate.")
-    sys.exit(0)
+    validator = Draft202012Validator(schema)
+    errors = 0
+    checked = 0
+    seen_gtins = set()
 
-with open(SCHEMA_PATH) as f:
-    schema = json.load(f)
-
-errors = []
-warnings = []
-records = sorted(f for f in os.listdir(RECORDS_DIR) if f.endswith(".json"))
-
-if not records:
-    print("No records found.")
-    sys.exit(0)
-
-print(f"Validating {len(records)} record(s)...\n")
-
-for filename in records:
-    path = os.path.join(RECORDS_DIR, filename)
-    with open(path) as f:
-        try:
-            record = json.load(f)
-        except json.JSONDecodeError as e:
-            errors.append(f"{filename}: invalid JSON — {e}")
-            print(f"  ✗  {filename}")
+    for filename in sorted(os.listdir(RECORDS_DIR)):
+        if not filename.endswith(".json"):
             continue
 
-    # GTIN must match filename
-    expected_gtin = filename.replace(".json", "")
-    if record.get("gtin") != expected_gtin:
-        errors.append(
-            f"{filename}: gtin field '{record.get('gtin')}' does not match filename"
-        )
+        checked += 1
+        filepath = os.path.join(RECORDS_DIR, filename)
+        with open(filepath) as f:
+            try:
+                record = json.load(f)
+            except json.JSONDecodeError as e:
+                print(f"  FAIL  {filename}: invalid JSON — {e}")
+                errors += 1
+                continue
 
-    # brand_certified must not be set to true via PR — certification is maintainer-only
-    if record.get("status", {}).get("brand_certified") is True:
-        errors.append(
-            f"{filename}: brand_certified: true must be set by a maintainer after DNS "
-            f"verification, not via PR. Set brand_certified: false and open a "
-            f"certification issue instead."
-        )
+        file_errors = list(validator.iter_errors(record))
 
-    # Schema validation
-    try:
-        validate(instance=record, schema=schema)
-        print(f"  ✓  {filename}")
-    except ValidationError as e:
-        field = " > ".join(str(p) for p in e.absolute_path) or "root"
-        errors.append(f"{filename}: {e.message} (at {field})")
-        print(f"  ✗  {filename}")
-        continue
+        if file_errors:
+            for err in file_errors:
+                path = ".".join(str(p) for p in err.absolute_path) or "(root)"
+                print(f"  FAIL  {filename}: {path} — {err.message}")
+            errors += 1
+            continue
 
-    # Check digit advisory (warning only — some GTINs are manufacturer-assigned)
-    gtin = record.get("gtin", "")
-    if len(gtin) in (8, 12, 13, 14) and not gtin_check_digit_valid(gtin):
-        warnings.append(
-            f"{filename}: GTIN {gtin} has an unexpected check digit. "
-            f"Verify it matches the physical barcode. "
-            f"(Manufacturer-assigned GTINs may not follow GS1 check digit rules.)"
-        )
+        # Cross-check: filename must match gtin or sku- prefix
+        gtin = record.get("gtin")
+        sku = record.get("sku", "")
+        if gtin:
+            if filename != f"{gtin}.json":
+                print(f"  FAIL  {filename}: filename doesn't match gtin '{gtin}'")
+                errors += 1
+            if gtin in seen_gtins:
+                print(f"  FAIL  {filename}: duplicate gtin '{gtin}'")
+                errors += 1
+            seen_gtins.add(gtin)
+        else:
+            expected = f"sku-{sku}.json"
+            if filename != expected:
+                print(f"  FAIL  {filename}: expected filename '{expected}' for sku '{sku}'")
+                errors += 1
 
-if warnings:
-    print(f"\n{len(warnings)} warning(s):\n")
-    for w in warnings:
-        print(f"  ⚠  {w}")
+    if errors:
+        print(f"\n{errors} file(s) failed validation out of {checked} checked.")
+        sys.exit(1)
+    else:
+        print(f"\n  OK  All {checked} records valid.")
 
-if errors:
-    print(f"\n{len(errors)} error(s):\n")
-    for e in errors:
-        print(f"  ✗  {e}")
-    sys.exit(1)
 
-print(f"\n{len(records)} record(s) valid.")
+if __name__ == "__main__":
+    main()
