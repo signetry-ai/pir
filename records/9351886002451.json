@@ -1,0 +1,98 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886002451",
+  "sku": "SK116R-SS",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "1-Door Under Bench Bar Fridge (Stainless Steel Glass)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 121,
+    "capacity_375ml_cans": 132,
+    "dimensions_exterior_w_mm": 495,
+    "dimensions_exterior_d_mm": 570,
+    "dimensions_exterior_h_mm": 800,
+    "weight_kg": 39,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 1.4,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "left",
+    "glass_door": true,
+    "glass_door_type": "Triple glazed tempered glass",
+    "led_lighting": true,
+    "body_material": "Matte Black Finish",
+    "interior_finish": "Polished 304 Mirror Stainless",
+    "grill_material": "304 Stainless Steel"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "121 litres, holds 132 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Will it fit under a standard bench?",
+      "a": "Exterior height is 800mm. Standard Australian bench height is 900mm. Check ventilation clearance requirements.",
+      "facts": [
+        "dimensions_exterior_h_mm"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 1.4 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8393453404452.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-quiet-running-front-venting-under-bench-glass-door-bar-fridge-model-sk116-ss",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

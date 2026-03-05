@@ -1,0 +1,96 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886005582",
+  "sku": "SK126L-SD",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "1-Door Under Bench Bar Fridge (Solid Door)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 132,
+    "capacity_375ml_cans": 121,
+    "dimensions_exterior_w_mm": 495,
+    "dimensions_exterior_d_mm": 586,
+    "dimensions_exterior_h_mm": 840,
+    "weight_kg": 43,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 1.13,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": false,
+    "body_material": "Matte Black Finish",
+    "interior_finish": "Polished 304 Mirror Stainless",
+    "grill_material": "304 Stainless Steel"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "132 litres, holds 121 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Will it fit under a standard bench?",
+      "a": "Exterior height is 840mm. Standard Australian bench height is 900mm. Check ventilation clearance requirements.",
+      "facts": [
+        "dimensions_exterior_h_mm"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 1.13 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8981860385060.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/copy-of-schmick-quiet-running-front-venting-under-bench-stainless-door-bar-fridge-model-sk126-sd",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

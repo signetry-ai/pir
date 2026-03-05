@@ -1,0 +1,144 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886003236",
+  "sku": "SK156R-B-HD",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "1-Door Under Bench Bar Fridge (Heated Glass)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 164,
+    "capacity_375ml_cans": 144,
+    "dimensions_exterior_w_mm": 595,
+    "dimensions_exterior_d_mm": 586,
+    "dimensions_exterior_h_mm": 840,
+    "weight_kg": 44,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 2.75,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "Right Hinge (Handle Left)",
+    "glass_door": true,
+    "glass_door_type": "Heated glass - tempered",
+    "glass_door_heated_switchable": true,
+    "led_lighting": true,
+    "body_material": "Matte Black Finish",
+    "interior_finish": "Polished 304 Mirror Stainless",
+    "grill_material": "Black",
+    "running_cost_aud_annual": 257.36,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "internal_temperature_min_c": 0,
+    "dimensions_interior_w_mm": 515,
+    "dimensions_interior_d_mm": 436,
+    "dimensions_interior_h_mm": 690,
+    "ventilation_top_mm": 10,
+    "ventilation_each_side_mm": 10,
+    "ventilation_rear_mm": 50,
+    "approvals": [
+      "EMC (C-Tick)",
+      "SAA Electrical"
+    ],
+    "refrigerant": "R600",
+    "component_compressor": "Jiaxipera",
+    "component_transformer": "Meanwell (Taiwan)",
+    "component_fan_primary": "Schmick quiet running fans",
+    "component_controller": "Schmick ECO Controller"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "164 litres, holds 144 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Will it fit under a standard bench?",
+      "a": "Exterior height is 840mm. Standard Australian bench height is 900mm. Ventilation requires 10mm top, 10mm each side, 50mm rear.",
+      "facts": [
+        "dimensions_exterior_h_mm",
+        "ventilation_top_mm",
+        "ventilation_each_side_mm",
+        "ventilation_rear_mm"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $257.36 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "Does it get condensation on the glass?",
+      "a": "No. It has heated glass that prevents condensation.",
+      "facts": [
+        "glass_door_heated_switchable",
+        "glass_door_type"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "EMC (C-Tick), SAA Electrical.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8407961895204.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-quiet-running-front-venting-under-bench-heated-glass-door-bar-fridge-model-sk156r-b-hd",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}
