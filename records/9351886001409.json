@@ -59,7 +59,9 @@
     "component_compressor": "GMCC",
     "component_fan_secondary": "EC Fan (Taiwan)",
     "component_controller": "Danish developed controller",
-    "component_transformer": "Meanwell (Taiwan)"
+    "component_transformer": "Meanwell (Taiwan)",
+    "capacity_litres": 293,
+    "capacity_375ml_cans": 320
   },
   "qa": [
     {

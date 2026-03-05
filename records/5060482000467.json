@@ -65,7 +65,9 @@
     "component_fan_secondary": "EC Fan (Taiwan)",
     "component_controller": "Quality China Electronic Controller",
     "component_transformer": "Meanwell (Taiwan)",
-    "component_lighting": "Philips LED"
+    "component_lighting": "Philips LED",
+    "capacity_litres": 330,
+    "capacity_375ml_cans": 350
   },
   "qa": [
     {

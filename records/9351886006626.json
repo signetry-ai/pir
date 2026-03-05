@@ -47,7 +47,8 @@
       "Commercial Electrical Safety 60335.2.89\nGems Energy Tested (Meps)\nEMC (Electro Magnetic Conformity)"
     ],
     "component_fan_primary": "EBM EC Fan (Germany)",
-    "component_controller": "Danfoss ECO (Germany)"
+    "component_controller": "Danfoss ECO (Germany)",
+    "capacity_litres": 170
   },
   "qa": [
     {

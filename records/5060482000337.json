@@ -62,7 +62,9 @@
     ],
     "component_compressor": "GMCC",
     "component_controller": "Danfoss ECO (Germany)",
-    "component_lighting": "Philips LED"
+    "component_lighting": "Philips LED",
+    "capacity_litres": 138,
+    "capacity_375ml_cans": 140
   },
   "qa": [
     {
