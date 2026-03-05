@@ -23,7 +23,6 @@
     "temperature_zones": 1,
     "shelf_material": "Beech wood",
     "glass_door": true,
-    "glass_door_type": "Triple layer glass (glass, tempered glass, low-E coating)",
     "door_hinge": "reversible",
     "led_lighting": true,
     "anti_vibration": true,
@@ -37,7 +36,8 @@
     "installation": "freestanding",
     "location": [
       "indoor"
-    ]
+    ],
+    "door_type": "triple_layer_low_e"
   },
   "qa": [
     {

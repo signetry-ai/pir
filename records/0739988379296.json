@@ -20,7 +20,6 @@
     "temperature_zones": 2,
     "shelf_material": "Beech wood",
     "glass_door": true,
-    "glass_door_type": "Double pane glass",
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": false,
@@ -40,7 +39,8 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
     "refrigerant": "R600a",
-    "winter_function": true
+    "winter_function": true,
+    "door_type": "double_pane"
   },
   "qa": [
     {

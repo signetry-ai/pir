@@ -34,7 +34,6 @@
     "body_material": "Black",
     "interior_finish": "White",
     "grill_material": "Black",
-    "glass_door_type": "Triple Glazed LOW E Glass",
     "running_cost_aud_annual": 149.74,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 540,
@@ -46,7 +45,8 @@
     "approvals": [
       "RCM Includes C-Tick And EMC",
       "Units Are Also MEPS Approved For Energy To Latest Standard."
-    ]
+    ],
+    "door_type": "triple_glazed_low_e"
   },
   "qa": [
     {

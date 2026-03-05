@@ -42,7 +42,6 @@
     "shelf_type": "6 x Adjustable Chromed Special 'No Topple' Shelves (2x 395mmW x 345mmD + 4 x 445mm x 345mm)",
     "door_hinge": "1 x left, 1 x right",
     "glass_door": true,
-    "glass_door_type": "Heated Glass Stops Condensation",
     "glass_door_heated_switchable": true,
     "led_lighting": true,
     "refrigerant": "R600",
@@ -67,7 +66,8 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_lighting": "Philips LED",
     "capacity_litres": 330,
-    "capacity_375ml_cans": 350
+    "capacity_375ml_cans": 350,
+    "door_type": "heated_tempered"
   },
   "qa": [
     {
@@ -123,7 +123,7 @@
       "a": "No. It has switchable heated tempered glass. When enabled, it prevents condensation in high humidity environments.",
       "facts": [
         "glass_door_heated_switchable",
-        "glass_door_type"
+        "door_type"
       ]
     },
     {

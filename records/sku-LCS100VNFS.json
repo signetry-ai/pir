@@ -26,7 +26,6 @@
     "temperature_zones": 1,
     "shelf_material": "Beech wood",
     "glass_door": true,
-    "glass_door_type": "Double layer tempered glass",
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": true,
@@ -37,7 +36,8 @@
     "location": [
       "indoor"
     ],
-    "door_hinge": "right"
+    "door_hinge": "right",
+    "door_type": "double_layer_tempered"
   },
   "qa": [
     {

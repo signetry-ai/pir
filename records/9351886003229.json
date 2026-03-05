@@ -32,7 +32,6 @@
     "adjustable_feet_count": 4,
     "door_hinge": "Left Hinged (Handle On Right)",
     "glass_door": true,
-    "glass_door_type": "Heated Glass Stops Condensation",
     "glass_door_heated_switchable": true,
     "led_lighting": true,
     "body_material": "Matte Black Finish",
@@ -55,7 +54,8 @@
     "component_compressor": "Jiaxipera",
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_secondary": "Noctua (Silent)",
-    "component_fan_primary": "EBM (Germany)"
+    "component_fan_primary": "EBM (Germany)",
+    "door_type": "heated_tempered"
   },
   "qa": [
     {
@@ -104,7 +104,7 @@
       "a": "No. It has heated glass that prevents condensation.",
       "facts": [
         "glass_door_heated_switchable",
-        "glass_door_type"
+        "door_type"
       ]
     },
     {

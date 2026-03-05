@@ -27,7 +27,6 @@
     "shelf_count": 2,
     "shelf_material": "Wire with wood trim",
     "glass_door": true,
-    "glass_door_type": "Double pane glass",
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": false,
@@ -40,7 +39,8 @@
     "door_hinge": "reversible",
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
-    "refrigerant": "R600a"
+    "refrigerant": "R600a",
+    "door_type": "double_pane"
   },
   "qa": [
     {

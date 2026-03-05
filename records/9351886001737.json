@@ -37,7 +37,6 @@
     "body_material": "Black",
     "interior_finish": "Smashed Aluminum",
     "grill_material": "Black",
-    "glass_door_type": "Heated glass - tempered",
     "running_cost_aud_annual": 248.0,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 470,
@@ -51,7 +50,8 @@
       "EMC (C-Tick)"
     ],
     "refrigerant": "R600",
-    "shelf_type": "2 x flat chromed adjustable shelves (455mmW x 360mmD)"
+    "shelf_type": "2 x flat chromed adjustable shelves (455mmW x 360mmD)",
+    "door_type": "heated_tempered"
   },
   "qa": [
     {

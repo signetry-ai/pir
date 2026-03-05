@@ -32,11 +32,11 @@
     "adjustable_feet_count": 4,
     "door_hinge": "left",
     "glass_door": true,
-    "glass_door_type": "Triple glazed tempered glass",
     "led_lighting": true,
     "body_material": "Matte Black Finish",
     "interior_finish": "Polished 304 Mirror Stainless",
-    "grill_material": "304 Stainless Steel"
+    "grill_material": "304 Stainless Steel",
+    "door_type": "triple_glazed_tempered"
   },
   "qa": [
     {

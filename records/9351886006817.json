@@ -35,7 +35,6 @@
     "body_material": "Black",
     "interior_finish": "Polished Mirror Stainless Steel",
     "grill_material": "Black",
-    "glass_door_type": "Heated Glass To Stop Condensation",
     "running_cost_aud_annual": 371.54,
     "running_cost_basis_cents_per_kwh": 25.64,
     "internal_temperature_min_c": 0,
@@ -53,7 +52,8 @@
     "refrigerant": "R600",
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_primary": "Schmick quiet running fans",
-    "adjustable_feet_count": 4
+    "adjustable_feet_count": 4,
+    "door_type": "heated_tempered"
   },
   "qa": [
     {

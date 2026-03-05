@@ -30,12 +30,11 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "door_hinge": "Right Hinged (Reversible Door)",
-    "glass_door": true,
+    "glass_door": false,
     "led_lighting": true,
     "body_material": "Black",
     "interior_finish": "White Molded Plastic",
     "grill_material": "Black",
-    "glass_door_type": "Solid Foamed Door",
     "running_cost_aud_annual": 51.47,
     "running_cost_basis_cents_per_kwh": 25.64,
     "energy_star_rating_au": 10,
@@ -53,7 +52,8 @@
     ],
     "refrigerant": "R600",
     "shelf_type": "Glass - 2 x Large 435mmW x 395mmD, 1 x Small",
-    "energy_star_rating_au_note": "Australian 1-10 star scale"
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
+    "door_type": "solid_foamed"
   },
   "qa": [
     {

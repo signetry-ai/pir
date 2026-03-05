@@ -36,7 +36,6 @@
     "led_lighting": true,
     "body_material": "Black",
     "grill_material": "Black",
-    "glass_door_type": "Heated glass - tempered",
     "running_cost_aud_annual": 383.7,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 785,
@@ -50,7 +49,8 @@
       "SAA Electrical"
     ],
     "refrigerant": "R600",
-    "shelf_type": "4 x flat chromed adjustable shelves (370mmW x 330mmD)"
+    "shelf_type": "4 x flat chromed adjustable shelves (370mmW x 330mmD)",
+    "door_type": "heated_tempered"
   },
   "qa": [
     {

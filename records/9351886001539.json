@@ -35,7 +35,6 @@
     "led_lighting": true,
     "body_material": "Black",
     "grill_material": "Black",
-    "glass_door_type": "Triple glazed tempered LOW E glass",
     "running_cost_aud_annual": 196.53,
     "running_cost_basis_cents_per_kwh": 25.64,
     "internal_temperature_min_c": 0,
@@ -50,7 +49,8 @@
       "EMC (C-Tick)"
     ],
     "refrigerant": "R600",
-    "component_fan_primary": "EBM (Germany)"
+    "component_fan_primary": "EBM (Germany)",
+    "door_type": "triple_glazed_low_e"
   },
   "qa": [
     {

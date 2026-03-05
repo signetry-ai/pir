@@ -43,7 +43,6 @@
     "shelf_type": "6 x Adjustable Chromed Special 'No Topple' Shelves (2x 395mmW x 345mmD + 4 x 445mm x 345mm)",
     "door_hinge": "1 x left, 1 x right",
     "glass_door": true,
-    "glass_door_type": "Dual glazed tempered LOW E glass",
     "led_lighting": true,
     "refrigerant": "R600",
     "refrigerant_odp": 0,
@@ -67,7 +66,8 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_lighting": "Philips LED",
     "capacity_litres": 330,
-    "capacity_375ml_cans": 350
+    "capacity_375ml_cans": 350,
+    "door_type": "dual_glazed_low_e"
   },
   "qa": [
     {

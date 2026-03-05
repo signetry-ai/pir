@@ -29,12 +29,11 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
     "door_hinge": "Right Hinged (Reversible Door)",
-    "glass_door": true,
+    "glass_door": false,
     "led_lighting": true,
     "body_material": "White",
     "interior_finish": "White Molded Plastic",
     "grill_material": "White",
-    "glass_door_type": "Solid Foamed Door",
     "running_cost_aud_annual": 46.79,
     "running_cost_basis_cents_per_kwh": 25.64,
     "energy_star_rating_au": 3,
@@ -45,7 +44,8 @@
       "EMC (C-Tick)"
     ],
     "shelf_type": "Fridge: 4 Large Inc Floor (430mmW x 275mmD) - 3 x Inner Door (380mmW x 85mmD) 1 x Cris",
-    "energy_star_rating_au_note": "Australian 1-10 star scale"
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
+    "door_type": "solid_foamed"
   },
   "qa": [
     {

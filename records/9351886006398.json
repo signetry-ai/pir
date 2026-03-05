@@ -32,7 +32,6 @@
     "adjustable_feet_count": 4,
     "door_hinge": "Can Be Changed To Left Hinged - Please Mention In Comments",
     "glass_door": true,
-    "glass_door_type": "Triple glazed tempered LOW E glass",
     "led_lighting": true,
     "body_material": "Matte Black Finish",
     "interior_finish": "Polished 304 Mirror Stainless",
@@ -55,7 +54,8 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_secondary": "Noctua (Silent)",
     "component_fan_primary": "EBM (Germany)",
-    "component_controller": "Schmick ECO Controller"
+    "component_controller": "Schmick ECO Controller",
+    "door_type": "triple_glazed_low_e"
   },
   "qa": [
     {

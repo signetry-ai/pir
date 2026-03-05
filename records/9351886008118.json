@@ -32,7 +32,6 @@
     "adjustable_feet_count": 4,
     "door_hinge": "1 x left, 1 x right",
     "glass_door": true,
-    "glass_door_type": "Swtichable (on/off) Stainless Steel heated glass to stop condensation in high humidity. *Note: Heated glass adds to running costs.",
     "glass_door_heated_switchable": true,
     "led_lighting": true,
     "body_material": "Black",
@@ -53,7 +52,8 @@
     "refrigerant": "R600",
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_primary": "Schmick quiet running fans",
-    "component_controller": "Schmick ECO Controller"
+    "component_controller": "Schmick ECO Controller",
+    "door_type": "heated_tempered"
   },
   "qa": [
     {
@@ -102,7 +102,7 @@
       "a": "No. It has heated glass that prevents condensation.",
       "facts": [
         "glass_door_heated_switchable",
-        "glass_door_type"
+        "door_type"
       ]
     },
     {

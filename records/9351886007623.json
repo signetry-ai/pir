@@ -34,7 +34,6 @@
     "body_material": "White",
     "interior_finish": "Smashed Aluminum",
     "grill_material": "White",
-    "glass_door_type": "LOW E Glass Helps Prevent Condensation, Glass Area 500mmW x 1230mmH",
     "running_cost_aud_annual": 205.89,
     "running_cost_basis_cents_per_kwh": 25.64,
     "internal_temperature_min_c": 2,
@@ -48,7 +47,8 @@
       "Electrical Approvals 60335.2.89",
       "MEPS 2020 23953-2"
     ],
-    "refrigerant": "R290"
+    "refrigerant": "R290",
+    "door_type": "low_e"
   },
   "qa": [
     {

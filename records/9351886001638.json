@@ -31,12 +31,11 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 0,
     "door_hinge": "Reversible Door (left or right)",
-    "glass_door": true,
+    "glass_door": false,
     "led_lighting": true,
     "body_material": "White",
     "interior_finish": "White Molded Plastic",
     "grill_material": "White",
-    "glass_door_type": "Solid Foamed Door",
     "running_cost_aud_annual": 97.33,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 310,
@@ -45,7 +44,8 @@
     "ventilation_top_mm": 20,
     "ventilation_each_side_mm": 20,
     "ventilation_rear_mm": 100,
-    "shelf_type": "1 x Shelf Located Middle (304mmW x 204mmD)"
+    "shelf_type": "1 x Shelf Located Middle (304mmW x 204mmD)",
+    "door_type": "solid_foamed"
   },
   "qa": [
     {

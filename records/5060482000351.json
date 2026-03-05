@@ -42,7 +42,6 @@
     "shelf_type": "6 x chromed adjustable shelves (395mmW x 335mmD)",
     "door_hinge": "1 x left, 1 x right",
     "glass_door": true,
-    "glass_door_type": "Tempered, Dual Glazed With BOTH Panes LOW E Glass.",
     "led_lighting": true,
     "refrigerant": "R600",
     "refrigerant_odp": 0,
@@ -65,7 +64,8 @@
     "component_controller": "Danfoss ECO (Germany)",
     "component_lighting": "Philips LED",
     "capacity_litres": 330,
-    "capacity_375ml_cans": 324
+    "capacity_375ml_cans": 324,
+    "door_type": "dual_glazed_low_e"
   },
   "qa": [
     {

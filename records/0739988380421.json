@@ -27,7 +27,6 @@
     "shelf_count": 3,
     "shelf_material": "Wire with wood trim",
     "glass_door": true,
-    "glass_door_type": "Double pane glass",
     "door_hinge": "right",
     "led_lighting": true,
     "anti_vibration": true,
@@ -40,7 +39,8 @@
     "capacity_bottles": 21,
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
-    "refrigerant": "R600a"
+    "refrigerant": "R600a",
+    "door_type": "double_pane"
   },
   "qa": [
     {

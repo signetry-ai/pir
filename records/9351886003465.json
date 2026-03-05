@@ -43,7 +43,6 @@
     "door_hinge": "left",
     "handle_side": "right",
     "glass_door": true,
-    "glass_door_type": "Heated glass - tempered",
     "glass_door_heated_switchable": true,
     "led_lighting": true,
     "refrigerant": "R600",
@@ -66,7 +65,8 @@
     "component_controller": "USA developed controller",
     "component_transformer": "Meanwell (Taiwan)",
     "capacity_litres": 129,
-    "capacity_375ml_cans": 140
+    "capacity_375ml_cans": 140,
+    "door_type": "heated_tempered"
   },
   "qa": [
     {
@@ -122,7 +122,7 @@
       "a": "No. It has switchable heated tempered glass. When enabled, it prevents condensation in high humidity environments.",
       "facts": [
         "glass_door_heated_switchable",
-        "glass_door_type"
+        "door_type"
       ]
     },
     {

@@ -35,7 +35,6 @@
     "led_lighting": true,
     "body_material": "Black",
     "grill_material": "Stainless Steel",
-    "glass_door_type": "Dual glazed tempered LOW E glass",
     "running_cost_aud_annual": 64.57,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 360,
@@ -51,7 +50,8 @@
     ],
     "refrigerant": "R600",
     "shelf_type": "3 x chromed shelves (340mm x 340mm)",
-    "component_fan_secondary": "Noctua (Silent)"
+    "component_fan_secondary": "Noctua (Silent)",
+    "door_type": "dual_glazed_low_e"
   },
   "qa": [
     {

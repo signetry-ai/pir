@@ -35,7 +35,6 @@
     "body_material": "Black",
     "interior_finish": "Black Molded Plastic",
     "grill_material": "Black",
-    "glass_door_type": "Triple glazed tempered LOW E glass",
     "running_cost_aud_annual": 116.05,
     "running_cost_basis_cents_per_kwh": 25.64,
     "energy_star_rating_au": 10,
@@ -54,7 +53,8 @@
     "component_compressor": "Jiaxipera",
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_secondary": "Noctua (Silent)",
-    "energy_star_rating_au_note": "Australian 1-10 star scale"
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
+    "door_type": "triple_glazed_low_e"
   },
   "qa": [
     {

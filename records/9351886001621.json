@@ -35,7 +35,6 @@
     "body_material": "White",
     "interior_finish": "White Molded Plastic",
     "grill_material": "White",
-    "glass_door_type": "Tempered Triple Glazed With 2 x Layers LOW E",
     "running_cost_aud_annual": 137.57,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 310,
@@ -44,7 +43,8 @@
     "ventilation_top_mm": 20,
     "ventilation_each_side_mm": 20,
     "ventilation_rear_mm": 100,
-    "shelf_type": "1 x Shelf Located Middle (304mmW x 204mmD)"
+    "shelf_type": "1 x Shelf Located Middle (304mmW x 204mmD)",
+    "door_type": "triple_glazed_low_e"
   },
   "qa": [
     {

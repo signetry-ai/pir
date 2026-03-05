@@ -36,7 +36,6 @@
     "body_material": "Black",
     "interior_finish": "Molded black",
     "grill_material": "Stainless Steel",
-    "glass_door_type": "Triple glazed tempered LOW E glass",
     "running_cost_aud_annual": 149.74,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 360,
@@ -50,7 +49,8 @@
       "SAA Electrical",
       "Meps"
     ],
-    "refrigerant": "R600"
+    "refrigerant": "R600",
+    "door_type": "triple_glazed_low_e"
   },
   "qa": [
     {

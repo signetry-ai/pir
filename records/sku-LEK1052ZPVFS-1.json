@@ -30,7 +30,6 @@
     "shelf_count": 6,
     "shelf_material": "Beech wood",
     "glass_door": true,
-    "glass_door_type": "Triple layer glass (glass, tempered glass, low-E coating)",
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": false,
@@ -44,7 +43,8 @@
     "adjustable_feet_count": 2,
     "refrigerant": "R600a",
     "charcoal_filter": true,
-    "frame_material": "black frame"
+    "frame_material": "black frame",
+    "door_type": "triple_layer_low_e"
   },
   "qa": [
     {

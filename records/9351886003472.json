@@ -30,18 +30,18 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 0,
     "door_hinge": "Lift Up Lid",
-    "glass_door": true,
+    "glass_door": false,
     "led_lighting": true,
     "body_material": "Light Grey",
     "interior_finish": "White Metal",
-    "glass_door_type": "Solid Foamed Door",
     "dimensions_interior_w_mm": 575,
     "dimensions_interior_d_mm": 330,
     "dimensions_interior_h_mm": 400,
     "approvals": [
       "RCM"
     ],
-    "shelf_type": "2 x Baskets Included"
+    "shelf_type": "2 x Baskets Included",
+    "door_type": "solid_foamed"
   },
   "qa": [
     {

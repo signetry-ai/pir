@@ -36,7 +36,6 @@
     "body_material": "Black",
     "interior_finish": "Polished Mirror Stainless Steel",
     "grill_material": "Black",
-    "glass_door_type": "Heated Glass To Prevent Condensation",
     "running_cost_aud_annual": 306.03,
     "running_cost_basis_cents_per_kwh": 25.64,
     "internal_temperature_min_c": 1,
@@ -53,7 +52,8 @@
     "refrigerant": "R600",
     "component_compressor": "Jiaxipera",
     "component_fan_primary": "Schmick quiet running fans",
-    "component_controller": "Schmick ECO Controller"
+    "component_controller": "Schmick ECO Controller",
+    "door_type": "heated_tempered"
   },
   "qa": [
     {

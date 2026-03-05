@@ -31,7 +31,6 @@
     "shelf_count": 3,
     "shelf_type": "3 x Fully Adjustable Plus The Floor",
     "glass_door": true,
-    "glass_door_type": "Side Glass Panels LOW E Glass To Prevent Condensation",
     "led_lighting": true,
     "refrigerant": "R290",
     "refrigerant_odp": 0,
@@ -47,7 +46,8 @@
     ],
     "component_fan_primary": "EBM EC Fan (Germany)",
     "component_controller": "Danfoss ECO (Germany)",
-    "capacity_litres": 260
+    "capacity_litres": 260,
+    "door_type": "side_panel_low_e"
   },
   "qa": [
     {

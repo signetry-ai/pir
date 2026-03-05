@@ -32,7 +32,6 @@
     "adjustable_feet_count": 4,
     "door_hinge": "Can Be Changed To Right Hinged - Please Mention In Comments Or Search Model SK156R-SS",
     "glass_door": true,
-    "glass_door_type": "Triple glazed tempered LOW E glass",
     "led_lighting": true,
     "body_material": "Matte Black Finish",
     "interior_finish": "Polished 304 Mirror Stainless",
@@ -54,7 +53,8 @@
     "component_compressor": "Jiaxipera",
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_primary": "Schmick quiet running fans",
-    "component_controller": "Schmick ECO Controller"
+    "component_controller": "Schmick ECO Controller",
+    "door_type": "triple_glazed_low_e"
   },
   "qa": [
     {

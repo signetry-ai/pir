@@ -34,7 +34,6 @@
     "body_material": "Body",
     "interior_finish": "Smashed Aluminium",
     "grill_material": "White",
-    "glass_door_type": "Heated Glass Stops Condensation",
     "running_cost_aud_annual": 2433.24,
     "running_cost_basis_cents_per_kwh": 25.64,
     "internal_temperature_min_c": 18,
@@ -49,7 +48,8 @@
       "MEPS 2020 23953-2"
     ],
     "refrigerant": "R290",
-    "glass_door_heated_switchable": true
+    "glass_door_heated_switchable": true,
+    "door_type": "heated_tempered"
   },
   "qa": [
     {

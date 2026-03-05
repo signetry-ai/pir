@@ -30,7 +30,6 @@
     "zone_lower_temp_max_c": 20,
     "shelf_material": "Beech wood",
     "glass_door": true,
-    "glass_door_type": "Double layer tempered glass",
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": false,
@@ -43,7 +42,8 @@
       "indoor"
     ],
     "door_hinge": "reversible",
-    "frame_material": "black frame"
+    "frame_material": "black frame",
+    "door_type": "double_layer_tempered"
   },
   "qa": [
     {

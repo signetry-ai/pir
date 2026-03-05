@@ -35,7 +35,6 @@
     "body_material": "Black",
     "interior_finish": "Black Molded Plastic",
     "grill_material": "Black All Glass With Black Trim",
-    "glass_door_type": "Heated glass - tempered",
     "running_cost_aud_annual": 221.8,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 445,
@@ -50,7 +49,8 @@
     ],
     "refrigerant": "R600",
     "shelf_type": "3 x 2Pc Shelves (463mmW x 340mmD)",
-    "glass_door_heated_switchable": true
+    "glass_door_heated_switchable": true,
+    "door_type": "heated_tempered"
   },
   "qa": [
     {

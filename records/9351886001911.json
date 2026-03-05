@@ -36,7 +36,6 @@
     "body_material": "304 Stainless Steel",
     "interior_finish": "Black Molded Plastic",
     "grill_material": "304 Stainless Steel",
-    "glass_door_type": "Triple LOW E glass with heated glass option",
     "running_cost_aud_annual": 131.02,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 350,
@@ -54,7 +53,8 @@
     "glass_door_heated_switchable": true,
     "component_compressor": "Jiaxipera",
     "component_transformer": "Meanwell (Taiwan)",
-    "component_fan_secondary": "Noctua (Silent)"
+    "component_fan_secondary": "Noctua (Silent)",
+    "door_type": "triple_glazed_low_e_heated"
   },
   "qa": [
     {

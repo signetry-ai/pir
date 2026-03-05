@@ -36,7 +36,6 @@
     "body_material": "White",
     "interior_finish": "Black Molded Plastic",
     "grill_material": "White ",
-    "glass_door_type": "LOW E glass prevents cond",
     "running_cost_aud_annual": 159.1,
     "running_cost_basis_cents_per_kwh": 25.64,
     "energy_star_rating_au": 10,
@@ -53,7 +52,8 @@
     ],
     "refrigerant": "R600",
     "component_fan_primary": "Schmick quiet running fans",
-    "energy_star_rating_au_note": "Australian 1-10 star scale"
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
+    "door_type": "low_e"
   },
   "qa": [
     {
