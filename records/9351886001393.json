@@ -1,0 +1,152 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886001393",
+  "sku": "SGT1R-BS",
+  "brand": "Rhino",
+  "range": "SGT",
+  "name": "3-Door Upright Display Fridge (Low-E Glass)",
+  "category": "upright_display_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "dimensions_exterior_w_mm": 600,
+    "dimensions_exterior_d_mm": 515,
+    "dimensions_exterior_h_mm": 1820,
+    "dimensions_interior_w_mm": 511,
+    "dimensions_interior_d_mm": 418,
+    "dimensions_interior_h_mm": 1485,
+    "dimensions_note": "Door opens app. 5-7mm outside diameter of fridge",
+    "weight_kg": 75,
+    "noise_db": 47,
+    "energy_star_rating_au": 10,
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
+    "power_consumption_kwh_per_24h": 1.14,
+    "running_cost_aud_annual": 106.69,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "shelf_count": 5,
+    "shelf_w_mm": 500,
+    "shelf_d_mm": 355,
+    "shelf_type": "5 x Adjustable Chromed Special 'No Topple' Shelves (500mmW x 355mmD)",
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "glass_door_type": "Dual glazed tempered LOW E glass",
+    "led_lighting": true,
+    "refrigerant": "R600",
+    "refrigerant_odp": 0,
+    "refrigerant_gwp": 3,
+    "body_material": "Black",
+    "interior_finish": "Polished 304 SS",
+    "grill_material": "Black",
+    "approvals": [
+      "SAA Electrical",
+      "EMC (C-Tick)",
+      "Green Sense Plus Accredited"
+    ],
+    "component_compressor": "GMCC",
+    "component_fan_secondary": "EC Fan (Taiwan)",
+    "component_controller": "Danish developed controller",
+    "component_transformer": "Meanwell (Taiwan)"
+  },
+  "qa": [
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "Will it fit under a standard bench?",
+      "a": "The exterior height is 1820mm.",
+      "facts": [
+        "dimensions_exterior_h_mm"
+      ]
+    },
+    {
+      "q": "How wide is it?",
+      "a": "600mm exterior width.",
+      "facts": [
+        "dimensions_exterior_w_mm"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $106.69 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "47 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "10 stars on the Australian 1-10 star scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600. Ozone Depletion Potential: 0. Global Warming Potential: 3.",
+      "facts": [
+        "refrigerant",
+        "refrigerant_odp",
+        "refrigerant_gwp"
+      ]
+    },
+    {
+      "q": "Which side is the door hinged?",
+      "a": "1 x left, 1 x right hinge.",
+      "facts": [
+        "door_hinge"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "SAA Electrical, EMC (C-Tick), Green Sense Plus Accredited.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "manual",
+      "url": "https://bar-fridges-australia.com.au/cdn/shop/files/SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf?v=13442591868744245214",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/rhino-black-commercial-upright-triple-glass-door-bar-fridge-ultra-energy-efficient",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

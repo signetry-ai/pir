@@ -1,0 +1,130 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886006626",
+  "sku": "TK-6",
+  "brand": "Rhino",
+  "range": "TK",
+  "name": "Open Display Commercial Cooler (Low-E Glass)",
+  "category": "open_display_cooler",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "dimensions_exterior_w_mm": 610,
+    "dimensions_exterior_d_mm": 660,
+    "dimensions_exterior_h_mm": 1500,
+    "dimensions_note": "170 Litre / Fits Over 100 600ml Bottles",
+    "weight_kg": 151,
+    "noise_db": 47,
+    "energy_star_rating_au": 4,
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
+    "power_consumption_kwh_per_24h": 7.16,
+    "running_cost_aud_annual": 670.08,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "location": [
+      "indoor"
+    ],
+    "shelf_count": 2,
+    "shelf_d_mm": 200,
+    "shelf_type": "2 x Fully Adjustable Shelves. Sizes: Top Shelf 530 x 200mmD / Middle Shelf 530 x 340mmD / Floor 560 x 450mmD",
+    "glass_door": true,
+    "glass_door_type": "Side Glass Panels LOW E Glass To Prevent Condensation",
+    "led_lighting": true,
+    "refrigerant": "R290",
+    "refrigerant_odp": 0,
+    "refrigerant_gwp": 3,
+    "body_material": "Black",
+    "interior_finish": "White",
+    "grill_material": "Black",
+    "ventilation_top_mm": 20,
+    "ventilation_each_side_mm": 20,
+    "ventilation_rear_mm": 100,
+    "approvals": [
+      "Commercial Electrical Safety 60335.2.89\nGems Energy Tested (Meps)\nEMC (Electro Magnetic Conformity)"
+    ],
+    "component_fan_primary": "EBM EC Fan (Germany)",
+    "component_controller": "Danfoss ECO (Germany)"
+  },
+  "qa": [
+    {
+      "q": "Can it be used outdoors?",
+      "a": "This unit is designed for indoor or enclosed outdoor use only. It does not have an outdoor IP rating.",
+      "facts": [
+        "location"
+      ]
+    },
+    {
+      "q": "Will it fit under a standard bench?",
+      "a": "The exterior height is 1500mm. Ventilation requires 20mm top, 20mm each side, 100mm rear.",
+      "facts": [
+        "dimensions_exterior_h_mm",
+        "ventilation_top_mm",
+        "ventilation_each_side_mm",
+        "ventilation_rear_mm"
+      ]
+    },
+    {
+      "q": "How wide is it?",
+      "a": "610mm exterior width.",
+      "facts": [
+        "dimensions_exterior_w_mm"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $670.08 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "47 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "4 stars on the Australian 1-10 star scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R290. Ozone Depletion Potential: 0. Global Warming Potential: 3.",
+      "facts": [
+        "refrigerant",
+        "refrigerant_odp",
+        "refrigerant_gwp"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "Commercial Electrical Safety 60335.2.89\nGems Energy Tested (Meps)\nEMC (Electro Magnetic Conformity).",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/rhino-energy-efficient-open-front-open-face-commercial-refrigerator-cooler-model-tk-6",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

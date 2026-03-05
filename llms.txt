@@ -31,14 +31,64 @@ market suffix: energy_star_rating_au: 8.
 ## Schema
 https://schema.signetry.ai/pir/v1.json
 
-## Current records
+## Current records (43 products, 1 brand)
+
+### Rhino Envy (7 products)
+- 9351886000259 — Rhino Envy ENV1R-SD, 1-Door Outdoor Bar Fridge (Solid Door) (bar_fridge)
 - 9351886000266 — Rhino Envy ENV1R-SS, 1-Door Outdoor Bar Fridge (bar_fridge)
-- 9351886001324 — Rhino Envy ENV1L-SS, 1-Door Outdoor Bar Fridge Left Hinge (bar_fridge)
-- 9351886000259 — Rhino Envy ENV1R-SD, 1-Door Outdoor Bar Fridge Solid Door (bar_fridge)
-- 9351886001263 — Rhino Envy ENV1L-SD, 1-Door Outdoor Bar Fridge Solid Door Left Hinge (bar_fridge)
 - 9351886000273 — Rhino Envy ENV2H-SS, 2-Door Outdoor Bar Fridge (bar_fridge)
-- 9351886003205 — Rhino Envy ENV2H-SD, 2-Door Outdoor Bar Fridge Solid Door (bar_fridge)
+- 9351886001263 — Rhino Envy ENV1L-SD, 1-Door Outdoor Bar Fridge (Solid Door, Left Hinge) (bar_fridge)
+- 9351886001324 — Rhino Envy ENV1L-SS, 1-Door Outdoor Bar Fridge (Left Hinge) (bar_fridge)
 - 9351886001331 — Rhino Envy ENV3H-SS, 3-Door Outdoor Bar Fridge (bar_fridge)
+- 9351886003205 — Rhino Envy ENV2H-SD, 2-Door Outdoor Bar Fridge (Solid Door) (bar_fridge)
+
+### Rhino GSP (7 products)
+- 5060482000320 — Rhino GSP GSP1H-SS, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 5060482000337 — Rhino GSP GSP1HL-SS, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 5060482000344 — Rhino GSP GSP2H-SS, 2-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 5060482000351 — Rhino GSP GSP3H-SS, 3-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 5060482000382 — Rhino GSP GSP1H-840-SS, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 5060482000405 — Rhino GSP GSP2H-840-SS, 2-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 9351886000280 — Rhino GSP GSP1H-840-BW, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+
+### Rhino SG (22 products)
+- 5060482000429 — Rhino SG SG1R-B, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 5060482000436 — Rhino SG SG1L-B, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 5060482000443 — Rhino SG SG2H-B, 2-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 5060482000450 — Rhino SG SG2S-B, 2-Door Outdoor Bar Fridge (Sliding Glass) (bar_fridge)
+- 5060482000467 — Rhino SG SG3H-B, 3-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 5060482000474 — Rhino SG SG3S-B, 3-Door Outdoor Bar Fridge (Sliding Glass) (bar_fridge)
+- 5060482000580 — Rhino SG SG1R-SD, 1-Door Outdoor Bar Fridge (Solid Door) (bar_fridge)
+- 5060482000597 — Rhino SG SG1L-SD, 1-Door Outdoor Bar Fridge (Solid Door) (bar_fridge)
+- 5060482000627 — Rhino SG SG1R-HD, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
+- 5060482000634 — Rhino SG SG1L-HD, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
+- 5060482000641 — Rhino SG SG2H-HD, 2-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
+- 5060482003611 — Rhino SG SG3H-HD, 3-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
+- 9351886000945 — Rhino SG SG1Q-Combo, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 9351886001300 — Rhino SG SG1R-NC, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 9351886001317 — Rhino SG SG1L-NC, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 9351886001645 — Rhino SG SG1R-BQ, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 9351886001669 — Rhino SG SG2H-NC, 2-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 9351886003366 — Rhino SG SG3H-B-HD, 3-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
+- 9351886003465 — Rhino SG SG1L-HDQ, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
+- 9351886004752 — Rhino SG SG1L-BQ, 1-Door Outdoor Bar Fridge (Low-E Glass) (bar_fridge)
+- 9351886006350 — Rhino SG SG2H-B-HD, 2-Door Outdoor Bar Fridge (Heated Low-E Glass) (bar_fridge)
+- 9351886007838 — Rhino SG SG1L-B-HD, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
+- 9351886007845 — Rhino SG SG1R-B-HD, 1-Door Outdoor Bar Fridge (Heated Glass) (bar_fridge)
+
+### Rhino SGT (3 products)
+- 9351886001393 — Rhino SGT SGT1R-BS, 3-Door Upright Display Fridge (Low-E Glass) (upright_display_fridge)
+- 9351886001409 — Rhino SGT SGT1L-BS, 3-Door Upright Display Fridge (Low-E Glass) (upright_display_fridge)
+- 9351886001430 — Rhino SGT SGT2-BS, 2-Door Upright Display Fridge (Low-E Glass) (upright_display_fridge)
+
+### Rhino TK (3 products)
+- 9351886006626 — Rhino TK TK-6, Open Display Commercial Cooler (Low-E Glass) (open_display_cooler)
+- 9351886006633 — Rhino TK TK-6S, Open Display Commercial Cooler (Low-E Glass) (open_display_cooler)
+- 9351886006657 — Rhino TK TK-12, Open Display Commercial Cooler (Low-E Glass) (open_display_cooler)
+
+## Known data gaps
+- 35 products missing capacity_litres (source product pages don't include volume data)
+- TK-6S (9351886006633) and TK-9 share the same GTIN in Shopify — data entry error, pending correction
 
 ## Contributing
 Records are stored as {gtin}.json in /records/. Submit via pull request.

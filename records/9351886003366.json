@@ -1,0 +1,176 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886003366",
+  "sku": "SG3H-B-HD",
+  "brand": "Rhino",
+  "range": "SG",
+  "name": "3-Door Outdoor Bar Fridge (Heated Glass)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "dimensions_exterior_w_mm": 1350,
+    "dimensions_exterior_d_mm": 500,
+    "dimensions_exterior_h_mm": 840,
+    "dimensions_interior_w_mm": 1270,
+    "dimensions_interior_d_mm": 360,
+    "dimensions_interior_h_mm": 680,
+    "dimensions_note": "The doors open 5-7mm outside the diameter of the fridge.",
+    "weight_kg": 98,
+    "noise_db": 47,
+    "energy_star_rating_au": 7,
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
+    "power_consumption_kwh_per_24h": 3.44,
+    "running_cost_aud_annual": 321.94,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 5,
+    "shelf_count": 6,
+    "shelf_w_mm": 395,
+    "shelf_d_mm": 345,
+    "shelf_type": "6 x Adjustable Chromed Special 'No Topple' Shelves (2x 395mmW x 345mmD + 4 x 445mm x 345mm)",
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "glass_door_type": "Heated Glass Stops Condensation",
+    "glass_door_heated_switchable": true,
+    "led_lighting": true,
+    "refrigerant": "R600",
+    "refrigerant_odp": 0,
+    "refrigerant_gwp": 3,
+    "body_material": "Black",
+    "interior_finish": "Polished 304 SS",
+    "grill_material": "Black",
+    "ventilation_top_mm": 10,
+    "ventilation_each_side_mm": 10,
+    "ventilation_rear_mm": 50,
+    "approvals": [
+      "Meps",
+      "SAA Electrical",
+      "EMC (C-Tick)",
+      "Green Sense Plus Accredited"
+    ],
+    "component_compressor": "LG",
+    "component_fan_primary": "EBM EC Fan (Germany)",
+    "component_fan_secondary": "EC Fan (Taiwan)",
+    "component_controller": "Quality China Electronic Controller",
+    "component_transformer": "Meanwell (Taiwan)",
+    "component_lighting": "Philips LED"
+  },
+  "qa": [
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "Will it fit under a standard bench?",
+      "a": "The exterior height is 840mm. Standard bench height in Australia is 900mm. Ventilation requires 10mm top, 10mm each side, 50mm rear.",
+      "facts": [
+        "dimensions_exterior_h_mm",
+        "ventilation_top_mm",
+        "ventilation_each_side_mm",
+        "ventilation_rear_mm"
+      ]
+    },
+    {
+      "q": "How wide is it?",
+      "a": "1350mm exterior width.",
+      "facts": [
+        "dimensions_exterior_w_mm"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $321.94 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "47 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "7 stars on the Australian 1-10 star scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "Does it get condensation on the glass?",
+      "a": "No. It has switchable heated tempered glass. When enabled, it prevents condensation in high humidity environments.",
+      "facts": [
+        "glass_door_heated_switchable",
+        "glass_door_type"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600. Ozone Depletion Potential: 0. Global Warming Potential: 3.",
+      "facts": [
+        "refrigerant",
+        "refrigerant_odp",
+        "refrigerant_gwp"
+      ]
+    },
+    {
+      "q": "Which side is the door hinged?",
+      "a": "1 x left, 1 x right hinge.",
+      "facts": [
+        "door_hinge"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "Meps, SAA Electrical, EMC (C-Tick), Green Sense Plus Accredited.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "spec_sheet",
+      "url": "https://bar-fridges-australia.com.au/cdn/shop/files/SG3H-B.pdf?v=15022788653564838360",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    },
+    {
+      "type": "manual",
+      "url": "https://bar-fridges-australia.com.au/cdn/shop/files/SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf?v=13442591868744245214",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/commercial-glass-3-door-black-under-bench-bar-fridge-with-heated-glass-to-stop-condensation",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

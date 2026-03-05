@@ -1,0 +1,166 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886001317",
+  "sku": "SG1L-NC",
+  "brand": "Rhino",
+  "range": "SG",
+  "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "dimensions_exterior_w_mm": 600,
+    "dimensions_exterior_d_mm": 500,
+    "dimensions_exterior_h_mm": 840,
+    "dimensions_interior_w_mm": 520,
+    "dimensions_interior_d_mm": 360,
+    "dimensions_interior_h_mm": 680,
+    "dimensions_note": "Door opens app. 5-7mm outside diameter of fridge",
+    "weight_kg": 50,
+    "noise_db": 43,
+    "energy_star_rating_au": 9,
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
+    "power_consumption_kwh_per_24h": 1.86,
+    "running_cost_aud_annual": 174.07,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "shelf_count": 2,
+    "shelf_w_mm": 500,
+    "shelf_d_mm": 355,
+    "shelf_type": "2 x Adjustable Chromed Special 'No Topple' Shelves (500mmW x 355mmD)",
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "glass_door_type": "Triple glazed tempered LOW E glass",
+    "led_lighting": true,
+    "led_colour_switchable": true,
+    "refrigerant": "R600",
+    "refrigerant_odp": 0,
+    "refrigerant_gwp": 3,
+    "body_material": "Black",
+    "interior_finish": "Polished 304 SS",
+    "grill_material": "Black",
+    "ventilation_top_mm": 10,
+    "ventilation_each_side_mm": 10,
+    "ventilation_rear_mm": 50,
+    "approvals": [
+      "Meps",
+      "SAA Electrical",
+      "Green Sense Plus Accredited",
+      "EMC (C-Tick)"
+    ],
+    "component_compressor": "GMCC",
+    "component_fan_secondary": "EC Fan (Taiwan)",
+    "component_controller": "USA developed controller",
+    "component_transformer": "Meanwell (Taiwan)"
+  },
+  "qa": [
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "Will it fit under a standard bench?",
+      "a": "The exterior height is 840mm. Standard bench height in Australia is 900mm. Ventilation requires 10mm top, 10mm each side, 50mm rear.",
+      "facts": [
+        "dimensions_exterior_h_mm",
+        "ventilation_top_mm",
+        "ventilation_each_side_mm",
+        "ventilation_rear_mm"
+      ]
+    },
+    {
+      "q": "How wide is it?",
+      "a": "600mm exterior width.",
+      "facts": [
+        "dimensions_exterior_w_mm"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $174.07 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "9 stars on the Australian 1-10 star scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600. Ozone Depletion Potential: 0. Global Warming Potential: 3.",
+      "facts": [
+        "refrigerant",
+        "refrigerant_odp",
+        "refrigerant_gwp"
+      ]
+    },
+    {
+      "q": "Which side is the door hinged?",
+      "a": "1 x left, 1 x right hinge.",
+      "facts": [
+        "door_hinge"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "Meps, SAA Electrical, Green Sense Plus Accredited, EMC (C-Tick).",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "spec_sheet",
+      "url": "https://bar-fridges-australia.com.au/cdn/shop/files/SG1L-NC-BFA.pdf?v=9722668481045429293",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    },
+    {
+      "type": "manual",
+      "url": "https://bar-fridges-australia.com.au/cdn/shop/files/SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf?v=13442591868744245214",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/rhino-night-club-commercial-multi-light-colored-black-1-door-bar-fridge-left-hinged",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}
