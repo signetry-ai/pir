@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://schema.signetry.ai/pir/v1.json",
   "title": "Product Intelligence Record",
   "description": "An open, authenticated record of product facts. GTIN is the primary key. Facts are contributed by retailers or certified by the brand via domain ownership verification.",
@@ -12,7 +12,8 @@
     },
     "gtin": {
       "type": "string",
-      "description": "EAN-13 or GTIN-14. Primary key. Filename must match: {gtin}.json"
+      "pattern": "^(\\d{8}|\\d{12}|\\d{13}|\\d{14})$",
+      "description": "GTIN-8, UPC-12, EAN-13, or GTIN-14. Primary key. Filename must match: {gtin}.json"
     },
     "sku": {
       "type": "string",

@@ -1,3 +1,6 @@
+# Note: headers are enforced by the Cloudflare Worker serving pir.signetry.ai.
+# This file is kept for parity if the repo is ever deployed directly to Cloudflare Pages.
+
 /records/*
   Access-Control-Allow-Origin: *
   Content-Type: application/json; charset=utf-8
@@ -6,4 +9,9 @@
 /schema/*
   Access-Control-Allow-Origin: *
   Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Access-Control-Allow-Origin: *
+  Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
