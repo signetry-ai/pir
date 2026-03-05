@@ -51,7 +51,8 @@
       "EMC (C-Tick)"
     ],
     "refrigerant": "R600",
-    "component_fan_primary": "EBM (Germany)"
+    "component_fan_primary": "EBM (Germany)",
+    "shelf_type": "5 x Shelves W: 294 mm x D: 325mm"
   },
   "qa": [
     {

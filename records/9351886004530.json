@@ -1,0 +1,89 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886004530",
+  "sku": "SC88-FP-CASTROL",
+  "brand": "Fuel Pump",
+  "range": "SC",
+  "name": "1-Door Bar Fridge (Triple Glazed)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 98,
+    "capacity_375ml_cans": 115,
+    "dimensions_exterior_w_mm": 470,
+    "dimensions_exterior_d_mm": 500,
+    "dimensions_exterior_h_mm": 850,
+    "weight_kg": 32,
+    "noise_db": 41,
+    "power_consumption_kwh_per_24h": 1.7,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Black Molded Plastic",
+    "grill_material": "Stainless Steel"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "98 litres, holds 115 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "41 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 1.7 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8394568466724.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/castrol-schmick-vintage-fuel-pump-triple-glazed-alfresco-bar-fridge-with-led-strip-lights",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

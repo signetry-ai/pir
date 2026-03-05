@@ -1,0 +1,90 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "5060482000399",
+  "sku": "GSP1HL-840-SS",
+  "brand": "Rhino",
+  "range": "Other",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 129,
+    "capacity_375ml_cans": 140,
+    "dimensions_exterior_w_mm": 600,
+    "dimensions_exterior_d_mm": 500,
+    "dimensions_exterior_h_mm": 840,
+    "weight_kg": 49,
+    "noise_db": 46,
+    "power_consumption_kwh_per_24h": 1.03,
+    "ambient_temperature_max_c": 43,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Brushed 304 Grade Stainless Steel",
+    "interior_finish": "Polished 304 Mirror Stainless",
+    "grill_material": "Brushed 304 Grade Stainless Steel"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "129 litres, holds 140 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "46 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 1.03 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8392777695524.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/rhino-alfresco-bar-fridge-glass-door-outdoor-rated-129l",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "schema": "pir/1.0",
-  "gtin": "9351886005896",
-  "sku": "SS-P160FA-LWF",
-  "brand": "Schmick",
+  "gtin": "9351886001881",
+  "sku": "SS-P160-FP-FLEECE",
+  "brand": "Fuel Pump",
   "range": "SS",
   "name": "1-Door Bar Fridge",
   "category": "bar_fridge",
@@ -22,7 +22,7 @@
     "weight_kg": 60,
     "noise_db": 43,
     "power_consumption_kwh_per_24h": 2.1,
-    "ambient_temperature_max_c": 32,
+    "ambient_temperature_max_c": 38,
     "location": [
       "indoor",
       "outdoor"
@@ -30,29 +30,12 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "Right Hinge (Handle Left)",
+    "door_hinge": "1 x left, 1 x right",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "Black",
     "interior_finish": "Smashed Aluminum",
-    "grill_material": "Black",
-    "glass_door_type": "Triple glazed tempered LOW E glass",
-    "running_cost_aud_annual": 196.53,
-    "running_cost_basis_cents_per_kwh": 25.64,
-    "internal_temperature_min_c": 0,
-    "dimensions_interior_w_mm": 300,
-    "dimensions_interior_d_mm": 330,
-    "dimensions_interior_h_mm": 1250,
-    "ventilation_top_mm": 40,
-    "ventilation_each_side_mm": 40,
-    "ventilation_rear_mm": 150,
-    "approvals": [
-      "SAA Electrical",
-      "EMC (C-Tick)"
-    ],
-    "refrigerant": "R600",
-    "component_fan_primary": "EBM (Germany)",
-    "shelf_type": "5 x Shelves W: 294 mm x D: 325mm"
+    "grill_material": "Black"
   },
   "qa": [
     {
@@ -79,32 +62,16 @@
     },
     {
       "q": "What are the running costs?",
-      "a": "Approximately $196.53 AUD per year based on 25.64 cents per kWh.",
+      "a": "Power consumption is 2.1 kWh per 24 hours.",
       "facts": [
-        "running_cost_aud_annual",
-        "running_cost_basis_cents_per_kwh",
         "power_consumption_kwh_per_24h"
-      ]
-    },
-    {
-      "q": "What refrigerant does it use?",
-      "a": "R600.",
-      "facts": [
-        "refrigerant"
-      ]
-    },
-    {
-      "q": "What approvals does it have?",
-      "a": "SAA Electrical, EMC (C-Tick).",
-      "facts": [
-        "approvals"
       ]
     }
   ],
   "documents": [
     {
       "type": "brochure",
-      "url": "https://brochures.barfridgesaustralia.au/174752036/8397016203556.pdf",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8393326854436.pdf",
       "source": "bar-fridges-australia.com.au",
       "brand_certified": false
     }
@@ -113,7 +80,7 @@
     {
       "name": "Bar Fridges Australia",
       "domain": "bar-fridges-australia.com.au",
-      "url": "https://bar-fridges-australia.com.au/products/skinny-upright-bar-fridge-with-lest-we-forget-design",
+      "url": "https://bar-fridges-australia.com.au/products/golden-fleece-fuel-pump-branded-skinny-upright-bar-fridge",
       "authorized": false,
       "regions": [
         "AU"

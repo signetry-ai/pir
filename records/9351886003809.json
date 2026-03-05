@@ -1,0 +1,88 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886003809",
+  "sku": "BC46W-DRAUGHT-V2",
+  "brand": "CUB",
+  "range": "BC",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 46,
+    "capacity_375ml_cans": 38,
+    "dimensions_exterior_w_mm": 430,
+    "dimensions_exterior_d_mm": 470,
+    "dimensions_exterior_h_mm": 500,
+    "weight_kg": 16,
+    "noise_db": 39,
+    "power_consumption_kwh_per_24h": 0.21,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 2,
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Carlton Draught Branded",
+    "interior_finish": "White Molded Plastic",
+    "grill_material": "Carlton Draught Branded"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "46 litres, holds 38 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "39 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 0.21 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8393427124516.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/carlton-draught-original-logo-retro-mini-bar-fridge",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

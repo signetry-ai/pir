@@ -1,0 +1,87 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886007777",
+  "sku": "FC-BS75AH",
+  "brand": "IC COLD",
+  "range": "Other",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 540,
+    "dimensions_exterior_w_mm": 750,
+    "dimensions_exterior_d_mm": 710,
+    "dimensions_exterior_h_mm": 2030,
+    "weight_kg": 142,
+    "noise_db": 47,
+    "power_consumption_kwh_per_24h": 4.56,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "door_hinge": "right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Black",
+    "grill_material": "Black"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "540 litres.",
+      "facts": [
+        "capacity_litres"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "47 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 4.56 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/10012336685348.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/commercial-upright-i-door-black-refrigerator-model-ic-cold-fc-bs75ah",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

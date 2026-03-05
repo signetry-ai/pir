@@ -1,0 +1,90 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886000938",
+  "sku": "SG1-Combo",
+  "brand": "Rhino",
+  "range": "Other",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 258,
+    "capacity_375ml_cans": 280,
+    "dimensions_exterior_w_mm": 1200,
+    "dimensions_exterior_d_mm": 500,
+    "dimensions_exterior_h_mm": 840,
+    "weight_kg": 50,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 2.84,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 8,
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Polished 304 SS",
+    "grill_material": "Black"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "258 litres, holds 280 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 2.84 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8506271695140.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/test-bundle",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

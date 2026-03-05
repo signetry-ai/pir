@@ -1,0 +1,81 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886003564",
+  "sku": "SK-BDC60-GNBC",
+  "brand": "cub",
+  "range": "SK",
+  "name": "1-Door Portable Fridge",
+  "category": "portable_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 60,
+    "capacity_375ml_cans": 69,
+    "dimensions_exterior_w_mm": 740,
+    "dimensions_exterior_d_mm": 495,
+    "dimensions_exterior_h_mm": 520,
+    "weight_kg": 32,
+    "noise_db": 43,
+    "ambient_temperature_max_c": 43,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 0,
+    "door_hinge": "right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Branded",
+    "interior_finish": "White Metal"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "60 litres, holds 69 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8395005198628.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/great-northern-portable-camping-multi-purpose-fridge-freezer-12-24-240v-60litre-model-sk-bdc60-gnbc",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

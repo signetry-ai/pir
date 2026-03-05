@@ -1,0 +1,89 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886007135",
+  "sku": "BC70B-BTS-GOLD",
+  "brand": "CUB",
+  "range": "BC",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 70,
+    "capacity_375ml_cans": 85,
+    "dimensions_exterior_w_mm": 430,
+    "dimensions_exterior_d_mm": 475,
+    "dimensions_exterior_h_mm": 690,
+    "weight_kg": 21,
+    "noise_db": 39,
+    "power_consumption_kwh_per_24h": 0.5,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 2,
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Black Molded Plastic",
+    "grill_material": "Black"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "70 litres, holds 85 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "39 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 0.5 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9418271457572.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-blue-tooth-speaker-disco-bar-fridge-model-bc70b-bts-gnbc-gold",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

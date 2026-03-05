@@ -1,0 +1,89 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886006664",
+  "sku": "EC68L-SSH-ORIG",
+  "brand": "CUB",
+  "range": "EC",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 70,
+    "capacity_375ml_cans": 80,
+    "dimensions_exterior_w_mm": 430,
+    "dimensions_exterior_d_mm": 500,
+    "dimensions_exterior_h_mm": 700,
+    "weight_kg": 26,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 0.69,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "left",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "grill_material": "Stainless Steel"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "70 litres, holds 80 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 0.69 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8980304789796.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/copy-of-great-northern-gold-tropical-glass-door-fridge-80-cans-left-hinge-model-ec68l-ssh-gnbc-gold",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

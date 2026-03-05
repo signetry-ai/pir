@@ -1,0 +1,88 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886007029",
+  "sku": "SC372W-VC",
+  "brand": "CUB",
+  "range": "SC",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 370,
+    "capacity_375ml_cans": 336,
+    "dimensions_exterior_w_mm": 615,
+    "dimensions_exterior_d_mm": 640,
+    "dimensions_exterior_h_mm": 1940,
+    "weight_kg": 0,
+    "noise_db": 41,
+    "power_consumption_kwh_per_24h": 1.6,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "door_hinge": "right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "White",
+    "interior_finish": "White",
+    "grill_material": "White"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "370 litres, holds 336 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "41 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Power consumption is 1.6 kWh per 24 hours.",
+      "facts": [
+        "power_consumption_kwh_per_24h"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9642615505188.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/vodka-cruiser-branded-design-upright-quiet-running-glass-door-bar-fridge-model-sc372w-vc",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}
