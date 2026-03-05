@@ -36,7 +36,11 @@
     "installation": "freestanding",
     "location": [
       "indoor"
-    ]
+    ],
+    "capacity_bottles": 21,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 2,
+    "refrigerant": "R600a"
   },
   "qa": [
     {

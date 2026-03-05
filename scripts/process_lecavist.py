@@ -34,9 +34,9 @@ GTIN_MAP = {
 }
 
 
-def read_intake():
-    """Read and convert the RTF intake file to plain text."""
-    rtf_path = os.path.expanduser("~/Documents/lecavist.rtf")
+def read_intake(path=None):
+    """Read and convert an RTF intake file to plain text."""
+    rtf_path = os.path.expanduser(path or "~/Documents/lecavist.rtf")
     if not os.path.exists(rtf_path):
         print(f"ERROR: {rtf_path} not found")
         sys.exit(1)
@@ -122,6 +122,18 @@ def parse_dimensions(text):
     if m:
         dims['w'], dims['h'], dims['d'] = int(m.group(1)), int(m.group(2)), int(m.group(3))
         return dims
+    # Format: 445×457×515mm or 445x462x840mm (WxDxH)
+    m = re.search(r'(?:Outside|Dimensions)[:\s]*(\d+)\s*[×x]\s*(\d+)\s*[×x]\s*(\d+)\s*mm', text)
+    if m:
+        dims['w'], dims['d'], dims['h'] = int(m.group(1)), int(m.group(2)), int(m.group(3))
+        return dims
+    # Format: WxDxH (cm) 54.5 x 60 x 167.4cm
+    m = re.search(r'WxDxH\s*\(cm\)\s*([\d.]+)\s*x\s*([\d.]+)\s*x\s*([\d.]+)', text)
+    if m:
+        dims['w'] = int(float(m.group(1)) * 10)
+        dims['d'] = int(float(m.group(2)) * 10)
+        dims['h'] = int(float(m.group(3)) * 10)
+        return dims
     return dims
 
 
@@ -143,9 +155,13 @@ def parse_product(block):
     if sku_m:
         data['sku'] = sku_m.group(1)
 
-    # GTIN
-    sku = data.get('sku', '')
-    data['gtin'] = GTIN_MAP.get(sku)
+    # GTIN — check EAN in text first, then fallback to map
+    ean_m = re.search(r'EAN\s*(?:Code)?\s*(\d{10,14})', text, re.IGNORECASE)
+    if ean_m:
+        data['gtin'] = ean_m.group(1)
+    else:
+        sku = data.get('sku', '')
+        data['gtin'] = GTIN_MAP.get(sku)
 
     # Product name/title — first non-empty line after URL
     for line in lines[1:]:
@@ -159,18 +175,26 @@ def parse_product(block):
     if m:
         data['capacity_litres'] = int(m.group(1))
     else:
-        m = re.search(r'(\d+)L\b', text)
+        m = re.search(r'CAPACITY\s+(\d+)\s*L', text)
         if m:
             data['capacity_litres'] = int(m.group(1))
+        else:
+            m = re.search(r'(\d+)L\s+(?:capacity|Bordeaux)', text)
+            if m:
+                data['capacity_litres'] = int(m.group(1))
 
     # Bottle capacity
-    m = re.search(r'(\d+)\s*(?:Bottle|bottle)\s*(?:Capacity|capacity)', text)
+    m = re.search(r'(\d+)\s*(?:Bordeaux\s*)?(?:Bottle|bottle)s?\s*(?:Capacity|capacity)', text)
     if m:
         data['capacity_bottles'] = int(m.group(1))
     else:
         m = re.search(r'(\d+)\s*Bordeaux\s*bottles\s*capacity', text)
         if m:
             data['capacity_bottles'] = int(m.group(1))
+        else:
+            m = re.search(r'CAPACITY\s+.*?(\d+)\s*BOTTLES', text, re.IGNORECASE)
+            if m:
+                data['capacity_bottles'] = int(m.group(1))
 
     # Dimensions
     data['dims'] = parse_dimensions(text)
@@ -187,7 +211,9 @@ def parse_product(block):
             data['weight_kg'] = int(w) if w == int(w) else w
 
     # Noise
-    m = re.search(r'(\d+)\s*dB', text)
+    m = re.search(r'(?:Noise|NOISE)[:\s]*(\d+)\s*dB', text, re.IGNORECASE)
+    if not m:
+        m = re.search(r'(\d+)\s*dB', text)
     if m:
         data['noise_db'] = int(m.group(1))
 
@@ -215,7 +241,9 @@ def parse_product(block):
             data['ambient_max_c'] = int(m.group(1))
 
     # Zones
-    if re.search(r'[Dd]ual [Zz]one|[Dd]ouble [Zz]one|2 [Tt]emperature [Zz]one', text):
+    if re.search(r'[Tt]riple [Zz]one|3 [Tt]emperature [Zz]one', text):
+        data['zones'] = 3
+    elif re.search(r'[Dd]ual [Zz]one|[Dd]ouble [Zz]one|2 [Tt]emperature [Zz]one', text):
         data['zones'] = 2
     else:
         data['zones'] = 1
@@ -291,21 +319,60 @@ def parse_product(block):
         else:
             data['documents'].append({'type': 'brochure', 'url': url})
 
-    # Dual zone temp ranges
-    if data.get('zones') == 2:
-        # Upper zone
-        m = re.search(r'(?:upper|top)\s*(?:zone|compartment)[^.]*?(\d+)\s*°?\s*C\s*(?:to|-)\s*(\d+)\s*°?\s*C', text, re.IGNORECASE)
-        if m:
-            data['zone_upper_min_c'] = int(m.group(1))
-            data['zone_upper_max_c'] = int(m.group(2))
-        # Lower zone
-        m = re.search(r'(?:lower|bottom)\s*(?:zone|compartment)[^.]*?(\d+)\s*°?\s*C\s*(?:to|-)\s*(\d+)\s*°?\s*C', text, re.IGNORECASE)
-        if m:
-            data['zone_lower_min_c'] = int(m.group(1))
-            data['zone_lower_max_c'] = int(m.group(2))
+    # Multi-zone temp ranges
+    if data.get('zones', 1) >= 2:
+        # Format: Dual Zone (5-12°C / 12-20°C) or Triple Zone (5-12°C / 8-12°C / 12-18°C)
+        zone_m = re.search(r'(?:Dual|Double|Triple)\s*Zone\s*\(([^)]+)\)', text, re.IGNORECASE)
+        if zone_m:
+            zone_str = zone_m.group(1)
+            ranges = re.findall(r'(\d+)\s*-\s*(\d+)\s*°?\s*C', zone_str)
+            if len(ranges) >= 2:
+                data['zone_upper_min_c'] = int(ranges[0][0])
+                data['zone_upper_max_c'] = int(ranges[0][1])
+                data['zone_lower_min_c'] = int(ranges[-1][0])
+                data['zone_lower_max_c'] = int(ranges[-1][1])
+            if len(ranges) >= 3:
+                data['zone_mid_min_c'] = int(ranges[1][0])
+                data['zone_mid_max_c'] = int(ranges[1][1])
+        else:
+            # Upper zone
+            m = re.search(r'(?:upper|top)\s*(?:zone|compartment)[^.]*?(\d+)\s*°?\s*C\s*(?:to|-)\s*(\d+)\s*°?\s*C', text, re.IGNORECASE)
+            if m:
+                data['zone_upper_min_c'] = int(m.group(1))
+                data['zone_upper_max_c'] = int(m.group(2))
+            # Lower zone
+            m = re.search(r'(?:lower|bottom)\s*(?:zone|compartment)[^.]*?(\d+)\s*°?\s*C\s*(?:to|-)\s*(\d+)\s*°?\s*C', text, re.IGNORECASE)
+            if m:
+                data['zone_lower_min_c'] = int(m.group(1))
+                data['zone_lower_max_c'] = int(m.group(2))
 
     # Two-door
     data['door_count'] = 2 if re.search(r'[Tt]wo [Dd]oors|[Dd]ouble [Dd]oor\s*design', text) else 1
+
+    # Charcoal filter
+    data['charcoal_filter'] = bool(re.search(r'[Cc]harcoal\s*filter', text))
+
+    # Winter function
+    data['winter_function'] = bool(re.search(r'[Ww]inter\s*function', text))
+
+    # Door reversible
+    if re.search(r'[Rr]eversible\s*door|[Dd]oor\s*[Rr]eversible', text):
+        data['door_hinge'] = 'reversible'
+    elif re.search(r'[Nn]ot\s*reversible', text):
+        data['door_hinge'] = 'right'
+
+    # Product code from structured spec
+    pc_m = re.search(r'PRODUCT CODE\s+(\S+)', text)
+    if pc_m and not data.get('sku'):
+        data['sku'] = pc_m.group(1)
+
+    # Frame color/material
+    frame_m = re.search(r'(?:Inox|Silver|Black|Stainless)\s*(?:frame|plastic frame)', text, re.IGNORECASE)
+    if frame_m:
+        data['frame_material'] = frame_m.group(0).strip()
+
+    # Solid door (wine cellar)
+    data['solid_door'] = bool(re.search(r'SOLID DOOR', text, re.IGNORECASE))
 
     return data
 
@@ -313,9 +380,12 @@ def parse_product(block):
 def infer_category(data):
     """Determine PIR category."""
     title = data.get('title', '').lower()
+    url = data.get('url', '').lower()
     if 'beverage' in title:
         return 'beverage_fridge'
-    if 'cellar' in title:
+    if 'cellar' in title or 'cellar' in url:
+        return 'wine_cellar'
+    if data.get('solid_door'):
         return 'wine_cellar'
     if 'wine' in title:
         return 'wine_fridge'
@@ -326,7 +396,7 @@ def build_name(data):
     """Build a descriptive product name."""
     bottles = data.get('capacity_bottles', '')
     zones = data.get('zones', 1)
-    zone_str = "Dual Zone" if zones == 2 else "Single Zone"
+    zone_str = "Triple Zone" if zones == 3 else "Dual Zone" if zones == 2 else "Single Zone"
 
     title = data.get('title', '')
     if 'Beverage' in title:
@@ -383,10 +453,13 @@ def build_record(data):
 
     facts['temperature_zones'] = data.get('zones', 1)
 
-    if data.get('zones') == 2:
+    if data.get('zones', 1) >= 2:
         if data.get('zone_upper_min_c') is not None:
             facts['zone_upper_temp_min_c'] = data['zone_upper_min_c']
             facts['zone_upper_temp_max_c'] = data['zone_upper_max_c']
+        if data.get('zone_mid_min_c') is not None:
+            facts['zone_mid_temp_min_c'] = data['zone_mid_min_c']
+            facts['zone_mid_temp_max_c'] = data['zone_mid_max_c']
         if data.get('zone_lower_min_c') is not None:
             facts['zone_lower_temp_min_c'] = data['zone_lower_min_c']
             facts['zone_lower_temp_max_c'] = data['zone_lower_max_c']
@@ -418,6 +491,16 @@ def build_record(data):
 
     if data.get('cooling_system'):
         facts['cooling_system'] = data['cooling_system']
+
+    if data.get('charcoal_filter'):
+        facts['charcoal_filter'] = True
+    if data.get('winter_function'):
+        facts['winter_function'] = True
+    if data.get('frame_material'):
+        facts['frame_material'] = data['frame_material']
+    if data.get('solid_door'):
+        facts['glass_door'] = False
+        facts['solid_door'] = True
 
     facts['installation'] = data.get('installation', 'freestanding')
     facts['location'] = ['indoor']
@@ -516,12 +599,34 @@ def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--file", nargs="*", help="RTF file(s) to process")
     args = parser.parse_args()
 
-    text = read_intake()
-    products = split_products(text)
+    files = args.file or [
+        os.path.expanduser("~/Documents/lecavist.rtf"),
+        os.path.expanduser("~/Documents/lecavist copy.rtf"),
+    ]
 
-    print(f"Found {len(products)} products in intake file\n")
+    products = []
+    for f in files:
+        if os.path.exists(f):
+            text = read_intake(f)
+            found = split_products(text)
+            print(f"  {os.path.basename(f)}: {len(found)} products")
+            products.extend(found)
+
+    # Merge duplicates by URL — combine text from both files
+    url_blocks = {}
+    for block in products:
+        url = block.split('\n')[0].strip()
+        if url in url_blocks:
+            # Append new text to existing block
+            url_blocks[url] = url_blocks[url] + '\n' + '\n'.join(block.split('\n')[1:])
+        else:
+            url_blocks[url] = block
+    products = list(url_blocks.values())
+
+    print(f"Total unique products: {len(products)}\n")
 
     created = 0
     pending_gtin = 0
@@ -545,8 +650,53 @@ def main():
             data['gtin'] = gtin
             filepath = os.path.join(RECORDS_DIR, f"{gtin}.json")
 
+        # Also check for sku- prefixed file (pending GTIN that now has one)
+        sku_filepath = os.path.join(RECORDS_DIR, f"sku-{sku}.json")
+        existing_path = None
         if os.path.exists(filepath):
-            print(f"  EXISTS {sku:20s} ({gtin})")
+            existing_path = filepath
+        elif os.path.exists(sku_filepath):
+            existing_path = sku_filepath
+
+        if existing_path:
+            with open(existing_path) as fh:
+                existing = json.load(fh)
+            record = build_record(data)
+            merged = 0
+            for k, v in record['facts'].items():
+                if k not in existing['facts']:
+                    existing['facts'][k] = v
+                    merged += 1
+            # Update GTIN if was null and now available
+            if not existing.get('gtin') and data.get('gtin'):
+                existing['gtin'] = data['gtin']
+                merged += 1
+            # Merge documents
+            existing_doc_urls = {d['url'] for d in existing.get('documents', [])}
+            for doc in record.get('documents', []):
+                if doc['url'] not in existing_doc_urls:
+                    existing['documents'].append(doc)
+                    merged += 1
+            # Rebuild Q&A with enriched data
+            new_qa = build_record(data)['qa']
+            if len(new_qa) > len(existing.get('qa', [])):
+                existing['qa'] = new_qa
+                merged += 1
+            if merged > 0:
+                if not args.dry_run:
+                    # If GTIN was added, rename sku- file to gtin file
+                    if existing.get('gtin') and existing_path.startswith(os.path.join(RECORDS_DIR, 'sku-')):
+                        new_path = os.path.join(RECORDS_DIR, f"{existing['gtin']}.json")
+                        os.rename(existing_path, new_path)
+                        existing_path = new_path
+                    with open(existing_path, 'w') as fh:
+                        json.dump(existing, fh, indent=2, ensure_ascii=False)
+                        fh.write('\n')
+                display_id = data['gtin'] or f"sku-{sku}"
+                print(f"  MERGED {sku:20s} ({display_id}) +{merged} fields")
+            else:
+                display_id = data['gtin'] or f"sku-{sku}"
+                print(f"  EXISTS {sku:20s} ({display_id}) — no new data")
             skipped_exists += 1
             continue
 

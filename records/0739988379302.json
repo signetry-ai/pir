@@ -26,7 +26,16 @@
     "installation": "built-in or freestanding",
     "location": [
       "indoor"
-    ]
+    ],
+    "weight_kg": 40,
+    "noise_db": 41,
+    "energy_consumption_kwh_annual": 161,
+    "glass_door_type": "Double layer tempered glass",
+    "door_hinge": "reversible",
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "refrigerant": "R600a",
+    "cooling_system": "Compressor"
   },
   "qa": [
     {
@@ -34,6 +43,20 @@
       "a": "52 Bordeaux bottles.",
       "facts": [
         "capacity_bottles"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "41 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy consumption?",
+      "a": "161 kWh per year.",
+      "facts": [
+        "energy_consumption_kwh_annual"
       ]
     },
     {

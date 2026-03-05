@@ -28,7 +28,19 @@
     "installation": "built-in or freestanding",
     "location": [
       "indoor"
-    ]
+    ],
+    "weight_kg": 28,
+    "noise_db": 41,
+    "energy_consumption_kwh_annual": 149,
+    "zone_upper_temp_min_c": 5,
+    "zone_upper_temp_max_c": 12,
+    "zone_lower_temp_min_c": 12,
+    "zone_lower_temp_max_c": 20,
+    "door_hinge": "reversible",
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "refrigerant": "R600a",
+    "winter_function": true
   },
   "qa": [
     {
@@ -39,10 +51,28 @@
       ]
     },
     {
-      "q": "How many temperature zones does it have?",
-      "a": "Dual zone.",
+      "q": "How noisy is it?",
+      "a": "41 dB.",
       "facts": [
-        "temperature_zones"
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy consumption?",
+      "a": "149 kWh per year.",
+      "facts": [
+        "energy_consumption_kwh_annual"
+      ]
+    },
+    {
+      "q": "How many temperature zones does it have?",
+      "a": "Dual zone. Upper zone: 5-12°C, lower zone: 12-20°C.",
+      "facts": [
+        "temperature_zones",
+        "zone_upper_temp_min_c",
+        "zone_upper_temp_max_c",
+        "zone_lower_temp_min_c",
+        "zone_lower_temp_max_c"
       ]
     },
     {

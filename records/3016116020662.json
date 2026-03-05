@@ -1,0 +1,69 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "3016116020662",
+  "sku": "LKV168PNDX",
+  "brand": "Lecavist",
+  "name": "Wine Cabinet 109 Bottle Single Zone Freestanding",
+  "category": "wine_cellar",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": "lecavist.com",
+    "certified_date": null,
+    "submitted_by": "lecavist.com",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_bottles": 109,
+    "dimensions_exterior_w_mm": 545,
+    "dimensions_exterior_d_mm": 600,
+    "dimensions_exterior_h_mm": 1674,
+    "noise_db": 43,
+    "temperature_zones": 1,
+    "shelf_count": 12,
+    "glass_door": false,
+    "led_lighting": true,
+    "anti_vibration": false,
+    "lockable": true,
+    "refrigerant": "R600a",
+    "solid_door": true,
+    "installation": "freestanding",
+    "location": [
+      "indoor"
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "109 Bordeaux bottles.",
+      "facts": [
+        "capacity_bottles"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "Can it be built in?",
+      "a": "Installation: freestanding.",
+      "facts": [
+        "installation"
+      ]
+    }
+  ],
+  "documents": [],
+  "sellers": [
+    {
+      "name": "Lecavist",
+      "domain": "lecavist.com",
+      "url": "https://lecavist.com/products/lecavist-109-bottle-cellar-with-full-shelveslkv168pndxfs",
+      "authorized": true,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

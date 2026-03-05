@@ -41,7 +41,9 @@
     "installation": "freestanding",
     "location": [
       "indoor"
-    ]
+    ],
+    "door_hinge": "reversible",
+    "frame_material": "black frame"
   },
   "qa": [
     {

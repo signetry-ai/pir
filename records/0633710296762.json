@@ -36,7 +36,9 @@
     "installation": "freestanding",
     "location": [
       "indoor"
-    ]
+    ],
+    "refrigerant": "R600a",
+    "frame_material": "black frame"
   },
   "qa": [
     {

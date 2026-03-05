@@ -1,9 +1,9 @@
 {
   "schema": "pir/1.0",
   "gtin": null,
-  "sku": "LEK1052ZPVFS-1",
+  "sku": "LEK1403ZPVXFS-1",
   "brand": "Lecavist",
-  "name": "Wine Cabinet 77 Bottle Dual Zone Freestanding",
+  "name": "Wine Cabinet 98 Bottle Triple Zone Freestanding",
   "category": "wine_fridge",
   "status": {
     "brand_certified": false,
@@ -13,50 +13,49 @@
     "submitted_date": "2026-03-05"
   },
   "facts": {
-    "capacity_bottles": 77,
+    "capacity_bottles": 98,
     "dimensions_exterior_w_mm": 545,
     "dimensions_exterior_d_mm": 600,
-    "dimensions_exterior_h_mm": 1244,
-    "weight_kg": 48.9,
-    "noise_db": 43,
+    "dimensions_exterior_h_mm": 1674,
+    "weight_kg": 57.4,
+    "noise_db": 42,
     "energy_consumption_kwh_annual": 169,
-    "ambient_temperature_max_c": 43,
-    "ambient_temperature_min_c": 16,
-    "temperature_zones": 2,
+    "temperature_zones": 3,
     "zone_upper_temp_min_c": 5,
     "zone_upper_temp_max_c": 12,
+    "zone_mid_temp_min_c": 8,
+    "zone_mid_temp_max_c": 12,
     "zone_lower_temp_min_c": 12,
     "zone_lower_temp_max_c": 18,
-    "shelf_count": 6,
     "shelf_material": "Beech wood",
     "glass_door": true,
     "glass_door_type": "Triple layer glass (glass, tempered glass, low-E coating)",
+    "door_hinge": "reversible",
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": false,
-    "cooling_system": "Compressor",
-    "installation": "freestanding",
-    "location": [
-      "indoor"
-    ],
-    "door_hinge": "reversible",
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "refrigerant": "R600a",
+    "cooling_system": "Compressor",
     "charcoal_filter": true,
-    "frame_material": "black frame"
+    "frame_material": "Silver frame",
+    "installation": "freestanding",
+    "location": [
+      "indoor"
+    ]
   },
   "qa": [
     {
       "q": "What is the capacity?",
-      "a": "77 Bordeaux bottles.",
+      "a": "98 Bordeaux bottles.",
       "facts": [
         "capacity_bottles"
       ]
     },
     {
       "q": "How noisy is it?",
-      "a": "43 dB.",
+      "a": "42 dB.",
       "facts": [
         "noise_db"
       ]
@@ -69,17 +68,6 @@
       ]
     },
     {
-      "q": "How many temperature zones does it have?",
-      "a": "Dual zone. Upper zone: 5-12°C, lower zone: 12-18°C.",
-      "facts": [
-        "temperature_zones",
-        "zone_upper_temp_min_c",
-        "zone_upper_temp_max_c",
-        "zone_lower_temp_min_c",
-        "zone_lower_temp_max_c"
-      ]
-    },
-    {
       "q": "Can it be built in?",
       "a": "Installation: freestanding.",
       "facts": [
@@ -87,19 +75,12 @@
       ]
     }
   ],
-  "documents": [
-    {
-      "type": "manual",
-      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/EN_LEK1052ZPV_Manual_dbe1d5ff-2bff-47b5-8f75-88c3366073dd.pdf?v=1751595103",
-      "source": "lecavist.com",
-      "brand_certified": true
-    }
-  ],
+  "documents": [],
   "sellers": [
     {
       "name": "Lecavist",
       "domain": "lecavist.com",
-      "url": "https://lecavist.com/products/lecavist-77-bottle-wine-cabinet-dual-zone-black-lek1052zpvfs-1",
+      "url": "https://lecavist.com/products/lecavist-98-bottle-wine-cabinet-triple-zone-stainless-steel-lek1403zpvxfs-1",
       "authorized": true,
       "regions": [
         "AU"

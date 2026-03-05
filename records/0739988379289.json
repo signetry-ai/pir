@@ -30,7 +30,14 @@
     "installation": "built-in or freestanding",
     "location": [
       "indoor"
-    ]
+    ],
+    "weight_kg": 28,
+    "noise_db": 41,
+    "energy_consumption_kwh_annual": 132,
+    "door_hinge": "reversible",
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "refrigerant": "R600a"
   },
   "qa": [
     {
@@ -38,6 +45,20 @@
       "a": "20 Bordeaux bottles.",
       "facts": [
         "capacity_bottles"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "41 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy consumption?",
+      "a": "132 kWh per year.",
+      "facts": [
+        "energy_consumption_kwh_annual"
       ]
     },
     {

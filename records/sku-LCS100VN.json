@@ -1,9 +1,9 @@
 {
   "schema": "pir/1.0",
   "gtin": null,
-  "sku": "LCS100VNFS",
+  "sku": "LCS100VN",
   "brand": "Lecavist",
-  "name": "Wine Cabinet 76 Bottle Single Zone Freestanding",
+  "name": "Wine Cabinet 111 Bottle Dual Zone Freestanding",
   "category": "wine_fridge",
   "status": {
     "brand_certified": false,
@@ -14,19 +14,17 @@
   },
   "facts": {
     "capacity_litres": 195,
-    "capacity_bottles": 76,
+    "capacity_bottles": 111,
     "dimensions_exterior_w_mm": 500,
     "dimensions_exterior_d_mm": 560,
     "dimensions_exterior_h_mm": 1250,
     "weight_kg": 40,
     "noise_db": 45,
-    "energy_consumption_kwh_annual": 169,
-    "internal_temperature_min_c": 5,
-    "internal_temperature_max_c": 20,
-    "temperature_zones": 1,
+    "temperature_zones": 2,
     "shelf_material": "Beech wood",
     "glass_door": true,
     "glass_door_type": "Double layer tempered glass",
+    "door_hinge": "right",
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": true,
@@ -36,13 +34,12 @@
     "installation": "freestanding",
     "location": [
       "indoor"
-    ],
-    "door_hinge": "right"
+    ]
   },
   "qa": [
     {
       "q": "What is the capacity?",
-      "a": "76 Bordeaux bottles (195L).",
+      "a": "111 Bordeaux bottles (195L).",
       "facts": [
         "capacity_bottles",
         "capacity_litres"
@@ -53,13 +50,6 @@
       "a": "45 dB.",
       "facts": [
         "noise_db"
-      ]
-    },
-    {
-      "q": "What is the energy consumption?",
-      "a": "169 kWh per year.",
-      "facts": [
-        "energy_consumption_kwh_annual"
       ]
     },
     {
@@ -77,19 +67,12 @@
       ]
     }
   ],
-  "documents": [
-    {
-      "type": "manual",
-      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/LCS100VN_UserManual_4_20_dec8b9b5-bc9f-4147-9825-0036629cd327.pdf?v=1748486418",
-      "source": "lecavist.com",
-      "brand_certified": true
-    }
-  ],
+  "documents": [],
   "sellers": [
     {
       "name": "Lecavist",
       "domain": "lecavist.com",
-      "url": "https://lecavist.com/products/lecavist-bottle-wine-cabinet-single-zone-black-full-shelves-lcs100vnfs",
+      "url": "https://lecavist.com/products/lecavist-97-bottle-wine-fridge-single-zone-black-lcs100vn",
       "authorized": true,
       "regions": [
         "AU"

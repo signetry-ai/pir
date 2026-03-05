@@ -1,6 +1,6 @@
 {
   "schema": "pir/1.0",
-  "gtin": null,
+  "gtin": "0739988379326",
   "sku": "LJ40VN2Z2DBU",
   "brand": "Lecavist",
   "name": "Wine Cabinet 40 Bottle Dual Zone Built-In/Freestanding",
@@ -30,7 +30,19 @@
     "installation": "built-in or freestanding",
     "location": [
       "indoor"
-    ]
+    ],
+    "weight_kg": 40,
+    "noise_db": 41,
+    "energy_consumption_kwh_annual": 143,
+    "zone_upper_temp_min_c": 5,
+    "zone_upper_temp_max_c": 20,
+    "zone_lower_temp_min_c": 5,
+    "zone_lower_temp_max_c": 20,
+    "door_hinge": "right",
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "refrigerant": "R600a",
+    "winter_function": true
   },
   "qa": [
     {
@@ -41,10 +53,28 @@
       ]
     },
     {
-      "q": "How many temperature zones does it have?",
-      "a": "Dual zone.",
+      "q": "How noisy is it?",
+      "a": "41 dB.",
       "facts": [
-        "temperature_zones"
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What is the energy consumption?",
+      "a": "143 kWh per year.",
+      "facts": [
+        "energy_consumption_kwh_annual"
+      ]
+    },
+    {
+      "q": "How many temperature zones does it have?",
+      "a": "Dual zone. Upper zone: 5-20°C, lower zone: 5-20°C.",
+      "facts": [
+        "temperature_zones",
+        "zone_upper_temp_min_c",
+        "zone_upper_temp_max_c",
+        "zone_lower_temp_min_c",
+        "zone_lower_temp_max_c"
       ]
     },
     {
