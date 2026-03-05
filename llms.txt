@@ -15,7 +15,7 @@ JSON Schema:
   https://pir.signetry.ai/schema/pir.v1.json
 
 Browse all records:
-  https://github.com/jb-au/pir/tree/main/records
+  https://github.com/signetry-ai/pir/tree/main/records
 
 ## Record structure
 
