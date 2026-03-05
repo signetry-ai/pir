@@ -524,7 +524,7 @@ def main():
     print(f"Found {len(products)} products in intake file\n")
 
     created = 0
-    skipped_no_gtin = 0
+    pending_gtin = 0
     skipped_exists = 0
 
     for block in products:
@@ -533,17 +533,17 @@ def main():
         gtin = data.get('gtin')
 
         if not gtin:
-            print(f"  SKIP {sku:20s} — no GTIN")
-            skipped_no_gtin += 1
-            continue
-
-        # Normalize GTIN (strip leading zeros, pad to 13)
-        gtin = gtin.lstrip('0')
-        if len(gtin) < 13:
-            gtin = gtin.zfill(13)
-
-        data['gtin'] = gtin
-        filepath = os.path.join(RECORDS_DIR, f"{gtin}.json")
+            # Use SKU as temporary identifier, pending GTIN
+            temp_id = f"sku-{sku}"
+            data['gtin'] = None
+            filepath = os.path.join(RECORDS_DIR, f"{temp_id}.json")
+        else:
+            # Normalize GTIN (strip leading zeros, pad to 13)
+            gtin = gtin.lstrip('0')
+            if len(gtin) < 13:
+                gtin = gtin.zfill(13)
+            data['gtin'] = gtin
+            filepath = os.path.join(RECORDS_DIR, f"{gtin}.json")
 
         if os.path.exists(filepath):
             print(f"  EXISTS {sku:20s} ({gtin})")
@@ -552,18 +552,21 @@ def main():
 
         record = build_record(data)
 
+        display_id = data['gtin'] or f"sku-{sku}"
         if args.dry_run:
-            print(f"  WOULD CREATE {sku:20s} ({gtin}) — {record['name']}")
+            print(f"  WOULD CREATE {sku:20s} ({display_id}) — {record['name']}")
             print(f"    Facts: {len(record['facts'])} fields, Q&A: {len(record['qa'])}, Docs: {len(record['documents'])}")
         else:
             with open(filepath, "w") as fh:
                 json.dump(record, fh, indent=2, ensure_ascii=False)
                 fh.write("\n")
-            print(f"  CREATED {sku:20s} ({gtin}) — {record['name']}")
+            print(f"  CREATED {sku:20s} ({display_id}) — {record['name']}")
 
+        if not data['gtin']:
+            pending_gtin += 1
         created += 1
 
-    print(f"\nCreated: {created}, No GTIN: {skipped_no_gtin}, Exists: {skipped_exists}")
+    print(f"\nCreated: {created}, Pending GTIN: {pending_gtin}, Exists: {skipped_exists}")
 
 
 if __name__ == "__main__":

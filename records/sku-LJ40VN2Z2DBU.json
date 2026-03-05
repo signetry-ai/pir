@@ -1,0 +1,83 @@
+{
+  "schema": "pir/1.0",
+  "gtin": null,
+  "sku": "LJ40VN2Z2DBU",
+  "brand": "Lecavist",
+  "name": "Wine Cabinet 40 Bottle Dual Zone Built-In/Freestanding",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": "lecavist.com",
+    "certified_date": null,
+    "submitted_by": "lecavist.com",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_bottles": 40,
+    "dimensions_exterior_w_mm": 595,
+    "dimensions_exterior_d_mm": 575,
+    "dimensions_exterior_h_mm": 820,
+    "temperature_zones": 2,
+    "shelf_count": 5,
+    "shelf_material": "Beech wood",
+    "glass_door": true,
+    "glass_door_type": "Double pane glass",
+    "door_count": 2,
+    "led_lighting": true,
+    "anti_vibration": true,
+    "lockable": false,
+    "cooling_system": "Fan",
+    "installation": "built-in or freestanding",
+    "location": [
+      "indoor"
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "40 Bordeaux bottles.",
+      "facts": [
+        "capacity_bottles"
+      ]
+    },
+    {
+      "q": "How many temperature zones does it have?",
+      "a": "Dual zone.",
+      "facts": [
+        "temperature_zones"
+      ]
+    },
+    {
+      "q": "Can it be built in?",
+      "a": "Installation: built-in or freestanding.",
+      "facts": [
+        "installation"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "manual",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/EN_LJ40VN2Z2DBU_IM_d89fd5d9-5ac6-490f-82bc-9ca629c639da.pdf?v=1753855531",
+      "source": "lecavist.com",
+      "brand_certified": true
+    },
+    {
+      "type": "spec_sheet",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/Cuve_Conti_LJ40VN2Z2DBU_Specsheet_9ebaec6e-3b38-4249-89e3-1ea9f9aa2b91.pdf?v=1748482381",
+      "source": "lecavist.com",
+      "brand_certified": true
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Lecavist",
+      "domain": "lecavist.com",
+      "url": "https://lecavist.com/products/lecavist-40-bottles-wine-cabinet-dual-zone-lj40vn2z2dbu",
+      "authorized": true,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

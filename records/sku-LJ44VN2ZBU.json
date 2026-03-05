@@ -1,0 +1,83 @@
+{
+  "schema": "pir/1.0",
+  "gtin": null,
+  "sku": "LJ44VN2ZBU",
+  "brand": "Lecavist",
+  "name": "Wine Cabinet 44 Bottle Dual Zone Built-In/Freestanding",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": "lecavist.com",
+    "certified_date": null,
+    "submitted_by": "lecavist.com",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_bottles": 44,
+    "dimensions_exterior_w_mm": 595,
+    "dimensions_exterior_d_mm": 575,
+    "dimensions_exterior_h_mm": 820,
+    "temperature_zones": 2,
+    "shelf_count": 4,
+    "shelf_material": "Beech wood",
+    "glass_door": true,
+    "glass_door_type": "Double pane glass",
+    "door_hinge": "reversible",
+    "led_lighting": true,
+    "anti_vibration": true,
+    "lockable": false,
+    "cooling_system": "Fan",
+    "installation": "built-in or freestanding",
+    "location": [
+      "indoor"
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "44 Bordeaux bottles.",
+      "facts": [
+        "capacity_bottles"
+      ]
+    },
+    {
+      "q": "How many temperature zones does it have?",
+      "a": "Dual zone.",
+      "facts": [
+        "temperature_zones"
+      ]
+    },
+    {
+      "q": "Can it be built in?",
+      "a": "Installation: built-in or freestanding.",
+      "facts": [
+        "installation"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "spec_sheet",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/Cuve_Conti_LJ44VN2ZBU_SpecSheet_3.pdf?v=1741230687",
+      "source": "lecavist.com",
+      "brand_certified": true
+    },
+    {
+      "type": "manual",
+      "url": "https://cdn.shopify.com/s/files/1/0616/6554/2401/files/EN_LJ44VN2ZBU_IM_6a23a22f-ae76-4048-a8f4-6384417a3a68.pdf?v=1753855531",
+      "source": "lecavist.com",
+      "brand_certified": true
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Lecavist",
+      "domain": "lecavist.com",
+      "url": "https://lecavist.com/products/lecavist-44-bottle-wine-cabinet-dual-zone-lj44vn2zbu",
+      "authorized": true,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}
