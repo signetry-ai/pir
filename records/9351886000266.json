@@ -1,6 +1,6 @@
 {
   "schema": "pir/1.0",
-  "gtin": "8393113829668",
+  "gtin": "9351886000266",
   "sku": "ENV1R-SS",
   "brand": "Rhino",
   "range": "Envy",
@@ -74,12 +74,12 @@
   "qa": [
     {
       "q": "Can it be used outdoors?",
-      "a": "Yes. IP24 rated for outdoor use. Performs in ambient temperatures up to 43°C+.",
+      "a": "Yes. IP24 rated for outdoor use. Performs in ambient temperatures up to 43\u00b0C+.",
       "facts": ["ip_rating", "ambient_temperature_max_c", "location"]
     },
     {
       "q": "Is it suitable for coastal areas?",
-      "a": "Yes. Both the body and grill are 316 marine grade stainless steel — the highest grade for rust prevention and longevity in coastal and sea environments.",
+      "a": "Yes. Both the body and grill are 316 marine grade stainless steel \u2014 the highest grade for rust prevention and longevity in coastal and sea environments.",
       "facts": ["body_material", "grill_material"]
     },
     {
@@ -104,7 +104,7 @@
     },
     {
       "q": "Will it fit under a standard bench?",
-      "a": "The exterior height is 840mm. Standard bench height in Australia is 900mm. Check your specific clearance — ventilation requires a minimum 10mm top, 10mm each side, and 50mm at the rear.",
+      "a": "The exterior height is 840mm. Standard bench height in Australia is 900mm. Check your specific clearance \u2014 ventilation requires a minimum 10mm top, 10mm each side, and 50mm at the rear.",
       "facts": ["dimensions_exterior_h_mm", "ventilation_top_mm", "ventilation_each_side_mm", "ventilation_rear_mm"]
     },
     {
@@ -168,7 +168,7 @@
     },
     {
       "type": "brochure",
-      "url": "https://brochures.barfridgesaustralia.au/8393113829668.pdf",
+      "url": "https://brochures.barfridgesaustralia.au/9351886000266.pdf",
       "source": "bar-fridges-australia.com.au",
       "brand_certified": false
     }

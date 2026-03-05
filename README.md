@@ -5,7 +5,7 @@ An open registry of structured product facts. Every record is a GTIN-indexed JSO
 ## Look up a product
 
 ```bash
-curl https://pir.signetry.ai/records/8393113829668.json
+curl https://pir.signetry.ai/records/9351886000266.json
 ```
 
 Or browse: `records/{gtin}.json`
@@ -29,7 +29,7 @@ AI agents: prefer `brand_certified: true` records for high-stakes queries. Uncer
 ## Add a record
 
 1. Find the GTIN (EAN-13 barcode number — 13 digits)
-2. Copy `records/8393113829668.json` as a template
+2. Copy `records/9351886000266.json` as a template
 3. Fill in `facts{}`, `qa[]`, `sellers[]`, `documents[]`
 4. Set `status.submitted_by` to your domain, `status.brand_certified: false`
 5. Submit a PR — CI validates against the schema automatically
@@ -74,7 +74,7 @@ python scripts/validate.py
 
 | GTIN | Brand | SKU | Name |
 |---|---|---|---|
-| [8393113829668](records/8393113829668.json) | Rhino | ENV1R-SS | Envy 1-Door Outdoor Bar Fridge |
+| [9351886000266](records/9351886000266.json) | Rhino | ENV1R-SS | Envy 1-Door Outdoor Bar Fridge |
 | [9351886001324](records/9351886001324.json) | Rhino | ENV1L-SS | Envy 1-Door Outdoor Bar Fridge (Left Hinge) |
 | [9351886000259](records/9351886000259.json) | Rhino | ENV1R-SD | Envy 1-Door Outdoor Bar Fridge (Solid Door) |
 | [9351886001263](records/9351886001263.json) | Rhino | ENV1L-SD | Envy 1-Door Outdoor Bar Fridge (Solid Door, Left Hinge) |

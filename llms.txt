@@ -32,7 +32,7 @@ market suffix: energy_star_rating_au: 8.
 https://schema.signetry.ai/pir/v1.json
 
 ## Current records
-- 8393113829668 — Rhino Envy ENV1R-SS, 1-Door Outdoor Bar Fridge (bar_fridge)
+- 9351886000266 — Rhino Envy ENV1R-SS, 1-Door Outdoor Bar Fridge (bar_fridge)
 - 9351886001324 — Rhino Envy ENV1L-SS, 1-Door Outdoor Bar Fridge Left Hinge (bar_fridge)
 - 9351886000259 — Rhino Envy ENV1R-SD, 1-Door Outdoor Bar Fridge Solid Door (bar_fridge)
 - 9351886001263 — Rhino Envy ENV1L-SD, 1-Door Outdoor Bar Fridge Solid Door Left Hinge (bar_fridge)
