@@ -1,0 +1,134 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886002802",
+  "sku": "SK68R-SS",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "1-Door Bar Fridge (Triple Glazed)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 69,
+    "capacity_375ml_cans": 76,
+    "dimensions_exterior_w_mm": 435,
+    "dimensions_exterior_d_mm": 490,
+    "dimensions_exterior_h_mm": 680,
+    "weight_kg": 32,
+    "noise_db": 41,
+    "power_consumption_kwh_per_24h": 0.82,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "Right Hinged (Reversible Door)",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Polished Mirror Stainless Steel",
+    "grill_material": "Stainless Steel",
+    "glass_door_type": "Triple glazed tempered LOW E glass",
+    "running_cost_aud_annual": 76.74,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "energy_star_rating_au": 10,
+    "dimensions_interior_w_mm": 355,
+    "dimensions_interior_d_mm": 306,
+    "dimensions_interior_h_mm": 575,
+    "ventilation_top_mm": 20,
+    "ventilation_each_side_mm": 20,
+    "ventilation_rear_mm": 100,
+    "approvals": [
+      "RCM",
+      "Meps",
+      "EMC (C-Tick)"
+    ],
+    "refrigerant": "R600",
+    "component_compressor": "Jiaxipera",
+    "component_transformer": "Meanwell (Taiwan)",
+    "component_fan_primary": "Schmick quiet running fans",
+    "energy_star_rating_au_note": "Australian 1-10 star scale"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "69 litres, holds 76 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "41 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $76.74 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "10 stars on the Australian 1-10 star scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "RCM, Meps, EMC (C-Tick).",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9652204765476.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/classy-quiet-69ltr-triple-glazed-bar-fridge-with-blue-and-white-led-model-sk68r-ss",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

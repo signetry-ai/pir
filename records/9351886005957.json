@@ -1,0 +1,107 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886005957",
+  "sku": "MC560-INT",
+  "brand": "Schmick",
+  "range": "MC",
+  "name": "1-Door Integrated Fridge",
+  "category": "integrated_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 479,
+    "capacity_375ml_cans": 224,
+    "dimensions_exterior_w_mm": 1080,
+    "dimensions_exterior_d_mm": 550,
+    "dimensions_exterior_h_mm": 1770,
+    "weight_kg": 110,
+    "noise_db": 42,
+    "power_consumption_kwh_per_24h": 1.0,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "Reversible (Left / Right)",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "White",
+    "interior_finish": "White Molded Plastic",
+    "grill_material": "White",
+    "glass_door_type": "Solid Foamed Door",
+    "running_cost_aud_annual": 93.59,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "approvals": [
+      "GEMS 2022",
+      "RCM",
+      "EMC (C-Tick)"
+    ],
+    "shelf_type": "Fridge: 5 Large (430mmW x 275mmD) 2 x Crispers (380mmW x 220mmD x 180mmH) 5 x Inner Door (380mmW x 85mmD)  Freezer: 6 x Drawers (380mmW x 340mmD x 180mmH) Top Section (390mmW x 400mmD x 180mmH)"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "479 litres, holds 224 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "42 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $93.59 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "GEMS 2022, RCM, EMC (C-Tick).",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9061291196708.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/mc560-int",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886005971",
+  "sku": "MSF90",
+  "brand": "Schmick",
+  "range": "MS",
+  "name": "1-Door Integrated Fridge",
+  "category": "integrated_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 96,
+    "dimensions_exterior_w_mm": 595,
+    "dimensions_exterior_d_mm": 540,
+    "dimensions_exterior_h_mm": 820,
+    "weight_kg": 31,
+    "noise_db": 39,
+    "power_consumption_kwh_per_24h": 0.35,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "Left Hinged (Reversible Door Can Be Changed)",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "White",
+    "interior_finish": "White Molded Plastic",
+    "grill_material": "White",
+    "glass_door_type": "Solid Foamed Door",
+    "running_cost_aud_annual": 32.76,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "internal_temperature_min_c": 22,
+    "dimensions_interior_w_mm": 450,
+    "dimensions_interior_d_mm": 340,
+    "dimensions_interior_h_mm": 440,
+    "approvals": [
+      "GEMS 2022",
+      "RCM",
+      "EMC (C-Tick)"
+    ],
+    "shelf_type": "3 x Drawers(450mmW x 340mmD x 120mmH)"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "96 litres.",
+      "facts": [
+        "capacity_litres"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "39 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $32.76 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "GEMS 2022, RCM, EMC (C-Tick).",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8397539606820.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-integrated-under-counter-built-in-freezer-model-msf90",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

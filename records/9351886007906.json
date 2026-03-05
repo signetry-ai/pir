@@ -1,0 +1,110 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886007906",
+  "sku": "SC372LB-LWF",
+  "brand": "Schmick",
+  "range": "SC",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 370,
+    "capacity_375ml_cans": 336,
+    "dimensions_exterior_w_mm": 615,
+    "dimensions_exterior_d_mm": 640,
+    "dimensions_exterior_h_mm": 1940,
+    "weight_kg": 65,
+    "noise_db": 41,
+    "power_consumption_kwh_per_24h": 1.6,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "door_hinge": "**Left Hinge Only Available At The Moment",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "White",
+    "interior_finish": "White",
+    "grill_material": "White",
+    "glass_door_type": "Triple Glazed LOW E Glass",
+    "running_cost_aud_annual": 149.74,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "dimensions_interior_w_mm": 540,
+    "dimensions_interior_d_mm": 480,
+    "dimensions_interior_h_mm": 1350,
+    "ventilation_top_mm": 40,
+    "ventilation_each_side_mm": 40,
+    "ventilation_rear_mm": 60,
+    "approvals": [
+      "RCM Includes C-Tick And EMC",
+      "Units Are Also MEPS Approved For Energy To Latest Standard."
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "370 litres, holds 336 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "41 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $149.74 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "RCM Includes C-Tick And EMC, Units Are Also MEPS Approved For Energy To Latest Standard..",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/10067472187684.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/lest-we-forget-upright-quiet-running-black-glass-door-bar-fridge-model-sc372b-lwf",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

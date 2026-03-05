@@ -1,0 +1,132 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886003359",
+  "sku": "HUS-BC115-B",
+  "brand": "Schmick",
+  "range": "HUS",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 115,
+    "capacity_375ml_cans": 120,
+    "dimensions_exterior_w_mm": 540,
+    "dimensions_exterior_d_mm": 540,
+    "dimensions_exterior_h_mm": 845,
+    "weight_kg": 26,
+    "noise_db": 41,
+    "power_consumption_kwh_per_24h": 0.55,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 2,
+    "door_hinge": "Right Hinged (Reversible Door)",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "White Molded Plastic",
+    "grill_material": "Black",
+    "glass_door_type": "Solid Foamed Door",
+    "running_cost_aud_annual": 51.47,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "energy_star_rating_au": 10,
+    "internal_temperature_min_c": 0,
+    "dimensions_interior_w_mm": 425,
+    "dimensions_interior_d_mm": 435,
+    "dimensions_interior_h_mm": 725,
+    "ventilation_top_mm": 30,
+    "ventilation_each_side_mm": 30,
+    "ventilation_rear_mm": 100,
+    "approvals": [
+      "Meps",
+      "SAA Electrical",
+      "EMC (C-Tick)"
+    ],
+    "refrigerant": "R600",
+    "shelf_type": "Glass - 2 x Large 435mmW x 395mmD, 1 x Small",
+    "energy_star_rating_au_note": "Australian 1-10 star scale"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "115 litres, holds 120 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "41 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $51.47 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "10 stars on the Australian 1-10 star scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "Meps, SAA Electrical, EMC (C-Tick).",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8394511089956.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-quiet-energy-efficient-10-star-rated-black-bar-fridge",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

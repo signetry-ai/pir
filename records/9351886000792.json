@@ -1,0 +1,122 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886000792",
+  "sku": "HUS-SC70-SS-COMBO",
+  "brand": "Schmick",
+  "range": "HUS",
+  "name": "2-Door Outdoor Bar Fridge (Triple Glazed)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 140,
+    "capacity_375ml_cans": 170,
+    "dimensions_exterior_w_mm": 860,
+    "dimensions_exterior_d_mm": 500,
+    "dimensions_exterior_h_mm": 700,
+    "weight_kg": 68,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 3.2,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "1 x Left & 1 x Right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Molded black",
+    "grill_material": "Stainless Steel",
+    "glass_door_type": "Triple glazed tempered LOW E glass",
+    "running_cost_aud_annual": 299.48,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "dimensions_interior_w_mm": 720,
+    "dimensions_interior_d_mm": 360,
+    "dimensions_interior_h_mm": 595,
+    "ventilation_top_mm": 20,
+    "ventilation_each_side_mm": 20,
+    "ventilation_rear_mm": 100,
+    "approvals": [
+      "Meps",
+      "SAA Electrical",
+      "EMC (C-Tick)"
+    ],
+    "refrigerant": "R600",
+    "shelf_type": "6 x chromed shelves (350mm x 350mmD), 1 x bottom shelf (350mmW x 250mmD)"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "140 litres, holds 170 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $299.48 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "Meps, SAA Electrical, EMC (C-Tick).",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9045638349092.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/hus-sc70-ss-combo",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886002994",
+  "sku": "HUS-RND70B",
+  "brand": "Schmick",
+  "range": "HUS",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 68,
+    "capacity_375ml_cans": 68,
+    "dimensions_exterior_w_mm": 430,
+    "dimensions_exterior_d_mm": 495,
+    "dimensions_exterior_h_mm": 680,
+    "weight_kg": 19,
+    "noise_db": 41,
+    "power_consumption_kwh_per_24h": 0.22,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 0,
+    "door_hinge": "Reversible (Left / Right)",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "White Molded Plastic",
+    "grill_material": "Black",
+    "running_cost_aud_annual": 20.59,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "energy_star_rating_au": 10,
+    "internal_temperature_min_c": 0,
+    "dimensions_interior_w_mm": 335,
+    "dimensions_interior_d_mm": 335,
+    "dimensions_interior_h_mm": 600,
+    "ventilation_top_mm": 20,
+    "ventilation_each_side_mm": 20,
+    "ventilation_rear_mm": 100,
+    "approvals": [
+      "RCM",
+      "SAA Electrical",
+      "EMC (C-Tick)",
+      "Meps"
+    ],
+    "refrigerant": "R600",
+    "shelf_type": "2 x Large 345mmW x 280mmD, 1 x Small 345mmW x 165mmD. Inner Door 300mmW x 75mmD (365+175mmH)",
+    "energy_star_rating_au_note": "Australian 1-10 star scale"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "68 litres, holds 68 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "41 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $20.59 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "10 stars on the Australian 1-10 star scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "RCM, SAA Electrical, EMC (C-Tick), Meps.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8393751003428.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/black-rounded-quiet-running-energy-efficient-mini-bar-fridge-model-hus-rnd70b",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

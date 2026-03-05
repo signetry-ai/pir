@@ -1,0 +1,125 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886001911",
+  "sku": "JC190-GG",
+  "brand": "Schmick",
+  "range": "JC",
+  "name": "2-Door Wine Fridge",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 190,
+    "capacity_375ml_cans": 80,
+    "dimensions_exterior_w_mm": 900,
+    "dimensions_exterior_d_mm": 595,
+    "dimensions_exterior_h_mm": 800,
+    "weight_kg": 60,
+    "noise_db": 44,
+    "power_consumption_kwh_per_24h": 1.4,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "1 x Left & 1 x Right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "304 Stainless Steel",
+    "interior_finish": "Black Molded Plastic",
+    "grill_material": "304 Stainless Steel",
+    "glass_door_type": "Triple LOW E glass with heated glass option",
+    "running_cost_aud_annual": 131.02,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "dimensions_interior_w_mm": 350,
+    "dimensions_interior_d_mm": 450,
+    "dimensions_interior_h_mm": 630,
+    "ventilation_top_mm": 10,
+    "ventilation_each_side_mm": 10,
+    "ventilation_rear_mm": 50,
+    "approvals": [
+      "SAA Electrical",
+      "EMC (C-Tick)",
+      "RCM"
+    ],
+    "refrigerant": "R600",
+    "glass_door_heated_switchable": true,
+    "component_compressor": "Jiaxipera",
+    "component_transformer": "Meanwell (Taiwan)",
+    "component_fan_secondary": "Noctua (Silent)"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "190 litres, holds 80 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "44 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $131.02 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "SAA Electrical, EMC (C-Tick), RCM.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8393340256548.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-twin-zone-alfresco-beer-and-wine-bar-fridge-model-jc190-gg",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

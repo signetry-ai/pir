@@ -1,0 +1,116 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886006565",
+  "sku": "MSLF241",
+  "brand": "Schmick",
+  "range": "MS",
+  "name": "1-Door Integrated Fridge",
+  "category": "integrated_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 241,
+    "dimensions_exterior_w_mm": 540,
+    "dimensions_exterior_d_mm": 550,
+    "dimensions_exterior_h_mm": 1770,
+    "weight_kg": 55,
+    "noise_db": 42,
+    "power_consumption_kwh_per_24h": 0.5,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "Right Hinged (Reversible Door)",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "White",
+    "interior_finish": "White Molded Plastic",
+    "grill_material": "White",
+    "glass_door_type": "Solid Foamed Door",
+    "running_cost_aud_annual": 46.79,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "energy_star_rating_au": 3,
+    "internal_temperature_min_c": 0,
+    "approvals": [
+      "GEMS 2022",
+      "RCM",
+      "EMC (C-Tick)"
+    ],
+    "shelf_type": "Fridge: 4 Large Inc Floor (430mmW x 275mmD) - 3 x Inner Door (380mmW x 85mmD) 1 x Cris",
+    "energy_star_rating_au_note": "Australian 1-10 star scale"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "241 litres.",
+      "facts": [
+        "capacity_litres"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "42 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $46.79 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "3 stars on the Australian 1-10 star scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "GEMS 2022, RCM, EMC (C-Tick).",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9117019341092.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-integrated-upright-built-in-fridge-and-freezer-model-mslf241",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

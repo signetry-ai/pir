@@ -1,0 +1,72 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886007753",
+  "sku": "YF-NL42",
+  "brand": "Schmick",
+  "range": "YF",
+  "name": "1-Door Portable Fridge",
+  "category": "portable_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 42,
+    "dimensions_exterior_w_mm": 525,
+    "dimensions_exterior_d_mm": 430,
+    "dimensions_exterior_h_mm": 475,
+    "weight_kg": 0,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 0,
+    "door_hinge": "right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "White - Ask us about branding in a custom design",
+    "dimensions_interior_w_mm": 418,
+    "dimensions_interior_d_mm": 290,
+    "dimensions_interior_h_mm": 375
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "42 litres.",
+      "facts": [
+        "capacity_litres"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9951409537316.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/heavy-duty-roto-mold-ice-box-42ltr-with-wheels-handle-and-temp-gauge",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

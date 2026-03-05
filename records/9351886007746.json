@@ -1,0 +1,75 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886007746",
+  "sku": "YF-NL35",
+  "brand": "Schmick",
+  "range": "YF",
+  "name": "1-Door Portable Fridge",
+  "category": "portable_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 35,
+    "capacity_375ml_cans": 48,
+    "dimensions_exterior_w_mm": 620,
+    "dimensions_exterior_d_mm": 360,
+    "dimensions_exterior_h_mm": 380,
+    "weight_kg": 0,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 0,
+    "door_hinge": "right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "White - Ask us about branding in a custom design",
+    "interior_finish": "White",
+    "dimensions_interior_w_mm": 480,
+    "dimensions_interior_d_mm": 230,
+    "dimensions_interior_h_mm": 290
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "35 litres, holds 48 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9951408718116.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/heavy-duty-roto-mold-ice-box-35ltr-with-temp-gauge",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

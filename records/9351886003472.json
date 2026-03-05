@@ -1,0 +1,96 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886003472",
+  "sku": "SK-BDC60",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "1-Door Portable Fridge",
+  "category": "portable_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 60,
+    "capacity_375ml_cans": 69,
+    "dimensions_exterior_w_mm": 740,
+    "dimensions_exterior_d_mm": 495,
+    "dimensions_exterior_h_mm": 520,
+    "weight_kg": 32,
+    "noise_db": 43,
+    "ambient_temperature_max_c": 43,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 0,
+    "door_hinge": "Lift Up Lid",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Light Grey",
+    "interior_finish": "White Metal",
+    "glass_door_type": "Solid Foamed Door",
+    "dimensions_interior_w_mm": 575,
+    "dimensions_interior_d_mm": 330,
+    "dimensions_interior_h_mm": 400,
+    "approvals": [
+      "RCM"
+    ],
+    "shelf_type": "2 x Baskets Included"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "60 litres, holds 69 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "RCM.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8394726834468.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/portable-camping-multi-purpose-fridge-freezer-12-24-240v-60litre-model-sk-bdc60",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

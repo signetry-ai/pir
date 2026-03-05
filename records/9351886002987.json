@@ -1,0 +1,122 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886002987",
+  "sku": "JC165B",
+  "brand": "Schmick",
+  "range": "JC",
+  "name": "1-Door Wine Fridge",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 165,
+    "capacity_375ml_cans": 90,
+    "dimensions_exterior_w_mm": 750,
+    "dimensions_exterior_d_mm": 570,
+    "dimensions_exterior_h_mm": 865,
+    "weight_kg": 61,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 1.23,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "1 x Left & 1 x Right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Molded black",
+    "grill_material": "Black",
+    "glass_door_type": "Dual glazed tempered LOW E glass",
+    "running_cost_aud_annual": 115.11,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "dimensions_interior_w_mm": 600,
+    "dimensions_interior_d_mm": 420,
+    "dimensions_interior_h_mm": 630,
+    "ventilation_top_mm": 10,
+    "ventilation_each_side_mm": 10,
+    "ventilation_rear_mm": 50,
+    "approvals": [
+      "EMC (C-Tick)",
+      "SAA Electrical"
+    ],
+    "refrigerant": "R600",
+    "shelf_type": "6 x Slide Out Wine Shelves 285mmW x 440mmD, 4 x Chromed Flat Shelves 280mmW x 435mmD",
+    "component_transformer": "Meanwell (Taiwan)",
+    "component_fan_secondary": "Noctua (Silent)"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "165 litres, holds 90 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $115.11 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "EMC (C-Tick), SAA Electrical.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8393476014372.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/under-bench-beer-and-wine-dual-zone-bar-fridge-model-jc165b",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886003151",
+  "sku": "SK168-Combo3",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "3-Door Wine Fridge",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 209,
+    "capacity_375ml_cans": 120,
+    "dimensions_exterior_w_mm": 1200,
+    "dimensions_exterior_d_mm": 395,
+    "dimensions_exterior_h_mm": 1820,
+    "weight_kg": 188,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 4.6,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 8,
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Molded Black",
+    "grill_material": "Black",
+    "glass_door_type": "Triple glazed tempered LOW E glass",
+    "running_cost_aud_annual": 430.5,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "dimensions_interior_w_mm": 515,
+    "dimensions_interior_d_mm": 255,
+    "dimensions_interior_h_mm": 1575,
+    "ventilation_top_mm": 20,
+    "ventilation_each_side_mm": 20,
+    "ventilation_rear_mm": 20,
+    "approvals": [
+      "Meps",
+      "RCM"
+    ],
+    "refrigerant": "R600"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "209 litres, holds 120 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $430.50 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "Meps, RCM.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9045630812452.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/sk168-combo3",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

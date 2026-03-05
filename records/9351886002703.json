@@ -1,0 +1,126 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886002703",
+  "sku": "SK386-SD",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "3-Door Bar Fridge (Solid Door)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 399,
+    "capacity_375ml_cans": 396,
+    "dimensions_exterior_w_mm": 1345,
+    "dimensions_exterior_d_mm": 590,
+    "dimensions_exterior_h_mm": 840,
+    "weight_kg": 92,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 2.41,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 6,
+    "door_hinge": "2 x Left & 1 x Right",
+    "glass_door": false,
+    "body_material": "Matte Black Finish",
+    "interior_finish": "Polished Mirror Stainless Steel",
+    "grill_material": "304 Stainless Steel",
+    "glass_door_type": "304 Stainless Solid Door",
+    "running_cost_aud_annual": 225.54,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "internal_temperature_min_c": 0,
+    "dimensions_interior_w_mm": 1265,
+    "dimensions_interior_d_mm": 440,
+    "dimensions_interior_h_mm": 690,
+    "ventilation_top_mm": 10,
+    "ventilation_each_side_mm": 10,
+    "ventilation_rear_mm": 50,
+    "approvals": [
+      "Meps",
+      "SAA Electrical",
+      "EMC (C-Tick)",
+      "GEMS 2022"
+    ],
+    "refrigerant": "R600",
+    "component_compressor": "Jiaxipera",
+    "component_transformer": "Meanwell (Taiwan)",
+    "component_fan_primary": "Schmick quiet running fans",
+    "component_controller": "Schmick ECO Controller"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "399 litres, holds 396 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $225.54 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "Meps, SAA Electrical, EMC (C-Tick), GEMS 2022.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8395770102052.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-3-door-quiet-running-solid-stainless-steel-door-bar-fridge-model-sk386-sd",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

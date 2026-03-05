@@ -1,0 +1,119 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886008019",
+  "sku": "BC46W-TENNIS",
+  "brand": "Schmick",
+  "range": "BC",
+  "name": "1-Door Bar Fridge",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 46,
+    "capacity_375ml_cans": 38,
+    "dimensions_exterior_w_mm": 430,
+    "dimensions_exterior_d_mm": 470,
+    "dimensions_exterior_h_mm": 500,
+    "weight_kg": 16,
+    "noise_db": 39,
+    "power_consumption_kwh_per_24h": 0.21,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 2,
+    "door_hinge": "Right Hinge (Handle Left)",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Black Molded Plastic",
+    "grill_material": "Black",
+    "running_cost_aud_annual": 19.65,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "dimensions_interior_w_mm": 350,
+    "dimensions_interior_d_mm": 360,
+    "dimensions_interior_h_mm": 415,
+    "ventilation_top_mm": 20,
+    "ventilation_each_side_mm": 20,
+    "ventilation_rear_mm": 100,
+    "approvals": [
+      "EMC (C-Tick)",
+      "SAA Electrical",
+      "Meps"
+    ],
+    "refrigerant": "R600",
+    "shelf_type": "1 x Large and 1 x Half Shelf"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "46 litres, holds 38 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "39 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $19.65 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "EMC (C-Tick), SAA Electrical, Meps.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/10077744922916.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/retro-tennis-ball-vintage-mini-bar-fridge-with-opener-add-your-own-name-model-bc46-ret-tennis",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

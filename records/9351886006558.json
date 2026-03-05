@@ -1,0 +1,111 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886006558",
+  "sku": "HUS-SC700W",
+  "brand": "Schmick",
+  "range": "HUS",
+  "name": "1-Door Commercial Fridge",
+  "category": "commercial_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 737,
+    "capacity_375ml_cans": 600,
+    "dimensions_exterior_w_mm": 890,
+    "dimensions_exterior_d_mm": 655,
+    "dimensions_exterior_h_mm": 2130,
+    "weight_kg": 65,
+    "noise_db": 47,
+    "power_consumption_kwh_per_24h": 1.6,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "door_hinge": "Right Hinged,",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "White",
+    "interior_finish": "White",
+    "grill_material": "White Front Grill - All Glass Door Has Silver Trim",
+    "glass_door_type": "Triple Glazed LOW E Glass",
+    "running_cost_aud_annual": 149.74,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "dimensions_interior_w_mm": 800,
+    "dimensions_interior_d_mm": 540,
+    "dimensions_interior_h_mm": 1800,
+    "ventilation_top_mm": 20,
+    "ventilation_each_side_mm": 40,
+    "ventilation_rear_mm": 60,
+    "approvals": [
+      "RCM Includes C-Tick And EMC",
+      "Units Are Also MEPS Approved For Energy To Latest Standard."
+    ]
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "737 litres, holds 600 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "47 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $149.74 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "RCM Includes C-Tick And EMC, Units Are Also MEPS Approved For Energy To Latest Standard..",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8990132109604.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/upright-commercial-classy-all-glass-door-bar-fridge-model-hus-sc700w",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

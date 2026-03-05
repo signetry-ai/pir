@@ -1,0 +1,122 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886001775",
+  "sku": "SK118L-SS",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "1-Door Bar Fridge (Heated Glass)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 118,
+    "capacity_375ml_cans": 120,
+    "dimensions_exterior_w_mm": 555,
+    "dimensions_exterior_d_mm": 500,
+    "dimensions_exterior_h_mm": 875,
+    "weight_kg": 50,
+    "noise_db": 47,
+    "power_consumption_kwh_per_24h": 2.65,
+    "ambient_temperature_max_c": 43,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "Left Hing (Handle Right)",
+    "glass_door": true,
+    "glass_door_heated_switchable": true,
+    "led_lighting": true,
+    "body_material": "304 Stainless Steel",
+    "interior_finish": "Smashed Aluminum",
+    "grill_material": "304 Stainless Steel",
+    "glass_door_type": "Heated glass - tempered",
+    "running_cost_aud_annual": 248.0,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "dimensions_interior_w_mm": 470,
+    "dimensions_interior_d_mm": 380,
+    "dimensions_interior_h_mm": 740,
+    "ventilation_top_mm": 10,
+    "ventilation_each_side_mm": 10,
+    "ventilation_rear_mm": 50,
+    "approvals": [
+      "SAA Electrical",
+      "EMC (C-Tick)"
+    ],
+    "refrigerant": "R600",
+    "shelf_type": "2 x flat chromed adjustable shelves (455mmW x 360mmD)"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "118 litres, holds 120 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "47 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $248.00 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "SAA Electrical, EMC (C-Tick).",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8393294381348.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-304-stainless-steel-bar-fridge-tropical-rated-with-heated-glass-and-triple-glazing-model-sk118l-ss",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

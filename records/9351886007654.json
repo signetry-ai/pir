@@ -1,0 +1,119 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886007654",
+  "sku": "HUS-F10",
+  "brand": "Schmick",
+  "range": "HUS",
+  "name": "1-Door Commercial Fridge",
+  "category": "commercial_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 810,
+    "dimensions_exterior_w_mm": 1200,
+    "dimensions_exterior_d_mm": 740,
+    "dimensions_exterior_h_mm": 1998,
+    "weight_kg": 250,
+    "noise_db": 49,
+    "power_consumption_kwh_per_24h": 26.0,
+    "ambient_temperature_max_c": 22,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Body",
+    "interior_finish": "Smashed Aluminium",
+    "grill_material": "White",
+    "glass_door_type": "Heated Glass Stops Condensation",
+    "running_cost_aud_annual": 2433.24,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "internal_temperature_min_c": 18,
+    "dimensions_interior_w_mm": 1070,
+    "dimensions_interior_d_mm": 530,
+    "dimensions_interior_h_mm": 1230,
+    "ventilation_top_mm": 40,
+    "ventilation_each_side_mm": 40,
+    "ventilation_rear_mm": 150,
+    "approvals": [
+      "Electrical Approvals 60335.2.89",
+      "MEPS 2020 23953-2"
+    ],
+    "refrigerant": "R290",
+    "glass_door_heated_switchable": true
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "810 litres.",
+      "facts": [
+        "capacity_litres"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "49 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $2433.24 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R290.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "Electrical Approvals 60335.2.89, MEPS 2020 23953-2.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9935282438436.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-upright-2-door-commercial-glass-door-freezer-model-hus-f10",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

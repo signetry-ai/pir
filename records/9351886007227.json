@@ -1,0 +1,125 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886007227",
+  "sku": "SK220L-B-HD",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "1-Door Upright Fridge (Heated Glass)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 219,
+    "capacity_375ml_cans": 245,
+    "dimensions_exterior_w_mm": 595,
+    "dimensions_exterior_d_mm": 586,
+    "dimensions_exterior_h_mm": 1220,
+    "weight_kg": 65,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 2.64,
+    "ambient_temperature_max_c": 32,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "door_hinge": "left",
+    "glass_door": true,
+    "glass_door_heated_switchable": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Polished Stainless 304",
+    "grill_material": "Black",
+    "glass_door_type": "Heated Glass (Stops Condensation)",
+    "running_cost_aud_annual": 247.07,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "internal_temperature_min_c": 1,
+    "dimensions_interior_w_mm": 520,
+    "dimensions_interior_d_mm": 440,
+    "dimensions_interior_h_mm": 820,
+    "ventilation_top_mm": 40,
+    "ventilation_each_side_mm": 40,
+    "ventilation_rear_mm": 150,
+    "approvals": [
+      "SAA Electrical",
+      "RCM"
+    ],
+    "refrigerant": "R600",
+    "component_compressor": "Jiaxipera",
+    "component_fan_primary": "Schmick quiet running fans",
+    "component_controller": "Schmick ECO Controller",
+    "adjustable_feet_count": 4
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "219 litres, holds 245 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $247.07 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "SAA Electrical, RCM.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9474325086500.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-short-upright-heated-glass-1-door-bar-fridge-model-sk220l-b-hd",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

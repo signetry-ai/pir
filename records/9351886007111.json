@@ -1,0 +1,128 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886007111",
+  "sku": "BD425D",
+  "brand": "Schmick",
+  "range": "BD",
+  "name": "1-Door Wine Fridge",
+  "category": "wine_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 405,
+    "dimensions_exterior_w_mm": 595,
+    "dimensions_exterior_d_mm": 695,
+    "dimensions_exterior_h_mm": 1800,
+    "weight_kg": 129,
+    "noise_db": 43,
+    "power_consumption_kwh_per_24h": 1.24,
+    "ambient_temperature_max_c": 38,
+    "location": [
+      "indoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "1 x left, 1 x right",
+    "glass_door": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "interior_finish": "Black Molded Plastic",
+    "grill_material": "Seamless 304 Stainless Steel No Joins",
+    "glass_door_type": "Triple glazed tempered LOW E glass",
+    "running_cost_aud_annual": 116.05,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "energy_star_rating_au": 10,
+    "dimensions_interior_w_mm": 450,
+    "dimensions_interior_d_mm": 540,
+    "dimensions_interior_h_mm": 1600,
+    "approvals": [
+      "EMC (C-Tick)",
+      "SAA Electrical",
+      "RCM"
+    ],
+    "refrigerant": "R600",
+    "component_compressor": "Jiaxipera",
+    "component_transformer": "Meanwell (Taiwan)",
+    "component_fan_primary": "Schmick quiet running fans",
+    "energy_star_rating_au_note": "Australian 1-10 star scale"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "405 litres.",
+      "facts": [
+        "capacity_litres"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "43 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $116.05 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "10 stars on the Australian 1-10 star scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "EMC (C-Tick), SAA Electrical, RCM.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/9417600827684.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-upright-glass-door-wine-refrigerator-model-bd425d",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}

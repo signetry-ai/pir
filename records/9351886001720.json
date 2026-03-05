@@ -1,0 +1,121 @@
+{
+  "schema": "pir/1.0",
+  "gtin": "9351886001720",
+  "sku": "SK190-B",
+  "brand": "Schmick",
+  "range": "SK",
+  "name": "2-Door Bar Fridge (Heated Glass)",
+  "category": "bar_fridge",
+  "status": {
+    "brand_certified": false,
+    "brand_domain": null,
+    "certified_date": null,
+    "submitted_by": "bar-fridges-australia.com.au",
+    "submitted_date": "2026-03-05"
+  },
+  "facts": {
+    "capacity_litres": 190,
+    "capacity_375ml_cans": 220,
+    "dimensions_exterior_w_mm": 870,
+    "dimensions_exterior_d_mm": 500,
+    "dimensions_exterior_h_mm": 875,
+    "weight_kg": 75,
+    "noise_db": 49,
+    "power_consumption_kwh_per_24h": 4.1,
+    "ambient_temperature_max_c": 43,
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
+    "lockable": true,
+    "adjustable_feet": true,
+    "adjustable_feet_count": 4,
+    "door_hinge": "1 x Left & 1 x Right",
+    "glass_door": true,
+    "glass_door_heated_switchable": true,
+    "led_lighting": true,
+    "body_material": "Black",
+    "grill_material": "Black",
+    "glass_door_type": "Heated glass - tempered",
+    "running_cost_aud_annual": 383.7,
+    "running_cost_basis_cents_per_kwh": 25.64,
+    "dimensions_interior_w_mm": 785,
+    "dimensions_interior_d_mm": 385,
+    "dimensions_interior_h_mm": 740,
+    "ventilation_top_mm": 10,
+    "ventilation_each_side_mm": 10,
+    "ventilation_rear_mm": 50,
+    "approvals": [
+      "EMC (C-Tick)",
+      "SAA Electrical"
+    ],
+    "refrigerant": "R600",
+    "shelf_type": "4 x flat chromed adjustable shelves (370mmW x 330mmD)"
+  },
+  "qa": [
+    {
+      "q": "What is the capacity?",
+      "a": "190 litres, holds 220 standard 375ml cans.",
+      "facts": [
+        "capacity_litres",
+        "capacity_375ml_cans"
+      ]
+    },
+    {
+      "q": "Is it lockable?",
+      "a": "Yes. Includes a key lock.",
+      "facts": [
+        "lockable"
+      ]
+    },
+    {
+      "q": "How noisy is it?",
+      "a": "49 dB.",
+      "facts": [
+        "noise_db"
+      ]
+    },
+    {
+      "q": "What are the running costs?",
+      "a": "Approximately $383.70 AUD per year based on 25.64 cents per kWh.",
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h"
+      ]
+    },
+    {
+      "q": "What refrigerant does it use?",
+      "a": "R600.",
+      "facts": [
+        "refrigerant"
+      ]
+    },
+    {
+      "q": "What approvals does it have?",
+      "a": "EMC (C-Tick), SAA Electrical.",
+      "facts": [
+        "approvals"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "brochure",
+      "url": "https://brochures.barfridgesaustralia.au/174752036/8393267708196.pdf",
+      "source": "bar-fridges-australia.com.au",
+      "brand_certified": false
+    }
+  ],
+  "sellers": [
+    {
+      "name": "Bar Fridges Australia",
+      "domain": "bar-fridges-australia.com.au",
+      "url": "https://bar-fridges-australia.com.au/products/schmick-black-bar-fridge-2-door-with-heated-glass-and-triple-glazing-model-sk190-b",
+      "authorized": false,
+      "regions": [
+        "AU"
+      ]
+    }
+  ]
+}
