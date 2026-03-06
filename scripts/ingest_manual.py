@@ -39,7 +39,7 @@ def load_record(gtin: str) -> dict:
         return json.load(f)
 
 
-def find_manual_url(record: dict) -> str | None:
+def find_manual_url(record: dict):
     for doc in record.get("documents", []):
         if doc.get("type") == "manual":
             return doc["url"]
