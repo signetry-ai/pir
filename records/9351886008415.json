@@ -31,7 +31,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
     "door_hinge": "right",
-    "glass_door": true,
     "led_lighting": true,
     "interior_finish": "Smashed Aluminum",
     "door_reversible": true,

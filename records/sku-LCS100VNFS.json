@@ -24,7 +24,6 @@
     "internal_temperature_min_c": 5,
     "internal_temperature_max_c": 20,
     "temperature_zones": 1,
-    "glass_door": true,
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": true,

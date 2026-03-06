@@ -51,7 +51,6 @@
     "door_hinge": "left",
     "handle_side": "right",
     "door_type": "solid",
-    "glass_door": false,
     "led_lighting": true,
     "refrigerant": "R600",
     "refrigerant_odp": 0,

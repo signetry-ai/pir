@@ -28,7 +28,6 @@
     "zone_upper_temp_max_c": 12,
     "zone_lower_temp_min_c": 12,
     "zone_lower_temp_max_c": 20,
-    "glass_door": true,
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": false,

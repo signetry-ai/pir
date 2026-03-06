@@ -31,7 +31,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
     "door_hinge": "right",
-    "glass_door": false,
     "interior_finish": "Polished Mirror Stainless Steel",
     "running_cost_aud_annual": 114.17,
     "running_cost_basis_cents_per_kwh": 25.64,

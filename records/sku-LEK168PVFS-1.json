@@ -21,7 +21,6 @@
     "noise_db": 42,
     "energy_consumption_kwh_annual": 183,
     "temperature_zones": 1,
-    "glass_door": true,
     "door_hinge": "right",
     "led_lighting": true,
     "anti_vibration": true,

@@ -1,7 +1,7 @@
 {
   "schema": "pir/1.0",
   "gtin": "9351886000372",
-  "sku": "HUS-BC46B-RET",
+  "sku": "BC46B-RET",
   "brand": "Schmick",
   "range": "HUS",
   "name": "1-Door Bar Fridge",
@@ -22,7 +22,7 @@
     "weight_kg": 16,
     "noise_db": 39,
     "power_consumption_kwh_per_24h": 0.21,
-    "ambient_temperature_max_c": 38,
+    "ambient_temperature_max_c": 32,
     "location": [
       "indoor"
     ],
@@ -30,7 +30,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "door_hinge": "right",
-    "glass_door": true,
     "led_lighting": true,
     "interior_finish": "Black Molded Plastic",
     "running_cost_aud_annual": 19.65,

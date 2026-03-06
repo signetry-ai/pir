@@ -30,7 +30,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "door_hinge": "right",
-    "glass_door": true,
     "led_lighting": true,
     "interior_finish": "Molded black",
     "running_cost_aud_annual": 64.57,

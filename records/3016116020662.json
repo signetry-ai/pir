@@ -20,7 +20,6 @@
     "noise_db": 43,
     "temperature_zones": 1,
     "shelf_count": 12,
-    "glass_door": false,
     "led_lighting": true,
     "anti_vibration": false,
     "lockable": true,

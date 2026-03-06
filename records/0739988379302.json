@@ -18,7 +18,6 @@
     "dimensions_exterior_d_mm": 575,
     "dimensions_exterior_h_mm": 820,
     "temperature_zones": 1,
-    "glass_door": true,
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": false,

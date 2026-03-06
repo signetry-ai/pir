@@ -27,7 +27,6 @@
     "zone_mid_temp_max_c": 12,
     "zone_lower_temp_min_c": 12,
     "zone_lower_temp_max_c": 18,
-    "glass_door": true,
     "door_hinge": "right",
     "led_lighting": true,
     "anti_vibration": true,

@@ -29,7 +29,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "door_hinge": "right",
-    "glass_door": true,
     "led_lighting": true,
     "running_cost_aud_annual": 19.65,
     "running_cost_basis_cents_per_kwh": 25.64,
@@ -50,7 +49,8 @@
     "door_type": "glass",
     "door_heated": false,
     "body_colour": "branded",
-    "led_light_colour": "white"
+    "led_light_colour": "white",
+    "ambient_temperature_max_c": 32
   },
   "qa": [
     {

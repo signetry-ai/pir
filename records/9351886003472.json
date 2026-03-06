@@ -30,7 +30,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 0,
     "door_hinge": "lift-up lid",
-    "glass_door": false,
     "led_lighting": true,
     "interior_finish": "White Metal",
     "dimensions_interior_w_mm": 575,

@@ -19,7 +19,6 @@
     "dimensions_exterior_h_mm": 820,
     "temperature_zones": 2,
     "shelf_count": 4,
-    "glass_door": true,
     "door_hinge": "right",
     "led_lighting": true,
     "anti_vibration": true,

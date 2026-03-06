@@ -25,7 +25,6 @@
     "ambient_temperature_max_c": 43,
     "temperature_zones": 1,
     "shelf_count": 3,
-    "glass_door": true,
     "door_hinge": "right",
     "led_lighting": true,
     "anti_vibration": true,

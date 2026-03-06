@@ -30,7 +30,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
     "door_hinge": "right",
-    "glass_door": false,
     "door_reversible": true,
     "door_count": 1,
     "door_type": "solid",

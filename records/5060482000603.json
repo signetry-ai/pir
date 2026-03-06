@@ -31,7 +31,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
     "door_hinge": "1 x left, 1 x right",
-    "glass_door": false,
     "body_material": "304 stainless steel",
     "interior_finish": "Polished 304 SS",
     "door_reversible": false,

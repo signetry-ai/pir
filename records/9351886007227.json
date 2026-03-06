@@ -30,7 +30,6 @@
     "lockable": true,
     "adjustable_feet": true,
     "door_hinge": "left",
-    "glass_door": true,
     "glass_door_heated_switchable": true,
     "led_lighting": true,
     "interior_finish": "Polished Stainless 304",

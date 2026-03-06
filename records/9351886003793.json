@@ -29,7 +29,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "door_hinge": "right",
-    "glass_door": true,
     "led_lighting": true,
     "interior_finish": "White Molded Plastic",
     "door_reversible": true,
@@ -37,7 +36,8 @@
     "door_type": "glass",
     "door_heated": false,
     "body_colour": "branded",
-    "led_light_colour": "white"
+    "led_light_colour": "white",
+    "ambient_temperature_max_c": 32
   },
   "qa": [
     {

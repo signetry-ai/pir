@@ -30,7 +30,6 @@
     "lockable": true,
     "adjustable_feet": true,
     "door_hinge": "right",
-    "glass_door": true,
     "led_lighting": true,
     "interior_finish": "Black Molded Plastic",
     "running_cost_aud_annual": 221.8,

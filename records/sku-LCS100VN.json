@@ -21,7 +21,6 @@
     "weight_kg": 40,
     "noise_db": 45,
     "temperature_zones": 2,
-    "glass_door": true,
     "door_hinge": "right",
     "led_lighting": true,
     "anti_vibration": true,

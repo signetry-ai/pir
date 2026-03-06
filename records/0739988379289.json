@@ -20,7 +20,6 @@
     "internal_temperature_min_c": 2,
     "internal_temperature_max_c": 18,
     "temperature_zones": 1,
-    "glass_door": true,
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": false,

@@ -29,7 +29,6 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "door_hinge": "right",
-    "glass_door": true,
     "led_lighting": true,
     "interior_finish": "Black Molded Plastic",
     "running_cost_aud_annual": 19.65,
@@ -52,7 +51,8 @@
     "door_type": "glass",
     "door_heated": false,
     "body_colour": "black",
-    "led_light_colour": "white"
+    "led_light_colour": "white",
+    "ambient_temperature_max_c": 32
   },
   "qa": [
     {
