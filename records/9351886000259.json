@@ -78,10 +78,7 @@
     "door_count": 1,
     "door_heated": false,
     "body_colour": "stainless steel",
-    "led_light_colour": [
-      "blue",
-      "white"
-    ]
+    "led_light_colour": "blue, white"
   },
   "qa": [
     {

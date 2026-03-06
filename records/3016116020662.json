@@ -24,7 +24,6 @@
     "anti_vibration": false,
     "lockable": true,
     "refrigerant": "R600a",
-    "solid_door": true,
     "installation": "freestanding",
     "location": [
       "indoor"
