@@ -9,3 +9,4 @@ venv/
 .idea/
 .vscode/
 intake/
+records/*.notes.json
