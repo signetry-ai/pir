@@ -19,13 +19,22 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RECORDS_DIR = os.path.join(ROOT, "records")
 
-# Load API key from backend/.env if not in env
-if not os.environ.get("ANTHROPIC_API_KEY"):
+
+def _load_api_key():
+    """Load ANTHROPIC_API_KEY from backend/.env if not in environment."""
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        return
     env_path = os.path.join(ROOT, "..", "backend", ".env")
-    if os.path.exists(env_path):
-        for line in open(env_path):
+    if not os.path.exists(env_path):
+        return
+    with open(env_path) as f:
+        for line in f:
             if line.startswith("ANTHROPIC_API_KEY="):
                 os.environ["ANTHROPIC_API_KEY"] = line.strip().split("=", 1)[1]
+                return
+
+
+_load_api_key()
 
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from extract_pdf import extract_chunks_from_url
@@ -67,10 +76,18 @@ def main():
     chunks = extract_chunks_from_url(manual_url)
     print(f"  Extracted {len(chunks)} pages with text")
 
+    if not chunks:
+        print("  ERROR: No text extracted from PDF. May be image-only.")
+        sys.exit(1)
+
     # Step 2: LLM extraction
     print("\n[2/3] Extracting notes (LLM pass 1)...")
     notes = extract_notes(chunks, record)
     print(f"  Extracted {len(notes)} candidate notes")
+
+    if not notes:
+        print("  No notes extracted. Manual may not contain support content.")
+        sys.exit(0)
 
     # Step 3: LLM verification
     print("\n[3/3] Verifying notes (LLM pass 2)...")

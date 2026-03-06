@@ -51,9 +51,18 @@ def main():
         print("No approved notes found. Edit the .notes.json file and set approved: true.")
         sys.exit(0)
 
-    # Merge into record — strip internal fields
+    # Merge into record — deduplicate by (topic, source_quote)
     existing_notes = record.get("notes", [])
+    existing_keys = {(n["topic"], n.get("source_quote", "")) for n in existing_notes}
+    added = 0
+    skipped = 0
+
     for note in approved:
+        key = (note["topic"], note.get("source_quote", ""))
+        if key in existing_keys:
+            skipped += 1
+            continue
+        existing_keys.add(key)
         clean_note = {
             "topic": note["topic"],
             "text": note["text"],
@@ -65,6 +74,7 @@ def main():
             "approved": True,
         }
         existing_notes.append(clean_note)
+        added += 1
 
     record["notes"] = existing_notes
 
@@ -72,11 +82,13 @@ def main():
         json.dump(record, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    print(f"Merged {len(approved)} approved notes into {record_path}")
+    print(f"Merged {added} approved notes into {record_path}")
+    if skipped:
+        print(f"Skipped {skipped} duplicates (already in record)")
     print(f"Rejected: {rejected}")
     print(f"\nDon't forget to commit:")
     print(f"  git add records/{gtin}.json")
-    print(f"  git commit -m 'feat({gtin}): add {len(approved)} verified support notes from manual'")
+    print(f"  git commit -m 'feat({gtin}): add {added} verified support notes from manual'")
 
 
 if __name__ == "__main__":

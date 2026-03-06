@@ -10,6 +10,7 @@ import os
 
 import anthropic
 
+# Keep in sync with schema/pir.v1.json notes.topic enum
 VALID_TOPICS = [
     "power_consumption", "temperature_control", "shelving", "installation",
     "components", "door_configuration", "glass", "noise", "warranty",
@@ -45,6 +46,9 @@ SOURCE TEXT (with page numbers):
 {chunks}
 """
 
+# Rough threshold: ~150K chars ≈ 37K tokens, well within Haiku's 200K context
+MAX_CHARS_PER_BATCH = 150_000
+
 
 def extract_notes(chunks: list[dict], record: dict) -> list[dict]:
     """Extract structured notes from text chunks using Claude Haiku."""
@@ -54,6 +58,15 @@ def extract_notes(chunks: list[dict], record: dict) -> list[dict]:
         f"--- PAGE {c['page']} ---\n{c['text']}" for c in chunks
     )
 
+    # Batch if content exceeds context threshold
+    if len(chunks_text) > MAX_CHARS_PER_BATCH:
+        return _extract_batched(client, chunks, record)
+
+    return _extract_single(client, chunks_text, record)
+
+
+def _extract_single(client, chunks_text: str, record: dict) -> list[dict]:
+    """Single-pass extraction for manuals that fit in one context window."""
     prompt = EXTRACTION_PROMPT.format(
         brand=record.get("brand", "Unknown"),
         sku=record.get("sku", "Unknown"),
@@ -62,11 +75,15 @@ def extract_notes(chunks: list[dict], record: dict) -> list[dict]:
         chunks=chunks_text,
     )
 
-    message = client.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
+    try:
+        message = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=4096,
+            messages=[{"role": "user", "content": prompt}],
+        )
+    except anthropic.APIError as e:
+        print(f"  ERROR: Anthropic API call failed: {e}")
+        return []
 
     response_text = message.content[0].text.strip()
 
@@ -74,11 +91,45 @@ def extract_notes(chunks: list[dict], record: dict) -> list[dict]:
     if response_text.startswith("```"):
         response_text = response_text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
 
-    notes = json.loads(response_text)
+    try:
+        notes = json.loads(response_text)
+    except json.JSONDecodeError as e:
+        print(f"  ERROR: Failed to parse LLM response as JSON: {e}")
+        print(f"  Response (first 200 chars): {response_text[:200]}")
+        return []
 
-    # Validate each note
+    return _validate_notes(notes)
+
+
+def _extract_batched(client, chunks: list[dict], record: dict) -> list[dict]:
+    """Batch extraction for large manuals — split into page groups."""
+    all_notes = []
+    batch = []
+    batch_len = 0
+
+    for chunk in chunks:
+        chunk_text = f"--- PAGE {chunk['page']} ---\n{chunk['text']}"
+        if batch_len + len(chunk_text) > MAX_CHARS_PER_BATCH and batch:
+            chunks_text = "\n\n".join(batch)
+            all_notes.extend(_extract_single(client, chunks_text, record))
+            batch = []
+            batch_len = 0
+        batch.append(chunk_text)
+        batch_len += len(chunk_text)
+
+    if batch:
+        chunks_text = "\n\n".join(batch)
+        all_notes.extend(_extract_single(client, chunks_text, record))
+
+    return all_notes
+
+
+def _validate_notes(notes: list) -> list[dict]:
+    """Validate and filter extracted notes."""
     validated = []
     for note in notes:
+        if not isinstance(note, dict):
+            continue
         if not all(k in note for k in ("topic", "text", "source_quote", "source_page")):
             continue
         if note["topic"] not in VALID_TOPICS:
@@ -89,5 +140,4 @@ def extract_notes(chunks: list[dict], record: dict) -> list[dict]:
             "source_quote": note["source_quote"],
             "source_page": note["source_page"],
         })
-
     return validated

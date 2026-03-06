@@ -42,17 +42,27 @@ def verify_notes(notes: list[dict]) -> list[dict]:
         indent=2,
     )
 
-    message = client.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=2048,
-        messages=[{"role": "user", "content": VERIFY_PROMPT.format(notes=notes_text)}],
-    )
+    try:
+        message = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=2048,
+            messages=[{"role": "user", "content": VERIFY_PROMPT.format(notes=notes_text)}],
+        )
+    except anthropic.APIError as e:
+        print(f"  ERROR: Anthropic API call failed during verification: {e}")
+        # Return all notes as unverified
+        return [{**n, "verified": False, "reason": f"API error: {e}"} for n in notes]
 
     response_text = message.content[0].text.strip()
     if response_text.startswith("```"):
         response_text = response_text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
 
-    verdicts = json.loads(response_text)
+    try:
+        verdicts = json.loads(response_text)
+    except json.JSONDecodeError as e:
+        print(f"  ERROR: Failed to parse verification response as JSON: {e}")
+        print(f"  Response (first 200 chars): {response_text[:200]}")
+        return [{**n, "verified": False, "reason": "JSON parse error"} for n in notes]
 
     # Merge verdicts back into notes
     results = []
@@ -61,6 +71,8 @@ def verify_notes(notes: list[dict]) -> list[dict]:
         results.append(result)
 
     for verdict in verdicts:
+        if not isinstance(verdict, dict):
+            continue
         idx = verdict.get("index")
         if idx is not None and 0 <= idx < len(results):
             results[idx]["verified"] = verdict.get("verified", False)
