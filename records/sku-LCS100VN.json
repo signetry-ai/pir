@@ -21,7 +21,6 @@
     "weight_kg": 40,
     "noise_db": 45,
     "temperature_zones": 2,
-    "shelf_material": "Beech wood",
     "glass_door": true,
     "door_hinge": "right",
     "led_lighting": true,
@@ -34,8 +33,10 @@
     "location": [
       "indoor"
     ],
-    "door_type": "double_layer_tempered",
-    "door_reversible": false
+    "door_type": "glass",
+    "door_reversible": false,
+    "door_heated": false,
+    "led_light_colour": "white"
   },
   "qa": [
     {

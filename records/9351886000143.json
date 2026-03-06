@@ -32,10 +32,12 @@
     "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Black",
-    "grill_material": "Black",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

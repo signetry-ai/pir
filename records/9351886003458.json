@@ -34,11 +34,14 @@
     "glass_door": true,
     "glass_door_heated_switchable": true,
     "led_lighting": true,
-    "body_material": "304 Stainless Steel",
+    "body_material": "304 stainless steel",
     "interior_finish": "Polished 304 SS",
-    "grill_material": "Stainless Steel",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "stainless steel",
+    "led_light_colour": "white"
   },
   "qa": [
     {

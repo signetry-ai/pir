@@ -31,9 +31,7 @@
     "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Black",
     "interior_finish": "Black Molded Plastic",
-    "grill_material": "Black",
     "running_cost_aud_annual": 46.79,
     "running_cost_basis_cents_per_kwh": 25.64,
     "energy_star_rating_au": 10,
@@ -52,7 +50,11 @@
     "shelf_type": "2 x Large and 1 x Half Shelf",
     "energy_star_rating_au_note": "Australian 1-10 star scale",
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

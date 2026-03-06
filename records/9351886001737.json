@@ -34,9 +34,7 @@
     "glass_door": true,
     "glass_door_heated_switchable": true,
     "led_lighting": true,
-    "body_material": "Black",
     "interior_finish": "Smashed Aluminum",
-    "grill_material": "Black",
     "running_cost_aud_annual": 248.0,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 470,
@@ -51,9 +49,12 @@
     ],
     "refrigerant": "R600",
     "shelf_type": "2 x flat chromed adjustable shelves (455mmW x 360mmD)",
-    "door_type": "heated_tempered",
+    "door_type": "glass",
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": true,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

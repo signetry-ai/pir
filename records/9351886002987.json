@@ -32,9 +32,7 @@
     "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Black",
     "interior_finish": "Molded black",
-    "grill_material": "Black",
     "running_cost_aud_annual": 115.11,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 600,
@@ -51,9 +49,12 @@
     "shelf_type": "6 x Slide Out Wine Shelves 285mmW x 440mmD, 4 x Chromed Flat Shelves 280mmW x 435mmD",
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_secondary": "Noctua (Silent)",
-    "door_type": "dual_glazed_low_e",
+    "door_type": "glass",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

@@ -25,7 +25,6 @@
     "internal_temperature_max_c": 20,
     "temperature_zones": 1,
     "shelf_count": 3,
-    "shelf_material": "Wood",
     "glass_door": true,
     "door_hinge": "right",
     "led_lighting": true,
@@ -38,8 +37,10 @@
     ],
     "refrigerant": "R600a",
     "frame_material": "black frame",
-    "door_type": "triple_layer_low_e",
-    "door_reversible": false
+    "door_type": "glass",
+    "door_reversible": false,
+    "door_heated": false,
+    "led_light_colour": "white"
   },
   "qa": [
     {

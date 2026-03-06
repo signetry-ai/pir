@@ -32,7 +32,6 @@
     "door_hinge": "lift-up lid",
     "glass_door": false,
     "led_lighting": true,
-    "body_material": "Light Grey",
     "interior_finish": "White Metal",
     "dimensions_interior_w_mm": 575,
     "dimensions_interior_d_mm": 330,
@@ -41,9 +40,12 @@
       "RCM"
     ],
     "shelf_type": "2 x Baskets Included",
-    "door_type": "solid_foamed",
+    "door_type": "solid",
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "stainless steel",
+    "led_light_colour": "white"
   },
   "qa": [
     {

@@ -32,9 +32,7 @@
     "door_hinge": "right",
     "glass_door": false,
     "led_lighting": true,
-    "body_material": "White",
     "interior_finish": "White Molded Plastic",
-    "grill_material": "White",
     "running_cost_aud_annual": 22.46,
     "running_cost_basis_cents_per_kwh": 25.64,
     "internal_temperature_min_c": 0,
@@ -47,9 +45,12 @@
       "EMC (C-Tick)"
     ],
     "shelf_type": "3 Large Inc Floor (480mmW x 300mmD) - 2 x Inner Door (460mmW x 100mmD) Crisper (340mmW x 190mmD x 110mmH)",
-    "door_type": "solid_foamed",
+    "door_type": "solid",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "white",
+    "led_light_colour": "white"
   },
   "qa": [
     {

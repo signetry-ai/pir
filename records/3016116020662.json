@@ -29,7 +29,10 @@
     "installation": "freestanding",
     "location": [
       "indoor"
-    ]
+    ],
+    "door_type": "solid",
+    "door_heated": false,
+    "led_light_colour": "white"
   },
   "qa": [
     {

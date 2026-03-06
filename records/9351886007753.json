@@ -29,12 +29,15 @@
     "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "White - Ask us about branding in a custom design",
     "dimensions_interior_w_mm": 418,
     "dimensions_interior_d_mm": 290,
     "dimensions_interior_h_mm": 375,
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "white",
+    "led_light_colour": "white"
   },
   "qa": [
     {

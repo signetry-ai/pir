@@ -33,9 +33,7 @@
     "door_hinge": "right",
     "glass_door": false,
     "led_lighting": true,
-    "body_material": "White",
     "interior_finish": "White Molded Plastic",
-    "grill_material": "White",
     "running_cost_aud_annual": 97.33,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 310,
@@ -45,9 +43,12 @@
     "ventilation_each_side_mm": 20,
     "ventilation_rear_mm": 100,
     "shelf_type": "1 x Shelf Located Middle (304mmW x 204mmD)",
-    "door_type": "solid_foamed",
+    "door_type": "solid",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "white",
+    "led_light_colour": "white"
   },
   "qa": [
     {

@@ -31,11 +31,13 @@
     "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Branded Custom Sticker",
     "interior_finish": "White Molded Plastic",
-    "grill_material": "Carlton Draught Branded",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "branded",
+    "led_light_colour": "white"
   },
   "qa": [
     {

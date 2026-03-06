@@ -33,11 +33,13 @@
     "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Vodka Cruiser Branded",
     "interior_finish": "Smashed Black Aluminum",
-    "grill_material": "Black",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "branded",
+    "led_light_colour": "white"
   },
   "qa": [
     {

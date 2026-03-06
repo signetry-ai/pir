@@ -32,9 +32,7 @@
     "door_hinge": "right",
     "glass_door": false,
     "led_lighting": true,
-    "body_material": "White",
     "interior_finish": "White Molded Plastic",
-    "grill_material": "White",
     "running_cost_aud_annual": 93.59,
     "running_cost_basis_cents_per_kwh": 25.64,
     "approvals": [
@@ -43,9 +41,12 @@
       "EMC (C-Tick)"
     ],
     "shelf_type": "Fridge: 5 Large (430mmW x 275mmD) 2 x Crispers (380mmW x 220mmD x 180mmH) 5 x Inner Door (380mmW x 85mmD)  Freezer: 6 x Drawers (380mmW x 340mmD x 180mmH) Top Section (390mmW x 400mmD x 180mmH)",
-    "door_type": "solid_foamed",
+    "door_type": "solid",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "white",
+    "led_light_colour": "white"
   },
   "qa": [
     {

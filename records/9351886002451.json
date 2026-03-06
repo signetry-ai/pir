@@ -33,12 +33,13 @@
     "door_hinge": "left",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Matte Black Finish",
     "interior_finish": "Polished 304 Mirror Stainless",
-    "grill_material": "304 Stainless Steel",
-    "door_type": "triple_glazed_tempered",
+    "door_type": "glass",
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

@@ -31,8 +31,6 @@
     "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Branded Custom Sticker",
-    "grill_material": "Black",
     "running_cost_aud_annual": 19.65,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 350,
@@ -48,7 +46,11 @@
     ],
     "shelf_type": "1 x large and 1 x half shelf",
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "branded",
+    "led_light_colour": "white"
   },
   "qa": [
     {

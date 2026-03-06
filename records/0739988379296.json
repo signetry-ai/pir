@@ -18,7 +18,6 @@
     "dimensions_exterior_d_mm": 575,
     "dimensions_exterior_h_mm": 820,
     "temperature_zones": 2,
-    "shelf_material": "Beech wood",
     "glass_door": true,
     "led_lighting": true,
     "anti_vibration": true,
@@ -40,8 +39,10 @@
     "adjustable_feet_count": 4,
     "refrigerant": "R600a",
     "winter_function": true,
-    "door_type": "double_pane",
-    "door_reversible": true
+    "door_type": "glass",
+    "door_reversible": true,
+    "door_heated": false,
+    "led_light_colour": "white"
   },
   "qa": [
     {

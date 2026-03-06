@@ -31,9 +31,7 @@
     "door_hinge": "left",
     "glass_door": false,
     "led_lighting": true,
-    "body_material": "White",
     "interior_finish": "White Molded Plastic",
-    "grill_material": "White",
     "running_cost_aud_annual": 32.76,
     "running_cost_basis_cents_per_kwh": 25.64,
     "internal_temperature_min_c": 22,
@@ -46,9 +44,12 @@
       "EMC (C-Tick)"
     ],
     "shelf_type": "3 x Drawers(450mmW x 340mmD x 120mmH)",
-    "door_type": "solid_foamed",
+    "door_type": "solid",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "white",
+    "led_light_colour": "white"
   },
   "qa": [
     {

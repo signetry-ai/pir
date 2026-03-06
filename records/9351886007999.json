@@ -31,9 +31,7 @@
     "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Black",
     "interior_finish": "Black Molded Plastic",
-    "grill_material": "Black",
     "running_cost_aud_annual": 19.65,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 350,
@@ -50,7 +48,11 @@
     "refrigerant": "R600",
     "shelf_type": "1 x Large and 1 x Half Shelf",
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

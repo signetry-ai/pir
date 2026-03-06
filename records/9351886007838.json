@@ -48,9 +48,7 @@
     "refrigerant": "R600",
     "refrigerant_odp": 0,
     "refrigerant_gwp": 3,
-    "body_material": "Black",
     "interior_finish": "Polished 304 SS",
-    "grill_material": "Black",
     "ventilation_top_mm": 10,
     "ventilation_each_side_mm": 10,
     "ventilation_rear_mm": 50,
@@ -66,9 +64,12 @@
     "component_transformer": "Meanwell (Taiwan)",
     "capacity_litres": 129,
     "capacity_375ml_cans": 140,
-    "door_type": "heated_tempered",
+    "door_type": "glass",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": true,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

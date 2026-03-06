@@ -25,7 +25,6 @@
     "ambient_temperature_max_c": 43,
     "temperature_zones": 1,
     "shelf_count": 3,
-    "shelf_material": "Wire with wood trim",
     "glass_door": true,
     "door_hinge": "right",
     "led_lighting": true,
@@ -40,8 +39,10 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "refrigerant": "R600a",
-    "door_type": "double_pane",
-    "door_reversible": false
+    "door_type": "glass",
+    "door_reversible": false,
+    "door_heated": false,
+    "led_light_colour": "white"
   },
   "qa": [
     {

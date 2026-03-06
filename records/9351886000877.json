@@ -33,9 +33,7 @@
     "door_hinge": "left",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Black",
     "interior_finish": "Molded black",
-    "grill_material": "Stainless Steel",
     "running_cost_aud_annual": 149.74,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 360,
@@ -50,9 +48,12 @@
       "Meps"
     ],
     "refrigerant": "R600",
-    "door_type": "triple_glazed_low_e",
+    "door_type": "glass",
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

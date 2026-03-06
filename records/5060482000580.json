@@ -42,14 +42,13 @@
     "shelf_type": "2 x Adjustable Chromed Special 'No Topple' Shelves (500mmW x 355mmD), Wine Shelf Option",
     "door_hinge": "right",
     "glass_door": false,
-    "door_type": "304 Stainless Solid Door",
+    "door_type": "solid",
     "led_lighting": true,
     "refrigerant": "R600",
     "refrigerant_odp": 0,
     "refrigerant_gwp": 3,
-    "body_material": "304 Stainless Steel",
+    "body_material": "304 stainless steel",
     "interior_finish": "Polished 304 SS",
-    "grill_material": "Stainless Steel",
     "ventilation_top_mm": 10,
     "ventilation_each_side_mm": 10,
     "ventilation_rear_mm": 50,
@@ -66,7 +65,10 @@
     "capacity_litres": 129,
     "capacity_375ml_cans": 140,
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "stainless steel",
+    "led_light_colour": "white"
   },
   "qa": [
     {

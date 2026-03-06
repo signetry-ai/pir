@@ -24,7 +24,6 @@
     "internal_temperature_min_c": 5,
     "internal_temperature_max_c": 20,
     "temperature_zones": 1,
-    "shelf_material": "Beech wood",
     "glass_door": true,
     "led_lighting": true,
     "anti_vibration": true,
@@ -37,8 +36,10 @@
       "indoor"
     ],
     "door_hinge": "right",
-    "door_type": "double_layer_tempered",
-    "door_reversible": false
+    "door_type": "glass",
+    "door_reversible": false,
+    "door_heated": false,
+    "led_light_colour": "white"
   },
   "qa": [
     {

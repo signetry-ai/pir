@@ -34,9 +34,7 @@
     "glass_door": true,
     "glass_door_heated_switchable": true,
     "led_lighting": true,
-    "body_material": "Matte Black Finish",
     "interior_finish": "Polished Mirror Stainless Steel",
-    "grill_material": "304 Stainless Steel",
     "running_cost_aud_annual": 207.76,
     "running_cost_basis_cents_per_kwh": 25.64,
     "internal_temperature_min_c": 0,
@@ -55,9 +53,12 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_primary": "Schmick quiet running fans",
     "component_controller": "Schmick ECO Controller",
-    "door_type": "heated_tempered",
+    "door_type": "glass",
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": true,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

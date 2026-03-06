@@ -35,9 +35,7 @@
     "refrigerant": "R290",
     "refrigerant_odp": 0,
     "refrigerant_gwp": 3,
-    "body_material": "Black",
     "interior_finish": "White",
-    "grill_material": "Black",
     "ventilation_top_mm": 20,
     "ventilation_each_side_mm": 20,
     "ventilation_rear_mm": 100,
@@ -47,7 +45,10 @@
     "component_fan_primary": "EBM EC Fan (Germany)",
     "component_controller": "Danfoss ECO (Germany)",
     "capacity_litres": 260,
-    "door_type": "side_panel_low_e"
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "black",
+    "led_light_colour": "white"
   },
   "qa": [
     {

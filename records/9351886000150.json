@@ -31,10 +31,11 @@
     "adjustable_feet_count": 4,
     "door_hinge": "right",
     "glass_door": false,
-    "body_material": "Silver",
-    "grill_material": "Silver",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "solid",
+    "door_heated": false,
+    "body_colour": "stainless steel"
   },
   "qa": [
     {

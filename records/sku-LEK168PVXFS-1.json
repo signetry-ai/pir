@@ -21,7 +21,6 @@
     "noise_db": 42,
     "energy_consumption_kwh_annual": 183,
     "temperature_zones": 1,
-    "shelf_material": "Beech wood",
     "glass_door": true,
     "door_hinge": "right",
     "led_lighting": true,
@@ -37,8 +36,10 @@
     "location": [
       "indoor"
     ],
-    "door_type": "triple_layer_low_e",
-    "door_reversible": true
+    "door_type": "glass",
+    "door_reversible": true,
+    "door_heated": false,
+    "led_light_colour": "white"
   },
   "qa": [
     {

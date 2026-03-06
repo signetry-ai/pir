@@ -33,9 +33,8 @@
     "door_hinge": "1 x left, 1 x right",
     "glass_door": false,
     "led_lighting": true,
-    "body_material": "304 Stainless Steel",
+    "body_material": "304 stainless steel",
     "interior_finish": "Black Molded Plastic",
-    "grill_material": "304 Stainless Steel",
     "running_cost_aud_annual": 131.02,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 350,
@@ -54,9 +53,12 @@
     "component_compressor": "Jiaxipera",
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_secondary": "Noctua (Silent)",
-    "door_type": "stainless_steel_solid",
+    "door_type": "solid",
     "door_reversible": false,
-    "door_count": 2
+    "door_count": 2,
+    "door_heated": false,
+    "body_colour": "stainless steel",
+    "led_light_colour": "white"
   },
   "qa": [
     {

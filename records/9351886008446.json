@@ -33,11 +33,13 @@
     "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "Coca-Cola branded",
     "interior_finish": "Black Molded Plastic",
-    "grill_material": "Black",
     "door_reversible": false,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "body_colour": "branded",
+    "led_light_colour": "white"
   },
   "qa": [
     {

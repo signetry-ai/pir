@@ -33,7 +33,10 @@
     "glass_door": true,
     "led_lighting": true,
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_type": "glass",
+    "door_heated": false,
+    "led_light_colour": "white"
   },
   "qa": [
     {

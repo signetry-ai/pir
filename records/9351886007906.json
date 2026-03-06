@@ -31,9 +31,7 @@
     "door_hinge": "left",
     "glass_door": true,
     "led_lighting": true,
-    "body_material": "White",
     "interior_finish": "White",
-    "grill_material": "White",
     "running_cost_aud_annual": 149.74,
     "running_cost_basis_cents_per_kwh": 25.64,
     "dimensions_interior_w_mm": 540,
@@ -46,9 +44,12 @@
       "RCM Includes C-Tick And EMC",
       "Units Are Also MEPS Approved For Energy To Latest Standard."
     ],
-    "door_type": "triple_glazed_low_e",
+    "door_type": "glass",
     "door_reversible": true,
-    "door_count": 1
+    "door_count": 1,
+    "door_heated": false,
+    "body_colour": "white",
+    "led_light_colour": "white"
   },
   "qa": [
     {

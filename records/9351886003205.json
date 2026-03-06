@@ -51,19 +51,13 @@
     "door_count": 2,
     "door_hinge": "1 x left, 1 x right",
     "glass_door": false,
-    "door_type": "316 grade solid stainless",
+    "door_type": "solid",
     "led_lighting": true,
-    "led_colour_switchable": true,
-    "led_colours": [
-      "blue",
-      "white"
-    ],
     "refrigerant": "R600",
     "refrigerant_odp": 0,
     "refrigerant_gwp": 3,
-    "body_material": "316 Marine Grade Stainless Steel",
+    "body_material": "316 marine grade stainless steel",
     "interior_finish": "Polished 304 Mirror Stainless",
-    "grill_material": "316 Marine Grade Stainless Steel",
     "ventilation_top_mm": 10,
     "ventilation_each_side_mm": 10,
     "ventilation_rear_mm": 50,
@@ -81,7 +75,13 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_switches": "Cherry (USA)",
     "component_lighting": "Philips LED",
-    "door_reversible": false
+    "door_reversible": false,
+    "door_heated": false,
+    "body_colour": "stainless steel",
+    "led_light_colour": [
+      "blue",
+      "white"
+    ]
   },
   "qa": [
     {
