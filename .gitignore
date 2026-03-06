@@ -10,3 +10,6 @@ venv/
 .vscode/
 intake/
 records/*.notes.json
+records/*.chunks.json
+records/*.review.html
+records/*.demo.html

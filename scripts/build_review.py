@@ -4,10 +4,12 @@
 Usage:
     python3 scripts/build_review.py 9351886006350
 
-Generates records/{gtin}.review.html — open in browser to compare
-PDF source text against extracted notes with highlighted source quotes.
+Generates records/{gtin}.review.html — shows actual PDF page images
+alongside extracted notes so you can visually compare what the LLM
+saw vs what it extracted.
 """
 
+import base64
 import html
 import json
 import os
@@ -16,60 +18,44 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RECORDS_DIR = os.path.join(ROOT, "records")
 
-sys.path.insert(0, os.path.join(ROOT, "scripts"))
-from extract_pdf import extract_chunks_from_url
 
-
-def highlight_quote(page_text: str, quote: str) -> str:
-    """Highlight source_quote within page text. Case-insensitive fuzzy match."""
-    escaped_text = html.escape(page_text)
-    escaped_quote = html.escape(quote)
-
-    # Try exact match first
-    if escaped_quote in escaped_text:
-        return escaped_text.replace(
-            escaped_quote,
-            f'<mark>{escaped_quote}</mark>',
-            1,
-        )
-
-    # Try case-insensitive
-    lower_text = escaped_text.lower()
-    lower_quote = escaped_quote.lower()
-    idx = lower_text.find(lower_quote)
-    if idx >= 0:
-        original = escaped_text[idx:idx + len(escaped_quote)]
-        return escaped_text[:idx] + f'<mark>{original}</mark>' + escaped_text[idx + len(escaped_quote):]
-
-    # Try first 60 chars as anchor (handles minor whitespace diffs)
-    anchor = lower_quote[:60]
-    idx = lower_text.find(anchor)
-    if idx >= 0:
-        end = min(idx + len(escaped_quote) + 50, len(escaped_text))
-        original = escaped_text[idx:end]
-        return escaped_text[:idx] + f'<mark>{original}</mark>' + escaped_text[end:]
-
-    # No match — return with a warning marker
-    return f'<span class="no-match-warning">⚠ Quote not found in page text</span>\n{escaped_text}'
+def load_page_image_b64(assets_dir: str, page_num: int):
+    """Load a page image as base64, or None if missing."""
+    path = os.path.join(assets_dir, f"page-{page_num:02d}.png")
+    if not os.path.exists(path):
+        return None
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode("utf-8")
 
 
 def build_review_html(gtin: str) -> str:
-    """Build the review HTML page."""
+    """Build the review HTML page with PDF images + extracted notes."""
     record_path = os.path.join(RECORDS_DIR, f"{gtin}.json")
     notes_path = os.path.join(RECORDS_DIR, f"{gtin}.notes.json")
+    chunks_path = os.path.join(RECORDS_DIR, f"{gtin}.chunks.json")
+    assets_dir = os.path.join(RECORDS_DIR, gtin)
 
     with open(record_path) as f:
         record = json.load(f)
     with open(notes_path) as f:
         notes_data = json.load(f)
 
-    # Load cached chunks (saved during ingestion) or re-extract
-    chunks_path = os.path.join(RECORDS_DIR, f"{gtin}.chunks.json")
+    # Load extracted chunks
     if os.path.exists(chunks_path):
-        print(f"Loading cached chunks...")
         with open(chunks_path) as f:
             chunks = json.load(f)
+    else:
+        chunks = []
     chunks_by_page = {c["page"]: c["text"] for c in chunks}
+
+    # Count page images
+    if os.path.isdir(assets_dir):
+        page_files = sorted(f for f in os.listdir(assets_dir) if f.startswith("page-") and f.endswith(".png"))
+        total_pages = len(page_files)
+    else:
+        page_files = []
+        total_pages = max((c["page"] for c in chunks), default=0)
+    print(f"Found {total_pages} page images in {assets_dir}")
 
     # Group notes by page
     notes_by_page = {}
@@ -77,35 +63,20 @@ def build_review_html(gtin: str) -> str:
         page = note["source_page"]
         notes_by_page.setdefault(page, []).append(note)
 
-    # Build HTML
+    # Build HTML for each page
     pages_html = []
-    all_pages = sorted(set(list(chunks_by_page.keys()) + list(notes_by_page.keys())))
 
-    for page_num in all_pages:
-        page_text = chunks_by_page.get(page_num, "")
+    for page_num in range(1, total_pages + 1):
         page_notes = notes_by_page.get(page_num, [])
+        page_b64 = load_page_image_b64(assets_dir, page_num)
+        extracted_text = chunks_by_page.get(page_num, "")
 
-        # Build highlighted page text — highlight all quotes for this page
-        highlighted = html.escape(page_text)
-        for note in page_notes:
-            quote = note["source_quote"]
-            escaped_quote = html.escape(quote)
-            lower_hl = highlighted.lower()
-            lower_q = escaped_quote.lower()
-            idx = lower_hl.find(lower_q)
-            if idx >= 0:
-                # Check it's not already inside a <mark> tag
-                before = highlighted[:idx]
-                if '<mark>' not in before[max(0, len(before)-6):]:
-                    original = highlighted[idx:idx + len(escaped_quote)]
-                    highlighted = highlighted[:idx] + f'<mark class="q-{id(note) % 1000}">{original}</mark>' + highlighted[idx + len(escaped_quote):]
-
-        # Build notes cards
+        # Notes cards
         notes_html = ""
         for note in page_notes:
             verified = note.get("verified", False)
             status_class = "grounded" if verified else "ungrounded"
-            status_icon = "✅" if verified else "❌"
+            status_icon = "&#x2705;" if verified else "&#x274C;"
             reason = html.escape(note.get("reason", ""))
 
             notes_html += f'''
@@ -113,29 +84,40 @@ def build_review_html(gtin: str) -> str:
                 <div class="note-header">
                     <span class="status">{status_icon}</span>
                     <span class="topic">{html.escape(note["topic"])}</span>
-                    <span class="verdict">{reason}</span>
                 </div>
                 <div class="note-text">{html.escape(note["text"])}</div>
                 <div class="note-quote">
                     <span class="label">Source quote:</span>
                     "{html.escape(note["source_quote"])}"
                 </div>
+                <div class="note-verdict">{reason}</div>
             </div>'''
 
-        if not page_text and not page_notes:
-            continue
+        # Extracted text (collapsible)
+        extracted_html = ""
+        if extracted_text:
+            escaped = html.escape(extracted_text)
+            extracted_html = f'''
+            <details class="extracted-text">
+                <summary>Extracted text ({len(extracted_text)} chars)</summary>
+                <pre>{escaped}</pre>
+            </details>'''
+
+        img_tag = f'<img src="data:image/png;base64,{page_b64}" alt="Page {page_num}" />' if page_b64 else '<p class="empty">No image available</p>'
 
         pages_html.append(f'''
         <div class="page-section">
-            <h2>Page {page_num}</h2>
+            <div class="page-header">
+                <h2>Page {page_num}</h2>
+                <span class="note-count">{len(page_notes)} note{"s" if len(page_notes) != 1 else ""} extracted</span>
+            </div>
             <div class="page-row">
                 <div class="pdf-column">
-                    <h3>PDF Source Text</h3>
-                    <pre class="pdf-text">{highlighted if highlighted.strip() else '<em class="empty">No text extracted (may be image/diagram)</em>'}</pre>
+                    {img_tag}
                 </div>
                 <div class="notes-column">
-                    <h3>Extracted Notes ({len(page_notes)})</h3>
                     {notes_html if notes_html else '<p class="empty">No notes extracted from this page</p>'}
+                    {extracted_html}
                 </div>
             </div>
         </div>''')
@@ -144,8 +126,10 @@ def build_review_html(gtin: str) -> str:
     total = len(notes_data["notes"])
     grounded = sum(1 for n in notes_data["notes"] if n.get("verified"))
     ungrounded = total - grounded
-    pages_with_text = len(chunks_by_page)
-    pages_with_notes = len(notes_by_page)
+    topics = {}
+    for n in notes_data["notes"]:
+        topics[n["topic"]] = topics.get(n["topic"], 0) + 1
+    topics_html = " ".join(f'<span class="topic-pill">{t} <b>{c}</b></span>' for t, c in sorted(topics.items(), key=lambda x: -x[1]))
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -159,86 +143,88 @@ def build_review_html(gtin: str) -> str:
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
         background: #0a0a0a;
         color: #e0e0e0;
-        padding: 2rem;
         line-height: 1.5;
     }}
     header {{
-        max-width: 1400px;
-        margin: 0 auto 2rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid #333;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 2rem 2rem 1.5rem;
+        border-bottom: 1px solid #222;
     }}
     header h1 {{
         font-size: 1.5rem;
         color: #fff;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
     }}
     header .subtitle {{
-        color: #888;
-        font-size: 0.9rem;
+        color: #666;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
     }}
     .stats {{
         display: flex;
         gap: 2rem;
-        margin-top: 1rem;
         font-family: 'SF Mono', 'Fira Code', monospace;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
     }}
-    .stat {{
-        display: flex;
-        gap: 0.5rem;
-    }}
-    .stat .label {{ color: #666; }}
-    .stat .value {{ color: #4ade80; }}
+    .stat .label {{ color: #555; }}
+    .stat .value {{ color: #4ade80; font-weight: 600; }}
     .stat .value.warn {{ color: #f59e0b; }}
+    .topics {{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+    }}
+    .topic-pill {{
+        background: #1e293b;
+        color: #93c5fd;
+        padding: 3px 10px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-family: 'SF Mono', 'Fira Code', monospace;
+    }}
+    .topic-pill b {{ color: #4ade80; }}
 
     .page-section {{
-        max-width: 1400px;
-        margin: 0 auto 3rem;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 2rem;
+        border-bottom: 1px solid #1a1a1a;
     }}
-    .page-section h2 {{
+    .page-header {{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }}
+    .page-header h2 {{
         font-size: 1.1rem;
         color: #fff;
-        margin-bottom: 1rem;
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 1rem;
         background: #1a1a1a;
         border-left: 3px solid #3b82f6;
+    }}
+    .note-count {{
+        font-size: 0.8rem;
+        color: #666;
     }}
     .page-row {{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
+        align-items: start;
     }}
-    .pdf-column h3, .notes-column h3 {{
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: #666;
-        margin-bottom: 0.75rem;
+    .pdf-column {{
+        position: sticky;
+        top: 1rem;
     }}
-    .pdf-text {{
-        background: #111;
+    .pdf-column img {{
+        width: 100%;
         border: 1px solid #222;
         border-radius: 6px;
-        padding: 1rem;
-        font-family: 'SF Mono', 'Fira Code', monospace;
-        font-size: 0.8rem;
-        line-height: 1.7;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        color: #999;
-        max-height: 600px;
-        overflow-y: auto;
-    }}
-    .pdf-text mark {{
-        background: #3b82f620;
-        color: #93c5fd;
-        border-bottom: 2px solid #3b82f6;
-        padding: 1px 2px;
-    }}
-    .no-match-warning {{
-        color: #f59e0b;
-        font-weight: bold;
+        background: #fff;
     }}
 
     .note-card {{
@@ -258,9 +244,8 @@ def build_review_html(gtin: str) -> str:
     .note-header {{
         display: flex;
         align-items: center;
-        gap: 0.75rem;
+        gap: 0.5rem;
         margin-bottom: 0.5rem;
-        font-size: 0.8rem;
     }}
     .note-header .topic {{
         background: #1e293b;
@@ -270,20 +255,15 @@ def build_review_html(gtin: str) -> str:
         font-family: 'SF Mono', 'Fira Code', monospace;
         font-size: 0.75rem;
     }}
-    .note-header .verdict {{
-        color: #666;
-        font-size: 0.75rem;
-        margin-left: auto;
-    }}
     .note-text {{
         color: #e0e0e0;
         font-size: 0.9rem;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
         font-weight: 500;
     }}
     .note-quote {{
         font-size: 0.8rem;
-        color: #666;
+        color: #888;
         font-style: italic;
         border-top: 1px solid #1a1a1a;
         padding-top: 0.5rem;
@@ -294,15 +274,49 @@ def build_review_html(gtin: str) -> str:
         font-size: 0.7rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
+        display: block;
+        margin-bottom: 2px;
+    }}
+    .note-verdict {{
+        font-size: 0.75rem;
+        color: #555;
+        margin-top: 0.5rem;
     }}
     .empty {{
-        color: #444;
+        color: #333;
         font-style: italic;
+        padding: 1rem;
+    }}
+    .extracted-text {{
+        margin-top: 1rem;
+    }}
+    .extracted-text summary {{
+        font-size: 0.75rem;
+        color: #555;
+        cursor: pointer;
+        padding: 0.5rem;
+        background: #0d0d0d;
+        border-radius: 4px;
+    }}
+    .extracted-text pre {{
+        font-size: 0.7rem;
+        color: #666;
+        background: #0d0d0d;
+        padding: 1rem;
+        border-radius: 0 0 4px 4px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        max-height: 400px;
+        overflow-y: auto;
+        line-height: 1.6;
     }}
 
-    @media (max-width: 900px) {{
+    @media (max-width: 1000px) {{
         .page-row {{
             grid-template-columns: 1fr;
+        }}
+        .pdf-column {{
+            position: static;
         }}
     }}
 </style>
@@ -310,14 +324,10 @@ def build_review_html(gtin: str) -> str:
 <body>
 <header>
     <h1>{html.escape(record["brand"])} {html.escape(record["sku"])} — {html.escape(record["name"])}</h1>
-    <div class="subtitle">GTIN: {html.escape(gtin)} | Manual Ingestion Review</div>
+    <div class="subtitle">GTIN: {html.escape(gtin)} | Manual Ingestion Review | {total_pages} pages</div>
     <div class="stats">
         <div class="stat">
-            <span class="label">Pages extracted:</span>
-            <span class="value">{pages_with_text}</span>
-        </div>
-        <div class="stat">
-            <span class="label">Notes extracted:</span>
+            <span class="label">Notes:</span>
             <span class="value">{total}</span>
         </div>
         <div class="stat">
@@ -326,13 +336,10 @@ def build_review_html(gtin: str) -> str:
         </div>
         <div class="stat">
             <span class="label">Ungrounded:</span>
-            <span class="value warn">{ungrounded}</span>
-        </div>
-        <div class="stat">
-            <span class="label">Pages with notes:</span>
-            <span class="value">{pages_with_notes}</span>
+            <span class="value{"" if ungrounded == 0 else " warn"}">{ungrounded}</span>
         </div>
     </div>
+    <div class="topics">{topics_html}</div>
 </header>
 
 {"".join(pages_html)}

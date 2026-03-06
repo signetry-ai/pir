@@ -166,6 +166,11 @@
           "approved": {
             "type": "boolean",
             "description": "True if a human has reviewed and approved this note."
+          },
+          "source_images": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Page image filenames relevant to this note (e.g. page-05.png). Stored in records/{gtin}/ directory."
           }
         }
       }

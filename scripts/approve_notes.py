@@ -70,6 +70,7 @@ def main():
             "source_quote": note["source_quote"],
             "source_page": note["source_page"],
             "source_document": note["source_document"],
+            "source_images": note.get("source_images", []),
             "verified": True,
             "approved": True,
         }

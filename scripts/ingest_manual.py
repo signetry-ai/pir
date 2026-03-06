@@ -12,9 +12,13 @@ Pipeline:
     5. Write candidate notes to records/{gtin}.notes.json for human review
 """
 
+import base64
+import io
 import json
 import os
 import sys
+import tempfile
+import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RECORDS_DIR = os.path.join(ROOT, "records")
@@ -37,9 +41,41 @@ def _load_api_key():
 _load_api_key()
 
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
-from extract_pdf import extract_chunks_from_url
+from extract_pdf import extract_chunks_from_url, MAX_PDF_BYTES
 from extract_notes import extract_notes
 from verify_notes import verify_notes
+
+
+def download_pdf(url: str) -> str:
+    """Download PDF to a temp file, return path."""
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
+        req = urllib.request.Request(url, headers={"User-Agent": "PIR-Intake/1.0"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            total = 0
+            while True:
+                chunk = resp.read(8192)
+                if not chunk:
+                    break
+                total += len(chunk)
+                if total > MAX_PDF_BYTES:
+                    os.unlink(tmp.name)
+                    raise ValueError(f"PDF exceeds {MAX_PDF_BYTES // (1024*1024)}MB limit")
+                tmp.write(chunk)
+        return tmp.name
+
+
+def extract_page_images(pdf_path: str, output_dir: str, dpi: int = 150) -> list[str]:
+    """Render each PDF page to a PNG file in output_dir. Returns list of filenames."""
+    from pdf2image import convert_from_path
+
+    os.makedirs(output_dir, exist_ok=True)
+    images = convert_from_path(pdf_path, dpi=dpi)
+    filenames = []
+    for i, img in enumerate(images, 1):
+        filename = f"page-{i:02d}.png"
+        img.save(os.path.join(output_dir, filename), format="PNG", optimize=True)
+        filenames.append(filename)
+    return filenames
 
 
 def load_record(gtin: str) -> dict:
@@ -71,17 +107,29 @@ def main():
         sys.exit(1)
     print(f"  Manual: {manual_url[:80]}...")
 
-    # Step 1: Extract text from PDF
-    print("\n[1/3] Extracting text from PDF...")
-    chunks = extract_chunks_from_url(manual_url)
+    # Step 1: Download PDF and extract content
+    print("\n[1/4] Downloading PDF...")
+    pdf_path = download_pdf(manual_url)
+
+    print("\n[2/4] Extracting text from PDF (vision)...")
+    from extract_pdf import extract_chunks_from_file
+    chunks = extract_chunks_from_file(pdf_path)
     print(f"  Extracted {len(chunks)} pages with text")
 
     if not chunks:
+        os.unlink(pdf_path)
         print("  ERROR: No text extracted from PDF. May be image-only.")
         sys.exit(1)
 
-    # Step 2: LLM extraction
-    print("\n[2/3] Extracting notes (LLM pass 1)...")
+    # Extract page images
+    assets_dir = os.path.join(RECORDS_DIR, gtin)
+    print(f"  Extracting page images to {assets_dir}/...")
+    page_filenames = extract_page_images(pdf_path, assets_dir)
+    print(f"  Saved {len(page_filenames)} page images")
+    os.unlink(pdf_path)
+
+    # Step 3: LLM extraction
+    print("\n[3/4] Extracting notes (LLM pass 1)...")
     notes = extract_notes(chunks, record)
     print(f"  Extracted {len(notes)} candidate notes")
 
@@ -89,18 +137,24 @@ def main():
         print("  No notes extracted. Manual may not contain support content.")
         sys.exit(0)
 
-    # Step 3: LLM verification
-    print("\n[3/3] Verifying notes (LLM pass 2)...")
+    # Step 4: LLM verification
+    print("\n[4/4] Verifying notes (LLM pass 2)...")
     verified_notes = verify_notes(notes)
 
     grounded = sum(1 for n in verified_notes if n["verified"])
     ungrounded = len(verified_notes) - grounded
     print(f"  Grounded: {grounded}, Ungrounded: {ungrounded}")
 
-    # Add metadata
+    # Add metadata + link page images
+    page_image_set = set(page_filenames)
     for note in verified_notes:
         note["approved"] = False
         note["source_document"] = manual_url.split("/")[-1].split("?")[0]
+        page_num = note.get("source_page")
+        if page_num:
+            img_name = f"page-{page_num:02d}.png"
+            if img_name in page_image_set:
+                note["source_images"] = [img_name]
 
     # Save chunks for review page
     chunks_path = os.path.join(RECORDS_DIR, f"{gtin}.chunks.json")
