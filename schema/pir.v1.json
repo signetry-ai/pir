@@ -107,6 +107,43 @@
         ]
       }
     },
+    "notes": {
+      "type": "array",
+      "description": "Expert-verified prose that elaborates on or qualifies atomic facts. Each note is topic-scoped and linked to the facts it explains.",
+      "items": {
+        "type": "object",
+        "required": ["topic", "text", "facts"],
+        "properties": {
+          "topic": {
+            "type": "string",
+            "description": "Semantic topic tag for resolver matching.",
+            "enum": [
+              "power_consumption",
+              "temperature_control",
+              "shelving",
+              "installation",
+              "components",
+              "door_configuration",
+              "glass",
+              "noise",
+              "warranty",
+              "capacity",
+              "location_suitability",
+              "maintenance"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "description": "Verified prose. Expert voice, no marketing language."
+          },
+          "facts": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Fact keys this note elaborates on. Establishes provenance."
+          }
+        }
+      }
+    },
     "qa": {
       "type": "array",
       "description": "Pre-answered questions with fact citations.",

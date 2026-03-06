@@ -22,7 +22,11 @@
     "weight_kg": 84,
     "noise_db": 43,
     "power_consumption_kwh_per_24h": 1.89,
-    "ambient_temperature_max_c": 32,
+    "internal_temperature_min_c": 1,
+    "internal_temperature_max_c": 18,
+    "ambient_temperature_max_c": 38,
+    "energy_star_rating_au": 9,
+    "energy_star_rating_au_note": "Australian 1-10 star scale",
     "location": [
       "indoor",
       "outdoor"
@@ -30,28 +34,44 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
+    "door_count": 2,
     "door_hinge": "1 x left, 1 x right",
+    "reversible_door": false,
+    "door_size_w_mm": 365,
+    "door_size_h_mm": 755,
     "glass_door": true,
     "glass_door_heated_switchable": true,
     "led_lighting": true,
+    "shelf_type": "Wine: 5 x Slide Out Shelves 280mmW x 415mmD and 2 x Mini 315mmW x 270mmD / Beer: 3 x Chromed Flat Slide Out Shelves 280mmW x 415mmD and 1 x Mini 315mmW x 270mmD",
     "body_material": "Black",
     "interior_finish": "Polished Stainless",
     "grill_material": "Black",
     "running_cost_aud_annual": 176.88,
     "running_cost_basis_cents_per_kwh": 25.64,
+    "power_consumption_kwh_per_24h_heated_on": 3.36,
     "dimensions_interior_w_mm": 600,
     "dimensions_interior_d_mm": 420,
     "dimensions_interior_h_mm": 605,
+    "dimensions_cavity_w_mm": 770,
+    "dimensions_cavity_d_mm": 620,
+    "dimensions_cavity_h_mm": 850,
     "ventilation_top_mm": 10,
     "ventilation_each_side_mm": 10,
     "ventilation_rear_mm": 50,
+    "capacity_wine_bottles": 28,
     "approvals": [
       "EMC (C-Tick)",
       "SAA Electrical"
     ],
     "refrigerant": "R600",
     "component_transformer": "Meanwell (Taiwan)",
-    "door_type": "dual_glazed_low_e_heated"
+    "door_type": "dual_glazed_low_e_heated",
+    "dual_zone": true,
+    "dual_zone_independent": true,
+    "grill_height_from_floor_mm": 70,
+    "shelf_count_wine_side": 7,
+    "shelf_count_beer_side": 4,
+    "component_controller": "Schmick ECO"
   },
   "qa": [
     {
@@ -116,6 +136,75 @@
       "facts": [
         "approvals"
       ]
+    },
+    {
+      "q": "What is the temperature range?",
+      "a": "Each zone can be set independently from 1°C to 18°C.",
+      "facts": [
+        "internal_temperature_min_c",
+        "internal_temperature_max_c",
+        "dual_zone_independent"
+      ]
+    },
+    {
+      "q": "What is the energy star rating?",
+      "a": "9 stars on the Australian 1-10 scale.",
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
+    },
+    {
+      "q": "What are the cavity/cutout dimensions?",
+      "a": "Minimum cavity: 770mm wide x 620mm deep x 850mm high.",
+      "facts": [
+        "dimensions_cavity_w_mm",
+        "dimensions_cavity_d_mm",
+        "dimensions_cavity_h_mm"
+      ]
+    },
+    {
+      "q": "How many doors does it have?",
+      "a": "2 doors. Left door hinged on the left, right door hinged on the right. Not reversible.",
+      "facts": [
+        "door_count",
+        "door_hinge",
+        "reversible_door"
+      ]
+    },
+    {
+      "q": "What shelving does it have?",
+      "a": "Wine side: 5 x Slide Out Shelves (280mm x 415mm) and 2 x Mini (315mm x 270mm). Beer side: 3 x Chromed Flat Slide Out Shelves (280mm x 415mm) and 1 x Mini (315mm x 270mm). Fully interchangeable between beer and wine configurations.",
+      "facts": [
+        "shelf_type"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "topic": "power_consumption",
+      "text": "1.89 kWh/24h with heated glass off. 3.36 kWh/24h with heated glass on. Heated glass adds to running costs.",
+      "facts": ["power_consumption_kwh_per_24h", "power_consumption_kwh_per_24h_heated_on"]
+    },
+    {
+      "topic": "temperature_control",
+      "text": "2 zones independently controlled with separate cooling systems. Either side can be set to any temperature between 1 and 18 degrees. Operates in ambient temperatures up to 38 degrees. A heater on the right-hand side helps maintain warmer temperatures for wines in cooler months.",
+      "facts": ["internal_temperature_min_c", "internal_temperature_max_c", "ambient_temperature_max_c", "dual_zone_independent"]
+    },
+    {
+      "topic": "shelving",
+      "text": "Wine side: 5 x Slide Out Shelves (280mm x 415mm) and 2 x Mini (315mm x 270mm). Beer side: 3 x Chromed Flat Slide Out Shelves (280mm x 415mm) and 1 x Mini (315mm x 270mm). Shelving is fully interchangeable between beer and wine configurations, with full height adjustability. Wine shelves have sliding rubber saddles for positioning bottles of different sizes.",
+      "facts": ["shelf_count_wine_side", "shelf_count_beer_side", "shelf_type"]
+    },
+    {
+      "topic": "installation",
+      "text": "Vents at front through grill. Build-in under counters is no problem. Grill height from floor: 70mm.",
+      "facts": ["grill_height_from_floor_mm", "ventilation_rear_mm", "ventilation_top_mm", "ventilation_each_side_mm"]
+    },
+    {
+      "topic": "components",
+      "text": "Meanwell transformer (Taiwan). Schmick ECO controller. Quiet running fans selected for indoor entertaining areas.",
+      "facts": ["component_transformer", "component_controller"]
     }
   ],
   "documents": [
