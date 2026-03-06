@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+"""Extract structured notes from PDF text chunks using an LLM.
+
+Each note carries a verbatim source quote for traceability.
+Uses Claude Haiku for cost efficiency (~$0.01 per manual).
+"""
+
+import json
+import os
+
+import anthropic
+
+VALID_TOPICS = [
+    "power_consumption", "temperature_control", "shelving", "installation",
+    "components", "door_configuration", "glass", "noise", "warranty",
+    "capacity", "location_suitability", "maintenance", "operation",
+    "troubleshooting", "safety", "cleaning", "unpacking", "recycling",
+]
+
+EXTRACTION_PROMPT = """You are extracting factual claims from a product manual for the {brand} {sku} ({name}).
+
+RULES:
+1. Extract ONLY facts that are explicitly stated in the text. Never infer or add knowledge.
+2. Each fact MUST include a verbatim quote from the source text that supports it.
+3. The quote must be copied exactly — do not paraphrase or shorten it.
+4. Assign each fact to exactly one topic from this list: {topics}
+5. Write the "text" field as a concise factual statement. No marketing language. Expert voice.
+6. If the manual covers multiple models, only extract facts that apply to the {sku} or its base model family.
+7. Skip trivial or obvious statements (e.g. "read the manual before use").
+8. Focus on information a customer or installer would need AFTER purchasing the product.
+
+OUTPUT FORMAT — respond with ONLY a JSON array:
+[
+  {{
+    "topic": "installation",
+    "text": "Concise factual statement",
+    "source_quote": "Exact verbatim quote from the manual",
+    "source_page": 5
+  }}
+]
+
+If no relevant facts are found, return an empty array: []
+
+SOURCE TEXT (with page numbers):
+{chunks}
+"""
+
+
+def extract_notes(chunks: list[dict], record: dict) -> list[dict]:
+    """Extract structured notes from text chunks using Claude Haiku."""
+    client = anthropic.Anthropic()
+
+    chunks_text = "\n\n".join(
+        f"--- PAGE {c['page']} ---\n{c['text']}" for c in chunks
+    )
+
+    prompt = EXTRACTION_PROMPT.format(
+        brand=record.get("brand", "Unknown"),
+        sku=record.get("sku", "Unknown"),
+        name=record.get("name", "Unknown"),
+        topics=", ".join(VALID_TOPICS),
+        chunks=chunks_text,
+    )
+
+    message = client.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=4096,
+        messages=[{"role": "user", "content": prompt}],
+    )
+
+    response_text = message.content[0].text.strip()
+
+    # Parse JSON from response — handle markdown code blocks
+    if response_text.startswith("```"):
+        response_text = response_text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+
+    notes = json.loads(response_text)
+
+    # Validate each note
+    validated = []
+    for note in notes:
+        if not all(k in note for k in ("topic", "text", "source_quote", "source_page")):
+            continue
+        if note["topic"] not in VALID_TOPICS:
+            continue
+        validated.append({
+            "topic": note["topic"],
+            "text": note["text"],
+            "source_quote": note["source_quote"],
+            "source_page": note["source_page"],
+        })
+
+    return validated
