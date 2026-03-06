@@ -167,5 +167,523 @@
         "AU"
       ]
     }
+  ],
+  "notes": [
+    {
+      "topic": "installation",
+      "text": "Minimum ventilation gap of at least 10mm required at sides and top, and 50mm at the rear.",
+      "facts": [],
+      "source_quote": "the appliance must have a minimum ventilation gap of at least 10mm at sides, top and 50mm at the rear.",
+      "source_page": 5,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "installation",
+      "text": "Front grille must be completely unobstructed.",
+      "facts": [],
+      "source_quote": "The front grille must be completely unobstructed.",
+      "source_page": 5,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "installation",
+      "text": "Appliance should not be placed adjacent to heat or humidity sources such as heater outlets, glass washers, or ice making machines.",
+      "facts": [],
+      "source_quote": "Please avoid placing it next to any source of heat or humidity such as a heater outlet, a glass washer or ice making machine.",
+      "source_page": 5,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "installation",
+      "text": "When installing multiple cabinets side-by-side, they should be placed in individual compartments to avoid re-circulation of waste hot air.",
+      "facts": [],
+      "source_quote": "lf installing within a run of several cabinets side-by-side, then it is advised to have them in individual compartments to avoid re-circulation of the waste hot air.",
+      "source_page": 5,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "safety",
+      "text": "Appliance must not be moved or tilted while the power switch is in the ON position.",
+      "facts": [],
+      "source_quote": "Never move or tilt the appliance whilst the power switch is in the \"ON\" position.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "safety",
+      "text": "Appliance must always be earthed.",
+      "facts": [],
+      "source_quote": "The appliance must always be earthed.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "safety",
+      "text": "Maximum shelf loading weight is 15 kgs per shelf to avoid injury or damage.",
+      "facts": [],
+      "source_quote": "Do not exceed the maximum shelf loading weight of 15 kgs per shelf so as to avoid injury or damage.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "safety",
+      "text": "Electrical equipment should not be placed under the unit or where refrigerant could gather in the event of a leak.",
+      "facts": [],
+      "source_quote": "Electrical equipment should not be placed under the unit or where refrigerant could gather in the event of a leak.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "components",
+      "text": "Appliance contains flammable refrigerant within sealed system and insulation foam; servicing and end-of-life recycling must be performed by professional organisations with qualified personnel.",
+      "facts": [],
+      "source_quote": "This appliance contains flammable refrigerant within its sealed system and also within the insulation foam. As such it is mandatory that the cabinet is serviced and, at end-of-life, recycled by a professional organisation using skilled persons in possession of the necessary qualifications, certifications and expertise to do so.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "components",
+      "text": "Appliance uses LED lighting; lighting strips and transformer should only be replaced using genuine Rhino parts of the same technical specification.",
+      "facts": [],
+      "source_quote": "The appliance uses LED lighting. The lighting strips and transformer should only be replaced using genuine Rhino parts of the same technical specification.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "components",
+      "text": "Appliance must only be charged with R600a refrigerant from an authorised supplier.",
+      "facts": [],
+      "source_quote": "The appliance must only be charged with R600a refrigerant from an authorised supplier. To use another type of refrigerant would be dangerous and is not permitted under any circumstances.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "components",
+      "text": "Electrical wiring diagram is located inside the cabinet on the side wall.",
+      "facts": [],
+      "source_quote": "The electrical wiring diagram is located inside the cabinet on the side wall.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "unpacking",
+      "text": "Power supply cord and plug top must be examined for splits or damage before connection; damaged cords must be replaced by manufacturer, service agent, or qualified persons.",
+      "facts": [],
+      "source_quote": "Please examine the power supply cord and plug top for splits or damage. If the power supply cord is damaged, it must be replaced by the manufacturer, it's service agent or similarly qualified persons in order to avoid a hazard.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "recycling",
+      "text": "Outer carton, inner padding, and base can all be recycled in local kerbside recycling bin.",
+      "facts": [],
+      "source_quote": "The outer carton, inner padding and base can all be recycled in your local kerbside recycling bin.",
+      "source_page": 2,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "location_suitability",
+      "text": "Appliance designed for maximum environmental conditions of Climate Class 4 (30°C / 55% Relative Humidity).",
+      "facts": [],
+      "source_quote": "The maximum environmental conditions for which the appliance has been designed are defined as Climate Class 4 (30°C / 55% Relative Humidity).",
+      "source_page": 3,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "operation",
+      "text": "ECO mode is activated by long press of ECO button for approximately 5 seconds; display shows \"Eco\" when activated.",
+      "facts": [],
+      "source_quote": "To enter ECO mode, press and hold the ECO button as indicated in Figure 5. Having done a long press of about 5 seconds,, the display will change to \"Eco\" and this will indicate the status of the appliance.",
+      "source_page": 7,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "operation",
+      "text": "Normal mode is restored by long pressing ECO button for approximately 5 seconds until \"Nor\" is displayed.",
+      "facts": [],
+      "source_quote": "To return to NORMAL mode, simply press and hold the ECO button (about 5 seconds) until the \"Nor\" is temporarily displayed followed immediately by the internal air temperature.",
+      "source_page": 7,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "maintenance",
+      "text": "Front grille must be properly refitted using all screws prior to reconnecting appliance to power supply.",
+      "facts": [],
+      "source_quote": "Ensure that the grille is properly refitted using all the screws prior to reconnecting to the power supply.",
+      "source_page": 9,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "verified": true,
+      "approved": true
+    },
+    {
+      "topic": "safety",
+      "text": "Repairs and replacements, especially of refrigeration or electrical nature, must only be carried out by suitably qualified and competent persons.",
+      "facts": [],
+      "source_quote": "Any repairs or replacements, especially of a refrigeration or electrical nature, must only be carried out by suitably qualified and competent persons.",
+      "source_page": 1,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-01.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "location_suitability",
+      "text": "The appliance is designed for indoor use only and has maximum environmental design conditions of Climate Class 4 (30°C / 55% Relative Humidity).",
+      "facts": [],
+      "source_quote": "This appliance is designed for use as a Commercial Beverage Cooler and is intended for indoor use only. The maximum environmental conditions for which the appliance has been designed are defined as Climate Class 4 (30°C / 55% Relative Humidity).",
+      "source_page": 3,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-03.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "safety",
+      "text": "The front grille and rear air vents must not be covered, and adequate ventilation must be ensured.",
+      "facts": [],
+      "source_quote": "Do not cover the front grille or rear air vents and please observe the installation and setting up instructions described later in this manual. Adequate ventilation must be ensured for the appliance.",
+      "source_page": 3,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-03.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "safety",
+      "text": "Do not store explosive substances such as aerosol cans with flammable propellant inside the appliance.",
+      "facts": [],
+      "source_quote": "Do not store explosive substances such as aerosol cans with a flammable propellant inside this appliance.",
+      "source_page": 3,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-03.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "safety",
+      "text": "Do not use any electrical appliances inside the refrigerated compartment.",
+      "facts": [],
+      "source_quote": "Do not use any electrical appliances inside the refrigerated compartment of this appliance.",
+      "source_page": 3,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-03.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "safety",
+      "text": "Defrosting is performed automatically by the electronic controller and requires no user intervention.",
+      "facts": [],
+      "source_quote": "Do not use any mechanical devices or other means to accelerate the defrosting process. Defrosting is performed automatically by the electronic controller and needs no user intervention.",
+      "source_page": 3,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-03.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "safety",
+      "text": "The refrigerant is flammable; if the refrigeration circuit is damaged, immediately ventilate the area by opening a window or door.",
+      "facts": [],
+      "source_quote": "Do not damage the refrigeration circuit. If you do so, then open a window or door immediately so as to ventilate the area. The refrigerant is flammable.",
+      "source_page": 3,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-03.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "safety",
+      "text": "The appliance contains flammable refrigerant within its sealed system and insulation foam; it must be serviced and recycled by a professional organisation with necessary qualifications and expertise.",
+      "facts": [],
+      "source_quote": "This appliance contains flammable refrigerant within its sealed system and also within the insulation foam. As such it is mandatory that the cabinet is serviced and, at end-of-life, recycled by a professional organisation using skilled persons in possession of the necessary qualifications, certifications and expertise to do so.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-04.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "shelving",
+      "text": "Maximum shelf loading weight is 15 kilograms per shelf.",
+      "facts": [],
+      "source_quote": "Do not exceed the maximum shelf loading weight of 15 kgs per shelf so as to avoid injury or damage.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-04.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "safety",
+      "text": "The appliance must be earthed and charged only with R600a refrigerant from an authorised supplier.",
+      "facts": [],
+      "source_quote": "The appliance must always be earthed. The appliance must only be charged with R600a refrigerant from an authorised supplier. To use another type of refrigerant would be dangerous and is not permitted under any circumstances.",
+      "source_page": 4,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-04.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "installation",
+      "text": "Minimum ventilation gap of at least 10 millimetres at sides and top, and 50 millimetres at the rear is required. Models SGT1 and SGT2 must have rear spacers fitted to the compressor compartment rear cover.",
+      "facts": [],
+      "source_quote": "the appliance must have a minimum ventilation gap of at least 10mm at sides, top and 50mm at the rear. (Models SGT1 and SGT2 must also have the rear spacers fitted to the compressor compartment rear cover. Note: Spacers are supplied with fitting instructions in a separate bag that has been placed inside the cooler).",
+      "source_page": 5,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-05.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "installation",
+      "text": "When multiple cabinets are installed side-by-side, they should be in individual compartments to avoid recirculation of waste hot air.",
+      "facts": [],
+      "source_quote": "If installing within a run of several cabinets side-by-side, then it is advised to have them in individual compartments to avoid re-circulation of the waste hot air.",
+      "source_page": 5,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-05.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "installation",
+      "text": "The cabinet must be installed level without twisting; adjustable feet are provided for levelling purposes.",
+      "facts": [],
+      "source_quote": "Please ensure that the cabinet is installed level without twisting. If the doors are not level then the cause may be an uneven surface. The appliance is supplied with adjustable feet for the purpose.",
+      "source_page": 5,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-05.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "location_suitability",
+      "text": "The room must be well ventilated and free from sources of ignition; it must not be located where refrigerant gas could gather in the event of a leak.",
+      "facts": [],
+      "source_quote": "The room must be well ventilated and free from sources of ignition. It must not be located where the refrigerant gas could gather in the event of a leak.",
+      "source_page": 5,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-05.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "shelving",
+      "text": "Shelf support clips can be adjusted by squeezing together and angling upwards.",
+      "facts": [],
+      "source_quote": "If you require to move the shelves, the support clips can be adjusted by squeezing together and angling upwards as can be seen in Figure 2.",
+      "source_page": 5,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-05.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "operation",
+      "text": "The appliance is designed to run automatically; defrosting is automatic and condensate water is evaporated automatically by the system.",
+      "facts": [],
+      "source_quote": "The appliance is designed to run automatically. Defrosting is automatic. The condensate water is evaporated automatically by the system.",
+      "source_page": 6,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-06.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "temperature_control",
+      "text": "The appliance is fitted with an electronic controller factory set to an optimum beverage cooling temperature known as the Set Point, which can be adjusted by the user.",
+      "facts": [],
+      "source_quote": "The appliance is fitted with an electronic controller and has been factory set to an optimum beverage cooling temperature known as the \"Set Point\". Should you wish to alter the Set Point, please follow the steps below",
+      "source_page": 6,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-06.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "temperature_control",
+      "text": "ECO mode allows the inside temperature to rise a few degrees warmer than the Set Point and manages fans differently to reduce power demand.",
+      "facts": [],
+      "source_quote": "During ECO mode the inside temperature is allowed to rise a few degrees warmer than the Set Point and the fans are managed differently to reduce power demand.",
+      "source_page": 7,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-07.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "cleaning",
+      "text": "Interior walls and shelves should be cleaned and sanitised regularly; only a damp or wet cloth should be used in conjunction with appropriate cleaning materials. Do not use splashing, dripping, jetting, running water, or steam.",
+      "facts": [],
+      "source_quote": "The interior walls and shelves should be cleaned and sanitised on a regular basis so as to ensure hygiene regulations are met. Please do not use splashing, dripping, jetting or running water. Do not use steam. Only a damp or wet cloth should be used in conjunction with appropriate cleaning materials for the task in hand.",
+      "source_page": 7,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-07.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "maintenance",
+      "text": "The condenser is located at the rear of the appliance behind the compressor compartment cover and must be kept clean and free from dust; cleaning is recommended at least every three months.",
+      "facts": [],
+      "source_quote": "The condenser is located at the rear of the appliance behind the compressor compartment cover. The function of the condenser is to dissipate the heat that has been extracted from inside the cabinet. It must be kept clean and free from dust at all times. Cleaning is recommended at regular intervals at least every three months.",
+      "source_page": 7,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-07.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "maintenance",
+      "text": "An appliance with a clean condenser will use less power and promotes longer component life.",
+      "facts": [],
+      "source_quote": "An appliance with a clean condenser will use less power and it promotes longer component life.",
+      "source_page": 7,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-07.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "cleaning",
+      "text": "Never use water to clean the condenser; if contaminated with grease or fat, a professional refrigeration specialist is required and the cabinet should not be used.",
+      "facts": [],
+      "source_quote": "Never use water in this area. If the condenser is contaminated with grease or fat, then a professional refrigeration specialist will be required to carry out the cleaning. In such a case do not use the cabinet or connect it to the power supply as a fire hazard may be present.",
+      "source_page": 9,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-09.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "troubleshooting",
+      "text": "In the event of malfunction, only use a suitably qualified, competent and skilled refrigeration service engineer and insist upon genuine Rhino parts.",
+      "facts": [],
+      "source_quote": "In the event of a malfunction, please be sure only to use a suitably qualified, competent and skilled refrigeration service engineer and insist upon genuine Rhino parts.",
+      "source_page": 9,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-09.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    },
+    {
+      "topic": "recycling",
+      "text": "The appliance must be recycled by a professional, competent, authorised and regulated organisation with expertise in handling refrigeration appliances.",
+      "facts": [],
+      "source_quote": "This appliance contains flammable refrigerant within its sealed system and also within the insulation foam. It must be recycled by a professional, competent, authorised and regulated organisation with expertise in the handling of refrigeration appliances.",
+      "source_page": 10,
+      "source_document": "SG_and_SGT_Instruction_Manual_2025_5bb4dea8-803b-4a99-91bf-afdc34bcc334.pdf",
+      "source_images": [
+        "page-10.png"
+      ],
+      "verified": true,
+      "approved": true,
+      "source_gtin": "9351886006350"
+    }
   ]
 }
