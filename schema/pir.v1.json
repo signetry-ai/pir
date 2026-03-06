@@ -129,7 +129,13 @@
               "warranty",
               "capacity",
               "location_suitability",
-              "maintenance"
+              "maintenance",
+              "operation",
+              "troubleshooting",
+              "safety",
+              "cleaning",
+              "unpacking",
+              "recycling"
             ]
           },
           "text": {
@@ -140,6 +146,26 @@
             "type": "array",
             "items": { "type": "string" },
             "description": "Fact keys this note elaborates on. Establishes provenance."
+          },
+          "source_quote": {
+            "type": "string",
+            "description": "Verbatim quote from source document that supports this note."
+          },
+          "source_page": {
+            "type": "integer",
+            "description": "Page number in source document."
+          },
+          "source_document": {
+            "type": "string",
+            "description": "Filename or title of the source document."
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "True if a second LLM pass confirmed this note is grounded in the source quote."
+          },
+          "approved": {
+            "type": "boolean",
+            "description": "True if a human has reviewed and approved this note."
           }
         }
       }
