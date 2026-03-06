@@ -36,7 +36,8 @@
     "location": [
       "indoor"
     ],
-    "door_type": "double_pane"
+    "door_type": "double_pane",
+    "door_reversible": false
   },
   "qa": [
     {

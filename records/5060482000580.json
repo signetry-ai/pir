@@ -40,7 +40,7 @@
     "shelf_w_mm": 500,
     "shelf_d_mm": 355,
     "shelf_type": "2 x Adjustable Chromed Special 'No Topple' Shelves (500mmW x 355mmD), Wine Shelf Option",
-    "door_hinge": "1 x left, 1 x right",
+    "door_hinge": "right",
     "glass_door": false,
     "door_type": "304 Stainless Solid Door",
     "led_lighting": true,
@@ -64,7 +64,9 @@
     "component_controller": "USA developed controller",
     "component_transformer": "Meanwell (Taiwan)",
     "capacity_litres": 129,
-    "capacity_375ml_cans": 140
+    "capacity_375ml_cans": 140,
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

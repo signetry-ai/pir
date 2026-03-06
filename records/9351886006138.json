@@ -30,12 +30,14 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "1 x left, 1 x right",
+    "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "Vodka Cruiser Branded",
     "interior_finish": "Smashed Black Aluminum",
-    "grill_material": "Black"
+    "grill_material": "Black",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

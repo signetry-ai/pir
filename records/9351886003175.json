@@ -29,7 +29,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "Left Hinged (Handle On Right)",
+    "door_hinge": "left",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "Black",
@@ -54,7 +54,9 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_secondary": "Noctua (Silent)",
     "energy_star_rating_au_note": "Australian 1-10 star scale",
-    "door_type": "triple_glazed_low_e"
+    "door_type": "triple_glazed_low_e",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

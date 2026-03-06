@@ -53,7 +53,9 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_primary": "Schmick quiet running fans",
     "component_controller": "Schmick ECO Controller",
-    "door_type": "heated_tempered"
+    "door_type": "heated_tempered",
+    "door_reversible": false,
+    "door_count": 2
   },
   "qa": [
     {

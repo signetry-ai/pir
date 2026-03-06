@@ -41,7 +41,7 @@
     "shelf_w_mm": 505,
     "shelf_d_mm": 345,
     "shelf_type": "2 x flat chromed adjustable shelves (505mmW x 345mmD) and 3 x wine shelves",
-    "door_hinge": "1 x left, 1 x right",
+    "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
     "refrigerant": "R600",
@@ -65,7 +65,9 @@
     "component_lighting": "Philips LED",
     "capacity_litres": 258,
     "capacity_375ml_cans": 140,
-    "door_type": "dual_glazed_low_e"
+    "door_type": "dual_glazed_low_e",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

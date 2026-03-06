@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 0,
-    "door_hinge": "Reversible Door (left or right)",
+    "door_hinge": "right",
     "glass_door": false,
     "led_lighting": true,
     "body_material": "White",
@@ -45,7 +45,9 @@
     "ventilation_each_side_mm": 20,
     "ventilation_rear_mm": 100,
     "shelf_type": "1 x Shelf Located Middle (304mmW x 204mmD)",
-    "door_type": "solid_foamed"
+    "door_type": "solid_foamed",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

@@ -36,7 +36,9 @@
     "body_material": "Matte Black Finish",
     "interior_finish": "Polished 304 Mirror Stainless",
     "grill_material": "304 Stainless Steel",
-    "door_type": "triple_glazed_tempered"
+    "door_type": "triple_glazed_tempered",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

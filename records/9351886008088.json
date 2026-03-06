@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "1 x left, 1 x right",
+    "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "White",
@@ -53,7 +53,9 @@
     "refrigerant": "R600",
     "component_fan_primary": "Schmick quiet running fans",
     "energy_star_rating_au_note": "Australian 1-10 star scale",
-    "door_type": "low_e"
+    "door_type": "low_e",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

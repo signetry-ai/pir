@@ -71,7 +71,8 @@
     "grill_height_from_floor_mm": 70,
     "shelf_count_wine_side": 7,
     "shelf_count_beer_side": 4,
-    "component_controller": "Schmick ECO"
+    "component_controller": "Schmick ECO",
+    "door_reversible": false
   },
   "qa": [
     {
@@ -184,27 +185,47 @@
     {
       "topic": "power_consumption",
       "text": "1.89 kWh/24h with heated glass off. 3.36 kWh/24h with heated glass on. Heated glass adds to running costs.",
-      "facts": ["power_consumption_kwh_per_24h", "power_consumption_kwh_per_24h_heated_on"]
+      "facts": [
+        "power_consumption_kwh_per_24h",
+        "power_consumption_kwh_per_24h_heated_on"
+      ]
     },
     {
       "topic": "temperature_control",
       "text": "2 zones independently controlled with separate cooling systems. Either side can be set to any temperature between 1 and 18 degrees. Operates in ambient temperatures up to 38 degrees. A heater on the right-hand side helps maintain warmer temperatures for wines in cooler months.",
-      "facts": ["internal_temperature_min_c", "internal_temperature_max_c", "ambient_temperature_max_c", "dual_zone_independent"]
+      "facts": [
+        "internal_temperature_min_c",
+        "internal_temperature_max_c",
+        "ambient_temperature_max_c",
+        "dual_zone_independent"
+      ]
     },
     {
       "topic": "shelving",
       "text": "Wine side: 5 x Slide Out Shelves (280mm x 415mm) and 2 x Mini (315mm x 270mm). Beer side: 3 x Chromed Flat Slide Out Shelves (280mm x 415mm) and 1 x Mini (315mm x 270mm). Shelving is fully interchangeable between beer and wine configurations, with full height adjustability. Wine shelves have sliding rubber saddles for positioning bottles of different sizes.",
-      "facts": ["shelf_count_wine_side", "shelf_count_beer_side", "shelf_type"]
+      "facts": [
+        "shelf_count_wine_side",
+        "shelf_count_beer_side",
+        "shelf_type"
+      ]
     },
     {
       "topic": "installation",
       "text": "Vents at front through grill. Build-in under counters is no problem. Grill height from floor: 70mm.",
-      "facts": ["grill_height_from_floor_mm", "ventilation_rear_mm", "ventilation_top_mm", "ventilation_each_side_mm"]
+      "facts": [
+        "grill_height_from_floor_mm",
+        "ventilation_rear_mm",
+        "ventilation_top_mm",
+        "ventilation_each_side_mm"
+      ]
     },
     {
       "topic": "components",
       "text": "Meanwell transformer (Taiwan). Schmick ECO controller. Quiet running fans selected for indoor entertaining areas.",
-      "facts": ["component_transformer", "component_controller"]
+      "facts": [
+        "component_transformer",
+        "component_controller"
+      ]
     }
   ],
   "documents": [

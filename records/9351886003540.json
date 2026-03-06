@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 5,
-    "door_hinge": "1 x Left & 1 x Right",
+    "door_hinge": "1 x left, 1 x right",
     "glass_door": true,
     "glass_door_heated_switchable": true,
     "led_lighting": true,
@@ -57,7 +57,9 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_primary": "Schmick quiet running fans",
     "component_controller": "Schmick ECO Controller",
-    "door_type": "heated_tempered"
+    "door_type": "heated_tempered",
+    "door_reversible": false,
+    "door_count": 2
   },
   "qa": [
     {

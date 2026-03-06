@@ -30,13 +30,15 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "1 x left, 1 x right",
+    "door_hinge": "right",
     "glass_door": true,
     "glass_door_heated_switchable": true,
     "led_lighting": true,
     "body_material": "304 Stainless Steel",
     "interior_finish": "Polished 304 SS",
-    "grill_material": "Stainless Steel"
+    "grill_material": "Stainless Steel",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

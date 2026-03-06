@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "Left Hing (Handle Right)",
+    "door_hinge": "left",
     "glass_door": true,
     "glass_door_heated_switchable": true,
     "led_lighting": true,
@@ -51,7 +51,9 @@
     ],
     "refrigerant": "R600",
     "shelf_type": "2 x flat chromed adjustable shelves (455mmW x 360mmD)",
-    "door_type": "heated_tempered"
+    "door_type": "heated_tempered",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

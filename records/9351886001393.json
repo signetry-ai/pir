@@ -4,7 +4,7 @@
   "sku": "SGT1R-BS",
   "brand": "Rhino",
   "range": "SGT",
-  "name": "3-Door Upright Display Fridge (Low-E Glass)",
+  "name": "Rhino SGT1R-BS – 293L Commercial Upright Glass Door Drinks Fridge – 10 Star Rating",
   "category": "upright_display_fridge",
   "status": {
     "brand_certified": false,
@@ -40,7 +40,7 @@
     "shelf_w_mm": 500,
     "shelf_d_mm": 355,
     "shelf_type": "5 x Adjustable Chromed Special 'No Topple' Shelves (500mmW x 355mmD)",
-    "door_hinge": "1 x left, 1 x right",
+    "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
     "refrigerant": "R600",
@@ -60,7 +60,9 @@
     "component_transformer": "Meanwell (Taiwan)",
     "capacity_litres": 293,
     "capacity_375ml_cans": 320,
-    "door_type": "dual_glazed_low_e"
+    "door_type": "dual_glazed_low_e",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

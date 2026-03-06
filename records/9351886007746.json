@@ -34,7 +34,9 @@
     "interior_finish": "White",
     "dimensions_interior_w_mm": 480,
     "dimensions_interior_d_mm": 230,
-    "dimensions_interior_h_mm": 290
+    "dimensions_interior_h_mm": 290,
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

@@ -68,7 +68,9 @@
     "component_lighting": "Philips LED",
     "capacity_litres": 208,
     "capacity_375ml_cans": 240,
-    "door_type": "dual_glazed_low_e"
+    "door_type": "dual_glazed_low_e",
+    "door_reversible": false,
+    "door_count": 2
   },
   "qa": [
     {

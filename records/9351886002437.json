@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "Right Hinge (Handle Left)",
+    "door_hinge": "right",
     "glass_door": true,
     "glass_door_heated_switchable": true,
     "led_lighting": true,
@@ -56,7 +56,9 @@
     "component_fan_secondary": "Noctua (Silent)",
     "component_fan_primary": "EBM (Germany)",
     "component_controller": "Schmick ECO Controller",
-    "door_type": "heated_tempered"
+    "door_type": "heated_tempered",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

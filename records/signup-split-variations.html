@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signetry — Split Signup Variations</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #1a1a1a;
+    font-family: 'Archivo', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* ─── NAV ─── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10000;
+    background: #000; border-bottom: 1px solid #333;
+    display: flex; gap: 0; overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  }
+  .nav button {
+    background: none; border: none; color: #666; padding: 12px 18px;
+    cursor: pointer; white-space: nowrap; font-family: inherit; font-size: inherit;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    border-bottom: 2px solid transparent; transition: all 0.2s;
+  }
+  .nav button:hover { color: #aaa; }
+  .nav button.active { color: #f0ece4; border-bottom-color: #f0ece4; }
+
+  /* ─── MOCKUPS ─── */
+  .mockup { display: none; min-height: 100vh; padding-top: 42px; flex-direction: row; }
+  .mockup.active { display: flex; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes expandRule {
+    from { width: 0; } to { width: 100%; }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+  }
+
+  /* ─── SHARED LEFT PANEL ─── */
+  .panel-left {
+    flex: 1; min-height: calc(100vh - 42px);
+    background: #f0ece4;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 60px 56px;
+    position: relative;
+  }
+  .panel-left::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle 1.2px at 8px 8px, rgba(0,0,0,0.045) 1.2px, transparent 1.2px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+  .panel-left > * { position: relative; z-index: 1; }
+
+  /* ─── SHARED RIGHT PANEL ─── */
+  .panel-right {
+    flex: 1; min-height: calc(100vh - 42px);
+    background: #1c1917;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 60px 56px;
+    position: relative; overflow: hidden;
+  }
+  .panel-right::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle 1px at 8px 8px, rgba(240,236,228,0.025) 1px, transparent 1px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+  .panel-right > * { position: relative; z-index: 1; }
+
+  /* ─── SHARED FORM ELEMENTS ─── */
+  .input-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.12em; margin-bottom: 8px;
+  }
+  .email-input {
+    width: 100%; max-width: 380px;
+    background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.08);
+    outline: none; color: #000;
+    padding: 16px 18px; font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    letter-spacing: 0.03em; transition: border-color 0.2s;
+  }
+  .email-input::placeholder { color: rgba(0,0,0,0.18); }
+  .email-input:focus { border-color: rgba(0,0,0,0.3); }
+  .submit-btn {
+    width: 100%; max-width: 380px;
+    background: #000; color: #f0ece4; border: none;
+    padding: 18px; font-family: 'Archivo Black', sans-serif; font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer;
+    margin-top: 12px; transition: all 0.2s;
+  }
+  .submit-btn:hover { letter-spacing: 0.14em; background: #1a1a1a; }
+  .form-note {
+    font-family: 'Special Elite', monospace; font-size: 12px;
+    color: rgba(0,0,0,0.25); margin-top: 12px; max-width: 380px;
+  }
+
+  @media (max-width: 860px) {
+    .mockup.active { flex-direction: column; }
+    .panel-left, .panel-right { min-height: auto; }
+    .panel-right { min-height: 50vh; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V1: TESTIMONIAL PULL QUOTE
+     ═══════════════════════════════════════════════════════════════ */
+  #v1 .panel-left .logo {
+    font-family: 'Archivo Black', sans-serif; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: #000; margin-bottom: 48px;
+    animation: fadeUp 0.5s 0.1s both;
+  }
+  #v1 .panel-left .headline {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(24px, 3vw, 34px); text-transform: uppercase;
+    color: #000; line-height: 1.12; margin-bottom: 20px;
+    max-width: 420px;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  #v1 .panel-left .desc {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px; line-height: 1.75; color: rgba(0,0,0,0.4);
+    max-width: 400px; margin-bottom: 36px;
+    animation: fadeUp 0.6s 0.35s both;
+  }
+  #v1 .panel-left .form-area { animation: fadeUp 0.6s 0.5s both; }
+  #v1 .panel-right .quote {
+    font-family: 'Special Elite', monospace;
+    font-size: clamp(28px, 3.5vw, 42px); line-height: 1.5;
+    color: rgba(240,236,228,0.5); font-style: italic;
+    max-width: 460px;
+    animation: fadeUp 0.8s 0.6s both;
+  }
+  #v1 .panel-right .quote em {
+    color: rgba(140,200,180,0.7); font-style: italic;
+  }
+  #v1 .panel-right .attribution {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: rgba(240,236,228,0.2); margin-top: 24px;
+    letter-spacing: 0.04em;
+    animation: fadeUp 0.6s 0.9s both;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V2: LIVE FEED — right panel shows scrolling queries
+     ═══════════════════════════════════════════════════════════════ */
+  #v2 .panel-left .logo {
+    font-family: 'Archivo Black', sans-serif; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: #000; margin-bottom: 48px;
+    animation: fadeUp 0.5s 0.1s both;
+  }
+  #v2 .panel-left .headline {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(24px, 3vw, 34px); text-transform: uppercase;
+    color: #000; line-height: 1.12; margin-bottom: 20px;
+    max-width: 420px;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  #v2 .panel-left .desc {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px; line-height: 1.75; color: rgba(0,0,0,0.4);
+    max-width: 400px; margin-bottom: 36px;
+    animation: fadeUp 0.6s 0.35s both;
+  }
+  #v2 .panel-left .form-area { animation: fadeUp 0.6s 0.5s both; }
+  #v2 .panel-right .feed-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(240,236,228,0.15); text-transform: uppercase;
+    letter-spacing: 0.14em; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+    animation: fadeUp 0.5s 0.5s both;
+  }
+  #v2 .panel-right .feed-label .live-dot {
+    width: 6px; height: 6px; background: #4ade80; border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  #v2 .panel-right .feed-item {
+    border-bottom: 1px solid rgba(240,236,228,0.04);
+    padding: 16px 0;
+  }
+  #v2 .panel-right .feed-item .q {
+    font-family: 'Special Elite', monospace; font-size: 14px;
+    color: rgba(240,236,228,0.45); line-height: 1.5;
+    margin-bottom: 6px;
+  }
+  #v2 .panel-right .feed-item .meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(240,236,228,0.12); display: flex; gap: 16px;
+  }
+  #v2 .panel-right .feed-item .meta .answered { color: rgba(74,222,128,0.4); }
+  #v2 .panel-right .feed-item .meta .gap { color: rgba(251,191,36,0.4); }
+  #v2 .feed-items > * {
+    opacity: 0; animation: fadeUp 0.4s both;
+  }
+  #v2 .feed-items > :nth-child(1) { animation-delay: 0.6s; }
+  #v2 .feed-items > :nth-child(2) { animation-delay: 0.8s; }
+  #v2 .feed-items > :nth-child(3) { animation-delay: 1.0s; }
+  #v2 .feed-items > :nth-child(4) { animation-delay: 1.2s; }
+  #v2 .feed-items > :nth-child(5) { animation-delay: 1.4s; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V3: STATS WALL — right panel is proof numbers
+     ═══════════════════════════════════════════════════════════════ */
+  #v3 .panel-left .logo {
+    font-family: 'Archivo Black', sans-serif; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: #000; margin-bottom: 48px;
+    animation: fadeUp 0.5s 0.1s both;
+  }
+  #v3 .panel-left .headline {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(24px, 3vw, 34px); text-transform: uppercase;
+    color: #000; line-height: 1.12; margin-bottom: 20px;
+    max-width: 420px;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  #v3 .panel-left .desc {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px; line-height: 1.75; color: rgba(0,0,0,0.4);
+    max-width: 400px; margin-bottom: 36px;
+    animation: fadeUp 0.6s 0.35s both;
+  }
+  #v3 .panel-left .form-area { animation: fadeUp 0.6s 0.5s both; }
+  #v3 .panel-right {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px; background: rgba(240,236,228,0.04);
+    padding: 0;
+  }
+  #v3 .panel-right::before { display: none; }
+  #v3 .stat-cell {
+    background: #1c1917; padding: 48px 36px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  #v3 .stat-cell::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle 1px at 8px 8px, rgba(240,236,228,0.02) 1px, transparent 1px);
+    background-size: 16px 16px; pointer-events: none;
+  }
+  #v3 .stat-cell .num {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(36px, 4vw, 56px);
+    color: rgba(240,236,228,0.6); line-height: 1;
+    position: relative;
+  }
+  #v3 .stat-cell .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(240,236,228,0.15); text-transform: uppercase;
+    letter-spacing: 0.08em; margin-top: 8px;
+    position: relative;
+  }
+  #v3 .stat-cell:nth-child(1) { animation: fadeUp 0.5s 0.4s both; }
+  #v3 .stat-cell:nth-child(2) { animation: fadeUp 0.5s 0.55s both; }
+  #v3 .stat-cell:nth-child(3) { animation: fadeUp 0.5s 0.7s both; }
+  #v3 .stat-cell:nth-child(4) { animation: fadeUp 0.5s 0.85s both; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V4: EMBED PREVIEW — right shows the widget in action
+     ═══════════════════════════════════════════════════════════════ */
+  #v4 .panel-left .logo {
+    font-family: 'Archivo Black', sans-serif; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: #000; margin-bottom: 48px;
+    animation: fadeUp 0.5s 0.1s both;
+  }
+  #v4 .panel-left .headline {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(24px, 3vw, 34px); text-transform: uppercase;
+    color: #000; line-height: 1.12; margin-bottom: 20px;
+    max-width: 420px;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  #v4 .panel-left .desc {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px; line-height: 1.75; color: rgba(0,0,0,0.4);
+    max-width: 400px; margin-bottom: 36px;
+    animation: fadeUp 0.6s 0.35s both;
+  }
+  #v4 .panel-left .form-area { animation: fadeUp 0.6s 0.5s both; }
+  #v4 .panel-right {
+    align-items: center; justify-content: center;
+  }
+  #v4 .widget-mock {
+    width: 340px; max-width: 100%;
+    background: #18181b; border: 1px solid #3f3f46;
+    border-radius: 16px; overflow: hidden;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    animation: fadeUp 0.7s 0.5s both;
+  }
+  #v4 .widget-header {
+    padding: 14px 16px; border-bottom: 1px solid #3f3f46;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  #v4 .widget-header span { color: #e4e4e7; font-size: 13px; font-weight: 600; }
+  #v4 .widget-header .close { color: #71717a; font-size: 18px; }
+  #v4 .widget-msgs { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+  #v4 .widget-msg {
+    padding: 10px 14px; border-radius: 12px; font-size: 12px; line-height: 1.5;
+    max-width: 85%;
+  }
+  #v4 .widget-msg.bot { background: #27272a; color: #d4d4d8; }
+  #v4 .widget-msg.user { background: #0891b2; color: #fff; align-self: flex-end; }
+  #v4 .widget-img {
+    margin-top: 8px; border-radius: 6px; overflow: hidden;
+    border: 1px solid #3f3f46;
+  }
+  #v4 .widget-img .placeholder {
+    width: 100%; height: 120px;
+    background: linear-gradient(135deg, #27272a 0%, #1f1f23 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; color: #52525b;
+  }
+  #v4 .widget-img .caption {
+    font-size: 9px; color: #52525b; padding: 4px 8px; background: #1f1f23;
+  }
+  #v4 .widget-input-area {
+    padding: 10px 14px; border-top: 1px solid #3f3f46;
+    display: flex; gap: 8px;
+  }
+  #v4 .widget-input-area .fake-input {
+    flex: 1; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 6px; padding: 9px 12px; color: #52525b; font-size: 12px;
+  }
+  #v4 .widget-input-area .fake-btn {
+    background: #0891b2; border-radius: 6px; padding: 9px 14px;
+    color: #fff; font-size: 12px;
+  }
+  #v4 .widget-footer {
+    text-align: center; padding: 6px; font-size: 9px; color: #3f3f46;
+  }
+  #v4 .widget-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(240,236,228,0.12); text-transform: uppercase;
+    letter-spacing: 0.12em; text-align: center;
+    margin-top: 16px;
+    animation: fadeUp 0.5s 0.8s both;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V5: HOW IT WORKS — right shows 3 steps stacked
+     ═══════════════════════════════════════════════════════════════ */
+  #v5 .panel-left .logo {
+    font-family: 'Archivo Black', sans-serif; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: #000; margin-bottom: 48px;
+    animation: fadeUp 0.5s 0.1s both;
+  }
+  #v5 .panel-left .headline {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(24px, 3vw, 34px); text-transform: uppercase;
+    color: #000; line-height: 1.12; margin-bottom: 20px;
+    max-width: 420px;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  #v5 .panel-left .desc {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px; line-height: 1.75; color: rgba(0,0,0,0.4);
+    max-width: 400px; margin-bottom: 36px;
+    animation: fadeUp 0.6s 0.35s both;
+  }
+  #v5 .panel-left .form-area { animation: fadeUp 0.6s 0.5s both; }
+  #v5 .panel-right {
+    justify-content: center; gap: 0;
+  }
+  #v5 .step {
+    border-bottom: 1px solid rgba(240,236,228,0.04);
+    padding: 36px 0;
+  }
+  #v5 .step:last-child { border-bottom: none; }
+  #v5 .step .step-num {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 48px; color: rgba(240,236,228,0.06);
+    line-height: 1; margin-bottom: 8px;
+  }
+  #v5 .step .step-title {
+    font-family: 'Archivo Black', sans-serif; font-size: 15px;
+    text-transform: uppercase; color: rgba(240,236,228,0.5);
+    letter-spacing: 0.04em; margin-bottom: 6px;
+  }
+  #v5 .step .step-desc {
+    font-family: 'Special Elite', monospace; font-size: 13px;
+    color: rgba(240,236,228,0.2); line-height: 1.6;
+    max-width: 360px;
+  }
+  #v5 .step .step-code {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: rgba(240,236,228,0.15); margin-top: 10px;
+    background: rgba(240,236,228,0.02); padding: 10px 14px;
+    border: 1px solid rgba(240,236,228,0.04);
+    white-space: nowrap; overflow-x: auto;
+  }
+  #v5 .step:nth-child(1) { animation: fadeUp 0.5s 0.5s both; }
+  #v5 .step:nth-child(2) { animation: fadeUp 0.5s 0.7s both; }
+  #v5 .step:nth-child(3) { animation: fadeUp 0.5s 0.9s both; }
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<div class="nav">
+  <button class="active" onclick="show('v1',this)">V1: Testimonial</button>
+  <button onclick="show('v2',this)">V2: Live Feed</button>
+  <button onclick="show('v3',this)">V3: Stats Wall</button>
+  <button onclick="show('v4',this)">V4: Widget Preview</button>
+  <button onclick="show('v5',this)">V5: How It Works</button>
+</div>
+
+<!-- ═══ V1: TESTIMONIAL ═══ -->
+<div class="mockup active" id="v1">
+  <div class="panel-left">
+    <div class="logo">Signetry</div>
+    <div class="headline">Your Customers Have Questions. Your Manuals Have Answers.</div>
+    <div class="desc">Signetry turns product manuals into instant, verified answers &mdash; embedded on your site with one line of code. See exactly what customers ask.</div>
+    <div class="form-area">
+      <div class="input-label">Work Email</div>
+      <input type="email" class="email-input" placeholder="you@brand.com">
+      <button class="submit-btn">Get Started &mdash; It's Free</button>
+      <div class="form-note">We'll send a magic link. No password needed.</div>
+    </div>
+  </div>
+  <div class="panel-right">
+    <div class="quote">
+      "Our support tickets dropped <em>40%</em> in the first month."
+    </div>
+  </div>
+</div>
+
+<!-- ═══ V2: LIVE FEED ═══ -->
+<div class="mockup" id="v2">
+  <div class="panel-left">
+    <div class="logo">Signetry</div>
+    <div class="headline">You Have No Idea What Customers Want to Know About Your Products</div>
+    <div class="desc">Right now, someone has a question about your product. You'll never see it. Signetry captures every question and answers it from verified data &mdash; you see the intelligence in real time.</div>
+    <div class="form-area">
+      <div class="input-label">Work Email</div>
+      <input type="email" class="email-input" placeholder="you@brand.com">
+      <button class="submit-btn">See Your Products' Questions</button>
+      <div class="form-note">Magic link. No password. Feed in 60 seconds.</div>
+    </div>
+  </div>
+  <div class="panel-right">
+    <div class="feed-label"><span class="live-dot"></span> Live Query Feed</div>
+    <div class="feed-items">
+      <div class="feed-item">
+        <div class="q">"Is the SG2H-B lockable?"</div>
+        <div class="meta"><span class="answered">Answered &bull; Manual p.4</span><span>2m ago</span></div>
+      </div>
+      <div class="feed-item">
+        <div class="q">"What clearance do I need behind the fridge?"</div>
+        <div class="meta"><span class="answered">Answered &bull; Manual p.7</span><span>8m ago</span></div>
+      </div>
+      <div class="feed-item">
+        <div class="q">"Can I use it outdoors in direct sun?"</div>
+        <div class="meta"><span class="gap">Knowledge gap</span><span>14m ago</span></div>
+      </div>
+      <div class="feed-item">
+        <div class="q">"How do I adjust the shelves?"</div>
+        <div class="meta"><span class="answered">Answered &bull; Manual p.5</span><span>23m ago</span></div>
+      </div>
+      <div class="feed-item">
+        <div class="q">"Does it come in stainless steel?"</div>
+        <div class="meta"><span class="gap">Knowledge gap</span><span>31m ago</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ V3: STATS WALL ═══ -->
+<div class="mockup" id="v3">
+  <div class="panel-left">
+    <div class="logo">Signetry</div>
+    <div class="headline">Product Truth Is Slipping Out of Your Hands</div>
+    <div class="desc">AI chatbots invent specs. Review sites parrot wrong data. Resellers copy outdated descriptions. Signetry puts you back in control &mdash; verified answers from your source data, served wherever customers ask.</div>
+    <div class="form-area">
+      <div class="input-label">Work Email</div>
+      <input type="email" class="email-input" placeholder="you@brand.com">
+      <button class="submit-btn">Take Back Control</button>
+      <div class="form-note">Magic link. No password. No credit card.</div>
+    </div>
+  </div>
+  <div class="panel-right">
+    <div class="stat-cell">
+      <div class="num">0%</div>
+      <div class="label">Hallucination rate</div>
+    </div>
+    <div class="stat-cell">
+      <div class="num">368</div>
+      <div class="label">Products indexed</div>
+    </div>
+    <div class="stat-cell">
+      <div class="num">&lt;2s</div>
+      <div class="label">To verified answer</div>
+    </div>
+    <div class="stat-cell">
+      <div class="num">Live</div>
+      <div class="label">Query intelligence</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ V4: WIDGET PREVIEW ═══ -->
+<div class="mockup" id="v4">
+  <div class="panel-left">
+    <div class="logo">Signetry</div>
+    <div class="headline">One Line of Code. Every Product Question Answered.</div>
+    <div class="desc">Customers ask questions on your product pages and get verified answers with actual manual diagrams. You see every query in real time. That's the intelligence.</div>
+    <div class="form-area">
+      <div class="input-label">Work Email</div>
+      <input type="email" class="email-input" placeholder="you@brand.com">
+      <button class="submit-btn">Get Your Embed Code</button>
+      <div class="form-note">API key + snippet in 60 seconds. Ship it in five minutes.</div>
+    </div>
+  </div>
+  <div class="panel-right">
+    <div class="widget-mock">
+      <div class="widget-header">
+        <span>Ask an Expert</span>
+        <span class="close">&times;</span>
+      </div>
+      <div class="widget-msgs">
+        <div class="widget-msg bot">Ask me anything about this product.</div>
+        <div class="widget-msg user">How do I adjust the shelves?</div>
+        <div class="widget-msg bot">
+          The SG2H-B has 3 adjustable shelves. To reposition: lift the shelf slightly, tilt the front edge up, and slide out. Reinsert at your preferred notch height.
+          <div class="widget-img">
+            <div class="placeholder">[ Manual page 5 &mdash; shelf diagram ]</div>
+            <div class="caption">Source: Manual page 5</div>
+          </div>
+        </div>
+      </div>
+      <div class="widget-input-area">
+        <div class="fake-input">e.g. Is it lockable?</div>
+        <div class="fake-btn">Ask</div>
+      </div>
+      <div class="widget-footer">Powered by Signetry</div>
+    </div>
+    <div class="widget-label">What your customers see</div>
+  </div>
+</div>
+
+<!-- ═══ V5: HOW IT WORKS ═══ -->
+<div class="mockup" id="v5">
+  <div class="panel-left">
+    <div class="logo">Signetry</div>
+    <div class="headline">The Questions They Can't Get Answered Are Worth More Than the Ones They Can</div>
+    <div class="desc">Every unanswered question is a signal &mdash; a gap in your docs, a feature you're not communicating, a sale you might be losing. Signetry shows you everything, answered and unanswered, in real time.</div>
+    <div class="form-area">
+      <div class="input-label">Work Email</div>
+      <input type="email" class="email-input" placeholder="you@brand.com">
+      <button class="submit-btn">See What They're Asking</button>
+      <div class="form-note">Magic link. Intelligence dashboard in under a minute.</div>
+    </div>
+  </div>
+  <div class="panel-right">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Add One Line</div>
+      <div class="step-desc">Drop a script tag on your product pages. That's the entire integration.</div>
+      <div class="step-code">&lt;script src="signetry.ai/widget.js" data-key="sk_..."&gt;&lt;/script&gt;</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Customers Ask</div>
+      <div class="step-desc">They get verified answers sourced from your actual manuals &mdash; with diagrams and page references. Zero hallucination.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">You See Everything</div>
+      <div class="step-desc">Every query flows through your dashboard. Answered questions confirm your data. Unanswered ones reveal the gaps. That's the intelligence brands pay for.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function show(id, btn) {
+    document.querySelectorAll('.mockup').forEach(m => m.classList.remove('active'));
+    document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

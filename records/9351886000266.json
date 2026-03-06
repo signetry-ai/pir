@@ -81,7 +81,9 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_switches": "Cherry (USA)",
     "component_lighting": "Philips LED",
-    "door_type": "heated_tempered"
+    "door_type": "heated_tempered",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

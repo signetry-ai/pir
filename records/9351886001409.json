@@ -4,7 +4,7 @@
   "sku": "SGT1L-BS",
   "brand": "Rhino",
   "range": "SGT",
-  "name": "3-Door Upright Display Fridge (Low-E Glass)",
+  "name": "Rhino SGT1L-BS – Black Upright Glass Door Drinks Fridge – 293 Litres",
   "category": "upright_display_fridge",
   "status": {
     "brand_certified": false,
@@ -61,7 +61,9 @@
     "component_transformer": "Meanwell (Taiwan)",
     "capacity_litres": 293,
     "capacity_375ml_cans": 320,
-    "door_type": "dual_glazed_low_e"
+    "door_type": "dual_glazed_low_e",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signetry — Editorial Login Variations</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,300;1,8..60,400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: #1c1917;
+    border-bottom: 1px solid #292524;
+    padding: 10px 20px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .nav-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #78716c;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 8px;
+  }
+  .nav button {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 5px 14px;
+    border: 1px solid #44403c;
+    background: #292524;
+    color: #a8a29e;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+  }
+  .nav button:hover { border-color: #78716c; color: #e7e5e4; }
+  .nav button.active { background: #faf6f1; border-color: #faf6f1; color: #1c1917; }
+
+  .mockup { display: none !important; min-height: 100vh; padding-top: 48px; }
+  .mockup.active { display: flex !important; }
+
+  /* ═══════════════════════════════════════════════════════════
+     V1 — CLASSIC SPLIT
+     Warm cream left, dark right with pull quote
+     ═══════════════════════════════════════════════════════════ */
+  .v1 {
+    background: #faf6f1;
+  }
+  .v1-left {
+    flex: 1;
+    padding: 80px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 560px;
+  }
+  .v1-right {
+    flex: 1;
+    background: #1c1917;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .v1-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(45,212,191,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(8,145,178,0.06) 0%, transparent 50%);
+  }
+  .v1-quote {
+    position: relative;
+    padding: 60px;
+    max-width: 480px;
+  }
+  .v1-quote-text {
+    font-family: 'Newsreader', serif;
+    font-size: 1.7rem;
+    color: #e7e5e4;
+    line-height: 1.4;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+  .v1-quote-text em { color: #2dd4bf; font-style: normal; font-weight: 500; }
+  .v1-quote-attr {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #57534e;
+  }
+  .v1-brand {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 13px;
+    color: #1c1917;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+  }
+  .v1-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.8rem;
+    color: #1c1917;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .v1-desc {
+    font-family: 'Newsreader', serif;
+    font-size: 1.05rem;
+    color: #78716c;
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+  .v1 label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .v1 input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #d6d3d1;
+    border-radius: 8px;
+    font-family: 'Newsreader', serif;
+    font-size: 16px;
+    color: #1c1917;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .v1 input:focus { border-color: #1c1917; }
+  .v1 input::placeholder { color: #d6d3d1; }
+  .v1-submit {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background: #1c1917;
+    color: #faf6f1;
+    border: none;
+    border-radius: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .v1-submit:hover { background: #292524; }
+  .v1-note {
+    margin-top: 16px;
+    font-family: 'Newsreader', serif;
+    font-size: 13px;
+    color: #a8a29e;
+    text-align: center;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     V2 — FULL-WIDTH HERO
+     Big statement top, form bottom, no split
+     ═══════════════════════════════════════════════════════════ */
+  .v2 {
+    background: #faf6f1;
+    flex-direction: column;
+    align-items: center;
+  }
+  .v2-inner {
+    width: 100%;
+    max-width: 720px;
+    padding: 80px 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+  }
+  .v2-brand {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 11px;
+    color: #a8a29e;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+  .v2-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.8rem;
+    font-weight: 300;
+    color: #1c1917;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+  .v2-headline strong {
+    font-weight: 600;
+    font-style: italic;
+  }
+  .v2-sub {
+    font-family: 'Newsreader', serif;
+    font-size: 1.1rem;
+    color: #78716c;
+    line-height: 1.7;
+    margin-bottom: 48px;
+    max-width: 520px;
+  }
+  .v2-rule {
+    width: 60px;
+    height: 2px;
+    background: #1c1917;
+    margin-bottom: 48px;
+  }
+  .v2-form {
+    display: flex;
+    gap: 12px;
+    max-width: 480px;
+  }
+  .v2-form input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1.5px solid #d6d3d1;
+    border-radius: 8px;
+    font-family: 'Newsreader', serif;
+    font-size: 16px;
+    color: #1c1917;
+    background: #fff;
+    outline: none;
+  }
+  .v2-form input:focus { border-color: #1c1917; }
+  .v2-form input::placeholder { color: #d6d3d1; }
+  .v2-form button {
+    padding: 14px 28px;
+    background: #1c1917;
+    color: #faf6f1;
+    border: none;
+    border-radius: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .v2-form button:hover { background: #292524; }
+  .v2-proof {
+    margin-top: 48px;
+    display: flex;
+    gap: 40px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+  }
+  .v2-proof-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1c1917;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     V3 — REVERSE SPLIT (DARK LEFT, LIGHT RIGHT)
+     Dark side shows live data, light side has form
+     ═══════════════════════════════════════════════════════════ */
+  .v3 {
+    background: #faf6f1;
+  }
+  .v3-left {
+    flex: 1.1;
+    background: #0c0a09;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .v3-left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(transparent, #0c0a09);
+    pointer-events: none;
+  }
+  .v3-left-brand {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 12px;
+    color: #44403c;
+    letter-spacing: 0.2em;
+    margin-bottom: 32px;
+  }
+  .v3-left-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: #57534e;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+  }
+  .v3-feed-item {
+    padding: 14px 0;
+    border-bottom: 1px solid #1c1917;
+  }
+  .v3-feed-q {
+    font-family: 'Source Serif 4', serif;
+    font-size: 14px;
+    color: #d6d3d1;
+    margin-bottom: 4px;
+  }
+  .v3-feed-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #44403c;
+    display: flex;
+    gap: 12px;
+  }
+  .v3-feed-meta .ok { color: #2dd4bf; }
+  .v3-feed-meta .gap { color: #f59e0b; }
+  .v3-right {
+    flex: 0.9;
+    padding: 80px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .v3-title {
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #1c1917;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    font-optical-sizing: auto;
+  }
+  .v3-title em {
+    font-style: italic;
+    font-weight: 300;
+  }
+  .v3-desc {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    color: #78716c;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .v3-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .v3-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .v3-step-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #d6d3d1;
+    line-height: 1;
+    min-width: 28px;
+  }
+  .v3-step-text {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem;
+    color: #57534e;
+    line-height: 1.5;
+  }
+  .v3-step-text strong { color: #1c1917; }
+  .v3 .field { margin-bottom: 12px; }
+  .v3 .field label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .v3 .field input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #e7e5e4;
+    border-radius: 6px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    color: #1c1917;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .v3 .field input:focus { border-color: #1c1917; }
+  .v3 .field input::placeholder { color: #d6d3d1; }
+  .v3-btn {
+    width: 100%;
+    padding: 14px;
+    background: #1c1917;
+    color: #faf6f1;
+    border: none;
+    border-radius: 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .v3-btn:hover { background: #292524; }
+  .v3-foot {
+    margin-top: 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #a8a29e;
+    text-align: center;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     V4 — CENTERED CARD ON TEXTURE
+     Subtle paper texture bg, elegant centered card
+     ═══════════════════════════════════════════════════════════ */
+  .v4 {
+    background: #f5f0e8;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .v4::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4b5a0' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .v4-card {
+    position: relative;
+    width: 480px;
+    max-width: 90vw;
+    background: #fffdf9;
+    border: 1px solid #e7e5e4;
+    padding: 56px 48px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 20px 60px rgba(0,0,0,0.06);
+  }
+  .v4-logo {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .v4-logo-text {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 12px;
+    color: #1c1917;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .v4-logo-line {
+    width: 40px;
+    height: 1.5px;
+    background: #1c1917;
+    margin: 8px auto 0;
+  }
+  .v4-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.6rem;
+    color: #1c1917;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .v4-sub {
+    font-family: 'Newsreader', serif;
+    font-size: 0.95rem;
+    color: #a8a29e;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .v4 .field { margin-bottom: 16px; }
+  .v4 .field label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .v4 .field input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e7e5e4;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 15px;
+    color: #1c1917;
+    background: #faf6f1;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .v4 .field input:focus { border-color: #1c1917; }
+  .v4 .field input::placeholder { color: #d6d3d1; }
+  .v4-btn {
+    width: 100%;
+    padding: 14px;
+    background: #1c1917;
+    color: #faf6f1;
+    border: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .v4-btn:hover { background: #292524; }
+  .v4-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .v4-divider::before, .v4-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e7e5e4;
+  }
+  .v4-divider span {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .v4-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .v4-feat {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-family: 'Newsreader', serif;
+    font-size: 14px;
+    color: #78716c;
+    line-height: 1.5;
+  }
+  .v4-feat-mark {
+    font-family: 'Libre Baskerville', serif;
+    color: #1c1917;
+    font-size: 14px;
+    line-height: 1.5;
+    flex-shrink: 0;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     V5 — EDITORIAL BROADSHEET
+     Newspaper masthead, three-column layout, serif heavy
+     ═══════════════════════════════════════════════════════════ */
+  .v5 {
+    background: #faf6f1;
+    flex-direction: column;
+    align-items: center;
+  }
+  .v5-masthead {
+    width: 100%;
+    text-align: center;
+    padding: 32px 32px 24px;
+    border-bottom: 3px double #1c1917;
+  }
+  .v5-masthead-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #1c1917;
+    letter-spacing: 0.05em;
+  }
+  .v5-masthead-tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .v5-dateline {
+    width: 100%;
+    max-width: 960px;
+    padding: 8px 32px;
+    border-bottom: 1px solid #d6d3d1;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+    display: flex;
+    justify-content: space-between;
+  }
+  .v5-body {
+    width: 100%;
+    max-width: 960px;
+    padding: 40px 32px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    flex: 1;
+    align-items: start;
+  }
+  .v5-main-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1c1917;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  .v5-main-deck {
+    font-family: 'Newsreader', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #78716c;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e7e5e4;
+  }
+  .v5-main-body {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    color: #57534e;
+    line-height: 1.8;
+    column-count: 2;
+    column-gap: 32px;
+    margin-bottom: 32px;
+  }
+  .v5-main-body p { margin-bottom: 16px; }
+  .v5-form-section {
+    border-top: 2px solid #1c1917;
+    padding-top: 24px;
+  }
+  .v5-form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1c1917;
+    margin-bottom: 16px;
+  }
+  .v5-form-row {
+    display: flex;
+    gap: 8px;
+  }
+  .v5-form-row input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d6d3d1;
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    color: #1c1917;
+    background: #fff;
+    outline: none;
+  }
+  .v5-form-row input:focus { border-color: #1c1917; }
+  .v5-form-row input::placeholder { color: #d6d3d1; }
+  .v5-form-row button {
+    padding: 12px 24px;
+    background: #1c1917;
+    color: #faf6f1;
+    border: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .v5-form-row button:hover { background: #292524; }
+  .v5-sidebar {
+    border-left: 1px solid #d6d3d1;
+    padding-left: 48px;
+  }
+  .v5-sidebar-section {
+    margin-bottom: 32px;
+  }
+  .v5-sidebar-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 9px;
+    color: #1c1917;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d6d3d1;
+  }
+  .v5-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px dotted #e7e5e4;
+  }
+  .v5-stat-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    color: #78716c;
+  }
+  .v5-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1c1917;
+  }
+  .v5-how-list {
+    counter-reset: how;
+  }
+  .v5-how-item {
+    counter-increment: how;
+    padding: 12px 0;
+    border-bottom: 1px dotted #e7e5e4;
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    color: #57534e;
+    line-height: 1.5;
+    display: flex;
+    gap: 12px;
+  }
+  .v5-how-item::before {
+    content: counter(how) ".";
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1c1917;
+    min-width: 20px;
+  }
+  .v5-how-item strong { color: #1c1917; }
+  .v5-pull {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #1c1917;
+    border-left: 3px solid #1c1917;
+    padding: 12px 0 12px 20px;
+    margin: 16px 0;
+    line-height: 1.35;
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <span class="nav-label">Editorial Variations</span>
+  <button onclick="show('v1')" class="active" id="btn-v1">Classic Split</button>
+  <button onclick="show('v2')" id="btn-v2">Full Hero</button>
+  <button onclick="show('v3')" id="btn-v3">Reverse Split</button>
+  <button onclick="show('v4')" id="btn-v4">Card</button>
+  <button onclick="show('v5')" id="btn-v5">Broadsheet</button>
+</div>
+
+<!-- ════════ V1: CLASSIC SPLIT ════════ -->
+<div class="mockup v1 active" id="v1">
+  <div class="v1-left">
+    <div class="v1-brand">SIGNETRY</div>
+    <div class="v1-title">Your customers have questions.<br>Your manuals have answers.</div>
+    <div class="v1-desc">Signetry turns product manuals into instant, verified answers — embedded on your site with one line of code. See exactly what customers ask.</div>
+    <div>
+      <label>Work email</label>
+      <input type="email" placeholder="you@brand.com" />
+    </div>
+    <button class="v1-submit">Get started — it's free</button>
+    <div class="v1-note">We'll send a magic link. No password needed.</div>
+  </div>
+  <div class="v1-right">
+    <div class="v1-quote">
+      <div class="v1-quote-text">"Our support calls dropped <em>40%</em> in the first month. Customers just ask the widget."</div>
+      <div class="v1-quote-attr">— Head of Support, Rhino Products</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ V2: FULL HERO ════════ -->
+<div class="mockup v2" id="v2">
+  <div class="v2-inner">
+    <div class="v2-brand">SIGNETRY</div>
+    <div class="v2-headline">Your customers have questions.<br>Your <strong>manuals</strong> have answers.</div>
+    <div class="v2-sub">One script tag. Every product question answered — with actual diagrams from the manual. Verified. Instant. See exactly what your customers want to know.</div>
+    <div class="v2-rule"></div>
+    <div class="v2-form">
+      <input type="email" placeholder="you@brand.com" />
+      <button>Get started free</button>
+    </div>
+    <div class="v2-proof">
+      <div>
+        <div class="v2-proof-num">368</div>
+        <div>Products live</div>
+      </div>
+      <div>
+        <div class="v2-proof-num">0</div>
+        <div>Hallucinations</div>
+      </div>
+      <div>
+        <div class="v2-proof-num">100%</div>
+        <div>Source-verified</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ V3: REVERSE SPLIT ════════ -->
+<div class="mockup v3" id="v3">
+  <div class="v3-left">
+    <div class="v3-left-brand">SIGNETRY</div>
+    <div class="v3-left-label">Live intelligence — what customers are asking right now</div>
+    <div class="v3-feed-item">
+      <div class="v3-feed-q">"How do I adjust the shelves?"</div>
+      <div class="v3-feed-meta"><span class="ok">✓ answered</span><span>page 5</span><span>SG2H-B-HD</span></div>
+    </div>
+    <div class="v3-feed-item">
+      <div class="v3-feed-q">"What ventilation gaps do I need?"</div>
+      <div class="v3-feed-meta"><span class="ok">✓ answered</span><span>page 5</span><span>SG1R-B</span></div>
+    </div>
+    <div class="v3-feed-item">
+      <div class="v3-feed-q">"What's the warranty period?"</div>
+      <div class="v3-feed-meta"><span class="gap">✗ gap — 8 customers asked</span></div>
+    </div>
+    <div class="v3-feed-item">
+      <div class="v3-feed-q">"How do I clean the condenser?"</div>
+      <div class="v3-feed-meta"><span class="ok">✓ answered</span><span>page 7, 9</span><span>SG3H-B</span></div>
+    </div>
+    <div class="v3-feed-item">
+      <div class="v3-feed-q">"Can I use this outdoors?"</div>
+      <div class="v3-feed-meta"><span class="ok">✓ answered</span><span>SG2H-HD</span></div>
+    </div>
+    <div class="v3-feed-item">
+      <div class="v3-feed-q">"What refrigerant does it use?"</div>
+      <div class="v3-feed-meta"><span class="ok">✓ answered</span><span>SG2H-B-HD</span></div>
+    </div>
+  </div>
+  <div class="v3-right">
+    <div class="v3-title">See what your customers <em>actually</em> want to know</div>
+    <div class="v3-desc">Your manuals already have the answers. Signetry extracts them, verifies every fact, and embeds an answer engine on your site — with the actual diagrams.</div>
+    <div class="v3-steps">
+      <div class="v3-step"><span class="v3-step-num">1</span><span class="v3-step-text"><strong>Enter your email.</strong> We send a magic link.</span></div>
+      <div class="v3-step"><span class="v3-step-num">2</span><span class="v3-step-text"><strong>Paste one script tag</strong> on your product page.</span></div>
+      <div class="v3-step"><span class="v3-step-num">3</span><span class="v3-step-text"><strong>Watch the intelligence flow.</strong> Every question, answered.</span></div>
+    </div>
+    <div class="field">
+      <label>Work email</label>
+      <input type="email" placeholder="you@brand.com" />
+    </div>
+    <button class="v3-btn">Send magic link</button>
+    <div class="v3-foot">Free to start. No credit card.</div>
+  </div>
+</div>
+
+<!-- ════════ V4: CARD ════════ -->
+<div class="mockup v4" id="v4">
+  <div class="v4-card">
+    <div class="v4-logo">
+      <div class="v4-logo-text">Signetry</div>
+      <div class="v4-logo-line"></div>
+    </div>
+    <div class="v4-title">Your customers have questions.<br>Your manuals have answers.</div>
+    <div class="v4-sub">One line of code. Every product question answered with verified facts and actual manual diagrams.</div>
+    <div class="field">
+      <label>Work email</label>
+      <input type="email" placeholder="you@brand.com" />
+    </div>
+    <button class="v4-btn">Send magic link — it's free</button>
+    <div class="v4-divider"><span>How it works</span></div>
+    <div class="v4-features">
+      <div class="v4-feat"><span class="v4-feat-mark">1.</span> We extract verified facts from your product manuals</div>
+      <div class="v4-feat"><span class="v4-feat-mark">2.</span> You paste one script tag on your product page</div>
+      <div class="v4-feat"><span class="v4-feat-mark">3.</span> Customers get instant answers — with diagrams</div>
+      <div class="v4-feat"><span class="v4-feat-mark">4.</span> You see every question in your intelligence feed</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ V5: BROADSHEET ════════ -->
+<div class="mockup v5" id="v5">
+  <div class="v5-masthead">
+    <div class="v5-masthead-name">Signetry</div>
+    <div class="v5-masthead-tagline">Product Intelligence · Established 2026</div>
+  </div>
+  <div class="v5-dateline">
+    <span>Thursday, March 6, 2026</span>
+    <span>368 products · 7 brands · Zero hallucinations</span>
+  </div>
+  <div class="v5-body">
+    <div>
+      <div class="v5-main-headline">Your Customers Have Questions. Your Manuals Have Answers.</div>
+      <div class="v5-main-deck">A new kind of product intelligence that turns support manuals into instant, verified answers — with actual diagrams.</div>
+      <div class="v5-main-body">
+        <p>Every day, customers buy products and immediately have questions. How do I install this? What clearance does it need? How do I clean the condenser? The answers exist — buried in PDF manuals that nobody reads.</p>
+        <p>Signetry extracts every fact from your product manuals, verifies each one against the source text, and makes them available through a widget that takes sixty seconds to install. One script tag on your product page. That's it.</p>
+        <p>When a customer asks a question, they get the answer immediately — with the actual diagram from the manual showing them exactly what to do. Every fact is traceable to a verbatim source quote. Zero hallucinations. Zero guesswork.</p>
+        <p>And you see everything. Every question your customers ask flows into your intelligence dashboard. What do they want to know? What can't you answer yet? That's the intelligence brands pay for.</p>
+      </div>
+      <div class="v5-form-section">
+        <div class="v5-form-title">Get started — free</div>
+        <div class="v5-form-row">
+          <input type="email" placeholder="you@brand.com" />
+          <button>Send magic link</button>
+        </div>
+      </div>
+    </div>
+    <div class="v5-sidebar">
+      <div class="v5-sidebar-section">
+        <div class="v5-sidebar-title">By the Numbers</div>
+        <div class="v5-stat-row"><span class="v5-stat-label">Products live</span><span class="v5-stat-num">368</span></div>
+        <div class="v5-stat-row"><span class="v5-stat-label">Facts verified</span><span class="v5-stat-num">12,400</span></div>
+        <div class="v5-stat-row"><span class="v5-stat-label">Hallucination rate</span><span class="v5-stat-num">0%</span></div>
+        <div class="v5-stat-row"><span class="v5-stat-label">Avg response</span><span class="v5-stat-num">340ms</span></div>
+      </div>
+      <div class="v5-sidebar-section">
+        <div class="v5-sidebar-title">How It Works</div>
+        <div class="v5-how-list">
+          <div class="v5-how-item"><strong>Enter your email.</strong> We send a secure login link — no password.</div>
+          <div class="v5-how-item"><strong>Copy one script tag</strong> and paste it on your product page.</div>
+          <div class="v5-how-item"><strong>Customers ask questions</strong> and get verified answers with manual diagrams.</div>
+          <div class="v5-how-item"><strong>You see every question</strong> in your live intelligence dashboard.</div>
+        </div>
+      </div>
+      <div class="v5-sidebar-section">
+        <div class="v5-pull">"Eight customers asked about warranty this week and we couldn't answer. Now we know exactly what to add."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.mockup').forEach(m => m.classList.remove('active'));
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('btn-' + id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>

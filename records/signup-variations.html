@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signetry — Signup/Login Variations</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #1a1a1a;
+    font-family: 'Archivo', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* ─── NAV ─── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10000;
+    background: #000; border-bottom: 1px solid #333;
+    display: flex; gap: 0; overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  }
+  .nav button {
+    background: none; border: none; color: #666; padding: 12px 18px;
+    cursor: pointer; white-space: nowrap; font-family: inherit; font-size: inherit;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .nav button:hover { color: #aaa; }
+  .nav button.active { color: #f0ece4; border-bottom-color: #f0ece4; }
+
+  /* ─── MOCKUP FRAMES ─── */
+  .mockup { display: none; min-height: 100vh; padding-top: 42px; }
+  .mockup.active { display: flex; }
+
+  /* ─── SHARED ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes expandRule {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes caretBlink {
+    0%, 100% { border-right-color: rgba(0,0,0,0.4); }
+    50% { border-right-color: transparent; }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V1: CENTERED SINGLE — full-page centered, typewriter reveal
+     ═══════════════════════════════════════════════════════════════ */
+  .v1 {
+    background: #f0ece4;
+    align-items: center; justify-content: center;
+    flex-direction: column;
+    padding: 40px 24px;
+    position: relative;
+  }
+  .v1::before {
+    content: ''; position: fixed; inset: 0; z-index: 0;
+    background: radial-gradient(circle 1.2px at 8px 8px, rgba(0,0,0,0.055) 1.2px, transparent 1.2px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+  .v1 .content {
+    position: relative; z-index: 1;
+    max-width: 480px; width: 100%;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  .v1 .topline {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(0,0,0,0.25); text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 32px;
+  }
+  .v1 .topline .dot {
+    width: 7px; height: 7px; background: #000;
+    animation: pulse 2.5s infinite;
+  }
+  .v1 .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(42px, 8vw, 72px);
+    color: #000; text-transform: uppercase;
+    line-height: 0.9; margin-bottom: 8px;
+  }
+  .v1 .tagline {
+    font-family: 'Special Elite', monospace;
+    font-size: 15px; color: rgba(0,0,0,0.4);
+    line-height: 1.6; margin-bottom: 32px;
+    max-width: 380px;
+  }
+  .v1 .rule {
+    height: 2px; background: rgba(0,0,0,0.08);
+    margin-bottom: 28px;
+    animation: expandRule 0.8s 0.6s both;
+  }
+  .v1 .form-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.12em; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .v1 .form-label::after { content: ''; flex: 1; height: 1px; background: rgba(0,0,0,0.06); }
+  .v1 input {
+    width: 100%; background: transparent; border: none; outline: none;
+    border-bottom: 2px solid rgba(0,0,0,0.08); color: #000;
+    padding: 16px 0; font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    letter-spacing: 0.03em; transition: border-color 0.2s;
+  }
+  .v1 input::placeholder { color: rgba(0,0,0,0.18); }
+  .v1 input:focus { border-bottom-color: #000; }
+  .v1 button.submit {
+    width: 100%; background: #000; color: #f0ece4; border: none;
+    padding: 18px; font-family: 'Archivo Black', sans-serif; font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer;
+    margin-top: 24px; transition: all 0.2s;
+  }
+  .v1 button.submit:hover { background: #1a1a1a; letter-spacing: 0.14em; }
+  .v1 .subtext {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(0,0,0,0.18); text-align: center;
+    margin-top: 16px; letter-spacing: 0.04em;
+  }
+  .v1 .footer {
+    margin-top: 48px; padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex; justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(0,0,0,0.15); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V2: SPLIT — left brand story, right form
+     ═══════════════════════════════════════════════════════════════ */
+  .v2 {
+    flex-direction: row; min-height: 100vh;
+  }
+  .v2-left {
+    flex: 1; background: #000; color: #f0ece4;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 60px 48px;
+    position: relative; overflow: hidden;
+  }
+  .v2-left::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle 1px at 8px 8px, rgba(240,236,228,0.04) 1px, transparent 1px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+  .v2-left .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(48px, 7vw, 80px);
+    text-transform: uppercase; line-height: 0.88;
+    margin-bottom: 16px; position: relative;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  .v2-left .subtitle {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(14px, 2vw, 22px);
+    color: rgba(240,236,228,0.35);
+    text-transform: uppercase; line-height: 1.1;
+    margin-bottom: 40px;
+    animation: fadeUp 0.6s 0.4s both;
+  }
+  .v2-left .desc {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px; line-height: 1.8;
+    color: rgba(240,236,228,0.4);
+    max-width: 400px;
+    animation: fadeUp 0.6s 0.6s both;
+  }
+  .v2-left .features {
+    margin-top: 40px; display: flex; flex-direction: column; gap: 8px;
+    animation: fadeUp 0.6s 0.8s both;
+  }
+  .v2-left .feat {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: rgba(240,236,228,0.25); text-transform: uppercase;
+    letter-spacing: 0.06em; display: flex; align-items: center; gap: 10px;
+  }
+  .v2-left .feat::before { content: '//'; color: rgba(240,236,228,0.1); font-weight: 700; }
+  .v2-right {
+    flex: 1; background: #f0ece4;
+    display: flex; align-items: center; justify-content: center;
+    padding: 60px 48px;
+    position: relative;
+  }
+  .v2-right::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle 1.2px at 8px 8px, rgba(0,0,0,0.04) 1.2px, transparent 1.2px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+  .v2-right .form-wrap {
+    position: relative; max-width: 380px; width: 100%;
+    animation: fadeUp 0.7s 0.3s both;
+  }
+  .v2-right .form-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px; text-transform: uppercase;
+    color: #000; margin-bottom: 8px;
+  }
+  .v2-right .form-sub {
+    font-family: 'Special Elite', monospace;
+    font-size: 13px; color: rgba(0,0,0,0.35);
+    margin-bottom: 32px; line-height: 1.6;
+  }
+  .v2-right input {
+    width: 100%; background: transparent; border: none; outline: none;
+    border-bottom: 2px solid rgba(0,0,0,0.08); color: #000;
+    padding: 16px 0; font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    letter-spacing: 0.03em; transition: border-color 0.2s;
+  }
+  .v2-right input::placeholder { color: rgba(0,0,0,0.18); }
+  .v2-right input:focus { border-bottom-color: #000; }
+  .v2-right button.submit {
+    width: 100%; background: #000; color: #f0ece4; border: none;
+    padding: 18px; font-family: 'Archivo Black', sans-serif; font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer;
+    margin-top: 24px; transition: all 0.2s;
+  }
+  .v2-right button.submit:hover { letter-spacing: 0.14em; }
+  .v2-right .switch {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: rgba(0,0,0,0.25); text-align: center; margin-top: 20px;
+  }
+  .v2-right .switch a { color: #000; text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V3: STACKED CARD — floating card on halftone field
+     ═══════════════════════════════════════════════════════════════ */
+  .v3 {
+    background: #e8e2d8;
+    align-items: center; justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .v3::before {
+    content: ''; position: fixed; inset: 0;
+    background: radial-gradient(circle 1.2px at 8px 8px, rgba(0,0,0,0.06) 1.2px, transparent 1.2px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+  .v3 .card {
+    position: relative; z-index: 1;
+    background: #f0ece4;
+    border: 2px solid rgba(0,0,0,0.06);
+    max-width: 440px; width: calc(100% - 48px);
+    padding: 48px 40px;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  .v3 .card-topline {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.14em; margin-bottom: 28px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .v3 .card-topline .dot {
+    width: 6px; height: 6px; background: #000;
+    animation: pulse 2.5s infinite;
+  }
+  .v3 .card .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 36px; text-transform: uppercase;
+    color: #000; line-height: 0.9; margin-bottom: 6px;
+  }
+  .v3 .card .tagline {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 13px; text-transform: uppercase;
+    color: rgba(0,0,0,0.25); letter-spacing: 0.04em;
+    margin-bottom: 28px;
+  }
+  .v3 .card .rule { height: 2px; background: rgba(0,0,0,0.06); margin-bottom: 28px; }
+  .v3 .card .desc {
+    font-family: 'Special Elite', monospace;
+    font-size: 13px; line-height: 1.7; color: rgba(0,0,0,0.4);
+    margin-bottom: 32px;
+  }
+  .v3 .card .input-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.12em; margin-bottom: 6px;
+  }
+  .v3 .card input {
+    width: 100%; background: transparent; border: none; outline: none;
+    border-bottom: 2px solid rgba(0,0,0,0.08); color: #000;
+    padding: 14px 0; font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    letter-spacing: 0.03em; transition: border-color 0.2s;
+  }
+  .v3 .card input::placeholder { color: rgba(0,0,0,0.15); }
+  .v3 .card input:focus { border-bottom-color: #000; }
+  .v3 .card button.submit {
+    width: 100%; background: #000; color: #f0ece4; border: none;
+    padding: 16px; font-family: 'Archivo Black', sans-serif; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer;
+    margin-top: 20px; transition: all 0.2s;
+  }
+  .v3 .card button.submit:hover { letter-spacing: 0.14em; }
+  .v3 .card .note {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(0,0,0,0.15); text-align: center;
+    margin-top: 16px; letter-spacing: 0.03em;
+  }
+  .v3 .shadow-card {
+    position: absolute; z-index: 0;
+    width: calc(100% - 48px); max-width: 440px;
+    height: 100%; background: rgba(0,0,0,0.04);
+    border: 2px solid rgba(0,0,0,0.03);
+    top: 8px; left: calc(50% + 4px); transform: translateX(-50%);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V4: DOSSIER — classified document aesthetic
+     ═══════════════════════════════════════════════════════════════ */
+  .v4 {
+    background: #f0ece4;
+    align-items: center; justify-content: center;
+    flex-direction: column;
+    padding: 40px 24px;
+    position: relative;
+  }
+  .v4::before {
+    content: ''; position: fixed; inset: 0;
+    background:
+      radial-gradient(circle 1.2px at 8px 8px, rgba(0,0,0,0.055) 1.2px, transparent 1.2px),
+      repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 27px, rgba(0,0,0,0.02) 28px);
+    background-size: 16px 16px, 100% 28px;
+    pointer-events: none;
+  }
+  .v4 .dossier {
+    position: relative; z-index: 1;
+    max-width: 520px; width: 100%;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  .v4 .stamp {
+    display: inline-block;
+    border: 3px solid rgba(180,40,40,0.25);
+    color: rgba(180,40,40,0.35);
+    font-family: 'Archivo Black', sans-serif; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.15em;
+    padding: 6px 14px; margin-bottom: 24px;
+    transform: rotate(-2deg);
+  }
+  .v4 .header-row {
+    display: flex; align-items: baseline; gap: 16px;
+    margin-bottom: 6px;
+  }
+  .v4 .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(36px, 6vw, 56px);
+    color: #000; text-transform: uppercase;
+    line-height: 0.9;
+  }
+  .v4 .classification {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .v4 .subject {
+    font-family: 'Archivo Black', sans-serif; font-size: 16px;
+    text-transform: uppercase; color: rgba(0,0,0,0.35);
+    letter-spacing: 0.04em; margin-bottom: 24px;
+  }
+  .v4 .rule { height: 2px; background: rgba(0,0,0,0.06); margin-bottom: 24px; }
+  .v4 .field-row {
+    display: grid; grid-template-columns: 100px 1fr;
+    gap: 0; margin-bottom: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    padding: 12px 0;
+  }
+  .v4 .field-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.08em; padding-top: 2px;
+  }
+  .v4 .field-value {
+    font-family: 'Special Elite', monospace; font-size: 14px;
+    color: rgba(0,0,0,0.5);
+  }
+  .v4 .section-break {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(0,0,0,0.12); text-transform: uppercase;
+    letter-spacing: 0.15em; margin: 28px 0 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .v4 .section-break::before,
+  .v4 .section-break::after { content: ''; flex: 1; height: 1px; background: rgba(0,0,0,0.04); }
+  .v4 .auth-desc {
+    font-family: 'Special Elite', monospace;
+    font-size: 13px; line-height: 1.7; color: rgba(0,0,0,0.35);
+    margin-bottom: 28px;
+  }
+  .v4 input {
+    width: 100%; background: transparent; border: none; outline: none;
+    border-bottom: 2px solid rgba(0,0,0,0.08); color: #000;
+    padding: 14px 0; font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    letter-spacing: 0.03em; transition: border-color 0.2s;
+  }
+  .v4 input::placeholder { color: rgba(0,0,0,0.15); }
+  .v4 input:focus { border-bottom-color: #000; }
+  .v4 button.submit {
+    width: 100%; background: #000; color: #f0ece4; border: none;
+    padding: 18px; font-family: 'Archivo Black', sans-serif; font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer;
+    margin-top: 24px; transition: all 0.2s;
+  }
+  .v4 button.submit:hover { letter-spacing: 0.14em; }
+  .v4 .caveat {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(0,0,0,0.12); margin-top: 16px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     V5: BROADSHEET — newspaper column with sidebar form
+     ═══════════════════════════════════════════════════════════════ */
+  .v5 {
+    background: #f0ece4;
+    align-items: flex-start; justify-content: center;
+    padding: 60px 40px 40px;
+    position: relative;
+  }
+  .v5::before {
+    content: ''; position: fixed; inset: 0;
+    background: radial-gradient(circle 1.2px at 8px 8px, rgba(0,0,0,0.055) 1.2px, transparent 1.2px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+  .v5 .broadsheet {
+    position: relative; z-index: 1;
+    max-width: 900px; width: 100%; margin: 0 auto;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  .v5 .masthead {
+    text-align: center; margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 4px double rgba(0,0,0,0.12);
+  }
+  .v5 .masthead .edition {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.15em; margin-bottom: 8px;
+  }
+  .v5 .masthead .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(40px, 6vw, 64px);
+    color: #000; text-transform: uppercase; line-height: 0.9;
+  }
+  .v5 .masthead .sub {
+    font-family: 'Archivo', sans-serif; font-weight: 300;
+    font-size: 13px; color: rgba(0,0,0,0.3);
+    text-transform: uppercase; letter-spacing: 0.2em;
+    margin-top: 6px;
+  }
+  .v5 .columns {
+    display: grid; grid-template-columns: 1fr 300px;
+    gap: 40px; align-items: start;
+  }
+  .v5 .main-col .headline {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 28px; text-transform: uppercase;
+    color: #000; line-height: 1.1; margin-bottom: 12px;
+  }
+  .v5 .main-col .byline {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.08em; margin-bottom: 20px;
+  }
+  .v5 .main-col .body-text {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px; line-height: 1.8; color: rgba(0,0,0,0.45);
+    column-count: 2; column-gap: 28px;
+    column-rule: 1px solid rgba(0,0,0,0.06);
+  }
+  .v5 .main-col .body-text p { margin-bottom: 16px; }
+  .v5 .main-col .pull-quote {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 18px; text-transform: uppercase;
+    color: rgba(0,0,0,0.12); line-height: 1.2;
+    padding: 20px 0; margin: 20px 0;
+    border-top: 2px solid rgba(0,0,0,0.06);
+    border-bottom: 2px solid rgba(0,0,0,0.06);
+    column-span: all;
+  }
+  .v5 .side-col {
+    border-left: 1px solid rgba(0,0,0,0.06);
+    padding-left: 28px;
+  }
+  .v5 .side-col .side-header {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.14em; margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(0,0,0,0.06);
+  }
+  .v5 .side-col .side-desc {
+    font-family: 'Special Elite', monospace;
+    font-size: 12px; line-height: 1.7; color: rgba(0,0,0,0.35);
+    margin-bottom: 24px;
+  }
+  .v5 .side-col input {
+    width: 100%; background: transparent; border: none; outline: none;
+    border-bottom: 2px solid rgba(0,0,0,0.08); color: #000;
+    padding: 14px 0; font-family: 'JetBrains Mono', monospace; font-size: 13px;
+    letter-spacing: 0.03em; transition: border-color 0.2s;
+  }
+  .v5 .side-col input::placeholder { color: rgba(0,0,0,0.15); }
+  .v5 .side-col input:focus { border-bottom-color: #000; }
+  .v5 .side-col button.submit {
+    width: 100%; background: #000; color: #f0ece4; border: none;
+    padding: 16px; font-family: 'Archivo Black', sans-serif; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer;
+    margin-top: 20px; transition: all 0.2s;
+  }
+  .v5 .side-col button.submit:hover { letter-spacing: 0.14em; }
+  .v5 .side-col .stats {
+    margin-top: 28px; padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.04);
+  }
+  .v5 .side-col .stat {
+    margin-bottom: 16px;
+  }
+  .v5 .side-col .stat .num {
+    font-family: 'Archivo Black', sans-serif; font-size: 28px;
+    color: #000; line-height: 1;
+  }
+  .v5 .side-col .stat .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.08em; margin-top: 2px;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .v2 { flex-direction: column; }
+    .v5 .columns { grid-template-columns: 1fr; }
+    .v5 .side-col { border-left: none; padding-left: 0; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 28px; }
+    .v5 .main-col .body-text { column-count: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<div class="nav">
+  <button class="active" onclick="show('v1')">V1: Centered</button>
+  <button onclick="show('v2')">V2: Split</button>
+  <button onclick="show('v3')">V3: Card</button>
+  <button onclick="show('v4')">V4: Dossier</button>
+  <button onclick="show('v5')">V5: Broadsheet</button>
+</div>
+
+<!-- ═══ V1: CENTERED SINGLE ═══ -->
+<div class="mockup v1 active" id="v1">
+  <div class="content">
+    <div class="topline">
+      <span class="dot"></span>
+      <span>Product Intelligence Platform</span>
+    </div>
+    <div class="logo">Signetry</div>
+    <div class="tagline">
+      Every question your customers ask &mdash; answered from the actual manual. You see every query. That's the intelligence.
+    </div>
+    <div class="rule"></div>
+    <div class="form-label">Get Started</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. We'll email you a login link.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span style="font-family: 'Special Elite', monospace; color: rgba(0,0,0,0.2);">One line of code. Infinite intelligence.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ V2: SPLIT ═══ -->
+<div class="mockup v2" id="v2">
+  <div class="v2-left">
+    <div class="logo">Signetry</div>
+    <div class="subtitle">Product Truth Infrastructure</div>
+    <div class="desc">
+      Brands embed one line of code. Customers ask questions about any product and get verified answers &mdash; with actual diagrams from the manual. You see every query in real time.
+    </div>
+    <div class="features">
+      <div class="feat">Answers from verified manufacturer data</div>
+      <div class="feat">Source images from actual manuals</div>
+      <div class="feat">Live intelligence on every question</div>
+      <div class="feat">Knowledge gaps reveal what's missing</div>
+    </div>
+  </div>
+  <div class="v2-right">
+    <div class="form-wrap">
+      <div class="form-title">Get Started</div>
+      <div class="form-sub">
+        No password required. Enter your work email and we'll send you a magic link.
+      </div>
+      <input type="email" placeholder="you@brand.com">
+      <button class="submit">Send Magic Link</button>
+      <div class="switch">Already have an account? <a href="#">Sign in</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ V3: STACKED CARD ═══ -->
+<div class="mockup v3" id="v3">
+  <div class="shadow-card"></div>
+  <div class="card">
+    <div class="card-topline">
+      <span class="dot"></span>
+      <span>Platform Access</span>
+    </div>
+    <div class="logo">Signetry</div>
+    <div class="tagline">Product Truth Infrastructure</div>
+    <div class="rule"></div>
+    <div class="desc">
+      One embed. Every product question answered from verified manufacturer data. You see the intelligence &mdash; every query, every gap, every opportunity.
+    </div>
+    <div class="input-label">Work Email</div>
+    <input type="email" placeholder="you@brand.com">
+    <button class="submit">Send Magic Link</button>
+    <div class="note">No password needed &bull; Link expires in 15 minutes</div>
+  </div>
+</div>
+
+<!-- ═══ V4: DOSSIER ═══ -->
+<div class="mockup v4" id="v4">
+  <div class="dossier">
+    <div class="stamp">Authorized Access</div>
+    <div class="header-row">
+      <div class="logo">Signetry</div>
+    </div>
+    <div class="subject">Product Intelligence Dossier</div>
+    <div class="rule"></div>
+
+    <div class="field-row">
+      <div class="field-label">Subject</div>
+      <div class="field-value">Brand-verified product answers</div>
+    </div>
+    <div class="field-row">
+      <div class="field-label">Method</div>
+      <div class="field-value">One-line embed on product pages</div>
+    </div>
+    <div class="field-row">
+      <div class="field-label">Output</div>
+      <div class="field-value">Verified answers + manual diagrams</div>
+    </div>
+    <div class="field-row">
+      <div class="field-label">Intel</div>
+      <div class="field-value">Every query, every gap, real-time feed</div>
+    </div>
+
+    <div class="section-break">Authentication</div>
+
+    <div class="auth-desc">
+      Enter your work email below. You'll receive a secure magic link &mdash; no password required. The link grants access to your brand's intelligence dashboard.
+    </div>
+
+    <input type="email" placeholder="Work email address">
+    <button class="submit">Request Access Link</button>
+    <div class="caveat">// Link valid for 15 minutes &bull; One-time use</div>
+  </div>
+</div>
+
+<!-- ═══ V5: BROADSHEET ═══ -->
+<div class="mockup v5" id="v5">
+  <div class="broadsheet">
+    <div class="masthead">
+      <div class="edition">Product Intelligence Record &bull; Est. 2026</div>
+      <div class="logo">Signetry</div>
+      <div class="sub">Infrastructure for Brand-Verified Product Truth</div>
+    </div>
+
+    <div class="columns">
+      <div class="main-col">
+        <div class="headline">Brands Can Now See Every Question Customers Ask About Their Products</div>
+        <div class="byline">Platform Intelligence Desk &bull; March 2026</div>
+        <div class="body-text">
+          <p>A new class of product intelligence is emerging from an unlikely source: the questions customers actually ask. Not surveys. Not focus groups. Real questions, asked in the moment of purchase consideration.</p>
+
+          <p>Signetry captures every query flowing through its answer engine and surfaces it to brands in real time. The result is a live feed of customer intent &mdash; what they want to know, what's missing from product pages, and where the gaps in brand communication lie.</p>
+
+          <div class="pull-quote">"The questions customers don't get answered are worth more than the ones they do."</div>
+
+          <p>The system works through a single line of embed code. Customers ask questions on product pages and receive verified answers sourced directly from manufacturer manuals &mdash; complete with actual diagrams and page references.</p>
+
+          <p>But the real value isn't the answers. It's the intelligence. Every query is logged, categorized, and surfaced. Unanswerable questions &mdash; where the system can't find verified data &mdash; reveal knowledge gaps that brands can act on. It's a continuous feedback loop between customer curiosity and brand knowledge.</p>
+        </div>
+      </div>
+
+      <div class="side-col">
+        <div class="side-header">Access the Platform</div>
+        <div class="side-desc">
+          Enter your work email to receive a magic link. No password required. See your products' live intelligence feed in under a minute.
+        </div>
+        <input type="email" placeholder="you@brand.com">
+        <button class="submit">Send Magic Link</button>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num">368</div>
+            <div class="label">Products indexed</div>
+          </div>
+          <div class="stat">
+            <div class="num">42</div>
+            <div class="label">Manual notes verified</div>
+          </div>
+          <div class="stat">
+            <div class="num">&lt;2s</div>
+            <div class="label">Average response time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function show(id) {
+    document.querySelectorAll('.mockup').forEach(m => m.classList.remove('active'));
+    document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>

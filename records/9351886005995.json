@@ -28,7 +28,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "Left Hinged (Reversible Door Can Be Changed)",
+    "door_hinge": "left",
     "glass_door": false,
     "led_lighting": true,
     "body_material": "White",
@@ -46,7 +46,9 @@
       "EMC (C-Tick)"
     ],
     "shelf_type": "3 x Drawers(450mmW x 340mmD x 120mmH)",
-    "door_type": "solid_foamed"
+    "door_type": "solid_foamed",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

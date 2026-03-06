@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "1 x Left & 1 x Right",
+    "door_hinge": "1 x left, 1 x right",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "Black",
@@ -51,7 +51,9 @@
     ],
     "refrigerant": "R600",
     "shelf_type": "6 x chromed shelves (350mm x 350mmD), 1 x bottom shelf (350mmW x 250mmD)",
-    "door_type": "triple_glazed_low_e"
+    "door_type": "triple_glazed_low_e",
+    "door_reversible": false,
+    "door_count": 2
   },
   "qa": [
     {

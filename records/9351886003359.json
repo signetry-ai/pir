@@ -29,7 +29,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
-    "door_hinge": "Right Hinged (Reversible Door)",
+    "door_hinge": "right",
     "glass_door": false,
     "led_lighting": true,
     "body_material": "Black",
@@ -53,7 +53,9 @@
     "refrigerant": "R600",
     "shelf_type": "Glass - 2 x Large 435mmW x 395mmD, 1 x Small",
     "energy_star_rating_au_note": "Australian 1-10 star scale",
-    "door_type": "solid_foamed"
+    "door_type": "solid_foamed",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

@@ -21,7 +21,7 @@
     "shelf_count": 4,
     "shelf_material": "Beech wood",
     "glass_door": true,
-    "door_hinge": "reversible",
+    "door_hinge": "right",
     "led_lighting": true,
     "anti_vibration": true,
     "lockable": false,
@@ -41,7 +41,8 @@
     "adjustable_feet_count": 4,
     "refrigerant": "R600a",
     "winter_function": true,
-    "door_type": "double_pane"
+    "door_type": "double_pane",
+    "door_reversible": true
   },
   "qa": [
     {

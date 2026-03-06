@@ -4,7 +4,7 @@
   "sku": "SK168-Combo3",
   "brand": "Schmick",
   "range": "SK",
-  "name": "3-Door Wine Fridge",
+  "name": "Upright 2 Door Bar Fridge | Triple Zone | Beer + Wine | Slim Depth | Triple-Glazed Glass | Schmick SK168-Combo3",
   "category": "wine_fridge",
   "status": {
     "brand_certified": false,
@@ -48,7 +48,9 @@
       "RCM"
     ],
     "refrigerant": "R600",
-    "door_type": "triple_glazed_low_e"
+    "door_type": "triple_glazed_low_e",
+    "door_reversible": false,
+    "door_count": 2
   },
   "qa": [
     {

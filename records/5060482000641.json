@@ -67,7 +67,9 @@
     "component_lighting": "Philips LED",
     "capacity_litres": 208,
     "capacity_375ml_cans": 240,
-    "door_type": "heated_tempered"
+    "door_type": "heated_tempered",
+    "door_reversible": false,
+    "door_count": 2
   },
   "qa": [
     {

@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "1 x Left & 1 x Right",
+    "door_hinge": "1 x left, 1 x right",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "304 Stainless Steel",
@@ -54,7 +54,9 @@
     "component_compressor": "Jiaxipera",
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_secondary": "Noctua (Silent)",
-    "door_type": "triple_glazed_low_e_heated"
+    "door_type": "triple_glazed_low_e_heated",
+    "door_reversible": false,
+    "door_count": 2
   },
   "qa": [
     {

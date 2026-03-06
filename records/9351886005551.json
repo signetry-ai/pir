@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "Can Be Changed To Right Hinged - Please Mention In Comments",
+    "door_hinge": "left",
     "glass_door": false,
     "body_material": "Black",
     "interior_finish": "Polished 304 Mirror Stainless",
@@ -54,7 +54,9 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_secondary": "Noctua (Silent)",
     "component_fan_primary": "EBM (Germany)",
-    "door_type": "stainless_steel_solid"
+    "door_type": "stainless_steel_solid",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

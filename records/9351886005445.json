@@ -30,12 +30,14 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "1 x left, 1 x right",
+    "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "Black",
     "interior_finish": "Smashed Aluminum",
-    "grill_material": "Great Northern Branded"
+    "grill_material": "Great Northern Branded",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

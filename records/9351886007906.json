@@ -28,7 +28,7 @@
     ],
     "lockable": true,
     "adjustable_feet": true,
-    "door_hinge": "**Left Hinge Only Available At The Moment",
+    "door_hinge": "left",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "White",
@@ -46,7 +46,9 @@
       "RCM Includes C-Tick And EMC",
       "Units Are Also MEPS Approved For Energy To Latest Standard."
     ],
-    "door_type": "triple_glazed_low_e"
+    "door_type": "triple_glazed_low_e",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

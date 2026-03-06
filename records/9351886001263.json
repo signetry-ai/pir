@@ -36,7 +36,10 @@
     "ip_rating": "IP24",
     "ambient_temperature_max_c": 43,
     "internal_temperature_min_c": 0,
-    "location": ["indoor", "outdoor"],
+    "location": [
+      "indoor",
+      "outdoor"
+    ],
     "lockable": true,
     "lockable_note": "Key lock included. Suitable for public and commercial installations.",
     "adjustable_feet": true,
@@ -51,7 +54,10 @@
     "glass_door": false,
     "led_lighting": true,
     "led_colour_switchable": true,
-    "led_colours": ["blue", "white"],
+    "led_colours": [
+      "blue",
+      "white"
+    ],
     "refrigerant": "R600",
     "refrigerant_odp": 0,
     "refrigerant_gwp": 3,
@@ -61,95 +67,161 @@
     "ventilation_top_mm": 10,
     "ventilation_each_side_mm": 10,
     "ventilation_rear_mm": 50,
-    "approvals": ["Green Sense Plus Accredited", "EMC C-Tick", "SAA Electrical", "MEPS", "IP24 Outdoor Rated"],
+    "approvals": [
+      "Green Sense Plus Accredited",
+      "EMC C-Tick",
+      "SAA Electrical",
+      "MEPS",
+      "IP24 Outdoor Rated"
+    ],
     "component_compressor": "Secop Variable Speed (Japan)",
     "component_fan_primary": "EBM EC Fan (Germany)",
     "component_fan_secondary": "Noctua (Norway)",
     "component_controller": "Danfoss ECO (Germany)",
     "component_transformer": "Meanwell (Taiwan)",
     "component_switches": "Cherry (USA)",
-    "component_lighting": "Philips LED"
+    "component_lighting": "Philips LED",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {
       "q": "Can it be used outdoors?",
       "a": "Yes. IP24 rated for outdoor use. Performs in ambient temperatures up to 43°C+.",
-      "facts": ["ip_rating", "ambient_temperature_max_c", "location"]
+      "facts": [
+        "ip_rating",
+        "ambient_temperature_max_c",
+        "location"
+      ]
     },
     {
       "q": "Is it suitable for coastal areas?",
       "a": "Yes. Both the body and grill are 316 marine grade stainless steel — the highest grade for rust prevention and longevity in coastal and sea environments.",
-      "facts": ["body_material", "grill_material"]
+      "facts": [
+        "body_material",
+        "grill_material"
+      ]
     },
     {
       "q": "Why choose solid door over glass?",
       "a": "The solid door model uses a Secop variable speed compressor and consumes only 1.03 kWh/24h — significantly less than the heated glass variant (2.33 kWh/24h). Annual running cost is approximately $96 vs $218. Choose solid if energy efficiency is the priority and you don't need to see contents.",
-      "facts": ["door_type", "component_compressor", "power_consumption_kwh_per_24h", "running_cost_aud_annual"]
+      "facts": [
+        "door_type",
+        "component_compressor",
+        "power_consumption_kwh_per_24h",
+        "running_cost_aud_annual"
+      ]
     },
     {
       "q": "Is it lockable?",
       "a": "Yes. Includes a key lock, making it suitable for public venues, pubs, clubs, and commercial hospitality installations.",
-      "facts": ["lockable", "lockable_note"]
+      "facts": [
+        "lockable",
+        "lockable_note"
+      ]
     },
     {
       "q": "How many cans does it hold?",
       "a": "140 standard 375ml cans.",
-      "facts": ["capacity_375ml_cans"]
+      "facts": [
+        "capacity_375ml_cans"
+      ]
     },
     {
       "q": "How many wine bottles does it hold?",
       "a": "48 standard 750ml wine bottles.",
-      "facts": ["capacity_wine_bottles_750ml"]
+      "facts": [
+        "capacity_wine_bottles_750ml"
+      ]
     },
     {
       "q": "Will it fit under a standard bench?",
       "a": "The exterior height is 840mm. Standard bench height in Australia is 900mm. Check your specific clearance — ventilation requires a minimum 10mm top, 10mm each side, and 50mm at the rear.",
-      "facts": ["dimensions_exterior_h_mm", "ventilation_top_mm", "ventilation_each_side_mm", "ventilation_rear_mm"]
+      "facts": [
+        "dimensions_exterior_h_mm",
+        "ventilation_top_mm",
+        "ventilation_each_side_mm",
+        "ventilation_rear_mm"
+      ]
     },
     {
       "q": "How wide is it?",
       "a": "600mm exterior width.",
-      "facts": ["dimensions_exterior_w_mm"]
+      "facts": [
+        "dimensions_exterior_w_mm"
+      ]
     },
     {
       "q": "What are the running costs?",
       "a": "Approximately $96.39 AUD per year based on 25.64 cents per kWh. The solid door has no heated glass element, resulting in significantly lower energy consumption (1.03 kWh/24h).",
-      "facts": ["running_cost_aud_annual", "running_cost_basis_cents_per_kwh", "power_consumption_kwh_per_24h", "power_consumption_note"]
+      "facts": [
+        "running_cost_aud_annual",
+        "running_cost_basis_cents_per_kwh",
+        "power_consumption_kwh_per_24h",
+        "power_consumption_note"
+      ]
     },
     {
       "q": "How noisy is it?",
       "a": "43 dB.",
-      "facts": ["noise_db"]
+      "facts": [
+        "noise_db"
+      ]
     },
     {
       "q": "What refrigerant does it use?",
       "a": "R600 (isobutane). Ozone Depletion Potential: 0. Global Warming Potential: 3.",
-      "facts": ["refrigerant", "refrigerant_odp", "refrigerant_gwp"]
+      "facts": [
+        "refrigerant",
+        "refrigerant_odp",
+        "refrigerant_gwp"
+      ]
     },
     {
       "q": "What is the energy star rating?",
       "a": "8 stars on the Australian 1-10 star scale.",
-      "facts": ["energy_star_rating_au", "energy_star_rating_au_note"]
+      "facts": [
+        "energy_star_rating_au",
+        "energy_star_rating_au_note"
+      ]
     },
     {
       "q": "Does it have adjustable shelves?",
       "a": "Yes. 2 flat chromed fully adjustable shelves, each 395mm wide by 400mm deep. Note: the top shelf depth is 400mm due to the fan assembly.",
-      "facts": ["shelf_count", "shelf_w_mm", "shelf_d_mm", "dimensions_note"]
+      "facts": [
+        "shelf_count",
+        "shelf_w_mm",
+        "shelf_d_mm",
+        "dimensions_note"
+      ]
     },
     {
       "q": "Which side is the door hinged?",
       "a": "Left hinge, handle on the right.",
-      "facts": ["door_hinge", "handle_side"]
+      "facts": [
+        "door_hinge",
+        "handle_side"
+      ]
     },
     {
       "q": "What approvals does it have?",
       "a": "Green Sense Plus Accredited, EMC (C-Tick), SAA Electrical, MEPS, IP24 Outdoor Rated.",
-      "facts": ["approvals"]
+      "facts": [
+        "approvals"
+      ]
     },
     {
       "q": "What components does it use?",
       "a": "Secop variable speed compressor (Japan), EBM EC fans (Germany), Noctua silent fans (Norway), Danfoss ECO controller (Germany), Meanwell transformer (Taiwan), Cherry switches (USA), Philips LED lighting.",
-      "facts": ["component_compressor", "component_fan_primary", "component_fan_secondary", "component_controller", "component_transformer", "component_switches", "component_lighting"]
+      "facts": [
+        "component_compressor",
+        "component_fan_primary",
+        "component_fan_secondary",
+        "component_controller",
+        "component_transformer",
+        "component_switches",
+        "component_lighting"
+      ]
     }
   ],
   "documents": [
@@ -178,7 +250,9 @@
       "domain": "bar-fridges-australia.com.au",
       "url": "https://bar-fridges-australia.com.au/products/outdoor-rhino-envy-1-door-bar-fridge-coldest-beer-43oc-best-alfresco-316-stainless-solid-door-quiet-left-hinge",
       "authorized": false,
-      "regions": ["AU"]
+      "regions": [
+        "AU"
+      ]
     }
   ]
 }

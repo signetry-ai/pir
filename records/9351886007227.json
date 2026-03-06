@@ -54,7 +54,9 @@
     "component_fan_primary": "Schmick quiet running fans",
     "component_controller": "Schmick ECO Controller",
     "adjustable_feet_count": 4,
-    "door_type": "heated_tempered"
+    "door_type": "heated_tempered",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

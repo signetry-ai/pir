@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "Can Be Changed To Right Hinged - Please Mention In Comments",
+    "door_hinge": "left",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "Matte Black Finish",
@@ -54,7 +54,9 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_primary": "Schmick quiet running fans",
     "component_controller": "Schmick ECO Controller",
-    "door_type": "triple_glazed_low_e"
+    "door_type": "triple_glazed_low_e",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

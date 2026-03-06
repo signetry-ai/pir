@@ -29,7 +29,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
-    "door_hinge": "Right Hinge (Handle Left)",
+    "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "White",
@@ -44,7 +44,9 @@
     "ventilation_each_side_mm": 20,
     "ventilation_rear_mm": 100,
     "shelf_type": "1 x Shelf Located Middle (304mmW x 204mmD)",
-    "door_type": "triple_glazed_low_e"
+    "door_type": "triple_glazed_low_e",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

@@ -40,7 +40,7 @@
     "shelf_w_mm": 395,
     "shelf_d_mm": 335,
     "shelf_type": "6 x chromed adjustable shelves (395mmW x 335mmD)",
-    "door_hinge": "1 x left, 1 x right",
+    "door_hinge": "2 x left, 1 x right",
     "glass_door": true,
     "led_lighting": true,
     "refrigerant": "R600",
@@ -65,7 +65,9 @@
     "component_lighting": "Philips LED",
     "capacity_litres": 330,
     "capacity_375ml_cans": 324,
-    "door_type": "dual_glazed_low_e"
+    "door_type": "dual_glazed_low_e",
+    "door_reversible": false,
+    "door_count": 3
   },
   "qa": [
     {

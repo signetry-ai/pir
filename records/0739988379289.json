@@ -33,11 +33,12 @@
     "weight_kg": 28,
     "noise_db": 41,
     "energy_consumption_kwh_annual": 132,
-    "door_hinge": "reversible",
+    "door_hinge": "right",
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
     "refrigerant": "R600a",
-    "door_type": "double_pane"
+    "door_type": "double_pane",
+    "door_reversible": true
   },
   "qa": [
     {

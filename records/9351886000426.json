@@ -29,7 +29,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
-    "door_hinge": "Right Hinge (Handle Left)",
+    "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "White",
@@ -49,7 +49,9 @@
       "Meps"
     ],
     "refrigerant": "R600",
-    "shelf_type": "1 x large and 1 x half shelf"
+    "shelf_type": "1 x large and 1 x half shelf",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

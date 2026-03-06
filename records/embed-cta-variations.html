@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embed CTA Variations — Ask an Expert Widget</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a1a1a;font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+
+.var-nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:#0a0a0a;border-bottom:1px solid #333;display:flex;align-items:center;padding:0 20px;gap:0;overflow-x:auto}
+.var-nav button{padding:14px 22px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#666;background:none;border:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+.var-nav button:hover{color:#aaa}
+.var-nav button.active{color:#f4f2ee;border-bottom-color:#f4f2ee}
+.var-label{font-family:'Bricolage Grotesque',sans-serif;font-size:11px;color:#444;padding:0 16px 0 4px;border-right:1px solid #333;margin-right:8px;white-space:nowrap}
+
+.variation{display:none}
+.variation.active{display:block}
+
+.demo-page{background:#f4f2ee;min-height:100vh;padding-top:54px;display:flex;align-items:center;justify-content:center}
+.demo-wrap{padding:60px 40px;max-width:740px;width:100%}
+
+/* ─── Shared ask-hero base ─── */
+.ask-hero{
+  padding:32px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,rgba(0,0,0,.02),rgba(0,0,0,.04));
+  border:1px solid rgba(0,0,0,.06);
+}
+.ask-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1a1a1a,transparent)}
+.ask-title{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;color:#0a0a0a;margin-bottom:4px}
+.ask-sub{font-size:13px;color:#999;margin-bottom:20px;line-height:1.5}
+.ask-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.ask-pill{background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.08);padding:8px 16px;font-family:'Space Mono',monospace;font-size:11px;color:#666;cursor:pointer;transition:all .2s}
+.ask-pill:hover{border-color:#1a1a1a;color:#1a1a1a}
+.ask-row{display:flex;gap:8px}
+.ask-row input{flex:1;background:#f4f2ee;border:1px solid rgba(0,0,0,.1);padding:14px 16px;font-family:'Space Mono',monospace;font-size:13px;color:#1a1a1a;outline:none}
+.ask-row input::placeholder{color:#bbb}
+.ask-row button{background:#1a1a1a;color:#f4f2ee;border:none;padding:14px 28px;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap}
+
+
+/* ═══════════════════════════════════════
+   V1: SUBTLE LINK — top-right corner text
+   ═══════════════════════════════════════ */
+.v1-embed-link{
+  position:absolute;top:12px;right:16px;
+  font-size:10px;letter-spacing:.06em;color:#bbb;
+  text-decoration:none;border:none;
+  transition:color .2s;
+}
+.v1-embed-link:hover{color:#1a1a1a}
+.v1-embed-link span{
+  border-bottom:1px dashed rgba(0,0,0,.15);
+  padding-bottom:1px;
+}
+
+
+/* ═══════════════════════════════════════
+   V2: CODE ICON — small </> icon that
+   expands to snippet on hover
+   ═══════════════════════════════════════ */
+.v2-embed-trigger{
+  position:absolute;top:12px;right:14px;
+  width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.08);
+  color:#bbb;font-size:12px;font-family:'Space Mono',monospace;
+  cursor:pointer;transition:all .2s;
+}
+.v2-embed-trigger:hover{background:rgba(0,0,0,.08);color:#1a1a1a;border-color:rgba(0,0,0,.15)}
+
+.v2-embed-popover{
+  display:none;position:absolute;top:46px;right:14px;z-index:10;
+  background:#0a0a0a;border:1px solid #333;padding:16px;
+  width:340px;max-width:calc(100vw - 80px);
+  animation:embedFadeIn .2s ease;
+}
+.v2-embed-popover.show{display:block}
+@keyframes embedFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.v2-pop-title{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#666;margin-bottom:10px}
+.v2-pop-code{
+  font-family:'Space Mono',monospace;font-size:11px;color:#0ea5e9;
+  background:#111;padding:12px;line-height:1.6;
+  word-break:break-all;user-select:all;border:1px solid #222;
+}
+.v2-pop-copy{
+  margin-top:8px;background:#222;color:#aaa;border:1px solid #333;
+  padding:8px 14px;font-family:'Space Mono',monospace;font-size:10px;
+  letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
+  width:100%;transition:all .2s;
+}
+.v2-pop-copy:hover{background:#333;color:#fff}
+.v2-pop-note{font-size:10px;color:#555;margin-top:8px;line-height:1.5}
+
+
+/* ═══════════════════════════════════════
+   V3: BADGE — small pill in corner
+   ═══════════════════════════════════════ */
+.v3-embed-badge{
+  position:absolute;top:12px;right:14px;
+  display:flex;align-items:center;gap:6px;
+  padding:5px 12px;
+  background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.08);
+  font-size:10px;color:#999;letter-spacing:.04em;
+  cursor:pointer;transition:all .2s;text-decoration:none;
+}
+.v3-embed-badge:hover{border-color:#1a1a1a;color:#1a1a1a;background:rgba(0,0,0,.06)}
+.v3-embed-badge svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2}
+
+.v3-embed-drawer{
+  display:none;margin-top:20px;padding:20px;
+  background:rgba(0,0,0,.03);border:1px solid rgba(0,0,0,.06);
+  animation:embedFadeIn .2s ease;
+}
+.v3-embed-drawer.show{display:block}
+.v3-ed-title{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:600;color:#0a0a0a;margin-bottom:4px}
+.v3-ed-sub{font-size:12px;color:#999;margin-bottom:14px;line-height:1.5}
+.v3-ed-code{
+  font-family:'Space Mono',monospace;font-size:11px;color:#0a0a0a;
+  background:#f4f2ee;padding:14px;line-height:1.7;
+  border:1px solid rgba(0,0,0,.08);word-break:break-all;user-select:all;
+}
+.v3-ed-code em{font-style:normal;color:#999}
+.v3-ed-footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.v3-ed-copy{
+  background:#1a1a1a;color:#f4f2ee;border:none;padding:8px 18px;
+  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;cursor:pointer;transition:all .2s;
+}
+.v3-ed-copy:hover{background:#333}
+.v3-ed-link{font-size:10px;color:#999;text-decoration:none;border-bottom:1px dashed rgba(0,0,0,.15)}
+.v3-ed-link:hover{color:#1a1a1a}
+
+
+/* ═══════════════════════════════════════
+   V4: FLOATING TAG — rotated vertical label
+   on the right edge of the hero
+   ═══════════════════════════════════════ */
+.v4-embed-tag{
+  position:absolute;top:50%;right:-1px;transform:translateY(-50%) rotate(90deg);transform-origin:center;
+  background:#1a1a1a;color:#f4f2ee;
+  padding:4px 14px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;
+  cursor:pointer;transition:all .2s;text-decoration:none;border:none;
+  white-space:nowrap;
+}
+.v4-embed-tag:hover{background:#333;padding:4px 18px}
+
+/* Reuse v3 drawer for v4 */
+
+
+/* ═══════════════════════════════════════
+   V5: INLINE FOOTER — below the ask row,
+   subtle "powered by" that doubles as CTA
+   ═══════════════════════════════════════ */
+.v5-embed-footer{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:14px;padding-top:10px;border-top:1px solid rgba(0,0,0,.04);
+}
+.v5-powered{font-size:10px;color:#ccc}
+.v5-powered a{color:#ccc;text-decoration:none;border:none;transition:color .2s}
+.v5-powered a:hover{color:#1a1a1a}
+.v5-embed-cta{
+  font-size:10px;color:#999;letter-spacing:.04em;
+  text-decoration:none;border:none;
+  display:flex;align-items:center;gap:5px;
+  transition:color .2s;cursor:pointer;background:none;
+  font-family:'Space Mono',monospace;
+}
+.v5-embed-cta:hover{color:#1a1a1a}
+.v5-embed-cta svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2}
+</style>
+</head>
+<body>
+
+<div class="var-nav">
+  <span class="var-label">Embed CTA</span>
+  <button class="active" data-var="v1">V1 Subtle Link</button>
+  <button data-var="v2">V2 Code Icon</button>
+  <button data-var="v3">V3 Badge</button>
+  <button data-var="v4">V4 Edge Tag</button>
+  <button data-var="v5">V5 Footer CTA</button>
+</div>
+
+
+<!-- V1: SUBTLE LINK -->
+<div class="variation active" id="v1">
+<div class="demo-page"><div class="demo-wrap">
+  <div class="ask-hero">
+    <a class="v1-embed-link" href="#"><span>Embed this on your site &rarr;</span></a>
+    <div class="ask-title">Have a question?</div>
+    <div class="ask-sub">Get instant answers from verified product data. No guessing, no hallucination.</div>
+    <div class="ask-pills">
+      <div class="ask-pill">What is the capacity?</div>
+      <div class="ask-pill">Is it lockable?</div>
+      <div class="ask-pill">How noisy is it?</div>
+    </div>
+    <div class="ask-row">
+      <input type="text" placeholder="Ask anything about this product...">
+      <button>Ask an Expert</button>
+    </div>
+  </div>
+</div></div>
+</div>
+
+
+<!-- V2: CODE ICON + POPOVER -->
+<div class="variation" id="v2">
+<div class="demo-page"><div class="demo-wrap">
+  <div class="ask-hero">
+    <div class="v2-embed-trigger" id="v2-trigger" title="Embed this widget">&lt;/&gt;</div>
+    <div class="v2-embed-popover" id="v2-popover">
+      <div class="v2-pop-title">Add to your site</div>
+      <div class="v2-pop-code">&lt;script src="https://signetry.ai/widget.js" data-key="YOUR_KEY" data-gtin="9351886006558"&gt;&lt;/script&gt;</div>
+      <button class="v2-pop-copy" id="v2-copy">Copy snippet</button>
+      <div class="v2-pop-note">One line. Works on any site. Free tier available.</div>
+    </div>
+    <div class="ask-title">Have a question?</div>
+    <div class="ask-sub">Get instant answers from verified product data. No guessing, no hallucination.</div>
+    <div class="ask-pills">
+      <div class="ask-pill">What is the capacity?</div>
+      <div class="ask-pill">Is it lockable?</div>
+      <div class="ask-pill">How noisy is it?</div>
+    </div>
+    <div class="ask-row">
+      <input type="text" placeholder="Ask anything about this product...">
+      <button>Ask an Expert</button>
+    </div>
+  </div>
+</div></div>
+</div>
+
+
+<!-- V3: BADGE + DRAWER -->
+<div class="variation" id="v3">
+<div class="demo-page"><div class="demo-wrap">
+  <div class="ask-hero" id="v3-hero">
+    <div class="v3-embed-badge" id="v3-badge">
+      <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Embed this
+    </div>
+    <div class="ask-title">Have a question?</div>
+    <div class="ask-sub">Get instant answers from verified product data. No guessing, no hallucination.</div>
+    <div class="ask-pills">
+      <div class="ask-pill">What is the capacity?</div>
+      <div class="ask-pill">Is it lockable?</div>
+      <div class="ask-pill">How noisy is it?</div>
+    </div>
+    <div class="ask-row">
+      <input type="text" placeholder="Ask anything about this product...">
+      <button>Ask an Expert</button>
+    </div>
+    <div class="v3-embed-drawer" id="v3-drawer">
+      <div class="v3-ed-title">Add this to your product pages</div>
+      <div class="v3-ed-sub">One script tag. Answers your customers' questions from verified product data.</div>
+      <div class="v3-ed-code">&lt;script src="https://signetry.ai/widget.js"<br>&ensp;&ensp;data-key=<em>"YOUR_KEY"</em><br>&ensp;&ensp;data-gtin=<em>"9351886006558"</em>&gt;&lt;/script&gt;</div>
+      <div class="v3-ed-footer">
+        <button class="v3-ed-copy" id="v3-copy">Copy</button>
+        <a class="v3-ed-link" href="#">Get your API key &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div></div>
+</div>
+
+
+<!-- V4: EDGE TAG -->
+<div class="variation" id="v4">
+<div class="demo-page"><div class="demo-wrap">
+  <div class="ask-hero" id="v4-hero">
+    <div class="v4-embed-tag" id="v4-tag">Embed</div>
+    <div class="ask-title">Have a question?</div>
+    <div class="ask-sub">Get instant answers from verified product data. No guessing, no hallucination.</div>
+    <div class="ask-pills">
+      <div class="ask-pill">What is the capacity?</div>
+      <div class="ask-pill">Is it lockable?</div>
+      <div class="ask-pill">How noisy is it?</div>
+    </div>
+    <div class="ask-row">
+      <input type="text" placeholder="Ask anything about this product...">
+      <button>Ask an Expert</button>
+    </div>
+    <div class="v3-embed-drawer" id="v4-drawer">
+      <div class="v3-ed-title">Add this to your product pages</div>
+      <div class="v3-ed-sub">One script tag. Answers your customers' questions from verified product data.</div>
+      <div class="v3-ed-code">&lt;script src="https://signetry.ai/widget.js"<br>&ensp;&ensp;data-key=<em>"YOUR_KEY"</em><br>&ensp;&ensp;data-gtin=<em>"9351886006558"</em>&gt;&lt;/script&gt;</div>
+      <div class="v3-ed-footer">
+        <button class="v3-ed-copy" id="v4-copy">Copy</button>
+        <a class="v3-ed-link" href="#">Get your API key &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div></div>
+</div>
+
+
+<!-- V5: FOOTER CTA -->
+<div class="variation" id="v5">
+<div class="demo-page"><div class="demo-wrap">
+  <div class="ask-hero">
+    <div class="ask-title">Have a question?</div>
+    <div class="ask-sub">Get instant answers from verified product data. No guessing, no hallucination.</div>
+    <div class="ask-pills">
+      <div class="ask-pill">What is the capacity?</div>
+      <div class="ask-pill">Is it lockable?</div>
+      <div class="ask-pill">How noisy is it?</div>
+    </div>
+    <div class="ask-row">
+      <input type="text" placeholder="Ask anything about this product...">
+      <button>Ask an Expert</button>
+    </div>
+    <div class="v5-embed-footer">
+      <span class="v5-powered"><a href="#">Powered by Signetry</a></span>
+      <button class="v5-embed-cta" id="v5-cta">
+        <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        Add to your site
+      </button>
+    </div>
+  </div>
+</div></div>
+</div>
+
+
+<script>
+// Nav
+document.querySelectorAll('.var-nav button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.var-nav button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.variation').forEach(v => v.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.var).classList.add('active');
+  });
+});
+
+// V2: Code icon popover
+document.getElementById('v2-trigger').addEventListener('click', () => {
+  document.getElementById('v2-popover').classList.toggle('show');
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('.v2-embed-trigger') && !e.target.closest('.v2-embed-popover')) {
+    document.getElementById('v2-popover').classList.remove('show');
+  }
+});
+document.getElementById('v2-copy').addEventListener('click', function() {
+  navigator.clipboard.writeText('<script src="https://signetry.ai/widget.js" data-key="YOUR_KEY" data-gtin="9351886006558"><\/script>');
+  this.textContent = 'Copied!';
+  setTimeout(() => this.textContent = 'Copy snippet', 1500);
+});
+
+// V3: Badge drawer
+document.getElementById('v3-badge').addEventListener('click', () => {
+  document.getElementById('v3-drawer').classList.toggle('show');
+});
+document.getElementById('v3-copy').addEventListener('click', function() {
+  navigator.clipboard.writeText('<script src="https://signetry.ai/widget.js" data-key="YOUR_KEY" data-gtin="9351886006558"><\/script>');
+  this.textContent = 'Copied!';
+  setTimeout(() => this.textContent = 'Copy', 1500);
+});
+
+// V4: Edge tag drawer
+document.getElementById('v4-tag').addEventListener('click', () => {
+  document.getElementById('v4-drawer').classList.toggle('show');
+});
+document.getElementById('v4-copy').addEventListener('click', function() {
+  navigator.clipboard.writeText('<script src="https://signetry.ai/widget.js" data-key="YOUR_KEY" data-gtin="9351886006558"><\/script>');
+  this.textContent = 'Copied!';
+  setTimeout(() => this.textContent = 'Copy', 1500);
+});
+
+// V5: Footer CTA — same as v3 behavior, just show an alert for demo
+document.getElementById('v5-cta').addEventListener('click', () => {
+  // In production this would navigate to signup or show a popover
+  const el = document.getElementById('v5-cta');
+  el.innerHTML = '<svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2"><polyline points="20 6 9 17 4 12"/></svg> signetry.ai/signup';
+  setTimeout(() => {
+    el.innerHTML = '<svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Add to your site';
+  }, 2000);
+});
+</script>
+
+</body>
+</html>

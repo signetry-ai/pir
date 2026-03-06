@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 0,
-    "door_hinge": "1 x Left & 1 x Right",
+    "door_hinge": "1 x left, 1 x right",
     "glass_door": false,
     "body_material": "Black",
     "interior_finish": "Polished Mirror Stainless Steel",
@@ -54,7 +54,9 @@
     "component_transformer": "Meanwell (Taiwan)",
     "component_fan_primary": "Schmick quiet running fans",
     "component_controller": "Schmick ECO Controller",
-    "door_type": "stainless_steel_solid"
+    "door_type": "stainless_steel_solid",
+    "door_reversible": false,
+    "door_count": 2
   },
   "qa": [
     {

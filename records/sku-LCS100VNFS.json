@@ -37,7 +37,8 @@
       "indoor"
     ],
     "door_hinge": "right",
-    "door_type": "double_layer_tempered"
+    "door_type": "double_layer_tempered",
+    "door_reversible": false
   },
   "qa": [
     {

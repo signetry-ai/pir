@@ -34,7 +34,8 @@
     "location": [
       "indoor"
     ],
-    "door_type": "double_layer_tempered"
+    "door_type": "double_layer_tempered",
+    "door_reversible": false
   },
   "qa": [
     {

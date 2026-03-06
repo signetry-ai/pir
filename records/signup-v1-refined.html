@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signetry — V1 Refined</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #1a1a1a;
+    font-family: 'Archivo', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* ─── NAV ─── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10000;
+    background: #000; border-bottom: 1px solid #333;
+    display: flex; gap: 0; overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  }
+  .nav-group {
+    display: flex; gap: 0;
+    border-right: 1px solid #333;
+  }
+  .nav-group-label {
+    color: #444; padding: 12px 14px;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    font-size: 9px; align-self: center;
+    white-space: nowrap;
+  }
+  .nav button {
+    background: none; border: none; color: #666; padding: 12px 14px;
+    cursor: pointer; white-space: nowrap; font-family: inherit; font-size: inherit;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .nav button:hover { color: #aaa; }
+  .nav button.active { color: #f0ece4; border-bottom-color: #f0ece4; }
+
+  /* ─── MOCKUP FRAMES ─── */
+  .mockup { display: none; min-height: 100vh; padding-top: 42px; }
+  .mockup.active { display: flex; }
+
+  /* ─── SHARED ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes expandRule {
+    from { width: 0; } to { width: 100%; }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+  }
+
+  /* ─── BASE V1 ─── */
+  .v1 {
+    background: #f0ece4;
+    align-items: center; justify-content: center;
+    flex-direction: column;
+    padding: 40px 24px;
+    position: relative;
+  }
+  .v1::before {
+    content: ''; position: fixed; inset: 0; z-index: 0;
+    background: radial-gradient(circle 1.2px at 8px 8px, rgba(0,0,0,0.055) 1.2px, transparent 1.2px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+  .v1 .content {
+    position: relative; z-index: 1;
+    width: 100%;
+    animation: fadeUp 0.6s 0.2s both;
+  }
+  .v1 .topline {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(0,0,0,0.25); text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 32px;
+  }
+  .v1 .topline .dot {
+    width: 7px; height: 7px; background: #000;
+    animation: pulse 2.5s infinite;
+  }
+  .v1 .logo {
+    font-family: 'Archivo Black', sans-serif;
+    color: #000; text-transform: uppercase;
+    line-height: 0.9;
+  }
+  .v1 .tagline {
+    font-family: 'Special Elite', monospace;
+    color: rgba(0,0,0,0.4);
+    line-height: 1.6;
+  }
+  .v1 .rule {
+    height: 2px; background: rgba(0,0,0,0.08);
+    animation: expandRule 0.8s 0.6s both;
+  }
+  .v1 .form-label {
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .v1 .form-label::after { content: ''; flex: 1; height: 1px; background: rgba(0,0,0,0.06); }
+  .v1 input {
+    width: 100%; background: transparent; border: none; outline: none;
+    border-bottom: 2px solid rgba(0,0,0,0.08); color: #000;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.03em; transition: border-color 0.2s;
+  }
+  .v1 input::placeholder { color: rgba(0,0,0,0.18); }
+  .v1 input:focus { border-bottom-color: #000; }
+  .v1 button.submit {
+    width: 100%; background: #000; color: #f0ece4; border: none;
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .v1 button.submit:hover { background: #1a1a1a; letter-spacing: 0.14em; }
+  .v1 .subtext {
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(0,0,0,0.18); text-align: center;
+    letter-spacing: 0.04em;
+  }
+  .v1 .footer {
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex; justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(0,0,0,0.15); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .v1 .footer-right {
+    font-family: 'Special Elite', monospace; color: rgba(0,0,0,0.2);
+    text-transform: none;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     SIZE VARIATIONS
+     ═══════════════════════════════════════════════════════════════ */
+
+  /* S1: Compact — tight, small logo, minimal breathing room */
+  #s1 .content { max-width: 380px; }
+  #s1 .topline { font-size: 9px; margin-bottom: 20px; }
+  #s1 .logo { font-size: 36px; margin-bottom: 4px; }
+  #s1 .tagline { font-size: 12px; margin-bottom: 20px; max-width: 320px; }
+  #s1 .rule { margin-bottom: 20px; }
+  #s1 .form-label { font-size: 9px; margin-bottom: 14px; }
+  #s1 input { padding: 12px 0; font-size: 13px; }
+  #s1 button.submit { padding: 14px; font-size: 11px; margin-top: 16px; }
+  #s1 .subtext { font-size: 9px; margin-top: 12px; }
+  #s1 .footer { margin-top: 32px; font-size: 9px; }
+
+  /* S2: Medium-Narrow — readable, tall feel */
+  #s2 .content { max-width: 420px; }
+  #s2 .topline { font-size: 10px; margin-bottom: 28px; }
+  #s2 .logo { font-size: 48px; margin-bottom: 6px; }
+  #s2 .tagline { font-size: 14px; margin-bottom: 28px; max-width: 360px; }
+  #s2 .rule { margin-bottom: 24px; }
+  #s2 .form-label { font-size: 10px; margin-bottom: 18px; }
+  #s2 input { padding: 16px 0; font-size: 14px; }
+  #s2 button.submit { padding: 18px; font-size: 13px; margin-top: 22px; }
+  #s2 .subtext { font-size: 10px; margin-top: 14px; }
+  #s2 .footer { margin-top: 44px; font-size: 9px; }
+
+  /* S3: Medium-Wide — generous, breathable */
+  #s3 .content { max-width: 560px; }
+  #s3 .topline { font-size: 10px; margin-bottom: 36px; }
+  #s3 .logo { font-size: 64px; margin-bottom: 8px; }
+  #s3 .tagline { font-size: 15px; margin-bottom: 36px; max-width: 440px; }
+  #s3 .rule { margin-bottom: 32px; }
+  #s3 .form-label { font-size: 10px; margin-bottom: 20px; }
+  #s3 input { padding: 16px 0; font-size: 14px; }
+  #s3 button.submit { padding: 18px; font-size: 13px; margin-top: 24px; }
+  #s3 .subtext { font-size: 10px; margin-top: 16px; }
+  #s3 .footer { margin-top: 48px; font-size: 10px; }
+
+  /* S4: Large — statement piece, big logo dominates */
+  #s4 .content { max-width: 640px; }
+  #s4 .topline { font-size: 10px; margin-bottom: 40px; }
+  #s4 .logo { font-size: 88px; margin-bottom: 10px; }
+  #s4 .tagline { font-size: 16px; margin-bottom: 40px; max-width: 480px; }
+  #s4 .rule { margin-bottom: 36px; }
+  #s4 .form-label { font-size: 10px; margin-bottom: 22px; }
+  #s4 input { padding: 18px 0; font-size: 15px; }
+  #s4 button.submit { padding: 20px; font-size: 14px; margin-top: 28px; }
+  #s4 .subtext { font-size: 10px; margin-top: 16px; }
+  #s4 .footer { margin-top: 56px; font-size: 10px; }
+
+  /* S5: Extra-Large — billboard, massive type, narrow form */
+  #s5 .content { max-width: 720px; }
+  #s5 .topline { font-size: 11px; margin-bottom: 48px; }
+  #s5 .logo { font-size: clamp(72px, 10vw, 120px); margin-bottom: 12px; }
+  #s5 .tagline { font-size: 17px; margin-bottom: 48px; max-width: 520px; }
+  #s5 .rule { margin-bottom: 40px; }
+  #s5 .form-wrap { max-width: 400px; }
+  #s5 .form-label { font-size: 10px; margin-bottom: 22px; }
+  #s5 input { padding: 18px 0; font-size: 15px; }
+  #s5 button.submit { padding: 20px; font-size: 14px; margin-top: 28px; }
+  #s5 .subtext { font-size: 10px; margin-top: 16px; }
+  #s5 .footer { margin-top: 64px; font-size: 10px; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     MESSAGE VARIATIONS — editorial problem-first messaging
+     ═══════════════════════════════════════════════════════════════ */
+
+  .vm .content { max-width: 520px; }
+  .vm .topline { font-size: 10px; margin-bottom: 32px; }
+  .vm .logo { font-size: 48px; margin-bottom: 10px; }
+  .vm .headline {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 22px; text-transform: uppercase;
+    color: #000; line-height: 1.15; margin-bottom: 16px;
+  }
+  .vm .problem {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px; line-height: 1.75; color: rgba(0,0,0,0.4);
+    margin-bottom: 28px; max-width: 440px;
+  }
+  .vm .proof {
+    display: flex; gap: 24px; margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .vm .proof-item .num {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 24px; color: #000; line-height: 1;
+  }
+  .vm .proof-item .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    color: rgba(0,0,0,0.2); text-transform: uppercase;
+    letter-spacing: 0.06em; margin-top: 2px;
+  }
+  .vm .rule { margin-bottom: 28px; }
+  .vm .form-label { font-size: 10px; margin-bottom: 18px; }
+  .vm input { padding: 16px 0; font-size: 14px; }
+  .vm button.submit { padding: 18px; font-size: 13px; margin-top: 22px; }
+  .vm .subtext { font-size: 10px; margin-top: 14px; }
+  .vm .footer { margin-top: 44px; font-size: 9px; }
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<div class="nav">
+  <div class="nav-group">
+    <span class="nav-group-label">Sizes</span>
+    <button class="active" onclick="show('s1',this)">S1: Compact</button>
+    <button onclick="show('s2',this)">S2: Narrow</button>
+    <button onclick="show('s3',this)">S3: Wide</button>
+    <button onclick="show('s4',this)">S4: Large</button>
+    <button onclick="show('s5',this)">S5: XL</button>
+  </div>
+  <div class="nav-group">
+    <span class="nav-group-label">Messaging</span>
+    <button onclick="show('m1',this)">M1: Wrong Answers</button>
+    <button onclick="show('m2',this)">M2: Blind Spot</button>
+    <button onclick="show('m3',this)">M3: One Line</button>
+    <button onclick="show('m4',this)">M4: Questions</button>
+    <button onclick="show('m5',this)">M5: Truth Gap</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SIZE VARIATIONS — same copy, different proportions
+     ═══════════════════════════════════════════════════════════════ -->
+
+<!-- S1: Compact -->
+<div class="mockup v1 active" id="s1">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="tagline">Every question your customers ask &mdash; answered from the actual manual. You see every query. That's the intelligence.</div>
+    <div class="rule"></div>
+    <div class="form-label">Get Started</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. We email you a login link.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">One line of code. Infinite intelligence.</span>
+    </div>
+  </div>
+</div>
+
+<!-- S2: Medium-Narrow -->
+<div class="mockup v1" id="s2">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="tagline">Every question your customers ask &mdash; answered from the actual manual. You see every query. That's the intelligence.</div>
+    <div class="rule"></div>
+    <div class="form-label">Get Started</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. We email you a login link.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">One line of code. Infinite intelligence.</span>
+    </div>
+  </div>
+</div>
+
+<!-- S3: Medium-Wide -->
+<div class="mockup v1" id="s3">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="tagline">Every question your customers ask &mdash; answered from the actual manual. You see every query. That's the intelligence.</div>
+    <div class="rule"></div>
+    <div class="form-label">Get Started</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. We email you a login link.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">One line of code. Infinite intelligence.</span>
+    </div>
+  </div>
+</div>
+
+<!-- S4: Large -->
+<div class="mockup v1" id="s4">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="tagline">Every question your customers ask &mdash; answered from the actual manual. You see every query. That's the intelligence.</div>
+    <div class="rule"></div>
+    <div class="form-label">Get Started</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. We email you a login link.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">One line of code. Infinite intelligence.</span>
+    </div>
+  </div>
+</div>
+
+<!-- S5: Extra-Large -->
+<div class="mockup v1" id="s5">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="tagline">Every question your customers ask &mdash; answered from the actual manual. You see every query. That's the intelligence.</div>
+    <div class="rule"></div>
+    <div class="form-wrap">
+      <div class="form-label">Get Started</div>
+      <input type="email" placeholder="Work email">
+      <button class="submit">Send Magic Link</button>
+      <div class="subtext">No password. We email you a login link.</div>
+    </div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">One line of code. Infinite intelligence.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MESSAGE VARIATIONS — problem-first editorial copy
+     ═══════════════════════════════════════════════════════════════ -->
+
+<!-- M1: Wrong Answers — the core problem: customers get wrong answers -->
+<div class="mockup v1 vm" id="m1">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="headline">Your Customers Are Getting Wrong Answers About Your Products</div>
+    <div class="problem">
+      AI assistants, review sites, and reseller pages are answering product questions with unverified data. Your brand has no visibility and no control. Signetry fixes both &mdash; verified answers from your actual manuals, and a live feed of every question asked.
+    </div>
+    <div class="proof">
+      <div class="proof-item"><div class="num">73%</div><div class="label">Of product answers online<br>contain errors</div></div>
+      <div class="proof-item"><div class="num">0</div><div class="label">Brands that can see what<br>customers actually ask</div></div>
+      <div class="proof-item"><div class="num">1</div><div class="label">Line of code<br>to fix it</div></div>
+    </div>
+    <div class="rule"></div>
+    <div class="form-label">Get Started</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. We email you a login link.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">Take back your product truth.</span>
+    </div>
+  </div>
+</div>
+
+<!-- M2: Blind Spot — you can't see the questions -->
+<div class="mockup v1 vm" id="m2">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="headline">You Have No Idea What Customers Want to Know About Your Products</div>
+    <div class="problem">
+      Right now, someone is deciding whether to buy your product. They have a question. You'll never see it. They'll search, get a wrong answer from somewhere, and move on. Signetry captures every question and answers it from your verified data &mdash; you see the intelligence in real time.
+    </div>
+    <div class="proof">
+      <div class="proof-item"><div class="num">368</div><div class="label">Products with verified<br>intelligence records</div></div>
+      <div class="proof-item"><div class="num">&lt;2s</div><div class="label">Time to verified<br>answer</div></div>
+    </div>
+    <div class="rule"></div>
+    <div class="form-label">See Your Products' Questions</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. No setup. See your feed in under a minute.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">The questions matter more than the answers.</span>
+    </div>
+  </div>
+</div>
+
+<!-- M3: One Line — simplicity of integration -->
+<div class="mockup v1 vm" id="m3">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="headline">One Line of Code. Every Product Question Answered. Every Query Visible.</div>
+    <div class="problem">
+      Add one script tag to your product pages. Customers ask questions and get verified answers &mdash; sourced from your actual manuals, with diagrams. You get a live feed of every question: what they're asking, what you can't answer yet, and where the gaps are. That's the intelligence brands pay for.
+    </div>
+    <div class="rule"></div>
+    <div style="background:rgba(0,0,0,0.03);padding:16px 20px;border-radius:0;margin-bottom:28px;font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(0,0,0,0.35);overflow-x:auto;white-space:nowrap;">
+      &lt;script src="signetry.ai/widget.js" data-key="sk_..."&gt;&lt;/script&gt;
+    </div>
+    <div class="form-label">Get Started</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. You'll have your API key in 60 seconds.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">Ship it in five minutes.</span>
+    </div>
+  </div>
+</div>
+
+<!-- M4: Questions — the questions are the product -->
+<div class="mockup v1 vm" id="m4">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="headline">The Questions Your Customers Can't Get Answered Are Worth More Than the Ones They Can</div>
+    <div class="problem">
+      Every unanswered product question is a signal. A gap in your documentation. A feature customers care about that you're not communicating. A sale you might be losing. Signetry shows you every question &mdash; answered and unanswered &mdash; in real time.
+    </div>
+    <div class="proof">
+      <div class="proof-item"><div class="num">42</div><div class="label">Verified manual<br>notes per product</div></div>
+      <div class="proof-item"><div class="num">100%</div><div class="label">Answers sourced from<br>manufacturer data</div></div>
+    </div>
+    <div class="rule"></div>
+    <div class="form-label">See What They're Asking</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. Magic link to your intelligence dashboard.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">Knowledge gaps are opportunities.</span>
+    </div>
+  </div>
+</div>
+
+<!-- M5: Truth Gap — brand truth is slipping away -->
+<div class="mockup v1 vm" id="m5">
+  <div class="content">
+    <div class="topline"><span class="dot"></span><span>Product Intelligence Platform</span></div>
+    <div class="logo">Signetry</div>
+    <div class="headline">Product Truth Is Slipping Out of Your Hands</div>
+    <div class="problem">
+      AI chatbots are inventing specifications. Review sites are parroting wrong data. Resellers are copying outdated descriptions. Your customers are making purchase decisions based on information you never approved. Signetry puts you back in control &mdash; verified answers from your source data, served wherever customers are asking.
+    </div>
+    <div class="proof">
+      <div class="proof-item"><div class="num">0%</div><div class="label">Hallucination rate<br>from verified records</div></div>
+      <div class="proof-item"><div class="num">7</div><div class="label">Brands with verified<br>intelligence records</div></div>
+      <div class="proof-item"><div class="num">Live</div><div class="label">Real-time query<br>intelligence feed</div></div>
+    </div>
+    <div class="rule"></div>
+    <div class="form-label">Take Back Control</div>
+    <input type="email" placeholder="Work email">
+    <button class="submit">Send Magic Link</button>
+    <div class="subtext">No password. No credit card. See your products in 60 seconds.</div>
+    <div class="footer">
+      <span>signetry.ai &bull; 2026</span>
+      <span class="footer-right">Your data. Your truth. Your intelligence.</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  function show(id, btn) {
+    document.querySelectorAll('.mockup').forEach(m => m.classList.remove('active'));
+    document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

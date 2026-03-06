@@ -29,7 +29,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 0,
-    "door_hinge": "Lift Up Lid",
+    "door_hinge": "lift-up lid",
     "glass_door": false,
     "led_lighting": true,
     "body_material": "Light Grey",
@@ -41,7 +41,9 @@
       "RCM"
     ],
     "shelf_type": "2 x Baskets Included",
-    "door_type": "solid_foamed"
+    "door_type": "solid_foamed",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

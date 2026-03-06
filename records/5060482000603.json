@@ -34,7 +34,9 @@
     "glass_door": false,
     "body_material": "304 Stainless Steel",
     "interior_finish": "Polished 304 SS",
-    "grill_material": "Stainless Steel"
+    "grill_material": "Stainless Steel",
+    "door_reversible": false,
+    "door_count": 2
   },
   "qa": [
     {

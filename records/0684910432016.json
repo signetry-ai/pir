@@ -41,9 +41,10 @@
     "location": [
       "indoor"
     ],
-    "door_hinge": "reversible",
+    "door_hinge": "right",
     "frame_material": "black frame",
-    "door_type": "double_layer_tempered"
+    "door_type": "double_layer_tempered",
+    "door_reversible": true
   },
   "qa": [
     {

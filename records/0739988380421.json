@@ -40,7 +40,8 @@
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "refrigerant": "R600a",
-    "door_type": "double_pane"
+    "door_type": "double_pane",
+    "door_reversible": false
   },
   "qa": [
     {

@@ -34,7 +34,9 @@
     "glass_door": true,
     "led_lighting": true,
     "body_material": "Black",
-    "grill_material": "Stainless Steel"
+    "grill_material": "Stainless Steel",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {

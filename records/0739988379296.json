@@ -35,12 +35,13 @@
     "zone_upper_temp_max_c": 12,
     "zone_lower_temp_min_c": 12,
     "zone_lower_temp_max_c": 20,
-    "door_hinge": "reversible",
+    "door_hinge": "right",
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
     "refrigerant": "R600a",
     "winter_function": true,
-    "door_type": "double_pane"
+    "door_type": "double_pane",
+    "door_reversible": true
   },
   "qa": [
     {

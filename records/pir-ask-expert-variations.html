@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIR Product Page — Ask an Expert Integration Variations</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a1a1a;font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+
+/* ─── VARIATION NAV ─── */
+.var-nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:#0a0a0a;border-bottom:1px solid #333;display:flex;align-items:center;padding:0 20px;gap:0;overflow-x:auto}
+.var-nav button{padding:14px 22px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#666;background:none;border:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+.var-nav button:hover{color:#aaa}
+.var-nav button.active{color:#f4f2ee;border-bottom-color:#f4f2ee}
+.var-label{font-family:'Bricolage Grotesque',sans-serif;font-size:11px;color:#444;padding:0 16px 0 4px;border-right:1px solid #333;margin-right:8px;white-space:nowrap}
+
+.variation{display:none}
+.variation.active{display:block}
+
+/* ─── SHARED PIR PAGE STYLES ─── */
+.pir-page{background:#f4f2ee;min-height:100vh;padding-top:54px}
+.page{max-width:1060px;margin:0 auto;padding:68px 52px 80px}
+@media(max-width:640px){.page{padding:32px 16px 60px}}
+
+.signal{font-size:12px;color:#bbb;letter-spacing:.25em;text-transform:uppercase;margin-bottom:16px}
+.signal::before{content:'';display:inline-block;width:5px;height:5px;background:#1a1a1a;border-radius:50%;margin-right:8px}
+
+h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(36px,6.5vw,72px);font-weight:700;color:#0a0a0a;line-height:1.05;letter-spacing:-.02em}
+.brand-tag{font-size:15px;color:#999;margin-top:6px;padding-bottom:14px;border-bottom:1px solid rgba(0,0,0,.08)}
+
+.hero-row{display:flex;gap:32px;margin:28px 0 36px;flex-wrap:wrap;align-items:baseline}
+.hr-stat{display:flex;align-items:baseline;gap:4px}
+.hr-val{font-family:'Bricolage Grotesque',sans-serif;font-size:36px;font-weight:700;color:#0a0a0a}
+.hr-unit{font-size:13px;color:#999}
+.hr-sep{color:#ddd;font-size:16px}
+
+.tabs{display:flex;border-bottom:1px solid rgba(0,0,0,.08)}
+.tab-btn{padding:13px 28px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#999;background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+.tab-btn:hover{color:#666}
+.tab-btn.active{color:#1a1a1a;border-bottom-color:#1a1a1a;background:rgba(0,0,0,.02)}
+.tab-panel{display:none;padding:16px 0}
+.tab-panel.active{display:block}
+
+.facts-dense{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:640px){.facts-dense{grid-template-columns:1fr}}
+.fd-group{padding-top:8px;border-top:1px solid rgba(0,0,0,.06)}
+.grp-title{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#bbb;margin-bottom:14px}
+.fr{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.02)}
+.fr:hover{background:rgba(0,0,0,.012)}
+.fk{color:#666;font-size:14px}
+.fv{color:#1a1a1a;font-weight:700;text-align:right;font-size:15px}
+
+.qi{padding:18px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.qi:last-child{border-bottom:none}
+.qq{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;color:#1a1a1a;font-weight:600}
+.qa-text{font-size:15px;color:#555;margin-top:3px;line-height:1.6}
+.qc{font-size:10px;color:#ccc;margin-top:2px}
+
+.trust-strip{display:flex;gap:14px;align-items:center;padding:10px 14px;background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.06);flex-wrap:wrap;font-size:11px;margin-top:20px}
+.trust-strip.certified{border-color:rgba(0,128,80,.2);background:rgba(0,128,80,.03)}
+.badge{color:#006644;letter-spacing:.1em;display:flex;align-items:center;gap:5px}
+.badge .dot{width:5px;height:5px;border-radius:50%;background:#006644}
+.trust-src{color:#aaa}
+
+.raw{margin-top:24px;font-size:11px;color:#bbb}
+.raw a{color:#999;border-bottom:1px solid rgba(0,0,0,.06);text-decoration:none}
+.raw a:hover{color:#1a1a1a;border-color:rgba(0,0,0,.2)}
+
+/* ─── SPEC DATA (shared) ─── */
+
+/* Capacity group */
+/* Dimensions group */
+/* ... all groups share .fr layout */
+
+
+/* ===================================================================
+   V1: INLINE ASK BAR — below hero stats, above tabs
+   =================================================================== */
+.v1-ask-bar{
+  display:flex;gap:8px;padding:16px 0;margin-bottom:8px;
+  border-top:1px solid rgba(0,0,0,.06);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.v1-ask-bar input{
+  flex:1;background:transparent;border:1px solid rgba(0,0,0,.1);
+  padding:14px 16px;font-family:'Space Mono',monospace;font-size:13px;
+  color:#1a1a1a;outline:none;transition:border-color .2s;
+}
+.v1-ask-bar input::placeholder{color:#bbb}
+.v1-ask-bar input:focus{border-color:#1a1a1a}
+.v1-ask-bar button{
+  background:#1a1a1a;color:#f4f2ee;border:none;padding:14px 28px;
+  font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;cursor:pointer;white-space:nowrap;
+  transition:all .2s;
+}
+.v1-ask-bar button:hover{background:#333;letter-spacing:.12em}
+.v1-answer-zone{
+  display:none;padding:16px 0;
+}
+.v1-answer-zone.show{display:block}
+.v1-answer{
+  padding:14px 16px;background:rgba(0,0,0,.02);border-left:3px solid #1a1a1a;
+  font-size:14px;color:#444;line-height:1.7;margin-bottom:12px;
+}
+.v1-answer-meta{font-size:10px;color:#ccc;letter-spacing:.08em;text-transform:uppercase}
+
+
+/* ===================================================================
+   V2: Q&A TAB ENHANCED — live ask integrated into Q&A tab
+   =================================================================== */
+.v2-ask-inline{
+  padding:20px 0;border-bottom:1px solid rgba(0,0,0,.06);margin-bottom:12px;
+}
+.v2-ask-label{
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#bbb;margin-bottom:10px;
+  display:flex;align-items:center;gap:8px;
+}
+.v2-ask-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,.06)}
+.v2-ask-row{display:flex;gap:8px}
+.v2-ask-row input{
+  flex:1;background:transparent;border:none;border-bottom:2px solid rgba(0,0,0,.08);
+  padding:12px 0;font-family:'Space Mono',monospace;font-size:14px;color:#1a1a1a;outline:none;
+  transition:border-color .2s;
+}
+.v2-ask-row input::placeholder{color:#ccc}
+.v2-ask-row input:focus{border-bottom-color:#1a1a1a}
+.v2-ask-row button{
+  background:none;border:none;color:#1a1a1a;cursor:pointer;
+  font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;padding:12px 0;border-bottom:2px solid #1a1a1a;
+  transition:all .2s;white-space:nowrap;
+}
+.v2-ask-row button:hover{color:#666;border-color:#666}
+
+.v2-live-answer{
+  display:none;padding:16px 0;margin-bottom:12px;
+  border-bottom:1px solid rgba(0,0,0,.06);
+  animation:v2fadeIn .3s ease;
+}
+.v2-live-answer.show{display:block}
+@keyframes v2fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.v2-la-q{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;color:#1a1a1a;font-weight:600;margin-bottom:4px}
+.v2-la-a{font-size:15px;color:#555;line-height:1.6}
+.v2-la-badge{
+  display:inline-block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:#006644;padding:3px 8px;background:rgba(0,128,80,.06);margin-top:6px;
+}
+
+
+/* ===================================================================
+   V3: SIDE PANEL — slides from right
+   =================================================================== */
+.v3-trigger{
+  position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:9998;
+  writing-mode:vertical-rl;text-orientation:mixed;
+  background:#1a1a1a;color:#f4f2ee;border:none;
+  padding:24px 12px;font-family:'Space Mono',monospace;font-size:10px;
+  letter-spacing:.2em;text-transform:uppercase;cursor:pointer;
+  transition:all .3s;
+}
+.v3-trigger:hover{background:#333;padding-right:16px}
+.v3-trigger.hidden{display:none}
+
+.v3-panel{
+  position:fixed;top:54px;right:0;bottom:0;width:420px;max-width:100vw;
+  background:#f4f2ee;border-left:1px solid rgba(0,0,0,.08);
+  z-index:9999;transform:translateX(100%);transition:transform .3s ease;
+  display:flex;flex-direction:column;
+}
+.v3-panel.open{transform:translateX(0)}
+
+.v3-header{
+  padding:20px 24px;border-bottom:1px solid rgba(0,0,0,.08);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.v3-header-text{
+  font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:700;color:#0a0a0a;
+}
+.v3-close{
+  background:none;border:none;font-size:22px;color:#999;cursor:pointer;
+  padding:4px 8px;transition:color .2s;
+}
+.v3-close:hover{color:#1a1a1a}
+
+.v3-body{flex:1;overflow-y:auto;padding:20px 24px;display:flex;flex-direction:column;gap:16px}
+.v3-msg{padding:12px 16px;font-size:13px;line-height:1.6;max-width:90%}
+.v3-msg.bot{
+  background:rgba(0,0,0,.03);border:1px solid rgba(0,0,0,.06);
+  color:#555;align-self:flex-start;
+}
+.v3-msg.user{
+  background:#1a1a1a;color:#f4f2ee;align-self:flex-end;
+}
+.v3-msg.error{
+  background:rgba(180,40,40,.06);border:1px solid rgba(180,40,40,.15);
+  color:#944;align-self:flex-start;
+}
+
+.v3-footer{
+  padding:16px 24px;border-top:1px solid rgba(0,0,0,.08);display:flex;gap:8px;
+}
+.v3-footer input{
+  flex:1;background:transparent;border:1px solid rgba(0,0,0,.1);
+  padding:12px 14px;font-family:'Space Mono',monospace;font-size:13px;
+  color:#1a1a1a;outline:none;transition:border-color .2s;
+}
+.v3-footer input::placeholder{color:#bbb}
+.v3-footer input:focus{border-color:#1a1a1a}
+.v3-footer button{
+  background:#1a1a1a;color:#f4f2ee;border:none;padding:12px 20px;
+  font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;cursor:pointer;transition:background .2s;
+}
+.v3-footer button:hover{background:#333}
+
+.v3-powered{padding:8px 24px;text-align:right}
+.v3-powered a{font-size:10px;color:#ccc;text-decoration:none;border:none}
+.v3-powered a:hover{color:#999}
+
+
+/* ===================================================================
+   V4: HERO SECTION — prominent "Have a question?" between hero stats and tabs
+   =================================================================== */
+.v4-hero-ask{
+  margin:0 0 28px;padding:32px;
+  background:linear-gradient(135deg, rgba(0,0,0,.02), rgba(0,0,0,.04));
+  border:1px solid rgba(0,0,0,.06);
+  position:relative;overflow:hidden;
+}
+.v4-hero-ask::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg, #1a1a1a, transparent);
+}
+.v4-ha-title{
+  font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;
+  color:#0a0a0a;margin-bottom:4px;
+}
+.v4-ha-sub{font-size:13px;color:#999;margin-bottom:20px;line-height:1.5}
+
+.v4-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.v4-pill{
+  background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.08);
+  padding:8px 16px;font-family:'Space Mono',monospace;font-size:11px;
+  color:#666;cursor:pointer;transition:all .2s;
+}
+.v4-pill:hover{border-color:#1a1a1a;color:#1a1a1a;background:rgba(0,0,0,.06)}
+
+.v4-ask-row{display:flex;gap:8px}
+.v4-ask-row input{
+  flex:1;background:#f4f2ee;border:1px solid rgba(0,0,0,.1);
+  padding:14px 16px;font-family:'Space Mono',monospace;font-size:13px;
+  color:#1a1a1a;outline:none;transition:border-color .2s;
+}
+.v4-ask-row input::placeholder{color:#bbb}
+.v4-ask-row input:focus{border-color:#1a1a1a;background:#fff}
+.v4-ask-row button{
+  background:#1a1a1a;color:#f4f2ee;border:none;padding:14px 28px;
+  font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:600;
+  cursor:pointer;transition:all .2s;white-space:nowrap;
+}
+.v4-ask-row button:hover{background:#333}
+
+.v4-answer-zone{display:none;margin-top:20px;animation:v2fadeIn .3s ease}
+.v4-answer-zone.show{display:block}
+.v4-az-answer{
+  padding:16px 20px;background:rgba(255,255,255,.6);
+  border-left:3px solid #0a0a0a;font-size:14px;color:#444;line-height:1.7;
+}
+.v4-az-meta{font-size:10px;color:#bbb;margin-top:8px;letter-spacing:.06em;text-transform:uppercase}
+.v4-az-sig{display:inline-flex;align-items:center;gap:4px}
+.v4-az-sig::before{content:'';width:4px;height:4px;background:#006644;border-radius:50%}
+
+
+/* ===================================================================
+   V5: EXPANDABLE FAQ — pre-seeded questions + custom ask
+   =================================================================== */
+.v5-faq-section{
+  margin:36px 0;padding-top:20px;border-top:1px solid rgba(0,0,0,.06);
+}
+.v5-faq-header{
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;
+}
+.v5-faq-title{
+  font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:700;color:#0a0a0a;
+}
+.v5-faq-powered{font-size:10px;color:#ccc;letter-spacing:.06em}
+
+.v5-faq-item{
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.v5-faq-q{
+  padding:16px 0;display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;transition:color .2s;
+}
+.v5-faq-q:hover{color:#1a1a1a}
+.v5-faq-q-text{
+  font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:500;color:#444;
+}
+.v5-faq-q-text:hover{color:#1a1a1a}
+.v5-faq-arrow{
+  font-size:18px;color:#ccc;transition:transform .3s;
+}
+.v5-faq-item.open .v5-faq-arrow{transform:rotate(180deg);color:#1a1a1a}
+.v5-faq-a{
+  max-height:0;overflow:hidden;transition:max-height .3s ease, padding .3s ease;
+}
+.v5-faq-item.open .v5-faq-a{max-height:300px;padding-bottom:16px}
+.v5-faq-a-text{font-size:14px;color:#555;line-height:1.7}
+.v5-faq-a-cite{font-size:10px;color:#ccc;margin-top:6px;letter-spacing:.06em}
+
+.v5-ask-own{
+  margin-top:16px;padding:20px;background:rgba(0,0,0,.02);
+  border:1px dashed rgba(0,0,0,.08);
+}
+.v5-ao-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#bbb;margin-bottom:10px}
+.v5-ao-row{display:flex;gap:8px}
+.v5-ao-row input{
+  flex:1;background:transparent;border:none;border-bottom:2px solid rgba(0,0,0,.08);
+  padding:12px 0;font-family:'Space Mono',monospace;font-size:14px;color:#1a1a1a;
+  outline:none;transition:border-color .2s;
+}
+.v5-ao-row input::placeholder{color:#ccc}
+.v5-ao-row input:focus{border-bottom-color:#1a1a1a}
+.v5-ao-row button{
+  background:#1a1a1a;color:#f4f2ee;border:none;padding:12px 24px;
+  font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;cursor:pointer;transition:all .2s;
+}
+.v5-ao-row button:hover{background:#333}
+.v5-ao-answer{
+  display:none;margin-top:14px;padding:14px 16px;
+  background:rgba(0,0,0,.02);border-left:3px solid #1a1a1a;
+  font-size:14px;color:#444;line-height:1.7;
+  animation:v2fadeIn .3s ease;
+}
+.v5-ao-answer.show{display:block}
+
+
+/* ─── Typing indicator (shared) ─── */
+.pir-typing{display:flex;gap:4px;padding:10px 0}
+.pir-typing span{width:5px;height:5px;background:#bbb;border-radius:50%;animation:pirBounce 1.4s infinite}
+.pir-typing span:nth-child(2){animation-delay:.2s}
+.pir-typing span:nth-child(3){animation-delay:.4s}
+@keyframes pirBounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     VARIATION NAV
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="var-nav">
+  <span class="var-label">Ask an Expert</span>
+  <button class="active" data-var="v1">V1 Inline Bar</button>
+  <button data-var="v2">V2 Q&A Tab</button>
+  <button data-var="v3">V3 Side Panel</button>
+  <button data-var="v4">V4 Hero Section</button>
+  <button data-var="v5">V5 Expandable FAQ</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     V1: INLINE ASK BAR
+     Minimal ask bar between hero stats and tabs. Answers appear
+     inline below the bar — feels like search, not chat.
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="variation active" id="v1">
+<div class="pir-page">
+<div class="page">
+
+  <div class="signal">PIR/1.0 &ensp;|&ensp; bar fridge &ensp;|&ensp; 9351886006558</div>
+  <h1>HUS-SC700W Glass Door Bar Fridge</h1>
+  <div class="brand-tag">Husky &mdash; Professional &bull; HUS-SC700W &bull; 9351886006558</div>
+
+  <div class="hero-row">
+    <div class="hr-stat"><span class="hr-val">690</span><span class="hr-unit">L</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">43</span><span class="hr-unit">dB</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">4.5</span><span class="hr-unit">/10 stars</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">$98</span><span class="hr-unit">/yr</span></div>
+  </div>
+
+  <!-- ASK BAR -->
+  <div class="v1-ask-bar">
+    <input type="text" id="v1-input" placeholder="Ask about this product &mdash; e.g. &quot;Is it lockable?&quot;">
+    <button id="v1-btn">Ask</button>
+  </div>
+  <div class="v1-answer-zone" id="v1-answer"></div>
+
+  <div class="tabs" data-scope="v1">
+    <button class="tab-btn active" data-tab="facts">Specifications (42)</button>
+    <button class="tab-btn" data-tab="qa">Q&A (6)</button>
+    <button class="tab-btn" data-tab="docs">Documents</button>
+  </div>
+  <div class="tab-panel active" data-panel="facts" data-scope="v1">
+    <div class="facts-dense">
+      <div class="fd-group"><div class="grp-title">Capacity</div>
+        <div class="fr"><span class="fk">Capacity Litres</span><span class="fv">690</span></div>
+        <div class="fr"><span class="fk">Num Shelves</span><span class="fv">4</span></div>
+        <div class="fr"><span class="fk">Num Doors</span><span class="fv">1</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Dimensions</div>
+        <div class="fr"><span class="fk">Width</span><span class="fv">900 mm</span></div>
+        <div class="fr"><span class="fk">Depth</span><span class="fv">785 mm</span></div>
+        <div class="fr"><span class="fk">Height</span><span class="fv">1985 mm</span></div>
+        <div class="fr"><span class="fk">Weight</span><span class="fv">130 kg</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Performance</div>
+        <div class="fr"><span class="fk">Noise Level</span><span class="fv">43 dB</span></div>
+        <div class="fr"><span class="fk">Energy Rating</span><span class="fv">4.5 / 10 stars</span></div>
+        <div class="fr"><span class="fk">Running Cost</span><span class="fv">$98 / year</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Construction</div>
+        <div class="fr"><span class="fk">Door Type</span><span class="fv">Single low-E heated glass</span></div>
+        <div class="fr"><span class="fk">Body Material</span><span class="fv">Painted steel</span></div>
+        <div class="fr"><span class="fk">Interior</span><span class="fv">Aluminium</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-panel="qa" data-scope="v1">
+    <div class="qi"><div class="qq">Is it lockable?</div><div class="qa-text">Yes. The HUS-SC700W has a key-operated barrel lock on the door handle.</div><div class="qc">lock_type &bull; lock_included</div></div>
+    <div class="qi"><div class="qq">Can I use it outdoors?</div><div class="qa-text">Yes. It is rated for outdoor use with a subtropical climate class and IP24 water ingress protection.</div><div class="qc">location &bull; ip_rating</div></div>
+  </div>
+  <div class="tab-panel" data-panel="docs" data-scope="v1">
+    <div class="grp-title">Documents</div>
+    <div style="font-size:14px;color:#666">
+      <div class="fr"><span class="fk">User Manual</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+      <div class="fr"><span class="fk">Energy Label</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+    </div>
+  </div>
+
+  <div class="trust-strip certified">
+    <div class="badge"><span class="dot"></span>BRAND CERTIFIED</div>
+    <span class="trust-src">kingcave.com.au &bull; 2025-09-19</span>
+  </div>
+  <div class="raw">JSON: <a href="#">signetry.ai/records/9351886006558</a> &ensp;|&ensp; <a href="#">Schema</a> &ensp;|&ensp; <a href="#">CC-BY 4.0</a></div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     V2: Q&A TAB ENHANCED
+     Ask input lives at the top of the Q&A tab. Live answers appear
+     above the pre-seeded Q&A — looks like part of the existing data.
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="variation" id="v2">
+<div class="pir-page">
+<div class="page">
+
+  <div class="signal">PIR/1.0 &ensp;|&ensp; bar fridge &ensp;|&ensp; 9351886006558</div>
+  <h1>HUS-SC700W Glass Door Bar Fridge</h1>
+  <div class="brand-tag">Husky &mdash; Professional &bull; HUS-SC700W &bull; 9351886006558</div>
+
+  <div class="hero-row">
+    <div class="hr-stat"><span class="hr-val">690</span><span class="hr-unit">L</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">43</span><span class="hr-unit">dB</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">4.5</span><span class="hr-unit">/10 stars</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">$98</span><span class="hr-unit">/yr</span></div>
+  </div>
+
+  <div class="tabs" data-scope="v2">
+    <button class="tab-btn active" data-tab="facts">Specifications (42)</button>
+    <button class="tab-btn" data-tab="qa">Q&A (6)</button>
+    <button class="tab-btn" data-tab="docs">Documents</button>
+  </div>
+  <div class="tab-panel active" data-panel="facts" data-scope="v2">
+    <div class="facts-dense">
+      <div class="fd-group"><div class="grp-title">Capacity</div>
+        <div class="fr"><span class="fk">Capacity Litres</span><span class="fv">690</span></div>
+        <div class="fr"><span class="fk">Num Shelves</span><span class="fv">4</span></div>
+        <div class="fr"><span class="fk">Num Doors</span><span class="fv">1</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Dimensions</div>
+        <div class="fr"><span class="fk">Width</span><span class="fv">900 mm</span></div>
+        <div class="fr"><span class="fk">Depth</span><span class="fv">785 mm</span></div>
+        <div class="fr"><span class="fk">Height</span><span class="fv">1985 mm</span></div>
+        <div class="fr"><span class="fk">Weight</span><span class="fv">130 kg</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Performance</div>
+        <div class="fr"><span class="fk">Noise Level</span><span class="fv">43 dB</span></div>
+        <div class="fr"><span class="fk">Energy Rating</span><span class="fv">4.5 / 10 stars</span></div>
+        <div class="fr"><span class="fk">Running Cost</span><span class="fv">$98 / year</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Construction</div>
+        <div class="fr"><span class="fk">Door Type</span><span class="fv">Single low-E heated glass</span></div>
+        <div class="fr"><span class="fk">Body Material</span><span class="fv">Painted steel</span></div>
+        <div class="fr"><span class="fk">Interior</span><span class="fv">Aluminium</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-panel" data-panel="qa" data-scope="v2">
+    <!-- Live ask input at top of Q&A tab -->
+    <div class="v2-ask-inline">
+      <div class="v2-ask-label">Ask a question about this product</div>
+      <div class="v2-ask-row">
+        <input type="text" id="v2-input" placeholder="e.g. How do I adjust the shelves?">
+        <button id="v2-btn">Ask</button>
+      </div>
+    </div>
+
+    <!-- Live answer appears here -->
+    <div class="v2-live-answer" id="v2-answer"></div>
+
+    <!-- Pre-seeded Q&A below -->
+    <div class="qi"><div class="qq">Is it lockable?</div><div class="qa-text">Yes. The HUS-SC700W has a key-operated barrel lock on the door handle.</div><div class="qc">lock_type &bull; lock_included</div></div>
+    <div class="qi"><div class="qq">Can I use it outdoors?</div><div class="qa-text">Yes. It is rated for outdoor use with a subtropical climate class and IP24 water ingress protection.</div><div class="qc">location &bull; ip_rating</div></div>
+    <div class="qi"><div class="qq">What temperature range?</div><div class="qa-text">The internal temperature is adjustable between 2&deg;C and 8&deg;C via a digital thermostat.</div><div class="qc">internal_temp_min_c &bull; internal_temp_max_c</div></div>
+  </div>
+
+  <div class="tab-panel" data-panel="docs" data-scope="v2">
+    <div class="grp-title">Documents</div>
+    <div style="font-size:14px;color:#666">
+      <div class="fr"><span class="fk">User Manual</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+      <div class="fr"><span class="fk">Energy Label</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+    </div>
+  </div>
+
+  <div class="trust-strip certified">
+    <div class="badge"><span class="dot"></span>BRAND CERTIFIED</div>
+    <span class="trust-src">kingcave.com.au &bull; 2025-09-19</span>
+  </div>
+  <div class="raw">JSON: <a href="#">signetry.ai/records/9351886006558</a> &ensp;|&ensp; <a href="#">Schema</a> &ensp;|&ensp; <a href="#">CC-BY 4.0</a></div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     V3: SIDE PANEL
+     Vertical tab on right edge. Slides out a branded chat panel.
+     Page content stays undisturbed.
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="variation" id="v3">
+<div class="pir-page">
+<div class="page">
+
+  <div class="signal">PIR/1.0 &ensp;|&ensp; bar fridge &ensp;|&ensp; 9351886006558</div>
+  <h1>HUS-SC700W Glass Door Bar Fridge</h1>
+  <div class="brand-tag">Husky &mdash; Professional &bull; HUS-SC700W &bull; 9351886006558</div>
+
+  <div class="hero-row">
+    <div class="hr-stat"><span class="hr-val">690</span><span class="hr-unit">L</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">43</span><span class="hr-unit">dB</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">4.5</span><span class="hr-unit">/10 stars</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">$98</span><span class="hr-unit">/yr</span></div>
+  </div>
+
+  <div class="tabs" data-scope="v3">
+    <button class="tab-btn active" data-tab="facts">Specifications (42)</button>
+    <button class="tab-btn" data-tab="qa">Q&A (6)</button>
+    <button class="tab-btn" data-tab="docs">Documents</button>
+  </div>
+  <div class="tab-panel active" data-panel="facts" data-scope="v3">
+    <div class="facts-dense">
+      <div class="fd-group"><div class="grp-title">Capacity</div>
+        <div class="fr"><span class="fk">Capacity Litres</span><span class="fv">690</span></div>
+        <div class="fr"><span class="fk">Num Shelves</span><span class="fv">4</span></div>
+        <div class="fr"><span class="fk">Num Doors</span><span class="fv">1</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Dimensions</div>
+        <div class="fr"><span class="fk">Width</span><span class="fv">900 mm</span></div>
+        <div class="fr"><span class="fk">Depth</span><span class="fv">785 mm</span></div>
+        <div class="fr"><span class="fk">Height</span><span class="fv">1985 mm</span></div>
+        <div class="fr"><span class="fk">Weight</span><span class="fv">130 kg</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Performance</div>
+        <div class="fr"><span class="fk">Noise Level</span><span class="fv">43 dB</span></div>
+        <div class="fr"><span class="fk">Energy Rating</span><span class="fv">4.5 / 10 stars</span></div>
+        <div class="fr"><span class="fk">Running Cost</span><span class="fv">$98 / year</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Construction</div>
+        <div class="fr"><span class="fk">Door Type</span><span class="fv">Single low-E heated glass</span></div>
+        <div class="fr"><span class="fk">Body Material</span><span class="fv">Painted steel</span></div>
+        <div class="fr"><span class="fk">Interior</span><span class="fv">Aluminium</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-panel="qa" data-scope="v3">
+    <div class="qi"><div class="qq">Is it lockable?</div><div class="qa-text">Yes. The HUS-SC700W has a key-operated barrel lock on the door handle.</div><div class="qc">lock_type &bull; lock_included</div></div>
+    <div class="qi"><div class="qq">Can I use it outdoors?</div><div class="qa-text">Yes. It is rated for outdoor use with a subtropical climate class and IP24 water ingress protection.</div><div class="qc">location &bull; ip_rating</div></div>
+  </div>
+  <div class="tab-panel" data-panel="docs" data-scope="v3">
+    <div class="grp-title">Documents</div>
+    <div style="font-size:14px;color:#666">
+      <div class="fr"><span class="fk">User Manual</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+      <div class="fr"><span class="fk">Energy Label</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+    </div>
+  </div>
+
+  <div class="trust-strip certified">
+    <div class="badge"><span class="dot"></span>BRAND CERTIFIED</div>
+    <span class="trust-src">kingcave.com.au &bull; 2025-09-19</span>
+  </div>
+  <div class="raw">JSON: <a href="#">signetry.ai/records/9351886006558</a> &ensp;|&ensp; <a href="#">Schema</a> &ensp;|&ensp; <a href="#">CC-BY 4.0</a></div>
+
+</div>
+
+<!-- Side panel trigger + panel -->
+<button class="v3-trigger" id="v3-trigger">Ask an Expert</button>
+<div class="v3-panel" id="v3-panel">
+  <div class="v3-header">
+    <span class="v3-header-text">Ask an Expert</span>
+    <button class="v3-close" id="v3-close">&times;</button>
+  </div>
+  <div class="v3-body" id="v3-msgs">
+    <div class="v3-msg bot">Ask me anything about the HUS-SC700W. I only answer from verified product data.</div>
+  </div>
+  <div class="v3-footer">
+    <input type="text" id="v3-input" placeholder="e.g. Is it lockable?">
+    <button id="v3-btn">Ask</button>
+  </div>
+  <div class="v3-powered"><a href="https://signetry.ai">Powered by Signetry</a></div>
+</div>
+
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     V4: HERO SECTION
+     Large, prominent "Have a question?" block between hero stats and
+     tabs. Includes suggestion pills. Feels like a first-class feature.
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="variation" id="v4">
+<div class="pir-page">
+<div class="page">
+
+  <div class="signal">PIR/1.0 &ensp;|&ensp; bar fridge &ensp;|&ensp; 9351886006558</div>
+  <h1>HUS-SC700W Glass Door Bar Fridge</h1>
+  <div class="brand-tag">Husky &mdash; Professional &bull; HUS-SC700W &bull; 9351886006558</div>
+
+  <div class="hero-row">
+    <div class="hr-stat"><span class="hr-val">690</span><span class="hr-unit">L</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">43</span><span class="hr-unit">dB</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">4.5</span><span class="hr-unit">/10 stars</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">$98</span><span class="hr-unit">/yr</span></div>
+  </div>
+
+  <!-- HERO ASK SECTION -->
+  <div class="v4-hero-ask">
+    <div class="v4-ha-title">Have a question?</div>
+    <div class="v4-ha-sub">Get instant answers from verified product data. No guessing, no hallucination.</div>
+    <div class="v4-pills">
+      <div class="v4-pill" data-q="Is it lockable?">Is it lockable?</div>
+      <div class="v4-pill" data-q="Can I use it outdoors?">Can I use it outdoors?</div>
+      <div class="v4-pill" data-q="What temperature range?">What temperature range?</div>
+      <div class="v4-pill" data-q="How noisy is it?">How noisy is it?</div>
+    </div>
+    <div class="v4-ask-row">
+      <input type="text" id="v4-input" placeholder="Ask anything about this product...">
+      <button id="v4-btn">Ask an Expert</button>
+    </div>
+    <div class="v4-answer-zone" id="v4-answer"></div>
+  </div>
+
+  <div class="tabs" data-scope="v4">
+    <button class="tab-btn active" data-tab="facts">Specifications (42)</button>
+    <button class="tab-btn" data-tab="qa">Q&A (6)</button>
+    <button class="tab-btn" data-tab="docs">Documents</button>
+  </div>
+  <div class="tab-panel active" data-panel="facts" data-scope="v4">
+    <div class="facts-dense">
+      <div class="fd-group"><div class="grp-title">Capacity</div>
+        <div class="fr"><span class="fk">Capacity Litres</span><span class="fv">690</span></div>
+        <div class="fr"><span class="fk">Num Shelves</span><span class="fv">4</span></div>
+        <div class="fr"><span class="fk">Num Doors</span><span class="fv">1</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Dimensions</div>
+        <div class="fr"><span class="fk">Width</span><span class="fv">900 mm</span></div>
+        <div class="fr"><span class="fk">Depth</span><span class="fv">785 mm</span></div>
+        <div class="fr"><span class="fk">Height</span><span class="fv">1985 mm</span></div>
+        <div class="fr"><span class="fk">Weight</span><span class="fv">130 kg</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Performance</div>
+        <div class="fr"><span class="fk">Noise Level</span><span class="fv">43 dB</span></div>
+        <div class="fr"><span class="fk">Energy Rating</span><span class="fv">4.5 / 10 stars</span></div>
+        <div class="fr"><span class="fk">Running Cost</span><span class="fv">$98 / year</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Construction</div>
+        <div class="fr"><span class="fk">Door Type</span><span class="fv">Single low-E heated glass</span></div>
+        <div class="fr"><span class="fk">Body Material</span><span class="fv">Painted steel</span></div>
+        <div class="fr"><span class="fk">Interior</span><span class="fv">Aluminium</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-panel="qa" data-scope="v4">
+    <div class="qi"><div class="qq">Is it lockable?</div><div class="qa-text">Yes. The HUS-SC700W has a key-operated barrel lock on the door handle.</div><div class="qc">lock_type &bull; lock_included</div></div>
+    <div class="qi"><div class="qq">Can I use it outdoors?</div><div class="qa-text">Yes. It is rated for outdoor use with a subtropical climate class and IP24 water ingress protection.</div><div class="qc">location &bull; ip_rating</div></div>
+  </div>
+  <div class="tab-panel" data-panel="docs" data-scope="v4">
+    <div class="grp-title">Documents</div>
+    <div style="font-size:14px;color:#666">
+      <div class="fr"><span class="fk">User Manual</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+      <div class="fr"><span class="fk">Energy Label</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+    </div>
+  </div>
+
+  <div class="trust-strip certified">
+    <div class="badge"><span class="dot"></span>BRAND CERTIFIED</div>
+    <span class="trust-src">kingcave.com.au &bull; 2025-09-19</span>
+  </div>
+  <div class="raw">JSON: <a href="#">signetry.ai/records/9351886006558</a> &ensp;|&ensp; <a href="#">Schema</a> &ensp;|&ensp; <a href="#">CC-BY 4.0</a></div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     V5: EXPANDABLE FAQ
+     Standalone section below specs with pre-seeded questions that
+     expand on click + "Ask your own" input at the bottom.
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="variation" id="v5">
+<div class="pir-page">
+<div class="page">
+
+  <div class="signal">PIR/1.0 &ensp;|&ensp; bar fridge &ensp;|&ensp; 9351886006558</div>
+  <h1>HUS-SC700W Glass Door Bar Fridge</h1>
+  <div class="brand-tag">Husky &mdash; Professional &bull; HUS-SC700W &bull; 9351886006558</div>
+
+  <div class="hero-row">
+    <div class="hr-stat"><span class="hr-val">690</span><span class="hr-unit">L</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">43</span><span class="hr-unit">dB</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">4.5</span><span class="hr-unit">/10 stars</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">$98</span><span class="hr-unit">/yr</span></div>
+  </div>
+
+  <div class="tabs" data-scope="v5">
+    <button class="tab-btn active" data-tab="facts">Specifications (42)</button>
+    <button class="tab-btn" data-tab="docs">Documents</button>
+  </div>
+  <div class="tab-panel active" data-panel="facts" data-scope="v5">
+    <div class="facts-dense">
+      <div class="fd-group"><div class="grp-title">Capacity</div>
+        <div class="fr"><span class="fk">Capacity Litres</span><span class="fv">690</span></div>
+        <div class="fr"><span class="fk">Num Shelves</span><span class="fv">4</span></div>
+        <div class="fr"><span class="fk">Num Doors</span><span class="fv">1</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Dimensions</div>
+        <div class="fr"><span class="fk">Width</span><span class="fv">900 mm</span></div>
+        <div class="fr"><span class="fk">Depth</span><span class="fv">785 mm</span></div>
+        <div class="fr"><span class="fk">Height</span><span class="fv">1985 mm</span></div>
+        <div class="fr"><span class="fk">Weight</span><span class="fv">130 kg</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Performance</div>
+        <div class="fr"><span class="fk">Noise Level</span><span class="fv">43 dB</span></div>
+        <div class="fr"><span class="fk">Energy Rating</span><span class="fv">4.5 / 10 stars</span></div>
+        <div class="fr"><span class="fk">Running Cost</span><span class="fv">$98 / year</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Construction</div>
+        <div class="fr"><span class="fk">Door Type</span><span class="fv">Single low-E heated glass</span></div>
+        <div class="fr"><span class="fk">Body Material</span><span class="fv">Painted steel</span></div>
+        <div class="fr"><span class="fk">Interior</span><span class="fv">Aluminium</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-panel="docs" data-scope="v5">
+    <div class="grp-title">Documents</div>
+    <div style="font-size:14px;color:#666">
+      <div class="fr"><span class="fk">User Manual</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+      <div class="fr"><span class="fk">Energy Label</span><span class="fv"><a href="#">PDF &rarr;</a></span></div>
+    </div>
+  </div>
+
+  <!-- EXPANDABLE FAQ SECTION -->
+  <div class="v5-faq-section">
+    <div class="v5-faq-header">
+      <div class="v5-faq-title">Frequently Asked</div>
+      <span class="v5-faq-powered">Powered by Signetry</span>
+    </div>
+
+    <div class="v5-faq-item">
+      <div class="v5-faq-q"><span class="v5-faq-q-text">Is it lockable?</span><span class="v5-faq-arrow">&#8964;</span></div>
+      <div class="v5-faq-a"><div class="v5-faq-a-text">Yes. The HUS-SC700W has a key-operated barrel lock on the door handle. Keys are included.</div><div class="v5-faq-a-cite">lock_type &bull; lock_included</div></div>
+    </div>
+
+    <div class="v5-faq-item">
+      <div class="v5-faq-q"><span class="v5-faq-q-text">Can I use it outdoors?</span><span class="v5-faq-arrow">&#8964;</span></div>
+      <div class="v5-faq-a"><div class="v5-faq-a-text">Yes. It is rated for outdoor use with a subtropical climate class and IP24 water ingress protection.</div><div class="v5-faq-a-cite">location &bull; ip_rating &bull; ambient_climate_class</div></div>
+    </div>
+
+    <div class="v5-faq-item">
+      <div class="v5-faq-q"><span class="v5-faq-q-text">What temperature range does it support?</span><span class="v5-faq-arrow">&#8964;</span></div>
+      <div class="v5-faq-a"><div class="v5-faq-a-text">The internal temperature is adjustable between 2&deg;C and 8&deg;C via a digital thermostat.</div><div class="v5-faq-a-cite">internal_temp_min_c &bull; internal_temp_max_c</div></div>
+    </div>
+
+    <div class="v5-faq-item">
+      <div class="v5-faq-q"><span class="v5-faq-q-text">How noisy is it?</span><span class="v5-faq-arrow">&#8964;</span></div>
+      <div class="v5-faq-a"><div class="v5-faq-a-text">The HUS-SC700W runs at 43 dB, which is comparable to a quiet library or soft background music.</div><div class="v5-faq-a-cite">noise_db</div></div>
+    </div>
+
+    <div class="v5-faq-item">
+      <div class="v5-faq-q"><span class="v5-faq-q-text">Are the shelves adjustable?</span><span class="v5-faq-arrow">&#8964;</span></div>
+      <div class="v5-faq-a"><div class="v5-faq-a-text">Yes. The unit has 4 adjustable wire shelves that can be repositioned to accommodate different bottle and can sizes.</div><div class="v5-faq-a-cite">shelf_type &bull; shelf_count &bull; adjustable_shelves</div></div>
+    </div>
+
+    <!-- Ask your own -->
+    <div class="v5-ask-own">
+      <div class="v5-ao-label">Don't see your question?</div>
+      <div class="v5-ao-row">
+        <input type="text" id="v5-input" placeholder="Ask anything about this product...">
+        <button id="v5-btn">Ask</button>
+      </div>
+      <div class="v5-ao-answer" id="v5-answer"></div>
+    </div>
+  </div>
+
+  <div class="trust-strip certified">
+    <div class="badge"><span class="dot"></span>BRAND CERTIFIED</div>
+    <span class="trust-src">kingcave.com.au &bull; 2025-09-19</span>
+  </div>
+  <div class="raw">JSON: <a href="#">signetry.ai/records/9351886006558</a> &ensp;|&ensp; <a href="#">Schema</a> &ensp;|&ensp; <a href="#">CC-BY 4.0</a></div>
+
+</div>
+</div>
+</div>
+
+
+<script>
+// ─── VARIATION NAV ───
+document.querySelectorAll('.var-nav button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.var-nav button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.variation').forEach(v => v.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.var).classList.add('active');
+  });
+});
+
+// ─── SCOPED TABS ───
+document.querySelectorAll('.tab-btn').forEach(b => {
+  b.addEventListener('click', () => {
+    const scope = b.closest('[data-scope]')?.dataset.scope || b.closest('.page')?.querySelector('[data-scope]')?.dataset.scope;
+    if (!scope) return;
+    // Find all tab-btns and panels in this scope
+    const container = b.closest('.page');
+    container.querySelectorAll('[data-scope="'+scope+'"] .tab-btn, .tab-btn').forEach(t => {
+      if (t.closest('[data-scope]')?.dataset.scope === scope || t.closest('.tabs')?.dataset.scope === scope) {
+        t.classList.remove('active');
+      }
+    });
+    container.querySelectorAll('.tab-panel').forEach(p => {
+      if (p.dataset.scope === scope) p.classList.remove('active');
+    });
+    b.classList.add('active');
+    container.querySelector('.tab-panel[data-panel="'+b.dataset.tab+'"][data-scope="'+scope+'"]')?.classList.add('active');
+  });
+});
+
+// ─── SIMULATED ASK (shared helper) ───
+function simulateAsk(query) {
+  const answers = {
+    'is it lockable': 'Yes. The HUS-SC700W has a key-operated barrel lock on the door handle. Keys are included with the unit.',
+    'can i use it outdoors': 'Yes. It is rated for outdoor use with a subtropical climate class and IP24 water ingress protection rating.',
+    'what temperature range': 'The internal temperature is adjustable between 2\u00b0C and 8\u00b0C via a digital thermostat on the control panel.',
+    'how noisy is it': 'The HUS-SC700W runs at 43 dB, which is comparable to a quiet library or soft background music.',
+    'are the shelves adjustable': 'Yes. The unit has 4 adjustable wire shelves that can be repositioned to accommodate different bottle and can sizes.',
+  };
+  const q = query.toLowerCase().replace(/[?!.]/g, '').trim();
+  for (const [key, val] of Object.entries(answers)) {
+    if (q.includes(key) || key.includes(q.split(' ').slice(0,3).join(' '))) return val;
+  }
+  return 'Based on the verified product data: The HUS-SC700W is a 690-litre commercial glass door bar fridge with a single low-E heated glass door, 4 adjustable shelves, and a digital thermostat (2\u20138\u00b0C). It operates at 43 dB and is rated for outdoor/subtropical use with IP24 protection.';
+}
+
+// ─── V1: INLINE ASK BAR ───
+(function(){
+  const input = document.getElementById('v1-input');
+  const btn = document.getElementById('v1-btn');
+  const zone = document.getElementById('v1-answer');
+  let pending = false;
+
+  function ask() {
+    const q = input.value.trim();
+    if (!q || pending) return;
+    pending = true;
+    btn.textContent = '...';
+    zone.innerHTML = '<div class="pir-typing"><span></span><span></span><span></span></div>';
+    zone.classList.add('show');
+    input.value = '';
+    setTimeout(() => {
+      const answer = simulateAsk(q);
+      zone.innerHTML = '<div class="v1-answer">' + answer + '</div><div class="v1-answer-meta">Answered from verified product data &bull; Powered by Signetry</div>';
+      btn.textContent = 'Ask';
+      pending = false;
+      input.focus();
+    }, 800);
+  }
+  btn.addEventListener('click', ask);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') ask(); });
+})();
+
+// ─── V2: Q&A TAB ───
+(function(){
+  const input = document.getElementById('v2-input');
+  const btn = document.getElementById('v2-btn');
+  const zone = document.getElementById('v2-answer');
+  let pending = false;
+
+  function ask() {
+    const q = input.value.trim();
+    if (!q || pending) return;
+    pending = true;
+    btn.textContent = '...';
+    zone.innerHTML = '<div class="pir-typing"><span></span><span></span><span></span></div>';
+    zone.classList.add('show');
+    input.value = '';
+    setTimeout(() => {
+      const answer = simulateAsk(q);
+      zone.innerHTML = '<div class="v2-la-q">' + q + '</div><div class="v2-la-a">' + answer + '</div><div class="v2-la-badge">Verified Answer</div>';
+      zone.classList.add('show');
+      btn.textContent = 'Ask';
+      pending = false;
+      input.focus();
+    }, 800);
+  }
+  btn.addEventListener('click', ask);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') ask(); });
+})();
+
+// ─── V3: SIDE PANEL ───
+(function(){
+  const trigger = document.getElementById('v3-trigger');
+  const panel = document.getElementById('v3-panel');
+  const close = document.getElementById('v3-close');
+  const input = document.getElementById('v3-input');
+  const btn = document.getElementById('v3-btn');
+  const msgs = document.getElementById('v3-msgs');
+  let pending = false;
+
+  trigger.addEventListener('click', () => {
+    panel.classList.add('open');
+    trigger.classList.add('hidden');
+    input.focus();
+  });
+  close.addEventListener('click', () => {
+    panel.classList.remove('open');
+    trigger.classList.remove('hidden');
+  });
+
+  function ask() {
+    const q = input.value.trim();
+    if (!q || pending) return;
+    pending = true;
+
+    const userMsg = document.createElement('div');
+    userMsg.className = 'v3-msg user';
+    userMsg.textContent = q;
+    msgs.appendChild(userMsg);
+
+    const loader = document.createElement('div');
+    loader.className = 'pir-typing';
+    loader.innerHTML = '<span></span><span></span><span></span>';
+    msgs.appendChild(loader);
+    msgs.scrollTop = msgs.scrollHeight;
+    input.value = '';
+
+    setTimeout(() => {
+      loader.remove();
+      const reply = document.createElement('div');
+      reply.className = 'v3-msg bot';
+      reply.textContent = simulateAsk(q);
+      msgs.appendChild(reply);
+      msgs.scrollTop = msgs.scrollHeight;
+      pending = false;
+      input.focus();
+    }, 800);
+  }
+  btn.addEventListener('click', ask);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') ask(); });
+})();
+
+// ─── V4: HERO SECTION ───
+(function(){
+  const input = document.getElementById('v4-input');
+  const btn = document.getElementById('v4-btn');
+  const zone = document.getElementById('v4-answer');
+
+  document.querySelectorAll('.v4-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      input.value = pill.dataset.q;
+      ask();
+    });
+  });
+
+  let pending = false;
+  function ask() {
+    const q = input.value.trim();
+    if (!q || pending) return;
+    pending = true;
+    btn.textContent = '...';
+    zone.innerHTML = '<div class="pir-typing"><span></span><span></span><span></span></div>';
+    zone.classList.add('show');
+    input.value = '';
+    setTimeout(() => {
+      const answer = simulateAsk(q);
+      zone.innerHTML = '<div class="v4-az-answer">' + answer + '</div><div class="v4-az-meta"><span class="v4-az-sig">Verified from product record</span> &bull; Powered by Signetry</div>';
+      btn.textContent = 'Ask an Expert';
+      pending = false;
+      input.focus();
+    }, 800);
+  }
+  btn.addEventListener('click', ask);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') ask(); });
+})();
+
+// ─── V5: EXPANDABLE FAQ ───
+(function(){
+  // FAQ accordion
+  document.querySelectorAll('.v5-faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.v5-faq-item');
+      const wasOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.v5-faq-item').forEach(i => i.classList.remove('open'));
+      // Toggle current
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // Ask your own
+  const input = document.getElementById('v5-input');
+  const btn = document.getElementById('v5-btn');
+  const zone = document.getElementById('v5-answer');
+  let pending = false;
+
+  function ask() {
+    const q = input.value.trim();
+    if (!q || pending) return;
+    pending = true;
+    btn.textContent = '...';
+    zone.innerHTML = '<div class="pir-typing"><span></span><span></span><span></span></div>';
+    zone.classList.add('show');
+    input.value = '';
+    setTimeout(() => {
+      const answer = simulateAsk(q);
+      zone.textContent = answer;
+      zone.classList.add('show');
+      btn.textContent = 'Ask';
+      pending = false;
+      input.focus();
+    }, 800);
+  }
+  btn.addEventListener('click', ask);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') ask(); });
+})();
+</script>
+
+</body>
+</html>

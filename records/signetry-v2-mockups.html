@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signetry v2 — Login + Dashboard Mockups</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,300;1,6..72,400&family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&family=Unbounded:wght@300;400;500;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ─── Navigation ─── */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: #000;
+    border-bottom: 1px solid #222;
+    padding: 10px 20px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .nav-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 8px;
+  }
+  .nav button {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 4px 12px;
+    border: 1px solid #333;
+    background: #111;
+    color: #888;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+  }
+  .nav button:hover { border-color: #555; color: #ccc; }
+  .nav button.active { background: #0891b2; border-color: #0891b2; color: #fff; }
+  .nav .sep { width: 1px; height: 20px; background: #222; margin: 0 8px; }
+
+  .mockup { display: none !important; min-height: 100vh; padding-top: 48px; }
+  .mockup.active { display: flex !important; }
+  .d1.active, .d2.active, .d3.active, .d4.active, .d5.active { flex-direction: column; }
+
+  /* ═══════════════════════════════════════════════════════════
+     LOGIN 1 — TERMINAL ACCESS
+     Deep black, blinking cursor, system access aesthetic
+     ═══════════════════════════════════════════════════════════ */
+  .l1 {
+    background: #030303;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .l1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,255,200,0.015) 2px,
+      rgba(0,255,200,0.015) 4px
+    );
+    pointer-events: none;
+  }
+  .l1-box {
+    width: 480px;
+    max-width: 90vw;
+    position: relative;
+  }
+  .l1-pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #2dd4bf;
+    margin-bottom: 32px;
+    line-height: 1.8;
+    opacity: 0.6;
+  }
+  .l1-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -2px;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+  .l1-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 48px;
+  }
+  .l1-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #2dd4bf;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+  }
+  .l1-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #1a3a35;
+    padding: 12px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: #2dd4bf;
+    outline: none;
+    caret-color: #2dd4bf;
+  }
+  .l1-input::placeholder { color: #1a3a35; }
+  .l1-input:focus { border-color: #2dd4bf; }
+  .l1-btn {
+    margin-top: 32px;
+    width: 100%;
+    padding: 14px;
+    background: #2dd4bf;
+    color: #030303;
+    border: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .l1-btn:hover { background: #5eead4; }
+  .l1-foot {
+    margin-top: 24px;
+    font-size: 10px;
+    color: #333;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  @keyframes l1-blink { 0%,50% { opacity: 1; } 51%,100% { opacity: 0; } }
+  .l1-cursor { animation: l1-blink 1s infinite; color: #2dd4bf; }
+
+  /* ═══════════════════════════════════════════════════════════
+     LOGIN 2 — WARM EDITORIAL
+     Cream background, serif typography, magazine feel
+     ═══════════════════════════════════════════════════════════ */
+  .l2 {
+    background: #faf6f1;
+    display: flex;
+    min-height: 100vh;
+  }
+  .l2-left {
+    flex: 1;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 560px;
+  }
+  .l2-right {
+    flex: 1;
+    background: #1c1917;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .l2-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, #2dd4bf11 0%, transparent 70%);
+  }
+  .l2-right-text {
+    font-family: 'Newsreader', serif;
+    font-size: 2.5rem;
+    color: #faf6f1;
+    line-height: 1.3;
+    padding: 60px;
+    font-style: italic;
+    font-weight: 300;
+    opacity: 0.8;
+  }
+  .l2-right-text em { color: #2dd4bf; font-style: normal; font-weight: 600; }
+  .l2-brand {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 14px;
+    color: #1c1917;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+  }
+  .l2-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3rem;
+    color: #1c1917;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .l2-desc {
+    font-family: 'Newsreader', serif;
+    font-size: 1.05rem;
+    color: #78716c;
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+  .l2-field label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .l2-field input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #d6d3d1;
+    border-radius: 8px;
+    font-family: 'Newsreader', serif;
+    font-size: 16px;
+    color: #1c1917;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .l2-field input:focus { border-color: #1c1917; }
+  .l2-field input::placeholder { color: #d6d3d1; }
+  .l2-submit {
+    margin-top: 24px;
+    width: 100%;
+    padding: 14px;
+    background: #1c1917;
+    color: #faf6f1;
+    border: none;
+    border-radius: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .l2-submit:hover { background: #292524; }
+  .l2-note {
+    margin-top: 16px;
+    font-family: 'Newsreader', serif;
+    font-size: 13px;
+    color: #a8a29e;
+    text-align: center;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     LOGIN 3 — BRUTALIST SLAB
+     Raw, oversized typography, stark contrast
+     ═══════════════════════════════════════════════════════════ */
+  .l3 {
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+  }
+  .l3-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: #0a0a0a;
+  }
+  .l3-brand {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #0a0a0a;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .l3-hero {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    color: #0a0a0a;
+    line-height: 0.95;
+    margin-bottom: 24px;
+    max-width: 900px;
+  }
+  .l3-hero span {
+    display: inline-block;
+    background: #0a0a0a;
+    color: #fff;
+    padding: 4px 16px;
+    margin: 4px 0;
+  }
+  .l3-tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 64px;
+    max-width: 500px;
+  }
+  .l3-form {
+    display: flex;
+    gap: 0;
+    max-width: 560px;
+  }
+  .l3-form input {
+    flex: 1;
+    padding: 16px 20px;
+    border: 3px solid #0a0a0a;
+    border-right: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    color: #0a0a0a;
+    background: #fff;
+    outline: none;
+  }
+  .l3-form input::placeholder { color: #ccc; }
+  .l3-form button {
+    padding: 16px 32px;
+    background: #0a0a0a;
+    color: #fff;
+    border: 3px solid #0a0a0a;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+  .l3-form button:hover { background: #333; border-color: #333; }
+  .l3-stats {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    display: flex;
+    gap: 48px;
+  }
+  .l3-stat-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #0a0a0a;
+  }
+  .l3-stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     LOGIN 4 — MIDNIGHT GOLD
+     Dark refined, amber/gold accents, premium
+     ═══════════════════════════════════════════════════════════ */
+  .l4 {
+    background: #0c0a09;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .l4::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 80%;
+    height: 200%;
+    background: radial-gradient(ellipse, rgba(217,170,75,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .l4-card {
+    width: 420px;
+    max-width: 90vw;
+    text-align: center;
+    position: relative;
+  }
+  .l4-logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    color: #d9aa4b;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+  }
+  .l4-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.6rem;
+    color: #fafaf9;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .l4-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: #57534e;
+    margin-bottom: 48px;
+  }
+  .l4-input-wrap {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .l4-input-wrap input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #1c1917;
+    border: 1px solid #292524;
+    border-radius: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    color: #fafaf9;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .l4-input-wrap input:focus { border-color: #d9aa4b; }
+  .l4-input-wrap input::placeholder { color: #44403c; }
+  .l4-submit {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #d9aa4b 0%, #b8860b 100%);
+    color: #0c0a09;
+    border: none;
+    border-radius: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .l4-submit:hover { opacity: 0.9; }
+  .l4-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .l4-divider::before, .l4-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #292524;
+  }
+  .l4-divider span {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #44403c;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .l4-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .l4-feat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #78716c;
+  }
+  .l4-feat-dot {
+    width: 6px;
+    height: 6px;
+    background: #d9aa4b;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     LOGIN 5 — SIGNAL NOISE
+     Data flowing behind, intelligence visible at login
+     ═══════════════════════════════════════════════════════════ */
+  .l5 {
+    background: #050508;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .l5-stream {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0.12;
+  }
+  .l5-stream-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #0891b2;
+    white-space: nowrap;
+    padding: 3px 0;
+    animation: l5-scroll 20s linear infinite;
+  }
+  .l5-stream-line:nth-child(even) { animation-duration: 25s; color: #06b6d4; }
+  .l5-stream-line:nth-child(3n) { animation-duration: 18s; }
+  @keyframes l5-scroll {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-200vw); }
+  }
+  .l5-center {
+    position: relative;
+    z-index: 1;
+    width: 440px;
+    max-width: 90vw;
+    backdrop-filter: blur(40px);
+    background: rgba(5,5,8,0.85);
+    border: 1px solid #1e293b;
+    border-radius: 20px;
+    padding: 48px 40px;
+  }
+  .l5-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .l5-brand-mark {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #0891b2, #06b6d4);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .l5-brand-mark svg { width: 18px; height: 18px; }
+  .l5-brand-name {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 16px;
+    color: #f0f9ff;
+    letter-spacing: 0.05em;
+  }
+  .l5-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f0f9ff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .l5-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: #475569;
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+  .l5-input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    color: #e2e8f0;
+    outline: none;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+  }
+  .l5-input:focus { border-color: #0891b2; }
+  .l5-input::placeholder { color: #334155; }
+  .l5-btn {
+    width: 100%;
+    padding: 14px;
+    background: #0891b2;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .l5-btn:hover { background: #06b6d4; }
+  .l5-trust {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #334155;
+  }
+  .l5-trust span { display: flex; align-items: center; gap: 4px; }
+  .l5-trust-dot { width: 4px; height: 4px; background: #0891b2; border-radius: 50%; }
+
+  /* ═══════════════════════════════════════════════════════════
+     DASHBOARD 1 — LIVE TERMINAL FEED
+     Scrolling queries, monospace, command-center
+     ═══════════════════════════════════════════════════════════ */
+  .d1 {
+    background: #050505;
+    min-height: 100vh;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .d1-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 50px;
+    background: #050505;
+    z-index: 100;
+  }
+  .d1-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .d1-logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 0.15em;
+  }
+  .d1-live {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .d1-live-dot {
+    width: 6px;
+    height: 6px;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: d1-pulse 2s infinite;
+  }
+  @keyframes d1-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .d1-topbar-right {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 11px;
+    color: #555;
+  }
+  .d1-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    min-height: calc(100vh - 95px);
+  }
+  .d1-feed {
+    border-right: 1px solid #1a1a1a;
+    padding: 0;
+    overflow-y: auto;
+  }
+  .d1-feed-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #111;
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .d1-entry {
+    padding: 16px 24px;
+    border-bottom: 1px solid #0d0d0d;
+    transition: background 0.15s;
+    cursor: default;
+  }
+  .d1-entry:hover { background: #0a0a0a; }
+  .d1-entry-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  .d1-entry-q {
+    font-size: 13px;
+    color: #e0e0e0;
+    font-weight: 500;
+    flex: 1;
+  }
+  .d1-entry-time {
+    font-size: 10px;
+    color: #333;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+  .d1-entry-a {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .d1-entry-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 10px;
+  }
+  .d1-entry-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #333;
+  }
+  .d1-tag {
+    padding: 1px 6px;
+    background: #111;
+    border-radius: 3px;
+    color: #555;
+    font-size: 10px;
+  }
+  .d1-tag.ok { color: #4ade80; background: #052e16; }
+  .d1-tag.miss { color: #f59e0b; background: #451a03; }
+  .d1-tag.img { color: #06b6d4; background: #083344; }
+  .d1-sidebar {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .d1-sidebar-section h3 {
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+  }
+  .d1-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .d1-stat-card {
+    background: #0a0a0a;
+    border: 1px solid #151515;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .d1-stat-val {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .d1-stat-val.cyan { color: #06b6d4; }
+  .d1-stat-val.green { color: #4ade80; }
+  .d1-stat-label {
+    font-size: 9px;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+  .d1-snippet {
+    background: #0a0a0a;
+    border: 1px solid #151515;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .d1-snippet pre {
+    font-size: 10px;
+    color: #666;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .d1-snippet pre .hl { color: #06b6d4; }
+  .d1-key {
+    font-size: 11px;
+    color: #333;
+    background: #0a0a0a;
+    border: 1px solid #151515;
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .d1-key-copy {
+    font-size: 10px;
+    color: #0891b2;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     DASHBOARD 2 — INTELLIGENCE COMMAND CENTER
+     Multi-panel, dark, dense data
+     ═══════════════════════════════════════════════════════════ */
+  .d2 {
+    background: #080b10;
+    min-height: 100vh;
+    font-family: 'DM Mono', monospace;
+  }
+  .d2-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #131a28;
+    position: sticky;
+    top: 50px;
+    background: #080b10;
+    z-index: 100;
+  }
+  .d2-topbar-brand {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.1em;
+  }
+  .d2-topbar-center {
+    display: flex;
+    gap: 24px;
+    font-size: 11px;
+  }
+  .d2-topbar-center a {
+    color: #475569;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .d2-topbar-center a.active { color: #e2e8f0; }
+  .d2-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1px;
+    background: #131a28;
+    min-height: calc(100vh - 92px);
+  }
+  .d2-panel {
+    background: #080b10;
+    padding: 20px;
+  }
+  .d2-panel-title {
+    font-size: 9px;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .d2-panel-title .count {
+    background: #1e293b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #64748b;
+  }
+  .d2-big-stats {
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+  }
+  .d2-big-stat-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+  .d2-big-stat-num.accent { color: #0891b2; }
+  .d2-big-stat-label {
+    font-size: 10px;
+    color: #475569;
+    margin-top: 4px;
+  }
+  .d2-bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 60px;
+    margin-top: 16px;
+  }
+  .d2-bar {
+    flex: 1;
+    background: #1e293b;
+    border-radius: 2px 2px 0 0;
+    min-height: 4px;
+    transition: background 0.2s;
+  }
+  .d2-bar:hover { background: #0891b2; }
+  .d2-query-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .d2-query-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #0d1117;
+    font-size: 11px;
+  }
+  .d2-query-item .time { color: #334155; font-size: 10px; }
+  .d2-query-item .q { color: #cbd5e1; }
+  .d2-query-item .product {
+    color: #475569;
+    font-size: 10px;
+    background: #0f172a;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  .d2-query-item .status { font-size: 10px; }
+  .d2-top-q {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .d2-top-q-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #0c1220;
+    border-radius: 6px;
+    font-size: 11px;
+  }
+  .d2-top-q-item .text { color: #94a3b8; flex: 1; }
+  .d2-top-q-item .count {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0891b2;
+    margin-left: 12px;
+  }
+  .d2-embed {
+    background: #0c1220;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 12px;
+  }
+  .d2-embed pre {
+    font-size: 10px;
+    color: #64748b;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .d2-embed pre .tag { color: #0891b2; }
+  .d2-embed pre .attr { color: #f59e0b; }
+  .d2-embed pre .val { color: #4ade80; }
+
+  /* ═══════════════════════════════════════════════════════════
+     DASHBOARD 3 — EDITORIAL GAZETTE
+     Light, warm, queries as news stories
+     ═══════════════════════════════════════════════════════════ */
+  .d3 {
+    background: #faf6f1;
+    min-height: 100vh;
+    font-family: 'Newsreader', serif;
+  }
+  .d3-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    border-bottom: 2px solid #1c1917;
+    position: sticky;
+    top: 50px;
+    background: #faf6f1;
+    z-index: 100;
+  }
+  .d3-topbar-brand {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 14px;
+    color: #1c1917;
+    letter-spacing: 0.15em;
+  }
+  .d3-topbar-right {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .d3-topbar-right .live { color: #16a34a; display: flex; align-items: center; gap: 6px; }
+  .d3-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 32px;
+  }
+  .d3-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+  }
+  .d3-headline {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.5rem;
+    color: #1c1917;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #1c1917;
+    padding-bottom: 16px;
+  }
+  .d3-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid #e7e5e4;
+    margin-bottom: 32px;
+  }
+  .d3-summary-stat {
+    text-align: center;
+  }
+  .d3-summary-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.5rem;
+    color: #1c1917;
+  }
+  .d3-summary-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .d3-section-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 10px;
+    color: #1c1917;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d6d3d1;
+  }
+  .d3-story {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e7e5e4;
+  }
+  .d3-story-time {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+    padding-top: 4px;
+    min-width: 50px;
+  }
+  .d3-story-q {
+    font-size: 1.1rem;
+    color: #1c1917;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .d3-story-a {
+    font-size: 0.9rem;
+    color: #78716c;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .d3-story-meta {
+    display: flex;
+    gap: 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #a8a29e;
+  }
+  .d3-story-meta .cited { color: #0891b2; }
+  .d3-story-meta .img { color: #16a34a; }
+
+  /* ═══════════════════════════════════════════════════════════
+     DASHBOARD 4 — MINIMAL NOIR
+     Ultra-clean dark, single column, zen
+     ═══════════════════════════════════════════════════════════ */
+  .d4 {
+    background: #0a0a0a;
+    min-height: 100vh;
+    font-family: 'Space Mono', monospace;
+  }
+  .d4-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    top: 50px;
+    background: #0a0a0a;
+    z-index: 100;
+  }
+  .d4-brand {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+  }
+  .d4-nav {
+    display: flex;
+    gap: 32px;
+    font-size: 12px;
+  }
+  .d4-nav a { color: #333; text-decoration: none; }
+  .d4-nav a.active { color: #fff; }
+  .d4-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  .d4-metrics {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #151515;
+  }
+  .d4-metric-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+  }
+  .d4-metric-label {
+    font-size: 10px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 8px;
+  }
+  .d4-feed-title {
+    font-size: 10px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+  }
+  .d4-item {
+    padding: 24px 0;
+    border-bottom: 1px solid #111;
+  }
+  .d4-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .d4-item-q {
+    font-size: 14px;
+    color: #e0e0e0;
+  }
+  .d4-item-time {
+    font-size: 10px;
+    color: #222;
+    flex-shrink: 0;
+  }
+  .d4-item-a {
+    font-size: 12px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+  .d4-item-pills {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .d4-pill {
+    font-size: 9px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #111;
+    color: #444;
+  }
+  .d4-pill.answered { color: #4ade80; }
+  .d4-pill.image { color: #06b6d4; }
+  .d4-pill.gap { color: #f59e0b; background: #1a1400; }
+
+  /* ═══════════════════════════════════════════════════════════
+     DASHBOARD 5 — SPLIT INDUSTRIAL
+     Left: live feed. Right: product + embed. Industrial.
+     ═══════════════════════════════════════════════════════════ */
+  .d5 {
+    background: #0c0c0c;
+    min-height: 100vh;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .d5-topbar {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-bottom: 2px solid #2dd4bf;
+    position: sticky;
+    top: 50px;
+    background: #0c0c0c;
+    z-index: 100;
+    gap: 16px;
+  }
+  .d5-topbar-logo {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    color: #2dd4bf;
+    letter-spacing: 0.15em;
+  }
+  .d5-topbar-pipe {
+    width: 1px;
+    height: 16px;
+    background: #222;
+  }
+  .d5-topbar-product {
+    font-size: 11px;
+    color: #555;
+  }
+  .d5-topbar-product strong { color: #aaa; }
+  .d5-topbar-right {
+    margin-left: auto;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 10px;
+    color: #444;
+  }
+  .d5-topbar-right .live {
+    color: #2dd4bf;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .d5-topbar-right .live-dot {
+    width: 6px;
+    height: 6px;
+    background: #2dd4bf;
+    border-radius: 50%;
+    animation: d1-pulse 2s infinite;
+  }
+  .d5-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    min-height: calc(100vh - 93px);
+  }
+  .d5-feed {
+    border-right: 1px solid #151515;
+    overflow-y: auto;
+  }
+  .d5-feed-head {
+    padding: 16px 24px;
+    font-size: 9px;
+    color: #2dd4bf;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border-bottom: 1px solid #111;
+    display: flex;
+    justify-content: space-between;
+  }
+  .d5-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 80px;
+    gap: 16px;
+    padding: 14px 24px;
+    border-bottom: 1px solid #0e0e0e;
+    font-size: 11px;
+    align-items: start;
+    transition: background 0.1s;
+  }
+  .d5-row:hover { background: #0f0f0f; }
+  .d5-row .time { color: #2a2a2a; font-size: 10px; }
+  .d5-row .question { color: #ccc; margin-bottom: 4px; }
+  .d5-row .answer { color: #444; font-size: 10px; line-height: 1.5; }
+  .d5-row .badges { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
+  .d5-badge {
+    font-size: 9px;
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+  .d5-badge.ok { color: #2dd4bf; background: #0a1f1c; }
+  .d5-badge.miss { color: #f59e0b; background: #1a1400; }
+  .d5-badge.img { color: #818cf8; background: #1e1b4b; }
+  .d5-sidebar {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .d5-sidebar h3 {
+    font-size: 9px;
+    color: #2dd4bf;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+  }
+  .d5-embed-box {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 6px;
+    padding: 16px;
+  }
+  .d5-embed-box pre {
+    font-size: 10px;
+    line-height: 1.8;
+    color: #555;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .d5-embed-box pre .t { color: #2dd4bf; }
+  .d5-embed-box pre .a { color: #f59e0b; }
+  .d5-embed-box pre .v { color: #818cf8; }
+  .d5-gap-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .d5-gap-item {
+    padding: 8px 10px;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-left: 3px solid #f59e0b;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #888;
+  }
+  .d5-gap-item .count { color: #f59e0b; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <span class="nav-label">Login</span>
+  <button onclick="show('l1')" class="active" id="btn-l1">Terminal</button>
+  <button onclick="show('l2')" id="btn-l2">Editorial</button>
+  <button onclick="show('l3')" id="btn-l3">Brutalist</button>
+  <button onclick="show('l4')" id="btn-l4">Midnight</button>
+  <button onclick="show('l5')" id="btn-l5">Signal</button>
+  <div class="sep"></div>
+  <span class="nav-label">Dashboard</span>
+  <button onclick="show('d1')" id="btn-d1">Terminal</button>
+  <button onclick="show('d2')" id="btn-d2">Command</button>
+  <button onclick="show('d3')" id="btn-d3">Gazette</button>
+  <button onclick="show('d4')" id="btn-d4">Noir</button>
+  <button onclick="show('d5')" id="btn-d5">Industrial</button>
+</div>
+
+<!-- ════════ LOGIN 1: TERMINAL ════════ -->
+<div class="mockup l1 active" id="l1">
+  <div class="l1-box">
+    <div class="l1-pre">$ signetry init<br>→ establishing secure channel...<br>→ ready<span class="l1-cursor">_</span></div>
+    <div class="l1-title">SIGNETRY</div>
+    <div class="l1-sub">Brand-verified product truth. One widget. Every answer.</div>
+    <div class="l1-label">Email Address</div>
+    <input class="l1-input" type="email" placeholder="you@brand.com" />
+    <button class="l1-btn">Send magic link →</button>
+    <div class="l1-foot">No password required. We'll email you a secure login link.</div>
+  </div>
+</div>
+
+<!-- ════════ LOGIN 2: EDITORIAL ════════ -->
+<div class="mockup l2" id="l2">
+  <div class="l2-left">
+    <div class="l2-brand">SIGNETRY</div>
+    <div class="l2-title">Your customers have questions.<br>Your manuals have answers.</div>
+    <div class="l2-desc">Signetry turns product manuals into instant, verified answers — embedded on your site with one line of code. See exactly what your customers ask.</div>
+    <div class="l2-field">
+      <label>Work email</label>
+      <input type="email" placeholder="you@brand.com" />
+    </div>
+    <button class="l2-submit">Get started — it's free</button>
+    <div class="l2-note">We'll send a magic link. No password needed.</div>
+  </div>
+  <div class="l2-right">
+    <div class="l2-right-text">"Our support calls dropped <em>40%</em> in the first month. Customers just ask the widget."</div>
+  </div>
+</div>
+
+<!-- ════════ LOGIN 3: BRUTALIST ════════ -->
+<div class="mockup l3" id="l3">
+  <div class="l3-stripe"></div>
+  <div class="l3-brand">SIGNETRY</div>
+  <div class="l3-hero">
+    STOP ANSWERING<br>THE SAME<br><span>QUESTIONS</span>
+  </div>
+  <div class="l3-tagline">One script tag. Every product question answered from your manual. Verified. Instant. With the actual diagrams.</div>
+  <div class="l3-form">
+    <input type="email" placeholder="your@email.com" />
+    <button>Get started</button>
+  </div>
+  <div class="l3-stats">
+    <div>
+      <div class="l3-stat-num">368</div>
+      <div class="l3-stat-label">Products live</div>
+    </div>
+    <div>
+      <div class="l3-stat-num">0</div>
+      <div class="l3-stat-label">Hallucinations</div>
+    </div>
+    <div>
+      <div class="l3-stat-num">100%</div>
+      <div class="l3-stat-label">Verifiable</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ LOGIN 4: MIDNIGHT GOLD ════════ -->
+<div class="mockup l4" id="l4">
+  <div class="l4-card">
+    <div class="l4-logo">SIGNETRY</div>
+    <div class="l4-title">Product intelligence, verified</div>
+    <div class="l4-sub">Answers your customers trust. From manuals they'll never read.</div>
+    <div class="l4-input-wrap">
+      <input type="email" placeholder="your@company.com" />
+    </div>
+    <button class="l4-submit">Send login link</button>
+    <div class="l4-divider"><span>What you get</span></div>
+    <div class="l4-features">
+      <div class="l4-feat"><div class="l4-feat-dot"></div> Answers with actual manual diagrams</div>
+      <div class="l4-feat"><div class="l4-feat-dot"></div> Live intelligence feed — see every question</div>
+      <div class="l4-feat"><div class="l4-feat-dot"></div> One script tag. Works in 60 seconds.</div>
+      <div class="l4-feat"><div class="l4-feat-dot"></div> Zero hallucinations. Every fact is sourced.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ LOGIN 5: SIGNAL NOISE ════════ -->
+<div class="mockup l5" id="l5">
+  <div class="l5-stream">
+    <div class="l5-stream-line" style="animation-delay:0s">{"query":"is it lockable?","gtin":"9351886006350","answerable":true,"latency_ms":340}  {"query":"how much does it weigh?","gtin":"5060482000429","answerable":true}  {"query":"ventilation gaps?","gtin":"9351886001300"}</div>
+    <div class="l5-stream-line" style="animation-delay:-3s">{"query":"what refrigerant?","gtin":"9351886006350","answerable":true}  {"query":"can I put it outside?","gtin":"5060482000443","answerable":true}  {"query":"shelf weight limit?","gtin":"5060482000467"}</div>
+    <div class="l5-stream-line" style="animation-delay:-6s">{"query":"how do I clean the condenser?","gtin":"9351886003366","answerable":true,"source_images":["page-07.png"]}  {"query":"power consumption?","gtin":"5060482000580"}</div>
+    <div class="l5-stream-line" style="animation-delay:-9s">{"query":"does it have a lock?","gtin":"9351886001645","answerable":true}  {"query":"noise level in decibels?","gtin":"5060482000634","answerable":true,"latency_ms":280}</div>
+    <div class="l5-stream-line" style="animation-delay:-12s">{"query":"installation clearance?","gtin":"9351886004752","answerable":true}  {"query":"temperature range?","gtin":"5060482000450","answerable":true}  {"query":"how to adjust shelves?"}</div>
+    <div class="l5-stream-line" style="animation-delay:-2s">{"query":"warranty period?","gtin":"9351886006350","answerable":false}  {"query":"energy rating?","gtin":"5060482000429","answerable":true}  {"query":"dimensions with doors open?"}</div>
+    <div class="l5-stream-line" style="animation-delay:-7s">{"query":"replacement parts?","gtin":"9351886001317","answerable":false}  {"query":"maximum ambient temp?","gtin":"5060482000474","answerable":true}  {"query":"door seal replacement?"}</div>
+    <div class="l5-stream-line" style="animation-delay:-15s">{"query":"how many cans fit?","gtin":"9351886006350","answerable":true}  {"query":"compressor type?","gtin":"5060482000443"}  {"query":"can I remove shelves?"}</div>
+  </div>
+  <div class="l5-center">
+    <div class="l5-brand">
+      <div class="l5-brand-mark"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <span class="l5-brand-name">Signetry</span>
+    </div>
+    <div class="l5-title">See what your customers<br>actually want to know</div>
+    <div class="l5-sub">Every question. Every answer. Every diagram from your manual. Live intelligence from the moment you embed.</div>
+    <input class="l5-input" type="email" placeholder="your@brand.com" />
+    <button class="l5-btn">Send magic link</button>
+    <div class="l5-trust">
+      <span><span class="l5-trust-dot"></span> No passwords</span>
+      <span><span class="l5-trust-dot"></span> Free tier</span>
+      <span><span class="l5-trust-dot"></span> 60s setup</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ DASHBOARD 1: TERMINAL ════════ -->
+<div class="mockup d1" id="d1">
+  <div class="d1-topbar">
+    <div class="d1-topbar-left">
+      <span class="d1-logo">SIGNETRY</span>
+      <span class="d1-live"><span class="d1-live-dot"></span> Live</span>
+    </div>
+    <div class="d1-topbar-right">
+      <span>KingCave</span>
+      <span>23 products</span>
+    </div>
+  </div>
+  <div class="d1-layout">
+    <div class="d1-feed">
+      <div class="d1-feed-header">
+        <span>Query Feed — Last 24 hours</span>
+        <span>47 queries</span>
+      </div>
+      <div class="d1-entry">
+        <div class="d1-entry-top">
+          <div class="d1-entry-q">How do I adjust the shelves?</div>
+          <div class="d1-entry-time">2m ago</div>
+        </div>
+        <div class="d1-entry-a">Shelf support clips can be adjusted by squeezing together and angling upwards. Maximum load per shelf is 15 kilograms.</div>
+        <div class="d1-entry-meta">
+          <span class="d1-tag ok">✓ answered</span>
+          <span class="d1-tag img">📄 page 5</span>
+          <span class="d1-tag">SG2H-B-HD</span>
+        </div>
+      </div>
+      <div class="d1-entry">
+        <div class="d1-entry-top">
+          <div class="d1-entry-q">What ventilation gaps do I need?</div>
+          <div class="d1-entry-time">8m ago</div>
+        </div>
+        <div class="d1-entry-a">Minimum 10mm at sides and top, 50mm at the rear. Front grille must be completely unobstructed.</div>
+        <div class="d1-entry-meta">
+          <span class="d1-tag ok">✓ answered</span>
+          <span class="d1-tag img">📄 page 5</span>
+          <span class="d1-tag">SG1R-B</span>
+        </div>
+      </div>
+      <div class="d1-entry">
+        <div class="d1-entry-top">
+          <div class="d1-entry-q">What's the warranty period?</div>
+          <div class="d1-entry-time">14m ago</div>
+        </div>
+        <div class="d1-entry-a">I don't have that information for this product.</div>
+        <div class="d1-entry-meta">
+          <span class="d1-tag miss">✗ gap</span>
+          <span class="d1-tag">SG2H-B-HD</span>
+        </div>
+      </div>
+      <div class="d1-entry">
+        <div class="d1-entry-top">
+          <div class="d1-entry-q">How do I clean the condenser?</div>
+          <div class="d1-entry-time">23m ago</div>
+        </div>
+        <div class="d1-entry-a">Located at the rear behind the compressor compartment cover. Clean at least every three months using a soft brush. Never use water.</div>
+        <div class="d1-entry-meta">
+          <span class="d1-tag ok">✓ answered</span>
+          <span class="d1-tag img">📄 page 7, 9</span>
+          <span class="d1-tag">SG3H-B</span>
+        </div>
+      </div>
+      <div class="d1-entry">
+        <div class="d1-entry-top">
+          <div class="d1-entry-q">Can I put it outside?</div>
+          <div class="d1-entry-time">31m ago</div>
+        </div>
+        <div class="d1-entry-a">The appliance is designed for indoor use only. Do not place in direct sunlight or near sources of static electricity.</div>
+        <div class="d1-entry-meta">
+          <span class="d1-tag ok">✓ answered</span>
+          <span class="d1-tag">SG2H-HD</span>
+        </div>
+      </div>
+      <div class="d1-entry">
+        <div class="d1-entry-top">
+          <div class="d1-entry-q">What's the noise level?</div>
+          <div class="d1-entry-time">45m ago</div>
+        </div>
+        <div class="d1-entry-a">43 dB rated noise level.</div>
+        <div class="d1-entry-meta">
+          <span class="d1-tag ok">✓ answered</span>
+          <span class="d1-tag">SG2H-B-HD</span>
+        </div>
+      </div>
+      <div class="d1-entry">
+        <div class="d1-entry-top">
+          <div class="d1-entry-q">Do you deliver to Perth?</div>
+          <div class="d1-entry-time">52m ago</div>
+        </div>
+        <div class="d1-entry-a">I can only answer questions about the product's specifications and operation.</div>
+        <div class="d1-entry-meta">
+          <span class="d1-tag miss">✗ refused</span>
+          <span class="d1-tag">SG1R-B</span>
+        </div>
+      </div>
+    </div>
+    <div class="d1-sidebar">
+      <div class="d1-sidebar-section">
+        <h3>Today</h3>
+        <div class="d1-stat-grid">
+          <div class="d1-stat-card">
+            <div class="d1-stat-val cyan">47</div>
+            <div class="d1-stat-label">Queries</div>
+          </div>
+          <div class="d1-stat-card">
+            <div class="d1-stat-val green">89%</div>
+            <div class="d1-stat-label">Answered</div>
+          </div>
+          <div class="d1-stat-card">
+            <div class="d1-stat-val">340</div>
+            <div class="d1-stat-label">Avg ms</div>
+          </div>
+          <div class="d1-stat-card">
+            <div class="d1-stat-val">14</div>
+            <div class="d1-stat-label">With images</div>
+          </div>
+        </div>
+      </div>
+      <div class="d1-sidebar-section">
+        <h3>Your API Key</h3>
+        <div class="d1-key">
+          <span style="color:#555">sk_live_41a7••••••••</span>
+          <button class="d1-key-copy">Copy</button>
+        </div>
+      </div>
+      <div class="d1-sidebar-section">
+        <h3>Embed Snippet</h3>
+        <div class="d1-snippet">
+          <pre>&lt;script
+  src="<span class="hl">https://signetry.ai/widget.js</span>"
+  data-key="<span class="hl">sk_live_41a7...</span>"
+  data-gtin="<span class="hl">{PRODUCT_GTIN}</span>"
+&gt;&lt;/script&gt;</pre>
+        </div>
+      </div>
+      <div class="d1-sidebar-section">
+        <h3>Knowledge Gaps</h3>
+        <div style="font-size:11px;color:#555;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between"><span>warranty period</span><span style="color:#f59e0b">×8</span></div>
+          <div style="display:flex;justify-content:space-between"><span>replacement parts</span><span style="color:#f59e0b">×3</span></div>
+          <div style="display:flex;justify-content:space-between"><span>door seal</span><span style="color:#f59e0b">×2</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ DASHBOARD 2: COMMAND CENTER ════════ -->
+<div class="mockup d2" id="d2">
+  <div class="d2-topbar">
+    <div class="d2-topbar-brand">SIGNETRY</div>
+    <div class="d2-topbar-center">
+      <a href="#" class="active">Intelligence</a>
+      <a href="#">Products</a>
+      <a href="#">Settings</a>
+    </div>
+    <div style="font-size:11px;color:#475569">KingCave · Pro</div>
+  </div>
+  <div class="d2-grid">
+    <div class="d2-panel" style="grid-column:span 2;padding:20px 24px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="d2-big-stats">
+          <div>
+            <div class="d2-big-stat-num accent">1,247</div>
+            <div class="d2-big-stat-label">Queries this month</div>
+          </div>
+          <div>
+            <div class="d2-big-stat-num">91%</div>
+            <div class="d2-big-stat-label">Answer rate</div>
+          </div>
+          <div>
+            <div class="d2-big-stat-num">312ms</div>
+            <div class="d2-big-stat-label">Avg latency</div>
+          </div>
+          <div>
+            <div class="d2-big-stat-num">23</div>
+            <div class="d2-big-stat-label">Active products</div>
+          </div>
+        </div>
+        <div class="d2-bar-chart">
+          <div class="d2-bar" style="height:20%"></div>
+          <div class="d2-bar" style="height:35%"></div>
+          <div class="d2-bar" style="height:25%"></div>
+          <div class="d2-bar" style="height:60%"></div>
+          <div class="d2-bar" style="height:45%"></div>
+          <div class="d2-bar" style="height:80%"></div>
+          <div class="d2-bar" style="height:100%"></div>
+          <div class="d2-bar" style="height:70%"></div>
+          <div class="d2-bar" style="height:55%"></div>
+          <div class="d2-bar" style="height:90%"></div>
+          <div class="d2-bar" style="height:75%"></div>
+          <div class="d2-bar" style="height:40%"></div>
+          <div class="d2-bar" style="height:65%"></div>
+          <div class="d2-bar" style="height:50%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="d2-panel">
+      <div class="d2-panel-title">Live Feed <span class="count">47 today</span></div>
+      <div class="d2-query-list">
+        <div class="d2-query-item"><span class="time">2m</span><span class="q">How do I adjust the shelves?</span><span class="product">SG2H-B-HD</span><span class="status d1-tag ok">✓</span></div>
+        <div class="d2-query-item"><span class="time">8m</span><span class="q">What ventilation gaps?</span><span class="product">SG1R-B</span><span class="status d1-tag ok">✓</span></div>
+        <div class="d2-query-item"><span class="time">14m</span><span class="q">Warranty period?</span><span class="product">SG2H-B-HD</span><span class="status d1-tag miss">gap</span></div>
+        <div class="d2-query-item"><span class="time">23m</span><span class="q">Clean the condenser?</span><span class="product">SG3H-B</span><span class="status d1-tag ok">✓</span></div>
+        <div class="d2-query-item"><span class="time">31m</span><span class="q">Can I put it outside?</span><span class="product">SG2H-HD</span><span class="status d1-tag ok">✓</span></div>
+        <div class="d2-query-item"><span class="time">45m</span><span class="q">How noisy is it?</span><span class="product">SG2H-B-HD</span><span class="status d1-tag ok">✓</span></div>
+        <div class="d2-query-item"><span class="time">52m</span><span class="q">Do you deliver to Perth?</span><span class="product">SG1R-B</span><span class="status d1-tag miss">refused</span></div>
+      </div>
+    </div>
+    <div class="d2-panel">
+      <div class="d2-panel-title">Top Questions (7 days)</div>
+      <div class="d2-top-q">
+        <div class="d2-top-q-item"><span class="text">How do I adjust the shelves?</span><span class="count">23</span></div>
+        <div class="d2-top-q-item"><span class="text">What are the ventilation requirements?</span><span class="count">18</span></div>
+        <div class="d2-top-q-item"><span class="text">Can I use it outdoors?</span><span class="count">15</span></div>
+        <div class="d2-top-q-item"><span class="text">How do I clean the condenser?</span><span class="count">12</span></div>
+        <div class="d2-top-q-item"><span class="text">What's the noise level?</span><span class="count">9</span></div>
+      </div>
+      <div class="d2-panel-title" style="margin-top:24px">Embed Code</div>
+      <div class="d2-embed">
+        <pre><span class="tag">&lt;script</span>
+  <span class="attr">src</span>=<span class="val">"https://signetry.ai/widget.js"</span>
+  <span class="attr">data-key</span>=<span class="val">"sk_live_41a7..."</span>
+  <span class="attr">data-gtin</span>=<span class="val">"{PRODUCT_GTIN}"</span>
+<span class="tag">&gt;&lt;/script&gt;</span></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ DASHBOARD 3: GAZETTE ════════ -->
+<div class="mockup d3" id="d3">
+  <div class="d3-topbar">
+    <div class="d3-topbar-brand">SIGNETRY</div>
+    <div class="d3-topbar-right">
+      <span class="live">● Live</span>
+      <span>KingCave</span>
+    </div>
+  </div>
+  <div class="d3-container">
+    <div class="d3-date">Thursday, March 6, 2026</div>
+    <div class="d3-headline">Today's Product Intelligence</div>
+    <div class="d3-summary">
+      <div class="d3-summary-stat">
+        <div class="d3-summary-num">47</div>
+        <div class="d3-summary-label">Questions asked</div>
+      </div>
+      <div class="d3-summary-stat">
+        <div class="d3-summary-num">42</div>
+        <div class="d3-summary-label">Answers delivered</div>
+      </div>
+      <div class="d3-summary-stat">
+        <div class="d3-summary-num">5</div>
+        <div class="d3-summary-label">Knowledge gaps</div>
+      </div>
+    </div>
+    <div class="d3-section-title">Live Feed</div>
+    <div class="d3-story">
+      <div class="d3-story-time">2m ago</div>
+      <div>
+        <div class="d3-story-q">How do I adjust the shelves?</div>
+        <div class="d3-story-a">Shelf support clips can be adjusted by squeezing together and angling upwards. Maximum load per shelf is 15 kilograms.</div>
+        <div class="d3-story-meta"><span class="cited">shelving</span><span class="img">📄 page 5</span><span>SG2H-B-HD</span></div>
+      </div>
+    </div>
+    <div class="d3-story">
+      <div class="d3-story-time">8m ago</div>
+      <div>
+        <div class="d3-story-q">What ventilation gaps do I need?</div>
+        <div class="d3-story-a">Minimum 10mm at sides and top, 50mm at the rear. Front grille must be completely unobstructed.</div>
+        <div class="d3-story-meta"><span class="cited">installation</span><span class="img">📄 page 5</span><span>SG1R-B</span></div>
+      </div>
+    </div>
+    <div class="d3-story">
+      <div class="d3-story-time">14m ago</div>
+      <div>
+        <div class="d3-story-q">What's the warranty period?</div>
+        <div class="d3-story-a" style="color:#b45309;font-style:italic">Unanswered — information not in product record</div>
+        <div class="d3-story-meta"><span style="color:#b45309">knowledge gap</span><span>SG2H-B-HD</span></div>
+      </div>
+    </div>
+    <div class="d3-story">
+      <div class="d3-story-time">23m ago</div>
+      <div>
+        <div class="d3-story-q">How do I clean the condenser?</div>
+        <div class="d3-story-a">Located at the rear behind the compressor compartment cover. Clean at least every three months using a soft brush. Never use water.</div>
+        <div class="d3-story-meta"><span class="cited">maintenance</span><span class="img">📄 page 7, 9</span><span>SG3H-B</span></div>
+      </div>
+    </div>
+    <div class="d3-story">
+      <div class="d3-story-time">31m ago</div>
+      <div>
+        <div class="d3-story-q">Can I put it outside?</div>
+        <div class="d3-story-a">Designed for indoor use only. Do not place in direct sunlight or near sources of static electricity.</div>
+        <div class="d3-story-meta"><span class="cited">location_suitability</span><span>SG2H-HD</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ DASHBOARD 4: NOIR ════════ -->
+<div class="mockup d4" id="d4">
+  <div class="d4-topbar">
+    <div class="d4-brand">Signetry</div>
+    <div class="d4-nav">
+      <a href="#" class="active">Feed</a>
+      <a href="#">Gaps</a>
+      <a href="#">Setup</a>
+    </div>
+  </div>
+  <div class="d4-container">
+    <div class="d4-metrics">
+      <div>
+        <div class="d4-metric-num">47</div>
+        <div class="d4-metric-label">Queries today</div>
+      </div>
+      <div>
+        <div class="d4-metric-num">89%</div>
+        <div class="d4-metric-label">Answered</div>
+      </div>
+      <div>
+        <div class="d4-metric-num">5</div>
+        <div class="d4-metric-label">Gaps found</div>
+      </div>
+    </div>
+    <div class="d4-feed-title">Intelligence Feed</div>
+    <div class="d4-item">
+      <div class="d4-item-header">
+        <div class="d4-item-q">How do I adjust the shelves?</div>
+        <div class="d4-item-time">2m ago</div>
+      </div>
+      <div class="d4-item-a">Shelf support clips can be adjusted by squeezing together and angling upwards. Maximum load 15 kg.</div>
+      <div class="d4-item-pills">
+        <span class="d4-pill answered">✓ answered</span>
+        <span class="d4-pill image">page 5</span>
+        <span class="d4-pill">SG2H-B-HD</span>
+      </div>
+    </div>
+    <div class="d4-item">
+      <div class="d4-item-header">
+        <div class="d4-item-q">What's the warranty period?</div>
+        <div class="d4-item-time">14m ago</div>
+      </div>
+      <div class="d4-item-a" style="color:#f59e0b">Not in product record — 8 customers have asked this</div>
+      <div class="d4-item-pills">
+        <span class="d4-pill gap">knowledge gap ×8</span>
+        <span class="d4-pill">SG2H-B-HD</span>
+      </div>
+    </div>
+    <div class="d4-item">
+      <div class="d4-item-header">
+        <div class="d4-item-q">How do I clean the condenser?</div>
+        <div class="d4-item-time">23m ago</div>
+      </div>
+      <div class="d4-item-a">Located at the rear behind compressor cover. Clean every 3 months with soft brush. Never use water.</div>
+      <div class="d4-item-pills">
+        <span class="d4-pill answered">✓ answered</span>
+        <span class="d4-pill image">page 7, 9</span>
+        <span class="d4-pill">SG3H-B</span>
+      </div>
+    </div>
+    <div class="d4-item">
+      <div class="d4-item-header">
+        <div class="d4-item-q">Can I use this outdoors?</div>
+        <div class="d4-item-time">31m ago</div>
+      </div>
+      <div class="d4-item-a">Designed for indoor use only. Avoid direct sunlight and static electricity sources.</div>
+      <div class="d4-item-pills">
+        <span class="d4-pill answered">✓ answered</span>
+        <span class="d4-pill">SG2H-HD</span>
+      </div>
+    </div>
+    <div class="d4-item">
+      <div class="d4-item-header">
+        <div class="d4-item-q">What refrigerant does it use?</div>
+        <div class="d4-item-time">38m ago</div>
+      </div>
+      <div class="d4-item-a">R600a (isobutane). ODP 0, GWP 3. Flammable — only service agents should handle the refrigeration circuit.</div>
+      <div class="d4-item-pills">
+        <span class="d4-pill answered">✓ answered</span>
+        <span class="d4-pill">SG2H-B-HD</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ DASHBOARD 5: INDUSTRIAL ════════ -->
+<div class="mockup d5" id="d5">
+  <div class="d5-topbar">
+    <span class="d5-topbar-logo">SIGNETRY</span>
+    <span class="d5-topbar-pipe"></span>
+    <span class="d5-topbar-product"><strong>KingCave</strong> · 23 products · Pro</span>
+    <div class="d5-topbar-right">
+      <span class="live"><span class="live-dot"></span> Live</span>
+      <span>47 queries today</span>
+    </div>
+  </div>
+  <div class="d5-layout">
+    <div class="d5-feed">
+      <div class="d5-feed-head">
+        <span>Intelligence Feed</span>
+        <span>Last 24h</span>
+      </div>
+      <div class="d5-row">
+        <span class="time">14:22</span>
+        <div><div class="question">How do I adjust the shelves?</div><div class="answer">Shelf support clips adjusted by squeezing together and angling upwards. Max 15 kg per shelf.</div></div>
+        <div class="badges"><span class="d5-badge ok">answered</span><span class="d5-badge img">page 5</span></div>
+      </div>
+      <div class="d5-row">
+        <span class="time">14:16</span>
+        <div><div class="question">What ventilation gaps do I need?</div><div class="answer">10mm sides/top, 50mm rear. Front grille must be unobstructed.</div></div>
+        <div class="badges"><span class="d5-badge ok">answered</span><span class="d5-badge img">page 5</span></div>
+      </div>
+      <div class="d5-row">
+        <span class="time">14:10</span>
+        <div><div class="question">What's the warranty period?</div><div class="answer" style="color:#f59e0b">Not in product record</div></div>
+        <div class="badges"><span class="d5-badge miss">gap ×8</span></div>
+      </div>
+      <div class="d5-row">
+        <span class="time">14:01</span>
+        <div><div class="question">How do I clean the condenser?</div><div class="answer">Rear of appliance, behind compressor cover. Soft brush every 3 months. Never water.</div></div>
+        <div class="badges"><span class="d5-badge ok">answered</span><span class="d5-badge img">page 7</span></div>
+      </div>
+      <div class="d5-row">
+        <span class="time">13:53</span>
+        <div><div class="question">Can I put it outside?</div><div class="answer">Indoor use only. No direct sunlight. Well ventilated, free from ignition sources.</div></div>
+        <div class="badges"><span class="d5-badge ok">answered</span></div>
+      </div>
+      <div class="d5-row">
+        <span class="time">13:39</span>
+        <div><div class="question">Noise level?</div><div class="answer">43 dB rated noise level.</div></div>
+        <div class="badges"><span class="d5-badge ok">answered</span></div>
+      </div>
+      <div class="d5-row">
+        <span class="time">13:22</span>
+        <div><div class="question">What refrigerant?</div><div class="answer">R600a. ODP 0, GWP 3.</div></div>
+        <div class="badges"><span class="d5-badge ok">answered</span></div>
+      </div>
+    </div>
+    <div class="d5-sidebar">
+      <div>
+        <h3>Embed Widget</h3>
+        <div class="d5-embed-box">
+          <pre><span class="t">&lt;script</span>
+  <span class="a">src</span>=<span class="v">"signetry.ai/widget.js"</span>
+  <span class="a">data-key</span>=<span class="v">"sk_live_41a7..."</span>
+  <span class="a">data-gtin</span>=<span class="v">"{GTIN}"</span>
+<span class="t">&gt;&lt;/script&gt;</span></pre>
+        </div>
+      </div>
+      <div>
+        <h3>Knowledge Gaps</h3>
+        <p style="font-size:10px;color:#444;margin-bottom:8px">Questions customers ask that you can't answer yet:</p>
+        <div class="d5-gap-list">
+          <div class="d5-gap-item"><span class="count">×8</span> warranty period</div>
+          <div class="d5-gap-item"><span class="count">×3</span> replacement parts</div>
+          <div class="d5-gap-item"><span class="count">×2</span> door seal replacement</div>
+        </div>
+      </div>
+      <div>
+        <h3>Top Products</h3>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:#666;padding:6px 10px;background:#0a0a0a;border-radius:4px"><span>SG2H-B-HD</span><span style="color:#2dd4bf">18 queries</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:#666;padding:6px 10px;background:#0a0a0a;border-radius:4px"><span>SG1R-B</span><span style="color:#2dd4bf">9 queries</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:#666;padding:6px 10px;background:#0a0a0a;border-radius:4px"><span>SG3H-B</span><span style="color:#2dd4bf">7 queries</span></div>
+        </div>
+      </div>
+      <div>
+        <h3>This Month</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <div style="background:#0a0a0a;padding:12px;border-radius:6px"><div style="font-size:1.3rem;font-weight:600;color:#2dd4bf">1,247</div><div style="font-size:9px;color:#333;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px">Queries</div></div>
+          <div style="background:#0a0a0a;padding:12px;border-radius:6px"><div style="font-size:1.3rem;font-weight:600;color:#fff">91%</div><div style="font-size:9px;color:#333;text-transform:uppercase;letter-spacing:0.1em;margin-top:2px">Answered</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.mockup').forEach(m => m.classList.remove('active'));
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('btn-' + id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>

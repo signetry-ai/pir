@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIR Product Page — 10 Colour Variations</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#111;font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+
+/* Nav */
+.var-nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:#0a0a0a;border-bottom:1px solid #333;display:flex;align-items:center;padding:0 12px;gap:0;overflow-x:auto}
+.var-nav button{padding:14px 16px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#666;background:none;border:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+.var-nav button:hover{color:#aaa}
+.var-nav button.active{color:#f4f2ee;border-bottom-color:#f4f2ee}
+.var-label{font-family:'Bricolage Grotesque',sans-serif;font-size:11px;color:#444;padding:0 12px 0 4px;border-right:1px solid #333;margin-right:4px;white-space:nowrap}
+.variation{display:none}
+.variation.active{display:block}
+
+/* ─── Each variation is a full page ─── */
+.pir-page{min-height:100vh;padding-top:54px}
+.page{max-width:1060px;margin:0 auto;padding:68px 52px 80px}
+@media(max-width:640px){.page{padding:32px 16px 60px}}
+
+/* Shared structure */
+.signal{font-size:12px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:16px}
+.signal::before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:8px}
+h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(36px,6.5vw,64px);font-weight:700;line-height:1.05;letter-spacing:-.02em}
+.brand-tag{font-size:15px;margin-top:6px;padding-bottom:14px}
+.hero-row{display:flex;gap:32px;margin:28px 0 36px;flex-wrap:wrap;align-items:baseline}
+.hr-stat{display:flex;align-items:baseline;gap:4px}
+.hr-val{font-family:'Bricolage Grotesque',sans-serif;font-size:36px;font-weight:700}
+.hr-unit{font-size:13px}
+.hr-sep{font-size:16px}
+
+/* Ask hero (structure) */
+.ask-hero{padding:32px;position:relative;overflow:hidden;margin-bottom:28px}
+.ask-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.ask-title{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;margin-bottom:4px}
+.ask-sub{font-size:13px;margin-bottom:20px;line-height:1.5}
+.ask-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.ask-pill{padding:8px 16px;font-family:'Space Mono',monospace;font-size:11px;cursor:pointer;transition:all .2s}
+.ask-row{display:flex;gap:8px}
+.ask-row input{flex:1;padding:14px 16px;font-family:'Space Mono',monospace;font-size:13px;outline:none;transition:all .2s}
+.ask-row input::placeholder{opacity:.5}
+.ask-row button{border:none;padding:14px 28px;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.embed-badge{position:absolute;top:12px;right:14px;display:flex;align-items:center;gap:6px;padding:5px 12px;font-size:10px;letter-spacing:.04em;cursor:pointer;transition:all .2s;font-family:'Space Mono',monospace}
+.embed-badge svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2}
+
+/* Tabs */
+.tabs{display:flex}
+.tab-btn{padding:13px 28px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+.tab-panel{display:none;padding:16px 0}
+.tab-panel.active{display:block}
+.facts-dense{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:640px){.facts-dense{grid-template-columns:1fr}}
+.fd-group{padding-top:8px}
+.grp-title{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+.fr{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0}
+.fr:hover{opacity:.85}
+.fk{font-size:14px}
+.fv{font-weight:700;text-align:right;font-size:15px}
+
+/* Trust strip */
+.trust-strip{display:flex;gap:14px;align-items:center;padding:10px 14px;flex-wrap:wrap;font-size:11px;margin-top:20px}
+.badge{letter-spacing:.1em;display:flex;align-items:center;gap:5px}
+.badge .dot{width:5px;height:5px;border-radius:50%}
+
+.raw{margin-top:24px;font-size:11px}
+.raw a{text-decoration:none}
+
+
+/* ═══════════════════════════════════════════════════
+   THEME VARIABLES PER VARIATION
+   ═══════════════════════════════════════════════════ */
+
+/* V1: Current — Bone White (baseline) */
+#v1 .pir-page{background:#f4f2ee;color:#777}
+#v1 h1{color:#0a0a0a} #v1 .brand-tag{color:#999;border-bottom:1px solid rgba(0,0,0,.08)}
+#v1 .signal{color:#bbb} #v1 .signal::before{background:#1a1a1a}
+#v1 .hr-val{color:#0a0a0a} #v1 .hr-unit{color:#999} #v1 .hr-sep{color:#ddd}
+#v1 .ask-hero{background:linear-gradient(135deg,rgba(0,0,0,.02),rgba(0,0,0,.04));border:1px solid rgba(0,0,0,.06)}
+#v1 .ask-hero::before{background:linear-gradient(90deg,#1a1a1a,transparent)}
+#v1 .ask-title{color:#0a0a0a} #v1 .ask-sub{color:#999}
+#v1 .ask-pill{background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.08);color:#666}
+#v1 .ask-pill:hover{border-color:#1a1a1a;color:#1a1a1a}
+#v1 .ask-row input{background:#f4f2ee;border:1px solid rgba(0,0,0,.1);color:#1a1a1a}
+#v1 .ask-row input:focus{border-color:#1a1a1a;background:#fff}
+#v1 .ask-row button{background:#1a1a1a;color:#f4f2ee}
+#v1 .ask-row button:hover{background:#333}
+#v1 .embed-badge{background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.08);color:#999}
+#v1 .embed-badge:hover{border-color:#1a1a1a;color:#1a1a1a}
+#v1 .tabs{border-bottom:1px solid rgba(0,0,0,.08)}
+#v1 .tab-btn{color:#999} #v1 .tab-btn.active{color:#1a1a1a;border-bottom-color:#1a1a1a;background:rgba(0,0,0,.02)}
+#v1 .fd-group{border-top:1px solid rgba(0,0,0,.06)} #v1 .grp-title{color:#bbb}
+#v1 .fk{color:#666} #v1 .fv{color:#1a1a1a}
+#v1 .fr{border-bottom:1px solid rgba(0,0,0,.02)}
+#v1 .trust-strip{background:rgba(0,128,80,.03);border:1px solid rgba(0,128,80,.2)}
+#v1 .badge{color:#006644} #v1 .badge .dot{background:#006644}
+#v1 .raw{color:#bbb} #v1 .raw a{color:#999;border-bottom:1px solid rgba(0,0,0,.06)}
+
+/* V2: Midnight — dark background, cyan accent */
+#v2 .pir-page{background:#0c0c0f;color:#666}
+#v2 h1{color:#e8e8ec} #v2 .brand-tag{color:#555;border-bottom:1px solid rgba(255,255,255,.06)}
+#v2 .signal{color:#444} #v2 .signal::before{background:#0ea5e9}
+#v2 .hr-val{color:#e8e8ec} #v2 .hr-unit{color:#555} #v2 .hr-sep{color:#333}
+#v2 .ask-hero{background:rgba(14,165,233,.04);border:1px solid rgba(14,165,233,.12)}
+#v2 .ask-hero::before{background:linear-gradient(90deg,#0ea5e9,transparent)}
+#v2 .ask-title{color:#e8e8ec} #v2 .ask-sub{color:#666}
+#v2 .ask-pill{background:rgba(14,165,233,.06);border:1px solid rgba(14,165,233,.15);color:#0ea5e9}
+#v2 .ask-pill:hover{background:rgba(14,165,233,.12);border-color:rgba(14,165,233,.3)}
+#v2 .ask-row input{background:#111118;border:1px solid rgba(255,255,255,.08);color:#e8e8ec}
+#v2 .ask-row input:focus{border-color:#0ea5e9}
+#v2 .ask-row button{background:#0ea5e9;color:#fff}
+#v2 .ask-row button:hover{background:#38bdf8}
+#v2 .embed-badge{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:#555}
+#v2 .embed-badge:hover{border-color:#0ea5e9;color:#0ea5e9}
+#v2 .tabs{border-bottom:1px solid rgba(255,255,255,.06)}
+#v2 .tab-btn{color:#555} #v2 .tab-btn.active{color:#e8e8ec;border-bottom-color:#0ea5e9}
+#v2 .fd-group{border-top:1px solid rgba(255,255,255,.04)} #v2 .grp-title{color:#444}
+#v2 .fk{color:#666} #v2 .fv{color:#e8e8ec}
+#v2 .fr{border-bottom:1px solid rgba(255,255,255,.02)}
+#v2 .trust-strip{background:rgba(14,165,233,.04);border:1px solid rgba(14,165,233,.12)}
+#v2 .badge{color:#0ea5e9} #v2 .badge .dot{background:#0ea5e9}
+#v2 .raw{color:#444} #v2 .raw a{color:#555;border-bottom:1px solid rgba(255,255,255,.06)}
+
+/* V3: Warm Cream — amber/gold accent */
+#v3 .pir-page{background:#faf6ef;color:#8a7e6e}
+#v3 h1{color:#2c1810} #v3 .brand-tag{color:#a0927e;border-bottom:1px solid rgba(44,24,16,.08)}
+#v3 .signal{color:#c4b8a6} #v3 .signal::before{background:#c4822e}
+#v3 .hr-val{color:#2c1810} #v3 .hr-unit{color:#a0927e} #v3 .hr-sep{color:#ddd3c4}
+#v3 .ask-hero{background:linear-gradient(135deg,rgba(196,130,46,.04),rgba(196,130,46,.08));border:1px solid rgba(196,130,46,.12)}
+#v3 .ask-hero::before{background:linear-gradient(90deg,#c4822e,transparent)}
+#v3 .ask-title{color:#2c1810} #v3 .ask-sub{color:#a0927e}
+#v3 .ask-pill{background:rgba(196,130,46,.06);border:1px solid rgba(196,130,46,.15);color:#8a6d2e}
+#v3 .ask-pill:hover{background:rgba(196,130,46,.1);border-color:rgba(196,130,46,.3)}
+#v3 .ask-row input{background:#faf6ef;border:1px solid rgba(44,24,16,.1);color:#2c1810}
+#v3 .ask-row input:focus{border-color:#c4822e}
+#v3 .ask-row button{background:#2c1810;color:#faf6ef}
+#v3 .ask-row button:hover{background:#4a2e1e}
+#v3 .embed-badge{background:rgba(44,24,16,.04);border:1px solid rgba(44,24,16,.08);color:#a0927e}
+#v3 .embed-badge:hover{border-color:#c4822e;color:#c4822e}
+#v3 .tabs{border-bottom:1px solid rgba(44,24,16,.08)}
+#v3 .tab-btn{color:#a0927e} #v3 .tab-btn.active{color:#2c1810;border-bottom-color:#c4822e}
+#v3 .fd-group{border-top:1px solid rgba(44,24,16,.06)} #v3 .grp-title{color:#c4b8a6}
+#v3 .fk{color:#8a7e6e} #v3 .fv{color:#2c1810}
+#v3 .fr{border-bottom:1px solid rgba(44,24,16,.03)}
+#v3 .trust-strip{background:rgba(196,130,46,.04);border:1px solid rgba(196,130,46,.12)}
+#v3 .badge{color:#8a6d2e} #v3 .badge .dot{background:#c4822e}
+#v3 .raw{color:#c4b8a6} #v3 .raw a{color:#a0927e;border-bottom:1px solid rgba(44,24,16,.08)}
+
+/* V4: Slate — cool grey, emerald widget */
+#v4 .pir-page{background:#f0f2f5;color:#6b7280}
+#v4 h1{color:#111827} #v4 .brand-tag{color:#9ca3af;border-bottom:1px solid rgba(0,0,0,.06)}
+#v4 .signal{color:#d1d5db} #v4 .signal::before{background:#10b981}
+#v4 .hr-val{color:#111827} #v4 .hr-unit{color:#9ca3af} #v4 .hr-sep{color:#d1d5db}
+#v4 .ask-hero{background:linear-gradient(135deg,rgba(16,185,129,.03),rgba(16,185,129,.06));border:1px solid rgba(16,185,129,.12)}
+#v4 .ask-hero::before{background:linear-gradient(90deg,#10b981,transparent)}
+#v4 .ask-title{color:#111827} #v4 .ask-sub{color:#9ca3af}
+#v4 .ask-pill{background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.15);color:#059669}
+#v4 .ask-pill:hover{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3)}
+#v4 .ask-row input{background:#f8f9fb;border:1px solid rgba(0,0,0,.08);color:#111827}
+#v4 .ask-row input:focus{border-color:#10b981}
+#v4 .ask-row button{background:#10b981;color:#fff}
+#v4 .ask-row button:hover{background:#059669}
+#v4 .embed-badge{background:rgba(0,0,0,.03);border:1px solid rgba(0,0,0,.06);color:#9ca3af}
+#v4 .embed-badge:hover{border-color:#10b981;color:#059669}
+#v4 .tabs{border-bottom:1px solid rgba(0,0,0,.06)}
+#v4 .tab-btn{color:#9ca3af} #v4 .tab-btn.active{color:#111827;border-bottom-color:#10b981}
+#v4 .fd-group{border-top:1px solid rgba(0,0,0,.04)} #v4 .grp-title{color:#d1d5db}
+#v4 .fk{color:#6b7280} #v4 .fv{color:#111827}
+#v4 .fr{border-bottom:1px solid rgba(0,0,0,.02)}
+#v4 .trust-strip{background:rgba(16,185,129,.04);border:1px solid rgba(16,185,129,.15)}
+#v4 .badge{color:#059669} #v4 .badge .dot{background:#10b981}
+#v4 .raw{color:#d1d5db} #v4 .raw a{color:#9ca3af;border-bottom:1px solid rgba(0,0,0,.06)}
+
+/* V5: Ink — very dark, warm orange accent */
+#v5 .pir-page{background:#141210;color:#5c564e}
+#v5 h1{color:#e8e2d8} #v5 .brand-tag{color:#6e6558;border-bottom:1px solid rgba(232,226,216,.06)}
+#v5 .signal{color:#3d3830} #v5 .signal::before{background:#e87e22}
+#v5 .hr-val{color:#e8e2d8} #v5 .hr-unit{color:#6e6558} #v5 .hr-sep{color:#2e2a24}
+#v5 .ask-hero{background:rgba(232,126,34,.04);border:1px solid rgba(232,126,34,.1)}
+#v5 .ask-hero::before{background:linear-gradient(90deg,#e87e22,transparent)}
+#v5 .ask-title{color:#e8e2d8} #v5 .ask-sub{color:#6e6558}
+#v5 .ask-pill{background:rgba(232,126,34,.06);border:1px solid rgba(232,126,34,.12);color:#e87e22}
+#v5 .ask-pill:hover{background:rgba(232,126,34,.12);border-color:rgba(232,126,34,.25)}
+#v5 .ask-row input{background:#1a1714;border:1px solid rgba(232,226,216,.08);color:#e8e2d8}
+#v5 .ask-row input:focus{border-color:#e87e22}
+#v5 .ask-row button{background:#e87e22;color:#fff}
+#v5 .ask-row button:hover{background:#f59e40}
+#v5 .embed-badge{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#5c564e}
+#v5 .embed-badge:hover{border-color:#e87e22;color:#e87e22}
+#v5 .tabs{border-bottom:1px solid rgba(232,226,216,.06)}
+#v5 .tab-btn{color:#5c564e} #v5 .tab-btn.active{color:#e8e2d8;border-bottom-color:#e87e22}
+#v5 .fd-group{border-top:1px solid rgba(232,226,216,.04)} #v5 .grp-title{color:#3d3830}
+#v5 .fk{color:#6e6558} #v5 .fv{color:#e8e2d8}
+#v5 .fr{border-bottom:1px solid rgba(232,226,216,.02)}
+#v5 .trust-strip{background:rgba(232,126,34,.04);border:1px solid rgba(232,126,34,.1)}
+#v5 .badge{color:#e87e22} #v5 .badge .dot{background:#e87e22}
+#v5 .raw{color:#3d3830} #v5 .raw a{color:#5c564e;border-bottom:1px solid rgba(232,226,216,.06)}
+
+/* V6: Arctic — ice white, indigo widget */
+#v6 .pir-page{background:#fafbff;color:#6474a0}
+#v6 h1{color:#1e2340} #v6 .brand-tag{color:#8892b3;border-bottom:1px solid rgba(30,35,64,.06)}
+#v6 .signal{color:#c4c9dc} #v6 .signal::before{background:#6366f1}
+#v6 .hr-val{color:#1e2340} #v6 .hr-unit{color:#8892b3} #v6 .hr-sep{color:#d4d8e8}
+#v6 .ask-hero{background:linear-gradient(135deg,rgba(99,102,241,.03),rgba(99,102,241,.06));border:1px solid rgba(99,102,241,.1)}
+#v6 .ask-hero::before{background:linear-gradient(90deg,#6366f1,transparent)}
+#v6 .ask-title{color:#1e2340} #v6 .ask-sub{color:#8892b3}
+#v6 .ask-pill{background:rgba(99,102,241,.05);border:1px solid rgba(99,102,241,.12);color:#6366f1}
+#v6 .ask-pill:hover{background:rgba(99,102,241,.1);border-color:rgba(99,102,241,.25)}
+#v6 .ask-row input{background:#fff;border:1px solid rgba(30,35,64,.08);color:#1e2340}
+#v6 .ask-row input:focus{border-color:#6366f1}
+#v6 .ask-row button{background:#6366f1;color:#fff}
+#v6 .ask-row button:hover{background:#818cf8}
+#v6 .embed-badge{background:rgba(99,102,241,.04);border:1px solid rgba(99,102,241,.1);color:#8892b3}
+#v6 .embed-badge:hover{border-color:#6366f1;color:#6366f1}
+#v6 .tabs{border-bottom:1px solid rgba(30,35,64,.06)}
+#v6 .tab-btn{color:#8892b3} #v6 .tab-btn.active{color:#1e2340;border-bottom-color:#6366f1}
+#v6 .fd-group{border-top:1px solid rgba(30,35,64,.04)} #v6 .grp-title{color:#c4c9dc}
+#v6 .fk{color:#6474a0} #v6 .fv{color:#1e2340}
+#v6 .fr{border-bottom:1px solid rgba(30,35,64,.02)}
+#v6 .trust-strip{background:rgba(99,102,241,.03);border:1px solid rgba(99,102,241,.1)}
+#v6 .badge{color:#6366f1} #v6 .badge .dot{background:#6366f1}
+#v6 .raw{color:#c4c9dc} #v6 .raw a{color:#8892b3;border-bottom:1px solid rgba(30,35,64,.06)}
+
+/* V7: Forest — sage green background, deep green accent */
+#v7 .pir-page{background:#eef2ed;color:#6b7a68}
+#v7 h1{color:#1a2e18} #v7 .brand-tag{color:#8a9a86;border-bottom:1px solid rgba(26,46,24,.08)}
+#v7 .signal{color:#b8c4b6} #v7 .signal::before{background:#2d6a2e}
+#v7 .hr-val{color:#1a2e18} #v7 .hr-unit{color:#8a9a86} #v7 .hr-sep{color:#c8d4c6}
+#v7 .ask-hero{background:linear-gradient(135deg,rgba(45,106,46,.03),rgba(45,106,46,.06));border:1px solid rgba(45,106,46,.1)}
+#v7 .ask-hero::before{background:linear-gradient(90deg,#2d6a2e,transparent)}
+#v7 .ask-title{color:#1a2e18} #v7 .ask-sub{color:#8a9a86}
+#v7 .ask-pill{background:rgba(45,106,46,.05);border:1px solid rgba(45,106,46,.12);color:#2d6a2e}
+#v7 .ask-pill:hover{background:rgba(45,106,46,.1);border-color:rgba(45,106,46,.25)}
+#v7 .ask-row input{background:#f4f7f3;border:1px solid rgba(26,46,24,.1);color:#1a2e18}
+#v7 .ask-row input:focus{border-color:#2d6a2e}
+#v7 .ask-row button{background:#2d6a2e;color:#fff}
+#v7 .ask-row button:hover{background:#3d8a3e}
+#v7 .embed-badge{background:rgba(45,106,46,.04);border:1px solid rgba(45,106,46,.1);color:#8a9a86}
+#v7 .embed-badge:hover{border-color:#2d6a2e;color:#2d6a2e}
+#v7 .tabs{border-bottom:1px solid rgba(26,46,24,.08)}
+#v7 .tab-btn{color:#8a9a86} #v7 .tab-btn.active{color:#1a2e18;border-bottom-color:#2d6a2e}
+#v7 .fd-group{border-top:1px solid rgba(26,46,24,.06)} #v7 .grp-title{color:#b8c4b6}
+#v7 .fk{color:#6b7a68} #v7 .fv{color:#1a2e18}
+#v7 .fr{border-bottom:1px solid rgba(26,46,24,.02)}
+#v7 .trust-strip{background:rgba(45,106,46,.04);border:1px solid rgba(45,106,46,.12)}
+#v7 .badge{color:#2d6a2e} #v7 .badge .dot{background:#2d6a2e}
+#v7 .raw{color:#b8c4b6} #v7 .raw a{color:#8a9a86;border-bottom:1px solid rgba(26,46,24,.06)}
+
+/* V8: Noir — pure black, red accent */
+#v8 .pir-page{background:#080808;color:#555}
+#v8 h1{color:#eee} #v8 .brand-tag{color:#555;border-bottom:1px solid rgba(255,255,255,.06)}
+#v8 .signal{color:#333} #v8 .signal::before{background:#dc2626}
+#v8 .hr-val{color:#eee} #v8 .hr-unit{color:#555} #v8 .hr-sep{color:#222}
+#v8 .ask-hero{background:rgba(220,38,38,.03);border:1px solid rgba(220,38,38,.1)}
+#v8 .ask-hero::before{background:linear-gradient(90deg,#dc2626,transparent)}
+#v8 .ask-title{color:#eee} #v8 .ask-sub{color:#666}
+#v8 .ask-pill{background:rgba(220,38,38,.06);border:1px solid rgba(220,38,38,.12);color:#ef4444}
+#v8 .ask-pill:hover{background:rgba(220,38,38,.12);border-color:rgba(220,38,38,.25)}
+#v8 .ask-row input{background:#111;border:1px solid rgba(255,255,255,.08);color:#eee}
+#v8 .ask-row input:focus{border-color:#dc2626}
+#v8 .ask-row button{background:#dc2626;color:#fff}
+#v8 .ask-row button:hover{background:#ef4444}
+#v8 .embed-badge{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#555}
+#v8 .embed-badge:hover{border-color:#dc2626;color:#ef4444}
+#v8 .tabs{border-bottom:1px solid rgba(255,255,255,.06)}
+#v8 .tab-btn{color:#555} #v8 .tab-btn.active{color:#eee;border-bottom-color:#dc2626}
+#v8 .fd-group{border-top:1px solid rgba(255,255,255,.04)} #v8 .grp-title{color:#333}
+#v8 .fk{color:#666} #v8 .fv{color:#eee}
+#v8 .fr{border-bottom:1px solid rgba(255,255,255,.02)}
+#v8 .trust-strip{background:rgba(220,38,38,.03);border:1px solid rgba(220,38,38,.1)}
+#v8 .badge{color:#ef4444} #v8 .badge .dot{background:#dc2626}
+#v8 .raw{color:#333} #v8 .raw a{color:#555;border-bottom:1px solid rgba(255,255,255,.06)}
+
+/* V9: Paper — warm white, teal accent */
+#v9 .pir-page{background:#f8f5f0;color:#7a8080}
+#v9 h1{color:#1a2626} #v9 .brand-tag{color:#9aa5a5;border-bottom:1px solid rgba(26,38,38,.08)}
+#v9 .signal{color:#c4cbcb} #v9 .signal::before{background:#0d9488}
+#v9 .hr-val{color:#1a2626} #v9 .hr-unit{color:#9aa5a5} #v9 .hr-sep{color:#d0d6d6}
+#v9 .ask-hero{background:linear-gradient(135deg,rgba(13,148,136,.03),rgba(13,148,136,.06));border:1px solid rgba(13,148,136,.1)}
+#v9 .ask-hero::before{background:linear-gradient(90deg,#0d9488,transparent)}
+#v9 .ask-title{color:#1a2626} #v9 .ask-sub{color:#9aa5a5}
+#v9 .ask-pill{background:rgba(13,148,136,.05);border:1px solid rgba(13,148,136,.12);color:#0d9488}
+#v9 .ask-pill:hover{background:rgba(13,148,136,.1);border-color:rgba(13,148,136,.25)}
+#v9 .ask-row input{background:#faf8f4;border:1px solid rgba(26,38,38,.1);color:#1a2626}
+#v9 .ask-row input:focus{border-color:#0d9488}
+#v9 .ask-row button{background:#0d9488;color:#fff}
+#v9 .ask-row button:hover{background:#14b8a6}
+#v9 .embed-badge{background:rgba(13,148,136,.04);border:1px solid rgba(13,148,136,.1);color:#9aa5a5}
+#v9 .embed-badge:hover{border-color:#0d9488;color:#0d9488}
+#v9 .tabs{border-bottom:1px solid rgba(26,38,38,.08)}
+#v9 .tab-btn{color:#9aa5a5} #v9 .tab-btn.active{color:#1a2626;border-bottom-color:#0d9488}
+#v9 .fd-group{border-top:1px solid rgba(26,38,38,.06)} #v9 .grp-title{color:#c4cbcb}
+#v9 .fk{color:#7a8080} #v9 .fv{color:#1a2626}
+#v9 .fr{border-bottom:1px solid rgba(26,38,38,.02)}
+#v9 .trust-strip{background:rgba(13,148,136,.04);border:1px solid rgba(13,148,136,.12)}
+#v9 .badge{color:#0d9488} #v9 .badge .dot{background:#0d9488}
+#v9 .raw{color:#c4cbcb} #v9 .raw a{color:#9aa5a5;border-bottom:1px solid rgba(26,38,38,.06)}
+
+/* V10: Charcoal — medium dark, electric blue accent */
+#v10 .pir-page{background:#1c1e22;color:#6b6f78}
+#v10 h1{color:#e4e6ea} #v10 .brand-tag{color:#6b6f78;border-bottom:1px solid rgba(228,230,234,.06)}
+#v10 .signal{color:#3a3d44} #v10 .signal::before{background:#3b82f6}
+#v10 .hr-val{color:#e4e6ea} #v10 .hr-unit{color:#6b6f78} #v10 .hr-sep{color:#2e3138}
+#v10 .ask-hero{background:rgba(59,130,246,.04);border:1px solid rgba(59,130,246,.1)}
+#v10 .ask-hero::before{background:linear-gradient(90deg,#3b82f6,transparent)}
+#v10 .ask-title{color:#e4e6ea} #v10 .ask-sub{color:#6b6f78}
+#v10 .ask-pill{background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.12);color:#60a5fa}
+#v10 .ask-pill:hover{background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.25)}
+#v10 .ask-row input{background:#22252a;border:1px solid rgba(228,230,234,.08);color:#e4e6ea}
+#v10 .ask-row input:focus{border-color:#3b82f6}
+#v10 .ask-row button{background:#3b82f6;color:#fff}
+#v10 .ask-row button:hover{background:#60a5fa}
+#v10 .embed-badge{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#6b6f78}
+#v10 .embed-badge:hover{border-color:#3b82f6;color:#60a5fa}
+#v10 .tabs{border-bottom:1px solid rgba(228,230,234,.06)}
+#v10 .tab-btn{color:#6b6f78} #v10 .tab-btn.active{color:#e4e6ea;border-bottom-color:#3b82f6}
+#v10 .fd-group{border-top:1px solid rgba(228,230,234,.04)} #v10 .grp-title{color:#3a3d44}
+#v10 .fk{color:#6b6f78} #v10 .fv{color:#e4e6ea}
+#v10 .fr{border-bottom:1px solid rgba(228,230,234,.02)}
+#v10 .trust-strip{background:rgba(59,130,246,.04);border:1px solid rgba(59,130,246,.1)}
+#v10 .badge{color:#60a5fa} #v10 .badge .dot{background:#3b82f6}
+#v10 .raw{color:#3a3d44} #v10 .raw a{color:#6b6f78;border-bottom:1px solid rgba(228,230,234,.06)}
+</style>
+</head>
+<body>
+
+<div class="var-nav">
+  <span class="var-label">Colour</span>
+  <button class="active" data-var="v1">Bone White</button>
+  <button data-var="v2">Midnight Cyan</button>
+  <button data-var="v3">Warm Amber</button>
+  <button data-var="v4">Slate Emerald</button>
+  <button data-var="v5">Ink Orange</button>
+  <button data-var="v6">Arctic Indigo</button>
+  <button data-var="v7">Forest</button>
+  <button data-var="v8">Noir Red</button>
+  <button data-var="v9">Paper Teal</button>
+  <button data-var="v10">Charcoal Blue</button>
+</div>
+
+<script>
+// Generate page HTML (shared across all variations)
+function pageHTML(id) {
+  return `<div class="pir-page"><div class="page">
+  <div class="signal">PIR/1.0 &ensp;|&ensp; commercial fridge &ensp;|&ensp; 9351886006558</div>
+  <h1>1-Door Commercial Fridge</h1>
+  <div class="brand-tag">Schmick &mdash; HUS &bull; HUS-SC700W &bull; 9351886006558</div>
+  <div class="hero-row">
+    <div class="hr-stat"><span class="hr-val">737</span><span class="hr-unit">L</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">47</span><span class="hr-unit">dB</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">$150</span><span class="hr-unit">/yr</span></div>
+    <span class="hr-sep">/</span>
+    <div class="hr-stat"><span class="hr-val">65</span><span class="hr-unit">kg</span></div>
+  </div>
+  <div class="ask-hero">
+    <div class="embed-badge"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Embed this</div>
+    <div class="ask-title">Have a question?</div>
+    <div class="ask-sub">Get instant answers from verified product data. No guessing, no hallucination.</div>
+    <div class="ask-pills">
+      <div class="ask-pill">What is the capacity?</div>
+      <div class="ask-pill">Is it lockable?</div>
+      <div class="ask-pill">How noisy is it?</div>
+      <div class="ask-pill">What are the running costs?</div>
+    </div>
+    <div class="ask-row">
+      <input type="text" placeholder="Ask anything about this product...">
+      <button>Ask an Expert</button>
+    </div>
+  </div>
+  <div class="tabs" data-scope="${id}">
+    <button class="tab-btn active" data-tab="facts">Specifications (28)</button>
+    <button class="tab-btn" data-tab="qa">Q&A (5)</button>
+    <button class="tab-btn" data-tab="docs">Documents</button>
+  </div>
+  <div class="tab-panel active" data-panel="facts" data-scope="${id}">
+    <div class="facts-dense">
+      <div class="fd-group"><div class="grp-title">Capacity</div>
+        <div class="fr"><span class="fk">Capacity Litres</span><span class="fv">737</span></div>
+        <div class="fr"><span class="fk">Capacity 375ml Cans</span><span class="fv">600</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Dimensions</div>
+        <div class="fr"><span class="fk">Exterior W</span><span class="fv">890 mm</span></div>
+        <div class="fr"><span class="fk">Exterior D</span><span class="fv">655 mm</span></div>
+        <div class="fr"><span class="fk">Exterior H</span><span class="fv">2130 mm</span></div>
+        <div class="fr"><span class="fk">Weight</span><span class="fv">65 kg</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Performance</div>
+        <div class="fr"><span class="fk">Noise</span><span class="fv">47 dB</span></div>
+        <div class="fr"><span class="fk">Power</span><span class="fv">1.6 kWh/24h</span></div>
+        <div class="fr"><span class="fk">Running Cost</span><span class="fv">$149.74 / yr</span></div>
+      </div>
+      <div class="fd-group"><div class="grp-title">Construction</div>
+        <div class="fr"><span class="fk">Door Hinge</span><span class="fv">Right Hinged</span></div>
+        <div class="fr"><span class="fk">Glass Door</span><span class="fv">Yes</span></div>
+        <div class="fr"><span class="fk">Body Material</span><span class="fv">White</span></div>
+        <div class="fr"><span class="fk">Interior Finish</span><span class="fv">White</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-panel" data-panel="qa" data-scope="${id}"></div>
+  <div class="tab-panel" data-panel="docs" data-scope="${id}"></div>
+  <div class="trust-strip">
+    <div class="badge"><span class="dot"></span>BRAND CERTIFIED</div>
+    <span style="opacity:.6">kingcave.com.au &bull; 2025-09-19</span>
+  </div>
+  <div class="raw">JSON: <a href="#">signetry.ai/records/9351886006558</a> &ensp;|&ensp; <a href="#">Schema</a> &ensp;|&ensp; <a href="#">CC-BY 4.0</a></div>
+</div></div>`;
+}
+
+// Inject all 10 variations
+for (let i = 1; i <= 10; i++) {
+  const div = document.createElement('div');
+  div.className = 'variation' + (i === 1 ? ' active' : '');
+  div.id = 'v' + i;
+  div.innerHTML = pageHTML('v' + i);
+  document.body.appendChild(div);
+}
+
+// Nav
+document.querySelectorAll('.var-nav button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.var-nav button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.variation').forEach(v => v.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.var).classList.add('active');
+  });
+});
+
+// Scoped tabs
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.tab-btn');
+  if (!btn) return;
+  const scope = btn.closest('[data-scope]')?.dataset.scope;
+  if (!scope) return;
+  const page = btn.closest('.page');
+  page.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+  page.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  page.querySelector(`.tab-panel[data-panel="${btn.dataset.tab}"][data-scope="${scope}"]`)?.classList.add('active');
+});
+</script>
+
+</body>
+</html>

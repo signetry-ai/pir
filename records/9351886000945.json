@@ -43,7 +43,7 @@
     "shelf_w_mm": 500,
     "shelf_d_mm": 355,
     "shelf_type": "Each fridge 2 x adjustable chromed special 'no topple' shelves (500mmW x 355mmD) hold 104 kg weight",
-    "door_hinge": "1 x left, 1 x right",
+    "door_hinge": "right",
     "glass_door": true,
     "led_lighting": true,
     "refrigerant": "R600",
@@ -65,7 +65,9 @@
     "component_fan_secondary": "EC Fan (Taiwan)",
     "component_controller": "USA developed controller",
     "component_transformer": "Meanwell (Taiwan)",
-    "door_type": "dual_glazed_low_e"
+    "door_type": "dual_glazed_low_e",
+    "door_reversible": true,
+    "door_count": 1
   },
   "qa": [
     {

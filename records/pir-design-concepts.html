@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIR Product Page — 5 Design Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#111;-webkit-font-smoothing:antialiased}
+
+/* Nav */
+.concept-nav{position:fixed;top:0;left:0;right:0;z-index:10000;background:#0a0a0a;border-bottom:1px solid #333;display:flex;align-items:center;padding:0 12px;overflow-x:auto}
+.concept-nav .label{font-family:'Space Mono',monospace;font-size:11px;color:#444;padding:0 14px 0 4px;border-right:1px solid #333;margin-right:4px;white-space:nowrap}
+.concept-nav button{padding:14px 16px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#666;background:none;border:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+.concept-nav button:hover{color:#aaa}
+.concept-nav button.active{color:#f4f2ee;border-bottom-color:#f4f2ee}
+.concept{display:none;padding-top:48px}
+.concept.active{display:block}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   C1: THE CLINICAL AUTHORITY
+   Stripe Docs meets Wikipedia. Three columns. Trust blue accent.
+   ═══════════════════════════════════════════════════════════════════ */
+.c1{background:#fff;color:#374151;font-family:'DM Sans',sans-serif;min-height:100vh}
+.c1-header{border-bottom:1px solid #e5e7eb;padding:14px 32px;display:flex;justify-content:space-between;align-items:center}
+.c1-logo{font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:#111;letter-spacing:.08em;text-transform:uppercase}
+.c1-verify-btn{background:#1d4ed8;color:#fff;border:none;padding:8px 20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;border-radius:6px;cursor:pointer}
+.c1-verify-btn:hover{background:#2563eb}
+
+.c1-layout{display:grid;grid-template-columns:220px 1fr 340px;gap:0;min-height:calc(100vh - 50px)}
+@media(max-width:1024px){.c1-layout{grid-template-columns:1fr;}}
+
+/* Left sidebar — sticky quick specs */
+.c1-sidebar{border-right:1px solid #e5e7eb;padding:32px 24px;position:sticky;top:80px;align-self:start}
+@media(max-width:1024px){.c1-sidebar{position:static;border-right:none;border-bottom:1px solid #e5e7eb}}
+.c1-sb-title{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#9ca3af;margin-bottom:16px;font-weight:600}
+.c1-sb-item{padding:10px 0;border-bottom:1px solid #f3f4f6;display:flex;justify-content:space-between}
+.c1-sb-label{font-size:13px;color:#6b7280}
+.c1-sb-val{font-size:13px;font-weight:700;color:#111827}
+
+/* Center content */
+.c1-main{padding:40px 48px}
+@media(max-width:1024px){.c1-main{padding:32px 20px}}
+.c1-badge{display:inline-flex;align-items:center;gap:6px;background:#eff6ff;color:#1d4ed8;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:600;margin-bottom:16px}
+.c1-badge::before{content:'';width:6px;height:6px;background:#1d4ed8;border-radius:50%}
+.c1-h1{font-family:'Bricolage Grotesque',sans-serif;font-size:42px;font-weight:700;color:#111827;line-height:1.1;margin-bottom:6px}
+.c1-brand{font-size:15px;color:#9ca3af;margin-bottom:32px}
+.c1-section-title{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#9ca3af;font-weight:600;margin:32px 0 16px;padding-top:24px;border-top:1px solid #f3f4f6}
+.c1-fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.c1-fact{background:#f9fafb;border:1px solid #f3f4f6;padding:14px 16px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;position:relative}
+.c1-fact:hover{border-color:#dbeafe}
+.c1-fk{font-size:13px;color:#6b7280}
+.c1-fv{font-size:14px;font-weight:700;color:#111827;font-family:'Space Mono',monospace}
+.c1-source-dot{width:6px;height:6px;background:#22c55e;border-radius:50%;margin-left:8px;cursor:help;flex-shrink:0}
+.c1-source-dot:hover::after{content:'Brand Certified Source';position:absolute;right:10px;top:-28px;background:#111;color:#fff;padding:4px 10px;border-radius:4px;font-size:10px;white-space:nowrap}
+
+/* Right panel — Ask Anything */
+.c1-ask-panel{border-left:1px solid #e5e7eb;display:flex;flex-direction:column;position:sticky;top:48px;height:calc(100vh - 48px);align-self:start}
+@media(max-width:1024px){.c1-ask-panel{position:static;height:auto;border-left:none;border-top:1px solid #e5e7eb}}
+.c1-ask-header{padding:20px 24px;border-bottom:1px solid #f3f4f6}
+.c1-ask-title{font-size:14px;font-weight:700;color:#111827}
+.c1-ask-sub{font-size:12px;color:#9ca3af;margin-top:2px}
+.c1-ask-msgs{flex:1;overflow-y:auto;padding:20px 24px;display:flex;flex-direction:column;gap:12px}
+.c1-msg{padding:10px 14px;border-radius:10px;font-size:13px;line-height:1.6;max-width:90%}
+.c1-msg.bot{background:#f3f4f6;color:#374151;align-self:flex-start}
+.c1-msg.user{background:#1d4ed8;color:#fff;align-self:flex-end}
+.c1-ask-input-wrap{padding:16px 24px;border-top:1px solid #f3f4f6;display:flex;gap:8px}
+.c1-ask-input{flex:1;border:1px solid #e5e7eb;border-radius:8px;padding:10px 14px;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;color:#111}
+.c1-ask-input:focus{border-color:#1d4ed8;box-shadow:0 0 0 3px rgba(29,78,216,.08)}
+.c1-ask-send{background:#1d4ed8;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer}
+.c1-ask-send:hover{background:#2563eb}
+.c1-ask-footer{padding:8px 24px;text-align:center;font-size:10px;color:#d1d5db}
+
+/* Q&A section */
+.c1-qa{margin-top:24px}
+.c1-qa-item{padding:16px 0;border-bottom:1px solid #f3f4f6}
+.c1-qa-q{font-size:15px;font-weight:600;color:#111827;margin-bottom:4px}
+.c1-qa-a{font-size:14px;color:#6b7280;line-height:1.6}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   C2: THE INTELLIGENT TERMINAL
+   Linear meets Vercel. Dark. Command bar. Bento boxes.
+   ═══════════════════════════════════════════════════════════════════ */
+.c2{background:#0a0a0c;color:#888;font-family:'JetBrains Mono',monospace;min-height:100vh}
+.c2-header{padding:16px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.04)}
+.c2-logo{font-size:13px;font-weight:700;color:#fff;letter-spacing:.1em;text-transform:uppercase}
+.c2-gtin{font-size:11px;color:#444;font-family:'JetBrains Mono',monospace}
+
+.c2-hero{padding:48px 32px 32px;text-align:center}
+.c2-verified{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border:1px solid rgba(168,85,247,.2);background:rgba(168,85,247,.06);border-radius:20px;font-size:10px;color:#a855f7;letter-spacing:.06em;margin-bottom:16px}
+.c2-verified::before{content:'';width:5px;height:5px;background:#a855f7;border-radius:50%;box-shadow:0 0 8px rgba(168,85,247,.5)}
+.c2-h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:800;color:#fff;line-height:1.05;letter-spacing:-.02em}
+.c2-brand{font-size:13px;color:#555;margin-top:8px}
+
+/* Command bar */
+.c2-command{max-width:640px;margin:28px auto 0;position:relative}
+.c2-cmd-input{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px 24px;font-family:'JetBrains Mono',monospace;font-size:14px;color:#fff;outline:none;transition:all .3s}
+.c2-cmd-input::placeholder{color:#444}
+.c2-cmd-input:focus{border-color:rgba(168,85,247,.4);box-shadow:0 0 30px rgba(168,85,247,.08);background:rgba(168,85,247,.03)}
+.c2-cmd-hint{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:10px;color:#333;border:1px solid #222;padding:2px 8px;border-radius:4px}
+.c2-cmd-answer{display:none;max-width:640px;margin:16px auto 0;padding:20px 24px;background:rgba(168,85,247,.04);border:1px solid rgba(168,85,247,.1);border-radius:14px;font-size:13px;color:#c4b5fd;line-height:1.7;animation:c2FadeIn .3s ease}
+.c2-cmd-answer.show{display:block}
+@keyframes c2FadeIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+
+/* Bento grid */
+.c2-bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:40px 32px;max-width:1100px;margin:0 auto}
+@media(max-width:900px){.c2-bento{grid-template-columns:1fr}}
+.c2-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:24px;transition:all .3s;position:relative;overflow:hidden}
+.c2-card:hover{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.03)}
+.c2-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(168,85,247,.2),transparent)}
+.c2-card-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#555;margin-bottom:16px}
+.c2-spec-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.c2-spec-row:last-child{border:none}
+.c2-sk{font-size:12px;color:#666}
+.c2-sv{font-size:12px;color:#fff;font-weight:700}
+
+/* Q&A card */
+.c2-qa-item{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.c2-qa-item:last-child{border:none}
+.c2-qa-q{font-size:12px;color:#a855f7;margin-bottom:3px}
+.c2-qa-a{font-size:12px;color:#888;line-height:1.5}
+
+/* Stats card */
+.c2-stat-big{font-family:'Bricolage Grotesque',sans-serif;font-size:42px;font-weight:800;color:#fff}
+.c2-stat-label{font-size:11px;color:#555;margin-top:2px}
+.c2-stats-row{display:flex;gap:24px;margin-top:16px}
+.c2-stat-mini{text-align:center}
+.c2-stat-mini-val{font-size:20px;font-weight:700;color:#fff}
+.c2-stat-mini-label{font-size:9px;color:#444;text-transform:uppercase;letter-spacing:.08em}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   C3: THE VERIFIED CANVAS
+   Notion meets Apple. Single column. Soft. Rounded. Spacious.
+   ═══════════════════════════════════════════════════════════════════ */
+.c3{background:#fafafa;color:#6b7280;font-family:'DM Sans',sans-serif;min-height:100vh}
+.c3-header{padding:20px 40px;display:flex;justify-content:space-between;align-items:center}
+.c3-logo{font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:#111;letter-spacing:.08em;text-transform:uppercase}
+.c3-toggle-wrap{display:flex;align-items:center;gap:10px;font-size:12px;color:#9ca3af}
+.c3-toggle{width:44px;height:24px;background:#e5e7eb;border-radius:12px;cursor:pointer;position:relative;transition:background .2s}
+.c3-toggle.active{background:#10b981}
+.c3-toggle::after{content:'';position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:transform .2s}
+.c3-toggle.active::after{transform:translateX(20px)}
+
+.c3-content{max-width:800px;margin:0 auto;padding:40px 32px 80px}
+
+.c3-truth-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:#ecfdf5;color:#059669;border-radius:24px;font-size:12px;font-weight:600;margin-bottom:20px}
+.c3-truth-badge::before{content:'';width:8px;height:8px;background:#10b981;border-radius:50%}
+.c3-h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,6vw,64px);font-weight:700;color:#111827;line-height:1.08;letter-spacing:-.02em}
+.c3-brand{font-size:16px;color:#9ca3af;margin-top:8px;margin-bottom:40px}
+
+/* Truth Profile section */
+.c3-section{margin-bottom:48px}
+.c3-section-head{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:700;color:#111827;margin-bottom:6px}
+.c3-section-sub{font-size:14px;color:#9ca3af;margin-bottom:24px}
+
+.c3-fact-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.c3-fcard{background:#fff;border-radius:16px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.04);transition:all .2s}
+.c3-fcard:hover{box-shadow:0 4px 12px rgba(0,0,0,.06);transform:translateY(-2px)}
+.c3-fcard-label{font-size:11px;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.c3-fcard-val{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:700;color:#111827}
+.c3-fcard-unit{font-size:14px;color:#9ca3af;font-weight:400}
+
+/* AI Insights */
+.c3-ai-box{background:#fff;border-radius:20px;padding:28px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.04)}
+.c3-ai-input-wrap{display:flex;gap:10px;margin-bottom:20px}
+.c3-ai-input{flex:1;border:2px solid #f3f4f6;border-radius:14px;padding:14px 20px;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;color:#111;transition:border-color .2s}
+.c3-ai-input:focus{border-color:#10b981}
+.c3-ai-send{background:#111827;color:#fff;border:none;border-radius:14px;padding:14px 24px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer}
+.c3-ai-send:hover{background:#374151}
+.c3-ai-pills{display:flex;flex-wrap:wrap;gap:8px}
+.c3-ai-pill{background:#f9fafb;border:1px solid #f3f4f6;padding:8px 16px;border-radius:10px;font-size:12px;color:#6b7280;cursor:pointer;transition:all .2s}
+.c3-ai-pill:hover{background:#ecfdf5;border-color:#a7f3d0;color:#059669}
+
+/* Community Q&A */
+.c3-qa-item{background:#fff;border-radius:16px;padding:20px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.04)}
+.c3-qa-q{font-size:16px;font-weight:600;color:#111827;margin-bottom:6px}
+.c3-qa-a{font-size:14px;color:#6b7280;line-height:1.6}
+.c3-qa-meta{font-size:11px;color:#d1d5db;margin-top:8px}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   C4: THE EDITORIAL DOSSIER
+   Newspaper meets intelligence briefing. Serif headlines.
+   Two-column editorial layout. Ink on paper.
+   ═══════════════════════════════════════════════════════════════════ */
+.c4{background:#f5f0e8;color:#5c564a;font-family:'Space Mono',monospace;min-height:100vh}
+.c4-header{padding:14px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #1a1a1a}
+.c4-logo{font-family:'Instrument Serif',serif;font-size:22px;color:#1a1a1a}
+.c4-date{font-size:10px;color:#999;letter-spacing:.1em;text-transform:uppercase}
+
+.c4-content{max-width:960px;margin:0 auto;padding:40px 32px 80px}
+
+.c4-kicker{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#999;margin-bottom:8px}
+.c4-h1{font-family:'Instrument Serif',serif;font-size:clamp(44px,7vw,72px);color:#1a1a1a;line-height:1.05;margin-bottom:8px}
+.c4-deck{font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;color:#8a7e6e;line-height:1.4;margin-bottom:24px;max-width:600px}
+.c4-rule{height:1px;background:#1a1a1a;margin-bottom:32px}
+.c4-rule-thin{height:1px;background:rgba(0,0,0,.1);margin:24px 0}
+
+/* Two-col editorial */
+.c4-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:768px){.c4-cols{grid-template-columns:1fr}}
+.c4-col-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#bbb;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,.08)}
+.c4-col-fact{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dotted rgba(0,0,0,.08)}
+.c4-col-fk{font-size:13px;color:#8a7e6e}
+.c4-col-fv{font-size:13px;font-weight:700;color:#1a1a1a}
+
+/* Ask section — feels like a classified ad box */
+.c4-ask-box{margin:40px 0;padding:28px 32px;border:2px solid #1a1a1a;position:relative}
+.c4-ask-box::before{content:'ASK AN EXPERT';position:absolute;top:-10px;left:24px;background:#f5f0e8;padding:0 12px;font-size:10px;letter-spacing:.2em;color:#1a1a1a;font-weight:700}
+.c4-ask-desc{font-family:'Instrument Serif',serif;font-style:italic;font-size:16px;color:#8a7e6e;margin-bottom:16px}
+.c4-ask-row{display:flex;gap:8px}
+.c4-ask-input{flex:1;border:none;border-bottom:2px solid #1a1a1a;background:transparent;padding:12px 0;font-family:'Space Mono',monospace;font-size:14px;color:#1a1a1a;outline:none}
+.c4-ask-input::placeholder{color:#ccc}
+.c4-ask-btn{background:#1a1a1a;color:#f5f0e8;border:none;padding:12px 28px;font-family:'Instrument Serif',serif;font-size:14px;cursor:pointer}
+.c4-ask-btn:hover{background:#333}
+
+/* Q&A editorial */
+.c4-qa-item{padding:16px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.c4-qa-q{font-family:'Instrument Serif',serif;font-size:20px;color:#1a1a1a}
+.c4-qa-a{font-size:13px;color:#8a7e6e;line-height:1.7;margin-top:4px}
+
+/* Embed */
+.c4-embed{margin-top:32px;padding:16px;border:1px dashed rgba(0,0,0,.15);font-size:11px;color:#bbb;display:flex;justify-content:space-between;align-items:center}
+.c4-embed code{color:#1a1a1a;font-weight:700;user-select:all}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   C5: THE DATA OBSERVATORY
+   Bloomberg Terminal meets scientific paper.
+   Dense data, dark, neon green accents, real-time feel.
+   ═══════════════════════════════════════════════════════════════════ */
+.c5{background:#0b0e11;color:#6b7a6b;font-family:'JetBrains Mono',monospace;min-height:100vh}
+.c5-header{padding:10px 24px;display:flex;justify-content:space-between;align-items:center;background:#080a0d;border-bottom:1px solid #1a1f1a}
+.c5-logo{font-size:11px;font-weight:700;color:#22c55e;letter-spacing:.15em;text-transform:uppercase}
+.c5-header-right{display:flex;gap:16px;align-items:center;font-size:10px;color:#333}
+.c5-live{display:flex;align-items:center;gap:5px;color:#22c55e}
+.c5-live::before{content:'';width:6px;height:6px;background:#22c55e;border-radius:50%;animation:c5pulse 2s infinite}
+@keyframes c5pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+.c5-layout{display:grid;grid-template-columns:1fr 320px;gap:0}
+@media(max-width:900px){.c5-layout{grid-template-columns:1fr}}
+
+.c5-main{padding:24px}
+.c5-title-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+.c5-h1{font-size:20px;font-weight:700;color:#e0ffe0}
+.c5-gtin{font-size:11px;color:#333;margin-top:4px}
+.c5-cert-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border:1px solid rgba(34,197,94,.2);color:#22c55e;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.c5-cert-badge::before{content:'';width:4px;height:4px;background:#22c55e;border-radius:50%}
+
+/* Dense data table */
+.c5-table{width:100%;border-collapse:collapse;margin-bottom:20px}
+.c5-table th{text-align:left;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#333;padding:6px 10px;border-bottom:1px solid #1a1f1a;font-weight:400}
+.c5-table td{padding:5px 10px;font-size:11px;border-bottom:1px solid rgba(255,255,255,.02)}
+.c5-table td:first-child{color:#6b7a6b}
+.c5-table td:last-child{color:#e0ffe0;font-weight:700;text-align:right}
+.c5-table tr:hover td{background:rgba(34,197,94,.02)}
+
+/* Key metrics bar */
+.c5-metrics{display:flex;gap:1px;margin-bottom:20px;background:#1a1f1a}
+.c5-metric{flex:1;background:#0b0e11;padding:14px 16px;text-align:center}
+.c5-metric-val{font-size:22px;font-weight:700;color:#e0ffe0}
+.c5-metric-label{font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#444;margin-top:2px}
+
+/* Right panel — query terminal */
+.c5-terminal{border-left:1px solid #1a1f1a;display:flex;flex-direction:column;height:calc(100vh - 48px);position:sticky;top:48px}
+@media(max-width:900px){.c5-terminal{position:static;height:auto;border-left:none;border-top:1px solid #1a1f1a}}
+.c5-term-header{padding:12px 16px;border-bottom:1px solid #1a1f1a;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#22c55e;display:flex;justify-content:space-between}
+.c5-term-body{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.c5-term-msg{font-size:11px;line-height:1.6;max-width:90%}
+.c5-term-msg.sys{color:#22c55e;opacity:.6;align-self:flex-start}
+.c5-term-msg.usr{color:#e0ffe0;align-self:flex-end;text-align:right}
+.c5-term-msg.res{color:#6b7a6b;align-self:flex-start;padding:10px;background:rgba(34,197,94,.04);border-left:2px solid rgba(34,197,94,.2)}
+.c5-term-input-wrap{padding:12px 16px;border-top:1px solid #1a1f1a;display:flex;gap:6px}
+.c5-term-input{flex:1;background:transparent;border:1px solid #1a1f1a;padding:8px 12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#e0ffe0;outline:none}
+.c5-term-input:focus{border-color:#22c55e}
+.c5-term-input::placeholder{color:#222}
+.c5-term-send{background:#22c55e;color:#0b0e11;border:none;padding:8px 14px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;cursor:pointer;letter-spacing:.06em;text-transform:uppercase}
+.c5-term-send:hover{background:#4ade80}
+
+/* Section titles */
+.c5-sec-title{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#333;margin:20px 0 10px;padding-bottom:6px;border-bottom:1px solid #1a1f1a}
+
+/* Q&A */
+.c5-qa-row{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.02)}
+.c5-qa-q{font-size:11px;color:#22c55e}
+.c5-qa-a{font-size:11px;color:#6b7a6b;line-height:1.5;margin-top:2px}
+</style>
+</head>
+<body>
+
+<div class="concept-nav">
+  <span class="label">Concepts</span>
+  <button class="active" data-c="c1">Clinical Authority</button>
+  <button data-c="c2">Intelligent Terminal</button>
+  <button data-c="c3">Verified Canvas</button>
+  <button data-c="c4">Editorial Dossier</button>
+  <button data-c="c5">Data Observatory</button>
+</div>
+
+
+<!-- ═══ C1: THE CLINICAL AUTHORITY ═══ -->
+<div class="concept active" id="c1">
+<div class="c1">
+  <div class="c1-header">
+    <div class="c1-logo">Signetry</div>
+    <button class="c1-verify-btn">Verify a Product</button>
+  </div>
+  <div class="c1-layout">
+    <div class="c1-sidebar">
+      <div class="c1-sb-title">Quick Specs</div>
+      <div class="c1-sb-item"><span class="c1-sb-label">Capacity</span><span class="c1-sb-val">737 L</span></div>
+      <div class="c1-sb-item"><span class="c1-sb-label">Noise</span><span class="c1-sb-val">47 dB</span></div>
+      <div class="c1-sb-item"><span class="c1-sb-label">Running Cost</span><span class="c1-sb-val">$150/yr</span></div>
+      <div class="c1-sb-item"><span class="c1-sb-label">Weight</span><span class="c1-sb-val">65 kg</span></div>
+      <div class="c1-sb-item"><span class="c1-sb-label">Width</span><span class="c1-sb-val">890 mm</span></div>
+      <div class="c1-sb-item"><span class="c1-sb-label">Depth</span><span class="c1-sb-val">655 mm</span></div>
+      <div class="c1-sb-item"><span class="c1-sb-label">Height</span><span class="c1-sb-val">2130 mm</span></div>
+      <div class="c1-sb-item" style="border:none"><span class="c1-sb-label">GTIN</span><span class="c1-sb-val" style="font-family:'Space Mono',monospace;font-size:11px">9351886006558</span></div>
+    </div>
+    <div class="c1-main">
+      <div class="c1-badge">Verified Product Record</div>
+      <div class="c1-h1">1-Door Commercial Fridge</div>
+      <div class="c1-brand">Schmick &mdash; HUS &bull; HUS-SC700W</div>
+
+      <div class="c1-section-title">Technical Specifications</div>
+      <div class="c1-fact-grid">
+        <div class="c1-fact"><span class="c1-fk">Capacity</span><span class="c1-fv">737 L<span class="c1-source-dot" title="Brand Certified"></span></span></div>
+        <div class="c1-fact"><span class="c1-fk">Can Capacity</span><span class="c1-fv">600<span class="c1-source-dot" title="Brand Certified"></span></span></div>
+        <div class="c1-fact"><span class="c1-fk">Noise Level</span><span class="c1-fv">47 dB<span class="c1-source-dot" title="Brand Certified"></span></span></div>
+        <div class="c1-fact"><span class="c1-fk">Power</span><span class="c1-fv">1.6 kWh/24h<span class="c1-source-dot" title="Brand Certified"></span></span></div>
+        <div class="c1-fact"><span class="c1-fk">Running Cost</span><span class="c1-fv">$149.74/yr<span class="c1-source-dot" title="Brand Certified"></span></span></div>
+        <div class="c1-fact"><span class="c1-fk">Glass Door</span><span class="c1-fv">Yes<span class="c1-source-dot" title="Brand Certified"></span></span></div>
+        <div class="c1-fact"><span class="c1-fk">Body Material</span><span class="c1-fv">White<span class="c1-source-dot" title="Brand Certified"></span></span></div>
+        <div class="c1-fact"><span class="c1-fk">Door Hinge</span><span class="c1-fv">Right<span class="c1-source-dot" title="Brand Certified"></span></span></div>
+      </div>
+
+      <div class="c1-section-title">Frequently Asked</div>
+      <div class="c1-qa">
+        <div class="c1-qa-item"><div class="c1-qa-q">Is it lockable?</div><div class="c1-qa-a">Yes. Includes a key-operated barrel lock on the door handle.</div></div>
+        <div class="c1-qa-item"><div class="c1-qa-q">Can I use it outdoors?</div><div class="c1-qa-a">Yes. Rated for outdoor use with subtropical climate class and IP24 protection.</div></div>
+        <div class="c1-qa-item"><div class="c1-qa-q">What temperature range?</div><div class="c1-qa-a">Adjustable between 2&deg;C and 8&deg;C via digital thermostat.</div></div>
+      </div>
+    </div>
+    <div class="c1-ask-panel">
+      <div class="c1-ask-header">
+        <div class="c1-ask-title">Ask Anything</div>
+        <div class="c1-ask-sub">Answers from verified product data only</div>
+      </div>
+      <div class="c1-ask-msgs">
+        <div class="c1-msg bot">Ask me anything about the HUS-SC700W. I only answer from verified product data.</div>
+      </div>
+      <div class="c1-ask-input-wrap">
+        <input class="c1-ask-input" placeholder="e.g. Is it lockable?">
+        <button class="c1-ask-send">Ask</button>
+      </div>
+      <div class="c1-ask-footer">Powered by Signetry &bull; Verified answers only</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══ C2: THE INTELLIGENT TERMINAL ═══ -->
+<div class="concept" id="c2">
+<div class="c2">
+  <div class="c2-header">
+    <div class="c2-logo">Signetry</div>
+    <div class="c2-gtin">GTIN 9351886006558</div>
+  </div>
+  <div class="c2-hero">
+    <div class="c2-verified">Verified Product Record</div>
+    <div class="c2-h1">1-Door Commercial Fridge</div>
+    <div class="c2-brand">Schmick &mdash; HUS &bull; HUS-SC700W</div>
+    <div class="c2-command">
+      <input class="c2-cmd-input" id="c2-input" placeholder="Ask anything about this product...">
+      <span class="c2-cmd-hint">Enter &crarr;</span>
+    </div>
+    <div class="c2-cmd-answer" id="c2-answer"></div>
+  </div>
+  <div class="c2-bento">
+    <div class="c2-card">
+      <div class="c2-card-title">Technical Specs</div>
+      <div class="c2-spec-row"><span class="c2-sk">Capacity</span><span class="c2-sv">737 L</span></div>
+      <div class="c2-spec-row"><span class="c2-sk">Noise</span><span class="c2-sv">47 dB</span></div>
+      <div class="c2-spec-row"><span class="c2-sk">Power</span><span class="c2-sv">1.6 kWh/24h</span></div>
+      <div class="c2-spec-row"><span class="c2-sk">Running Cost</span><span class="c2-sv">$149.74/yr</span></div>
+      <div class="c2-spec-row"><span class="c2-sk">Glass Door</span><span class="c2-sv">Yes</span></div>
+      <div class="c2-spec-row"><span class="c2-sk">Door Hinge</span><span class="c2-sv">Right</span></div>
+      <div class="c2-spec-row"><span class="c2-sk">Body</span><span class="c2-sv">White Steel</span></div>
+    </div>
+    <div class="c2-card">
+      <div class="c2-card-title">Q&A</div>
+      <div class="c2-qa-item"><div class="c2-qa-q">Is it lockable?</div><div class="c2-qa-a">Yes. Key-operated barrel lock included.</div></div>
+      <div class="c2-qa-item"><div class="c2-qa-q">Can I use it outdoors?</div><div class="c2-qa-a">Yes. Subtropical climate class, IP24 rated.</div></div>
+      <div class="c2-qa-item"><div class="c2-qa-q">What temperature range?</div><div class="c2-qa-a">2&deg;C to 8&deg;C, digital thermostat.</div></div>
+    </div>
+    <div class="c2-card">
+      <div class="c2-card-title">Key Numbers</div>
+      <div class="c2-stat-big">737<span style="font-size:16px;color:#555"> L</span></div>
+      <div class="c2-stat-label">Total Capacity</div>
+      <div class="c2-stats-row">
+        <div class="c2-stat-mini"><div class="c2-stat-mini-val">890</div><div class="c2-stat-mini-label">Width mm</div></div>
+        <div class="c2-stat-mini"><div class="c2-stat-mini-val">655</div><div class="c2-stat-mini-label">Depth mm</div></div>
+        <div class="c2-stat-mini"><div class="c2-stat-mini-val">2130</div><div class="c2-stat-mini-label">Height mm</div></div>
+        <div class="c2-stat-mini"><div class="c2-stat-mini-val">65</div><div class="c2-stat-mini-label">Weight kg</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══ C3: THE VERIFIED CANVAS ═══ -->
+<div class="concept" id="c3">
+<div class="c3">
+  <div class="c3-header">
+    <div class="c3-logo">Signetry</div>
+    <div class="c3-toggle-wrap">
+      Marketing <div class="c3-toggle" id="c3-toggle"></div> Verified Facts
+    </div>
+  </div>
+  <div class="c3-content">
+    <div class="c3-truth-badge">Verified Product Truth</div>
+    <div class="c3-h1">1-Door Commercial Fridge</div>
+    <div class="c3-brand">Schmick &mdash; HUS &bull; HUS-SC700W &bull; 9351886006558</div>
+
+    <div class="c3-section">
+      <div class="c3-section-head">Truth Profile</div>
+      <div class="c3-section-sub">28 verified facts from brand-certified sources</div>
+      <div class="c3-fact-cards">
+        <div class="c3-fcard"><div class="c3-fcard-label">Capacity</div><div class="c3-fcard-val">737 <span class="c3-fcard-unit">L</span></div></div>
+        <div class="c3-fcard"><div class="c3-fcard-label">Noise</div><div class="c3-fcard-val">47 <span class="c3-fcard-unit">dB</span></div></div>
+        <div class="c3-fcard"><div class="c3-fcard-label">Running Cost</div><div class="c3-fcard-val">$150 <span class="c3-fcard-unit">/yr</span></div></div>
+        <div class="c3-fcard"><div class="c3-fcard-label">Weight</div><div class="c3-fcard-val">65 <span class="c3-fcard-unit">kg</span></div></div>
+        <div class="c3-fcard"><div class="c3-fcard-label">Width</div><div class="c3-fcard-val">890 <span class="c3-fcard-unit">mm</span></div></div>
+        <div class="c3-fcard"><div class="c3-fcard-label">Height</div><div class="c3-fcard-val">2130 <span class="c3-fcard-unit">mm</span></div></div>
+      </div>
+    </div>
+
+    <div class="c3-section">
+      <div class="c3-section-head">AI Insights</div>
+      <div class="c3-section-sub">Ask anything — answers sourced only from verified data</div>
+      <div class="c3-ai-box">
+        <div class="c3-ai-input-wrap">
+          <input class="c3-ai-input" placeholder="Ask a question about this product...">
+          <button class="c3-ai-send">Ask</button>
+        </div>
+        <div class="c3-ai-pills">
+          <div class="c3-ai-pill">Is it lockable?</div>
+          <div class="c3-ai-pill">Can I use it outdoors?</div>
+          <div class="c3-ai-pill">How noisy is it?</div>
+          <div class="c3-ai-pill">What's the running cost?</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="c3-section">
+      <div class="c3-section-head">Community Q&A</div>
+      <div class="c3-section-sub">AI-verified answers from product data</div>
+      <div class="c3-qa-item"><div class="c3-qa-q">Is it lockable?</div><div class="c3-qa-a">Yes. The HUS-SC700W includes a key-operated barrel lock on the door handle.</div><div class="c3-qa-meta">Verified &bull; lockable, lock_type</div></div>
+      <div class="c3-qa-item"><div class="c3-qa-q">Can I use it outdoors?</div><div class="c3-qa-a">Yes. Rated for outdoor use with subtropical climate class and IP24 water ingress protection.</div><div class="c3-qa-meta">Verified &bull; location, ip_rating</div></div>
+      <div class="c3-qa-item"><div class="c3-qa-q">What temperature range?</div><div class="c3-qa-a">Adjustable between 2&deg;C and 8&deg;C via digital thermostat.</div><div class="c3-qa-meta">Verified &bull; internal_temp_min_c, internal_temp_max_c</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══ C4: THE EDITORIAL DOSSIER ═══ -->
+<div class="concept" id="c4">
+<div class="c4">
+  <div class="c4-header">
+    <div class="c4-logo">Signetry</div>
+    <div class="c4-date">Product Intelligence Record &bull; PIR/1.0</div>
+  </div>
+  <div class="c4-content">
+    <div class="c4-kicker">Brand Certified &bull; Schmick &bull; HUS Range</div>
+    <div class="c4-h1">1-Door Commercial Fridge</div>
+    <div class="c4-deck">A 737-litre commercial glass door fridge rated for outdoor use, running at 47 dB with an annual cost of $149.74.</div>
+    <div class="c4-rule"></div>
+
+    <div class="c4-cols">
+      <div>
+        <div class="c4-col-title">Capacity &amp; Dimensions</div>
+        <div class="c4-col-fact"><span class="c4-col-fk">Capacity</span><span class="c4-col-fv">737 L</span></div>
+        <div class="c4-col-fact"><span class="c4-col-fk">375ml Cans</span><span class="c4-col-fv">600</span></div>
+        <div class="c4-col-fact"><span class="c4-col-fk">Exterior (W&times;D&times;H)</span><span class="c4-col-fv">890&times;655&times;2130</span></div>
+        <div class="c4-col-fact"><span class="c4-col-fk">Interior (W&times;D&times;H)</span><span class="c4-col-fv">800&times;540&times;1800</span></div>
+        <div class="c4-col-fact"><span class="c4-col-fk">Weight</span><span class="c4-col-fv">65 kg</span></div>
+      </div>
+      <div>
+        <div class="c4-col-title">Performance &amp; Construction</div>
+        <div class="c4-col-fact"><span class="c4-col-fk">Noise</span><span class="c4-col-fv">47 dB</span></div>
+        <div class="c4-col-fact"><span class="c4-col-fk">Power</span><span class="c4-col-fv">1.6 kWh/24h</span></div>
+        <div class="c4-col-fact"><span class="c4-col-fk">Running Cost</span><span class="c4-col-fv">$149.74/yr</span></div>
+        <div class="c4-col-fact"><span class="c4-col-fk">Glass Door</span><span class="c4-col-fv">Yes</span></div>
+        <div class="c4-col-fact"><span class="c4-col-fk">Body Material</span><span class="c4-col-fv">White Steel</span></div>
+      </div>
+    </div>
+
+    <div class="c4-ask-box">
+      <div class="c4-ask-desc">Verified answers from the product record. No guessing, no hallucination.</div>
+      <div class="c4-ask-row">
+        <input class="c4-ask-input" placeholder="Ask anything about this product...">
+        <button class="c4-ask-btn">Ask</button>
+      </div>
+    </div>
+
+    <div class="c4-rule-thin"></div>
+    <div class="c4-col-title">Questions &amp; Answers</div>
+    <div class="c4-qa-item"><div class="c4-qa-q">Is it lockable?</div><div class="c4-qa-a">Yes. Includes a key-operated barrel lock on the door handle.</div></div>
+    <div class="c4-qa-item"><div class="c4-qa-q">Can I use it outdoors?</div><div class="c4-qa-a">Yes. Subtropical climate class, IP24 water ingress protection.</div></div>
+    <div class="c4-qa-item"><div class="c4-qa-q">What temperature range?</div><div class="c4-qa-a">Adjustable 2&deg;C to 8&deg;C via digital thermostat.</div></div>
+
+    <div class="c4-embed">
+      <span>Embed this on your site:</span>
+      <code>&lt;script src="signetry.ai/widget.js" data-gtin="9351886006558"&gt;&lt;/script&gt;</code>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══ C5: THE DATA OBSERVATORY ═══ -->
+<div class="concept" id="c5">
+<div class="c5">
+  <div class="c5-header">
+    <div class="c5-logo">Signetry</div>
+    <div class="c5-header-right">
+      <span class="c5-live">Live</span>
+      <span>PIR/1.0</span>
+      <span>28 FACTS</span>
+    </div>
+  </div>
+  <div class="c5-layout">
+    <div class="c5-main">
+      <div class="c5-title-row">
+        <div>
+          <div class="c5-h1">HUS-SC700W &mdash; 1-Door Commercial Fridge</div>
+          <div class="c5-gtin">GTIN 9351886006558 &bull; Schmick &bull; HUS Range</div>
+        </div>
+        <div class="c5-cert-badge">Brand Certified</div>
+      </div>
+
+      <div class="c5-metrics">
+        <div class="c5-metric"><div class="c5-metric-val">737</div><div class="c5-metric-label">Litres</div></div>
+        <div class="c5-metric"><div class="c5-metric-val">47</div><div class="c5-metric-label">dB</div></div>
+        <div class="c5-metric"><div class="c5-metric-val">$150</div><div class="c5-metric-label">/Year</div></div>
+        <div class="c5-metric"><div class="c5-metric-val">65</div><div class="c5-metric-label">kg</div></div>
+        <div class="c5-metric"><div class="c5-metric-val">600</div><div class="c5-metric-label">Cans</div></div>
+      </div>
+
+      <div class="c5-sec-title">Dimensions &amp; Physical</div>
+      <table class="c5-table">
+        <tr><th>Parameter</th><th style="text-align:right">Value</th></tr>
+        <tr><td>Exterior Width</td><td>890 mm</td></tr>
+        <tr><td>Exterior Depth</td><td>655 mm</td></tr>
+        <tr><td>Exterior Height</td><td>2130 mm</td></tr>
+        <tr><td>Interior (W&times;D&times;H)</td><td>800 &times; 540 &times; 1800 mm</td></tr>
+        <tr><td>Weight</td><td>65 kg</td></tr>
+      </table>
+
+      <div class="c5-sec-title">Performance &amp; Energy</div>
+      <table class="c5-table">
+        <tr><th>Parameter</th><th style="text-align:right">Value</th></tr>
+        <tr><td>Noise Level</td><td>47 dB</td></tr>
+        <tr><td>Power Consumption</td><td>1.6 kWh / 24h</td></tr>
+        <tr><td>Annual Running Cost</td><td>$149.74 AUD</td></tr>
+        <tr><td>Cost per kWh</td><td>25.64c</td></tr>
+      </table>
+
+      <div class="c5-sec-title">Construction</div>
+      <table class="c5-table">
+        <tr><th>Parameter</th><th style="text-align:right">Value</th></tr>
+        <tr><td>Door Type</td><td>Glass, Right Hinged</td></tr>
+        <tr><td>Body Material</td><td>White Steel</td></tr>
+        <tr><td>Interior Finish</td><td>White</td></tr>
+        <tr><td>Grill</td><td>White Front, Silver Trim</td></tr>
+      </table>
+
+      <div class="c5-sec-title">Q&A</div>
+      <div class="c5-qa-row"><div class="c5-qa-q">&gt; Is it lockable?</div><div class="c5-qa-a">Yes. Key-operated barrel lock included.</div></div>
+      <div class="c5-qa-row"><div class="c5-qa-q">&gt; Outdoor use?</div><div class="c5-qa-a">Yes. Subtropical climate class, IP24.</div></div>
+      <div class="c5-qa-row"><div class="c5-qa-q">&gt; Temperature range?</div><div class="c5-qa-a">2&deg;C&ndash;8&deg;C, digital thermostat.</div></div>
+    </div>
+    <div class="c5-terminal">
+      <div class="c5-term-header"><span>Query Terminal</span><span style="color:#333">v2.0</span></div>
+      <div class="c5-term-body" id="c5-msgs">
+        <div class="c5-term-msg sys">> System ready. Query product record.</div>
+      </div>
+      <div class="c5-term-input-wrap">
+        <input class="c5-term-input" id="c5-input" placeholder="> ask a question...">
+        <button class="c5-term-send" id="c5-send">Run</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<script>
+// Nav switching
+document.querySelectorAll('.concept-nav button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.concept-nav button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.concept').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.c).classList.add('active');
+  });
+});
+
+// C2: Command bar interaction
+(function(){
+  var input = document.getElementById('c2-input');
+  var zone = document.getElementById('c2-answer');
+  input.addEventListener('keydown', function(e) {
+    if (e.key !== 'Enter') return;
+    var q = input.value.trim();
+    if (!q) return;
+    zone.textContent = 'Based on verified product data: The HUS-SC700W is a 737-litre commercial glass door bar fridge. It runs at 47 dB, costs approximately $149.74/year to run, and is rated for outdoor use with IP24 protection and subtropical climate class. It includes a key lock and digital thermostat (2\u20138\u00b0C).';
+    zone.classList.add('show');
+    input.value = '';
+  });
+})();
+
+// C3: Fact toggle
+document.getElementById('c3-toggle').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+// C5: Terminal
+(function(){
+  var input = document.getElementById('c5-input');
+  var send = document.getElementById('c5-send');
+  var msgs = document.getElementById('c5-msgs');
+  function ask() {
+    var q = input.value.trim();
+    if (!q) return;
+    var usr = document.createElement('div');
+    usr.className = 'c5-term-msg usr';
+    usr.textContent = q;
+    msgs.appendChild(usr);
+    input.value = '';
+    msgs.scrollTop = msgs.scrollHeight;
+    setTimeout(function() {
+      var res = document.createElement('div');
+      res.className = 'c5-term-msg res';
+      res.textContent = 'Yes. Includes a key-operated barrel lock. Keys included. Rated for outdoor use, subtropical climate class, IP24. 737L capacity, 47 dB, $149.74/yr running cost.';
+      msgs.appendChild(res);
+      msgs.scrollTop = msgs.scrollHeight;
+    }, 400);
+  }
+  send.addEventListener('click', ask);
+  input.addEventListener('keydown', function(e) { if (e.key === 'Enter') ask(); });
+})();
+</script>
+
+</body>
+</html>

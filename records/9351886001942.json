@@ -30,7 +30,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 0,
-    "door_hinge": "Glass Lid",
+    "door_hinge": "lift-up lid",
     "glass_door": true,
     "led_lighting": true,
     "body_material": "Black",
@@ -51,7 +51,9 @@
     ],
     "refrigerant": "R600",
     "shelf_type": "2 x baskets",
-    "door_type": "tempered_lid"
+    "door_type": "tempered_lid",
+    "door_reversible": false,
+    "door_count": 1
   },
   "qa": [
     {
