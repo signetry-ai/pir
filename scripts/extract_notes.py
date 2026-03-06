@@ -78,7 +78,7 @@ def _extract_single(client, chunks_text: str, record: dict) -> list[dict]:
     try:
         message = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=4096,
+            max_tokens=8192,
             messages=[{"role": "user", "content": prompt}],
         )
     except anthropic.APIError as e:

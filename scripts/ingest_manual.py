@@ -102,6 +102,12 @@ def main():
         note["approved"] = False
         note["source_document"] = manual_url.split("/")[-1].split("?")[0]
 
+    # Save chunks for review page
+    chunks_path = os.path.join(RECORDS_DIR, f"{gtin}.chunks.json")
+    with open(chunks_path, "w") as f:
+        json.dump(chunks, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
     # Write candidate notes for review
     output_path = os.path.join(RECORDS_DIR, f"{gtin}.notes.json")
     output = {
