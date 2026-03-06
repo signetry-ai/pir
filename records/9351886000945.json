@@ -4,7 +4,7 @@
   "sku": "SG1Q-Combo",
   "brand": "Rhino",
   "range": "SG",
-  "name": "1-Door Outdoor Bar Fridge (Low-E Glass)",
+  "name": "2-Door Outdoor Bar Fridge (Low-E Glass)",
   "category": "bar_fridge",
   "status": {
     "brand_certified": false,
@@ -43,7 +43,7 @@
     "shelf_w_mm": 500,
     "shelf_d_mm": 355,
     "shelf_type": "Each fridge 2 x adjustable chromed special 'no topple' shelves (500mmW x 355mmD) hold 104 kg weight",
-    "door_hinge": "right",
+    "door_hinge": "1 x left, 1 x right",
     "led_lighting": true,
     "refrigerant": "R600",
     "refrigerant_odp": 0,
@@ -64,7 +64,7 @@
     "component_transformer": "Meanwell (Taiwan)",
     "door_type": "glass",
     "door_reversible": true,
-    "door_count": 1,
+    "door_count": 2,
     "door_heated": false,
     "body_colour": "black",
     "led_light_colour": "white"
