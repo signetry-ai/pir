@@ -25,7 +25,7 @@
     "location": [
       "indoor"
     ],
-    "lockable": true,
+    "lockable": false,
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "door_hinge": "right",
@@ -45,6 +45,8 @@
       "Meps"
     ],
     "refrigerant": "R600",
+    "shelf_count": 2,
+    "adjustable_shelf": true,
     "shelf_type": "1 x Large and 1 x Half Shelf",
     "door_reversible": false,
     "door_count": 1,

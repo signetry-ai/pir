@@ -25,7 +25,7 @@
     "location": [
       "indoor"
     ],
-    "lockable": true,
+    "lockable": false,
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "door_hinge": "right",
@@ -37,7 +37,10 @@
     "door_heated": false,
     "body_colour": "black",
     "led_light_colour": "white",
-    "ambient_temperature_max_c": 32
+    "ambient_temperature_max_c": 32,
+    "shelf_count": 2,
+    "adjustable_shelf": true,
+    "shelf_type": "1 x Large and 1 x Half Shelf"
   },
   "qa": [
     {

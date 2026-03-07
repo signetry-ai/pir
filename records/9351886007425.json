@@ -26,7 +26,7 @@
     "location": [
       "indoor"
     ],
-    "lockable": true,
+    "lockable": false,
     "adjustable_feet": true,
     "adjustable_feet_count": 2,
     "door_hinge": "right",
