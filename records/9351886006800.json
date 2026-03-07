@@ -22,7 +22,7 @@
     "weight_kg": 80,
     "noise_db": 45,
     "power_consumption_kwh_per_24h": 3.27,
-    "ambient_temperature_max_c": 32,
+    "ambient_temperature_max_c": 38.0,
     "location": [
       "indoor"
     ],

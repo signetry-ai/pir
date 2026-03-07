@@ -34,7 +34,7 @@
     "running_cost_aud_annual": 124.47,
     "running_cost_basis_cents_per_kwh": 25.64,
     "ip_rating": "IP34",
-    "ambient_temperature_max_c": 43,
+    "ambient_temperature_max_c": 47.0,
     "internal_temperature_min_c": 0,
     "location": [
       "indoor",

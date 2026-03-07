@@ -28,7 +28,7 @@
     "power_consumption_kwh_per_24h": 1.03,
     "running_cost_aud_annual": 96.39,
     "running_cost_basis_cents_per_kwh": 25.64,
-    "ambient_temperature_max_c": 40,
+    "ambient_temperature_max_c": 43.0,
     "internal_temperature_min_c": 0,
     "location": [
       "indoor",

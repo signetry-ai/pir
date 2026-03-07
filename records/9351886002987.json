@@ -29,7 +29,7 @@
     "lockable": true,
     "adjustable_feet": true,
     "adjustable_feet_count": 4,
-    "door_hinge": "right",
+    "door_hinge": "1 x left, 1 x right",
     "led_lighting": true,
     "interior_finish": "Molded black",
     "running_cost_aud_annual": 115.11,
@@ -50,7 +50,7 @@
     "component_fan_secondary": "Noctua (Silent)",
     "door_type": "glass",
     "door_reversible": true,
-    "door_count": 1,
+    "door_count": 2,
     "door_heated": false,
     "body_colour": "black",
     "led_light_colour": "white"

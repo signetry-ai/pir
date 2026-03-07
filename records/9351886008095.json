@@ -24,7 +24,7 @@
     "power_consumption_kwh_per_24h": 1.89,
     "internal_temperature_min_c": 1,
     "internal_temperature_max_c": 18,
-    "ambient_temperature_max_c": 38,
+    "ambient_temperature_max_c": 32.0,
     "energy_star_rating_au": 9,
     "energy_star_rating_au_note": "Australian 1-10 star scale",
     "location": [
