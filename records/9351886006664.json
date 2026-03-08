@@ -36,7 +36,7 @@
     "door_count": 1,
     "door_type": "glass",
     "door_heated": false,
-    "body_colour": "black",
+    "body_colour": "branded",
     "led_light_colour": "white"
   },
   "qa": [

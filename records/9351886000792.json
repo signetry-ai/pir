@@ -52,7 +52,7 @@
     "door_reversible": false,
     "door_count": 2,
     "door_heated": false,
-    "body_colour": "black",
+    "body_colour": "stainless steel",
     "led_light_colour": "white"
   },
   "qa": [
