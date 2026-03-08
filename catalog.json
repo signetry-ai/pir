@@ -1251,7 +1251,9 @@
       "brand": "Schmick",
       "manufacturer": null,
       "name": "3-Door Bar Fridge",
-      "category": "bar_fridge"
+      "category": "bar_fridge",
+      "has_image": true,
+      "image": "images/9351886002710.jpg"
     },
     {
       "gtin": "9351886002727",

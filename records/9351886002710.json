@@ -125,5 +125,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886002710.jpg",
+      "alt": "Schmick SK386-SS 3-Door Bar Fridge",
+      "primary": true,
+      "source": "shopify"
+    }
   ]
 }
