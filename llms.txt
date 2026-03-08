@@ -6,7 +6,8 @@ Total: 368 products across 7 brands.
 ## How to access
 
 Individual record by GTIN:
-  https://signetry.ai/records/{gtin}.json
+  https://signetry.ai/records/{gtin}
+  (also accepts: https://signetry.ai/records/{gtin}.json)
 
 Full catalog index:
   https://signetry.ai/catalog.json

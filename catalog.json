@@ -2871,20 +2871,6 @@
       "image": "images/9351886006145.jpg"
     },
     {
-      "gtin": "9351886006343",
-      "sku": "AVS-1000",
-      "brand": "Bar Fridges Australia",
-      "manufacturer": "Schmick",
-      "name": "1-Door Bar Fridge",
-      "category": "bar_fridge",
-      "branding": {
-        "type": "house_brand",
-        "original_brand": "Bar Fridges Australia"
-      },
-      "has_image": true,
-      "image": "images/9351886006343.jpg"
-    },
-    {
       "gtin": "9351886006350",
       "sku": "SG2H-B-HD",
       "brand": "Rhino",

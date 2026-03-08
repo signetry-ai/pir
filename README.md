@@ -2,14 +2,16 @@
 
 An open registry of structured product facts. Every record is a GTIN-indexed JSON file containing verified specs, pre-answered questions, and authorized sellers.
 
-**368 products** across 7 brands and 10 categories. CC0 licensed.
+**368 products** across 7 brands and 10 categories. [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) licensed.
 
 ## Access the data
 
 **Single record (by GTIN):**
 ```bash
-curl https://signetry.ai/records/9351886000266.json
+curl https://signetry.ai/records/9351886000266
 ```
+
+Open the same URL in a browser to see a rendered product page. The server uses content negotiation — agents get JSON, browsers get HTML.
 
 **Full catalog index:**
 ```bash

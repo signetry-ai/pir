@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>BFA vs PIR Audit</title>
+<style>
+    body { font-family: -apple-system, monospace; background: #0a0a0a; color: #e4e4e7; margin: 20px; font-size: 13px; }
+    h1 { font-size: 18px; color: #fafafa; }
+    .stats { display: flex; gap: 24px; margin: 16px 0; }
+    .stat { background: #18181b; padding: 12px 20px; border-radius: 6px; }
+    .stat .n { font-size: 24px; font-weight: 700; color: #fafafa; }
+    .stat .label { color: #71717a; font-size: 11px; text-transform: uppercase; }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+    th { text-align: left; padding: 8px; border-bottom: 2px solid #27272a; color: #71717a; font-size: 11px; text-transform: uppercase; }
+    td { padding: 6px 8px; border-bottom: 1px solid #1e1e22; }
+    .mono { font-family: monospace; }
+    tr.high td { background: #1c0a0a; }
+    tr.high td:nth-child(4) { color: #ef4444; }
+    tr.med td { background: #1a1500; }
+    tr.med td:nth-child(4) { color: #f59e0b; }
+</style></head><body>
+<h1>BFA Feed vs PIR Audit</h1>
+<div class="stats">
+    <div class="stat"><div class="n">347</div><div class="label">Matched</div></div>
+    <div class="stat"><div class="n">6</div><div class="label">With Deltas</div></div>
+    <div class="stat"><div class="n">3</div><div class="label">Feed Only</div></div>
+    <div class="stat"><div class="n">21</div><div class="label">PIR Only</div></div>
+</div>
+<table>
+<tr><th>GTIN</th><th>SKU</th><th>Name</th><th>Field</th><th>PIR</th><th>BFA</th><th>Delta</th></tr>
+<tr class="high">
+                <td class="mono">9351886000938</td>
+                <td>SG1-Combo</td>
+                <td>1-Door Bar Fridge</td>
+                <td><b>door_count</b></td>
+                <td class="mono">1</td>
+                <td class="mono">2</td>
+                <td class="mono"></td>
+            </tr><tr class="high">
+                <td class="mono">9351886000945</td>
+                <td>SG1Q-Combo</td>
+                <td>1-Door Outdoor Bar Fridge (Low-E Glass)</td>
+                <td><b>door_count</b></td>
+                <td class="mono">1</td>
+                <td class="mono">2</td>
+                <td class="mono"></td>
+            </tr><tr class="med">
+                <td class="mono">9351886006633</td>
+                <td>TK-6S</td>
+                <td>Open Display Commercial Cooler (Low-E Glass)</td>
+                <td><b>w</b></td>
+                <td class="mono">610</td>
+                <td class="mono">890</td>
+                <td class="mono">-280</td>
+            </tr><tr class="med">
+                <td class="mono">9351886006633</td>
+                <td>TK-6S</td>
+                <td>Open Display Commercial Cooler (Low-E Glass)</td>
+                <td><b>h</b></td>
+                <td class="mono">1350</td>
+                <td class="mono">1500</td>
+                <td class="mono">-150</td>
+            </tr><tr class="high">
+                <td class="mono">9351886006817</td>
+                <td>SK668-B-HD</td>
+                <td>1-Door Upright Fridge (Heated Glass)</td>
+                <td><b>door_count</b></td>
+                <td class="mono">1</td>
+                <td class="mono">2</td>
+                <td class="mono"></td>
+            </tr><tr class="med">
+                <td class="mono">9351886007012</td>
+                <td>HUS-SC372LB</td>
+                <td>1-Door Bar Fridge</td>
+                <td><b>w</b></td>
+                <td class="mono">615</td>
+                <td class="mono">0</td>
+                <td class="mono">+615</td>
+            </tr><tr class="med">
+                <td class="mono">9351886007012</td>
+                <td>HUS-SC372LB</td>
+                <td>1-Door Bar Fridge</td>
+                <td><b>d</b></td>
+                <td class="mono">640</td>
+                <td class="mono">0</td>
+                <td class="mono">+640</td>
+            </tr><tr class="med">
+                <td class="mono">9351886007012</td>
+                <td>HUS-SC372LB</td>
+                <td>1-Door Bar Fridge</td>
+                <td><b>h</b></td>
+                <td class="mono">1940</td>
+                <td class="mono">0</td>
+                <td class="mono">+1940</td>
+            </tr><tr class="med">
+                <td class="mono">9351886007012</td>
+                <td>HUS-SC372LB</td>
+                <td>1-Door Bar Fridge</td>
+                <td><b>capacity_litres</b></td>
+                <td class="mono">370</td>
+                <td class="mono">0</td>
+                <td class="mono">+370</td>
+            </tr><tr class="med">
+                <td class="mono">9351886007012</td>
+                <td>HUS-SC372LB</td>
+                <td>1-Door Bar Fridge</td>
+                <td><b>capacity_cans</b></td>
+                <td class="mono">336</td>
+                <td class="mono">0</td>
+                <td class="mono">+336</td>
+            </tr><tr class="high">
+                <td class="mono">9351886007654</td>
+                <td>HUS-F10</td>
+                <td>1-Door Commercial Fridge</td>
+                <td><b>door_count</b></td>
+                <td class="mono">1</td>
+                <td class="mono">2</td>
+                <td class="mono"></td>
+            </tr>
+</table>
+</body></html>
