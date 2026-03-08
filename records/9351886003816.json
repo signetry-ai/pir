@@ -98,5 +98,13 @@
     "wrap_brand": "Great Northern Original",
     "licensor": "CUB"
   },
-  "base_model": "BC46W"
+  "base_model": "BC46W",
+  "images": [
+    {
+      "url": "images/9351886003816.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

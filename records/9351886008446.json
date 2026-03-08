@@ -96,5 +96,13 @@
     "wrap_brand": "Coca-Cola",
     "licensor": "Coca-Cola"
   },
-  "base_model": "PG65A"
+  "base_model": "PG65A",
+  "images": [
+    {
+      "url": "images/9351886008446.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

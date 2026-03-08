@@ -130,5 +130,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886006657.jpg",
+      "alt": "Rhino Open Display Commercial Cooler (Low-E Glass)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

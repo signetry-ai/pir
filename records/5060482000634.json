@@ -696,5 +696,13 @@
       "approved": true,
       "source_gtin": "9351886006350"
     }
+  ],
+  "images": [
+    {
+      "url": "images/5060482000634.jpg",
+      "alt": "Rhino 1-Door Outdoor Bar Fridge (Heated Glass)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

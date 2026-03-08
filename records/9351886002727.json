@@ -126,5 +126,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886002727.jpg",
+      "alt": "Schmick 3-Door Bar Fridge (Heated Glass)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

@@ -95,5 +95,13 @@
     "wrap_brand": "Dino",
     "licensor": "Sinclair Oil"
   },
-  "base_model": "SC88"
+  "base_model": "SC88",
+  "images": [
+    {
+      "url": "images/9351886004547.jpg",
+      "alt": "Schmick 1-Door Bar Fridge (Triple Glazed)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

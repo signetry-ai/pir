@@ -36,7 +36,8 @@
     "door_type": "glass",
     "door_heated": false,
     "body_colour": "white",
-    "led_light_colour": "white"
+    "led_light_colour": "white",
+    "colour": "branded"
   },
   "qa": [
     {
@@ -94,5 +95,13 @@
     "wrap_brand": "Carlton Dry",
     "licensor": "CUB"
   },
-  "base_model": "SC372B"
+  "base_model": "SC372B",
+  "images": [
+    {
+      "url": "images/9351886007098.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

@@ -95,5 +95,13 @@
     "wrap_brand": "Great Northern Crisp",
     "licensor": "CUB"
   },
-  "base_model": "EC68L"
+  "base_model": "EC68L",
+  "images": [
+    {
+      "url": "images/9351886007234.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

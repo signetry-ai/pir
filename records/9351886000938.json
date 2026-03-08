@@ -89,5 +89,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886000938.jpg",
+      "alt": "Rhino 2-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

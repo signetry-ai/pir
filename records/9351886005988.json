@@ -119,5 +119,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886005988.jpg",
+      "alt": "Schmick 1-Door Integrated Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

@@ -99,5 +99,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886001621.jpg",
+      "alt": "Schmick 1-Door Freezer",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

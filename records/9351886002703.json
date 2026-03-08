@@ -123,5 +123,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886002703.jpg",
+      "alt": "Schmick 3-Door Bar Fridge (Solid Door)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

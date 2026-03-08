@@ -36,7 +36,8 @@
     "door_type": "glass",
     "door_heated": false,
     "body_colour": "black",
-    "led_light_colour": "white"
+    "led_light_colour": "white",
+    "colour": "branded"
   },
   "qa": [
     {
@@ -94,5 +95,13 @@
     "wrap_brand": "Great Northern Crisp",
     "licensor": "CUB"
   },
-  "base_model": "SC372LB"
+  "base_model": "SC372LB",
+  "images": [
+    {
+      "url": "images/9351886008262.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

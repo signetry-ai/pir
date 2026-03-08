@@ -95,5 +95,13 @@
     "wrap_brand": "Victoria Cross",
     "licensor": "CUB"
   },
-  "base_model": "SC70"
+  "base_model": "SC70",
+  "images": [
+    {
+      "url": "images/9351886006121.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

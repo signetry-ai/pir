@@ -88,5 +88,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/5060482000603.jpg",
+      "alt": "Rhino 2-Door Bar Fridge (Solid Door)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

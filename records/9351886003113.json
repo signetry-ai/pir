@@ -118,5 +118,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886003113.jpg",
+      "alt": "Schmick 1-Door Upright Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

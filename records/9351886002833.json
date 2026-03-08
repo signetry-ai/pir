@@ -129,5 +129,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886002833.jpg",
+      "alt": "Schmick 1-Door Wine Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

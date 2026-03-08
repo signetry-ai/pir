@@ -94,5 +94,13 @@
     "wrap_brand": "Gilmore",
     "licensor": "Gilmore Oil"
   },
-  "base_model": "SC70"
+  "base_model": "SC70",
+  "images": [
+    {
+      "url": "images/9351886004349.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

@@ -96,5 +96,13 @@
     "wrap_brand": "Hahn Racing",
     "licensor": "Lion"
   },
-  "base_model": "SC50AB"
+  "base_model": "SC50AB",
+  "images": [
+    {
+      "url": "images/9351886008354.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

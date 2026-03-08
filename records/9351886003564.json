@@ -88,5 +88,13 @@
     "wrap_brand": "Great Northern",
     "licensor": "CUB"
   },
-  "base_model": "SK-BDC60"
+  "base_model": "SK-BDC60",
+  "images": [
+    {
+      "url": "images/9351886003564.jpg",
+      "alt": "Schmick 1-Door Portable Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

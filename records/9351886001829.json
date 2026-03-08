@@ -129,5 +129,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886001829.jpg",
+      "alt": "Schmick 1-Door Wine Fridge (Triple Glazed)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

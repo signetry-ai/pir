@@ -56,7 +56,8 @@
     "door_reversible": false,
     "door_count": 1,
     "door_heated": false,
-    "body_colour": "black"
+    "body_colour": "black",
+    "colour": "black"
   },
   "qa": [
     {
@@ -130,6 +131,14 @@
       "regions": [
         "AU"
       ]
+    }
+  ],
+  "images": [
+    {
+      "url": "images/9351886002130.jpg",
+      "alt": "Schmick 1-Door Bar Fridge (Solid Door)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
     }
   ]
 }

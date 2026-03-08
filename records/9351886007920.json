@@ -48,7 +48,8 @@
     "door_count": 1,
     "door_heated": false,
     "body_colour": "white",
-    "led_light_colour": "white"
+    "led_light_colour": "white",
+    "colour": "branded"
   },
   "qa": [
     {
@@ -107,6 +108,14 @@
       "regions": [
         "AU"
       ]
+    }
+  ],
+  "images": [
+    {
+      "url": "images/9351886007920.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
     }
   ]
 }

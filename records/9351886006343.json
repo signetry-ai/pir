@@ -75,5 +75,13 @@
   "branding": {
     "type": "house_brand",
     "original_brand": "Bar Fridges Australia"
-  }
+  },
+  "images": [
+    {
+      "url": "images/9351886006343.jpg",
+      "alt": "Bar Fridges Australia 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

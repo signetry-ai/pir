@@ -656,5 +656,13 @@
       "verified": true,
       "approved": true
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886006350.jpg",
+      "alt": "Rhino 2-Door Outdoor Bar Fridge (Heated Low-E Glass)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

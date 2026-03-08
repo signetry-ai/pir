@@ -95,5 +95,13 @@
     "wrap_brand": "Golden Fleece",
     "licensor": "Golden Fleece"
   },
-  "base_model": "SC70"
+  "base_model": "SC70",
+  "images": [
+    {
+      "url": "images/9351886002031.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

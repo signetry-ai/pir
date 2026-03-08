@@ -122,5 +122,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886006800.jpg",
+      "alt": "Schmick 1-Door Upright Fridge (Heated Glass)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

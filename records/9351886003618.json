@@ -115,5 +115,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886003618.jpg",
+      "alt": "Schmick 2-Door Bar Fridge (Solid Door)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

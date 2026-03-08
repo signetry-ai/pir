@@ -95,5 +95,13 @@
     "wrap_brand": "Victoria Bitter",
     "licensor": "CUB"
   },
-  "base_model": "RF-42"
+  "base_model": "RF-42",
+  "images": [
+    {
+      "url": "images/9351886005889.jpg",
+      "alt": "Schmick 1-Door Portable Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

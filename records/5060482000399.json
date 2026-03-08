@@ -90,5 +90,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/5060482000399.jpg",
+      "alt": "Rhino 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

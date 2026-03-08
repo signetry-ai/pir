@@ -95,5 +95,13 @@
     "wrap_brand": "Carlton Dry",
     "licensor": "CUB"
   },
-  "base_model": "BC70B"
+  "base_model": "BC70B",
+  "images": [
+    {
+      "url": "images/9351886007449.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

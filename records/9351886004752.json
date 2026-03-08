@@ -680,5 +680,13 @@
       "approved": true,
       "source_gtin": "9351886006350"
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886004752.jpg",
+      "alt": "Rhino 1-Door Outdoor Bar Fridge (Low-E Glass)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

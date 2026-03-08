@@ -95,5 +95,13 @@
     "wrap_brand": "Branded Vinyl",
     "licensor": "Novelty"
   },
-  "base_model": "SC70"
+  "base_model": "SC70",
+  "images": [
+    {
+      "url": "images/9351886008408.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

@@ -93,5 +93,13 @@
     "type": "sub_brand",
     "sub_brand": "Schmick OWL"
   },
-  "base_model": "HUS-SC372LW"
+  "base_model": "HUS-SC372LW",
+  "images": [
+    {
+      "url": "images/9351886006541.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

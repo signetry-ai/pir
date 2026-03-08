@@ -98,5 +98,13 @@
     "wrap_brand": "HSV",
     "licensor": "Holden"
   },
-  "base_model": "BC46B"
+  "base_model": "BC46B",
+  "images": [
+    {
+      "url": "images/9351886000358.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

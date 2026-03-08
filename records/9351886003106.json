@@ -85,5 +85,13 @@
   "branding": {
     "type": "oem",
     "original_brand": "Dellcool"
-  }
+  },
+  "images": [
+    {
+      "url": "images/9351886003106.jpg",
+      "alt": "Dellcool 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

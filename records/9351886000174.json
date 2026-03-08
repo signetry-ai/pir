@@ -92,5 +92,13 @@
   "branding": {
     "type": "oem",
     "original_brand": "Dellware"
-  }
+  },
+  "images": [
+    {
+      "url": "images/9351886000174.jpg",
+      "alt": "Dellware 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

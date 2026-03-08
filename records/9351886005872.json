@@ -94,5 +94,13 @@
     "wrap_brand": "Peroni",
     "licensor": "Asahi"
   },
-  "base_model": "SC88"
+  "base_model": "SC88",
+  "images": [
+    {
+      "url": "images/9351886005872.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

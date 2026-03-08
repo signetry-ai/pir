@@ -32,7 +32,7 @@
     "door_hinge": "right",
     "door_reversible": true,
     "door_count": 1,
-    "door_type": "solid",
+    "door_type": "glass",
     "door_heated": false,
     "body_colour": "stainless steel"
   },
@@ -90,5 +90,13 @@
   "branding": {
     "type": "oem",
     "original_brand": "Dellware"
-  }
+  },
+  "images": [
+    {
+      "url": "images/9351886000150.jpg",
+      "alt": "Dellware 1-Door Bar Fridge (Solid Door)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

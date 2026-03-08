@@ -126,5 +126,13 @@
         "AU"
       ]
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886003595.jpg",
+      "alt": "Schmick 2-Door Bar Fridge (Triple Glazed)",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }

@@ -96,5 +96,13 @@
     "wrap_brand": "Ned Kelly",
     "licensor": "Ned Kelly"
   },
-  "base_model": "SS-P160FA"
+  "base_model": "SS-P160FA",
+  "images": [
+    {
+      "url": "images/9351886007159.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

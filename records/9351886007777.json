@@ -91,5 +91,13 @@
   "branding": {
     "type": "oem",
     "original_brand": "IC COLD"
-  }
+  },
+  "images": [
+    {
+      "url": "images/9351886007777.jpg",
+      "alt": "IC COLD 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

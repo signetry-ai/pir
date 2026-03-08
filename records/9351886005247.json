@@ -96,5 +96,13 @@
     "wrap_brand": "Dino",
     "licensor": "Sinclair Oil"
   },
-  "base_model": "SS-P160"
+  "base_model": "SS-P160",
+  "images": [
+    {
+      "url": "images/9351886005247.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

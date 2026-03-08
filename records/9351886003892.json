@@ -95,5 +95,13 @@
     "wrap_brand": "Corona",
     "licensor": "CUB"
   },
-  "base_model": "BC70B"
+  "base_model": "BC70B",
+  "images": [
+    {
+      "url": "images/9351886003892.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

@@ -95,5 +95,13 @@
     "wrap_brand": "Holden Sandman",
     "licensor": "Holden"
   },
-  "base_model": "HUS-SC50"
+  "base_model": "HUS-SC50",
+  "images": [
+    {
+      "url": "images/9351886000761.jpg",
+      "alt": "Schmick 1-Door Bar Fridge",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
+  ]
 }

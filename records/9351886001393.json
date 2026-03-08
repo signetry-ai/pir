@@ -670,5 +670,13 @@
       "approved": true,
       "source_gtin": "9351886006350"
     }
+  ],
+  "images": [
+    {
+      "url": "images/9351886001393.jpg",
+      "alt": "Rhino Rhino SGT1R-BS – 293L Commercial Upright Glass Door Drinks Fridge – 10 Star Rating",
+      "primary": true,
+      "source": "barfridgesaustralia.com.au"
+    }
   ]
 }
